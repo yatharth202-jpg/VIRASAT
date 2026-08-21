@@ -213,6 +213,10 @@
             <button class="vault-tab-btn" data-tab="region">By Region</button>
             <button class="vault-tab-btn" data-tab="topic">By Topic</button>
             <button class="vault-tab-btn" data-tab="language">By Language</button>
+            <button class="vault-tab-btn" data-tab="pending" title="View submissions under verification">
+              Under Verification
+              <span id="pendingTabBadge" class="tab-badge-count" style="display: none;">0</span>
+            </button>
           </div>
 
           <div class="vault-search-actions">
@@ -230,23 +234,54 @@
         <!-- 2-Column Main Content Grid -->
         <div class="vault-content-grid">
           
-          <!-- LEFT COLUMN (Featured 2x2, Topics Carousel, Language Tags) -->
+          <!-- LEFT COLUMN (Main Archive, Verification Queue, Topics Carousel, Language Tags) -->
           <div class="left-column">
             
-            <!-- A. Featured Stories Grid -->
+            <!-- A. MAIN VERIFIED ARCHIVE SECTION (With Green Tick Badge ✓) -->
             <section class="featured-stories-section">
               <div class="section-title-wrap">
-                <svg class="section-star-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
-                <h2 class="section-title">Featured Stories</h2>
+                <div class="title-icon-group">
+                  <svg class="section-star-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                  <h2 class="section-title">Featured Stories</h2>
+                </div>
+                <span class="section-badge-verified">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                  Verified Living Archive
+                </span>
               </div>
 
-              <!-- Dynamically Rendered Stories Grid -->
+              <!-- Dynamically Rendered Verified Stories Grid -->
               <div class="featured-stories-grid" id="featuredStoriesGrid">
-                <!-- Story cards rendered dynamically by WisdomVault.renderStoriesGrid() -->
+                <!-- Verified Story cards with Green Tick Badges rendered here -->
               </div>
             </section>
 
-            <!-- B. Explore by Topic Horizontal Carousel -->
+            <!-- B. UNDER VERIFICATION QUEUE SECTION (Separate Section Before Main Promotion) -->
+            <section class="verification-queue-section" id="verificationQueueSection">
+              <div class="verification-header">
+                <div class="verification-title-group">
+                  <div class="verification-icon-badge">⏳</div>
+                  <div>
+                    <h3 class="verification-title">Under Verification & Audio Testing Queue</h3>
+                    <p class="verification-subtitle">New wisdom submissions undergoing audio clarity, dialect & authenticity review before merging to the main vault.</p>
+                  </div>
+                </div>
+                <span id="pendingQueueCount" style="font-family: var(--font-mono); font-size: 0.78rem; font-weight: 700; color: #b24d08; background: #fae4cb; padding: 3px 8px; border-radius: 4px;">0 Submissions</span>
+              </div>
+
+              <div id="emptyQueueMessage" class="empty-queue-message">
+                <div class="empty-queue-icon">🎙️</div>
+                <p style="font-weight: 600; color: #4b362a; margin-bottom: 2px;">No submissions currently waiting for verification.</p>
+                <p style="font-size: 0.78rem; color: #887262;">Use the "Share Your Wisdom" card to record or upload new elder stories!</p>
+              </div>
+
+              <!-- Pending submissions grid -->
+              <div class="pending-stories-grid" id="pendingStoriesGrid">
+                <!-- Pending stories rendered dynamically -->
+              </div>
+            </section>
+
+            <!-- C. Explore by Topic Horizontal Carousel -->
             <section class="topics-section">
               <div class="section-title-wrap">
                 <h2 class="section-title">Explore By Topic</h2>
@@ -329,7 +364,7 @@
               </div>
             </section>
 
-            <!-- C. Stories In Your Language Tag Cloud -->
+            <!-- D. Stories In Your Language Tag Cloud -->
             <section class="languages-section">
               <div class="section-title-wrap">
                 <h2 class="section-title">Stories In Your Language</h2>
@@ -495,11 +530,11 @@
       </div>
       <div class="modal-body">
         <div class="record-box-visual">
-          <button id="micRecordBtn" class="mic-pulse-btn" title="Click to Start/Pause Recording">
+          <button id="micRecordBtn" class="mic-pulse-btn" title="Click to Start/Stop Recording">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
           </button>
           <div class="record-timer-text" id="recordTimerDisplay">00:00</div>
-          <span id="recordStatusText" style="font-size: 0.82rem; color: #635043;">Click the microphone to start recording</span>
+          <span id="recordStatusText" style="font-size: 0.82rem; color: #635043;">Click the microphone to start recording live voice</span>
         </div>
 
         <div class="form-group">
@@ -509,11 +544,11 @@
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">Elder's Name</label>
-            <input type="text" id="recordElderInput" class="form-control" placeholder="e.g. Dadi Shanta Devi">
+            <input type="text" id="recordElderInput" class="form-control" placeholder="e.g. Dadi Kamala Devi">
           </div>
           <div class="form-group">
             <label class="form-label">Language / Dialect / Region</label>
-            <input type="text" id="recordLangInput" class="form-control" placeholder="e.g. Punjabi / Punjab">
+            <input type="text" id="recordLangInput" class="form-control" placeholder="e.g. Rajasthani / Rajasthan">
           </div>
         </div>
         <div class="form-group">
@@ -523,7 +558,7 @@
       </div>
       <div class="modal-footer">
         <button class="btn-secondary btn-modal-close">Cancel</button>
-        <button id="saveRecordSubmitBtn" class="btn-primary-action">Save & Archive</button>
+        <button id="saveRecordSubmitBtn" class="btn-primary-action">Submit for Verification</button>
       </div>
     </div>
   </div>
@@ -577,7 +612,7 @@
       </div>
       <div class="modal-footer">
         <button class="btn-secondary btn-modal-close">Cancel</button>
-        <button id="saveUploadSubmitBtn" class="btn-primary-action">Upload & Preserve</button>
+        <button id="saveUploadSubmitBtn" class="btn-primary-action">Submit for Verification</button>
       </div>
     </div>
   </div>
@@ -614,7 +649,7 @@
       </div>
       <div class="modal-footer">
         <button class="btn-secondary btn-modal-close">Cancel</button>
-        <button id="saveNominateSubmitBtn" class="btn-primary-action">Submit Nomination</button>
+        <button id="saveNominateSubmitBtn" class="btn-primary-action">Submit for Verification</button>
       </div>
     </div>
   </div>
@@ -631,7 +666,7 @@
       </div>
       <div class="modal-body">
         <p style="font-size: 0.88rem; color: #5a473c; margin-bottom: 1.2rem;">
-          Choose how you would like to help preserve living heritage for generations ahead:
+          Choose how you would like to submit oral wisdom for verification and archiving:
         </p>
         <div class="contribution-tiles-grid" style="margin-bottom: 1rem;">
           <button class="action-tile-btn" onclick="Modals.closeModal('contributeModal'); Modals.openModal('recordModal');">
@@ -684,7 +719,7 @@
       <div class="modal-body">
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem;">
           <span id="playerAuthor" style="font-weight: 700; color: #2e1b12; font-size: 0.95rem;">Dadi Shanta Devi • Punjab</span>
-          <span id="playerCategoryBadge" style="font-family: var(--font-mono); font-size: 0.8rem; background: #ebdcc9; padding: 2px 8px; border-radius: 4px; color: #5a473b;">Verified Oral Archive</span>
+          <span id="playerCategoryBadge" style="font-family: var(--font-mono); font-size: 0.8rem; background: #e8f5e9; padding: 2px 8px; border-radius: 4px; color: #2e7d32; font-weight: 700;">✓ Verified Oral Archive</span>
         </div>
         <p id="playerExcerpt" style="font-family: var(--font-serif); font-size: 0.95rem; line-height: 1.6; color: #3c291e;"></p>
       </div>
