@@ -196,6 +196,7 @@
   transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-smooth);
   cursor: pointer;
   position: relative;
+  animation: fadeIn 0.4s ease;
 }
 
 .story-card:hover {
@@ -203,6 +204,23 @@
   background: var(--color-bg-card-hover);
   box-shadow: 0 10px 24px rgba(78, 52, 38, 0.12);
   border-color: #d1b896;
+}
+
+.story-card.just-added-card {
+  border-color: var(--color-gold-muted);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.35);
+  animation: cardHighlight 1.5s ease-out;
+}
+
+@keyframes cardHighlight {
+  0% { transform: scale(0.96); box-shadow: 0 0 30px rgba(212, 175, 55, 0.8); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Story Thumbnail */
@@ -243,21 +261,43 @@
   border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+.new-archive-badge {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  background: var(--color-terracotta);
+  color: #fff;
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
 .story-duration-pill {
   position: absolute;
   bottom: 8px;
   left: 8px;
-  background: rgba(18, 12, 9, 0.8);
+  background: rgba(18, 12, 9, 0.85);
   color: #fdf7ec;
   font-family: var(--font-mono);
   font-size: 0.68rem;
-  font-weight: 500;
-  padding: 2px 7px;
+  font-weight: 600;
+  padding: 3px 8px;
   border-radius: 4px;
   display: flex;
   align-items: center;
   gap: 4px;
   backdrop-filter: blur(4px);
+  transition: background var(--transition-fast), transform var(--transition-fast);
+}
+
+.story-card:hover .story-duration-pill {
+  background: rgba(139, 94, 60, 0.95);
+  transform: scale(1.05);
 }
 
 .story-duration-pill svg {
@@ -827,4 +867,44 @@
   opacity: 0.25;
   width: 140px;
   pointer-events: none;
+}
+
+/* ==========================================================================
+   TOAST CELEBRATION NOTIFICATION
+   ========================================================================== */
+
+.virasat-toast {
+  position: fixed;
+  bottom: 2rem;
+  right: 2.5rem;
+  background: #1e140f;
+  color: #fff9ee;
+  border: 1px solid var(--color-gold-muted);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(212, 175, 55, 0.3);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.4rem;
+  z-index: 2000;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.virasat-toast.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.toast-sparkle {
+  font-size: 1.25rem;
 }
