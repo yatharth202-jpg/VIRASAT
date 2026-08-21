@@ -1,134 +1,81 @@
 /* ==========================================================================
-   HERO SECTION - ELDER WISDOM VAULT (PANORAMIC BACKGROUND INTEGRATION)
+   HERO SECTION - ELDER WISDOM VAULT (EXACT HIGH-FIDELITY LAYOUT)
    ========================================================================== */
 
 .hero-vault-section {
   position: relative;
-  background-color: #120c09;
+  background: radial-gradient(circle at 80% 50%, #2e1d15 0%, #17100d 50%, #0d0806 100%);
   color: var(--color-text-primary-light);
-  padding: 3.8rem 3.5rem 3rem 3.5rem;
+  padding: 3.2rem 3.5rem 2.8rem 3.5rem;
   overflow: hidden;
   border-bottom: 1px solid rgba(197, 160, 89, 0.25);
   box-shadow: inset 0 -20px 30px rgba(0, 0, 0, 0.6);
-  min-height: 380px;
+  min-height: 360px;
   display: flex;
   align-items: center;
 }
 
-/* ==========================================================================
-   BACKGROUND LAYERS: LEFT ELDER PORTRAIT & RIGHT GLOWING LANTERN
-   ========================================================================== */
-
-/* 1. Left Area Background (Elder & Grandchild) */
-.hero-bg-left-elder {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 42%;
-  background-image: url('../assets/images/hero-elder-child.jpg');
-  background-size: cover;
-  background-position: center left;
-  filter: sepia(0.25) contrast(1.08) brightness(0.85);
-  z-index: 1;
-}
-
-/* Smooth fade from left elder image into dark center */
-.hero-bg-left-elder::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: 
-    linear-gradient(to right, rgba(18, 12, 9, 0.15) 0%, rgba(18, 12, 9, 0.65) 60%, rgba(18, 12, 9, 0.98) 92%, #120c09 100%),
-    linear-gradient(to top, rgba(18, 12, 9, 0.9) 0%, transparent 40%),
-    linear-gradient(to bottom, rgba(18, 12, 9, 0.8) 0%, transparent 35%);
-  pointer-events: none;
-}
-
-/* 2. Right Area Background (Glowing Vintage Lantern) */
-.hero-bg-right-lantern {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 38%;
-  background-image: url('../assets/images/lantern.jpg');
-  background-size: cover;
-  background-position: center right;
-  filter: sepia(0.2) contrast(1.1) brightness(0.9);
-  z-index: 1;
-}
-
-/* Smooth fade from right lantern into dark center */
-.hero-bg-right-lantern::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: 
-    linear-gradient(to left, rgba(18, 12, 9, 0.2) 0%, rgba(18, 12, 9, 0.65) 55%, rgba(18, 12, 9, 0.98) 90%, #120c09 100%),
-    linear-gradient(to top, rgba(18, 12, 9, 0.9) 0%, transparent 40%),
-    linear-gradient(to bottom, rgba(18, 12, 9, 0.8) 0%, transparent 35%),
-    radial-gradient(circle at 80% 50%, rgba(255, 170, 50, 0.22) 0%, transparent 60%);
-  pointer-events: none;
-}
-
-/* Center subtle atmospheric glow */
+/* Background atmospheric amber highlights */
 .hero-vault-section::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 50%, rgba(212, 175, 55, 0.08) 0%, transparent 70%);
-  z-index: 2;
+  background: 
+    radial-gradient(circle at 12% 50%, rgba(212, 175, 55, 0.12) 0%, transparent 45%),
+    radial-gradient(circle at 92% 50%, rgba(255, 170, 50, 0.2) 0%, transparent 40%);
   pointer-events: none;
+  z-index: 1;
 }
-
-/* ==========================================================================
-   HERO CONTENT GRID ON TOP OF BACKGROUNDS
-   ========================================================================== */
 
 .hero-content-grid {
   display: grid;
-  grid-template-columns: 1fr 1.55fr 1.15fr;
+  grid-template-columns: 1.15fr 1.65fr 1.35fr;
   align-items: center;
   gap: 2.2rem;
   width: 100%;
   max-width: 1440px;
   margin: 0 auto;
   position: relative;
-  z-index: 3;
+  z-index: 2;
 }
 
-/* Left spacer allowing the elder background to breathe */
-.hero-left-spacer {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  min-height: 200px;
-  padding: 1rem 0;
+/* ==========================================================================
+   LEFT: PROMINENT ELDER & GRANDCHILD PHOTOGRAPH
+   ========================================================================== */
+
+.hero-image-pane {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(197, 160, 89, 0.3);
+  transition: transform var(--transition-smooth), box-shadow var(--transition-smooth);
+  background: #150f0c;
 }
 
-.hero-left-badge-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(22, 14, 10, 0.75);
-  border: 1px solid rgba(197, 160, 89, 0.4);
-  color: #eeddc4;
-  font-family: var(--font-sans);
-  font-size: 0.76rem;
-  font-weight: 600;
-  padding: 4px 10px;
-  border-radius: var(--radius-pill);
-  backdrop-filter: blur(8px);
-  width: fit-content;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+.hero-image-pane:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.85), 0 0 25px rgba(212, 175, 55, 0.3);
 }
 
-.hero-left-badge-tag span {
-  color: var(--color-gold-bright);
+.hero-elder-img {
+  width: 100%;
+  height: 235px;
+  object-fit: cover;
+  display: block;
+  filter: sepia(0.2) contrast(1.06) brightness(0.96);
 }
 
-/* Center: Title, Subtitle, Description & Impact Stats */
+.hero-image-overlay-glow {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 40%, rgba(18, 12, 9, 0.6) 100%);
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   CENTER: TITLE, SUBTITLE, DESCRIPTION & STATS PILL
+   ========================================================================== */
+
 .hero-text-center {
   text-align: center;
   display: flex;
@@ -158,7 +105,7 @@
 
 .hero-vault-title {
   font-family: var(--font-serif);
-  font-size: 2.35rem;
+  font-size: 2.25rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   color: #fff6e4;
@@ -170,43 +117,41 @@
 .hero-vault-subtitle {
   font-family: var(--font-serif);
   font-style: italic;
-  font-size: 1.1rem;
+  font-size: 1.08rem;
   color: #d6c7af;
   margin-bottom: 0.65rem;
   letter-spacing: 0.02em;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero-vault-desc {
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: 0.88rem;
   line-height: 1.55;
-  color: #c4b6a5;
-  max-width: 480px;
-  margin-bottom: 1.5rem;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
+  color: #bfaea0;
+  max-width: 450px;
+  margin-bottom: 1.4rem;
 }
 
 /* Impact Statistics Row */
 .hero-stats-pill {
-  background: rgba(26, 17, 13, 0.88);
+  background: rgba(28, 19, 15, 0.88);
   border: 1px solid rgba(197, 160, 89, 0.4);
   border-radius: var(--radius-sm);
-  padding: 0.65rem 1.25rem;
+  padding: 0.6rem 1.15rem;
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  max-width: 510px;
-  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.6), 0 0 15px rgba(212, 175, 55, 0.1);
-  backdrop-filter: blur(10px);
+  max-width: 490px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(212, 175, 55, 0.1);
+  backdrop-filter: blur(8px);
 }
 
 .stat-item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 0.5rem;
+  padding: 0 0.45rem;
   position: relative;
 }
 
@@ -225,31 +170,34 @@
   align-items: center;
   gap: 0.35rem;
   font-family: var(--font-mono);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
   color: #fff5e0;
 }
 
 .stat-icon {
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   color: var(--color-gold-muted);
 }
 
 .stat-label {
   font-family: var(--font-sans);
-  font-size: 0.68rem;
-  color: #b5a491;
+  font-size: 0.65rem;
+  color: #ab9b8a;
   text-transform: capitalize;
   margin-top: 1px;
   letter-spacing: 0.02em;
 }
 
-/* Right: Featured Quote Card (Overlaid on glowing lamp background) */
+/* ==========================================================================
+   RIGHT: FEATURED QUOTE CARD & GLOWING VINTAGE LANTERN
+   ========================================================================== */
+
 .hero-quote-pane {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  gap: 1.2rem;
   position: relative;
 }
 
@@ -259,22 +207,20 @@
   background-size: 8px 8px;
   border-radius: var(--radius-md);
   border: 1px solid #dbcbb0;
-  padding: 1.4rem 1.45rem;
+  padding: 1.35rem 1.4rem;
   color: var(--color-text-primary-dark);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 30px rgba(184, 151, 107, 0.18);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45), inset 0 0 30px rgba(184, 151, 107, 0.18);
   position: relative;
   overflow: hidden;
-  width: 100%;
-  max-width: 320px;
-  backdrop-filter: blur(4px);
+  flex: 1;
 }
 
 .quote-watermark-tree {
   position: absolute;
   right: -10px;
   bottom: -15px;
-  width: 115px;
-  height: 115px;
+  width: 110px;
+  height: 110px;
   opacity: 0.22;
   pointer-events: none;
   mix-blend-mode: multiply;
@@ -282,10 +228,10 @@
 
 .quote-mark {
   font-family: var(--font-serif);
-  font-size: 2.4rem;
+  font-size: 2.3rem;
   line-height: 1;
   color: var(--color-terracotta);
-  margin-bottom: -0.5rem;
+  margin-bottom: -0.4rem;
 }
 
 .quote-body {
@@ -293,7 +239,7 @@
   font-size: 0.88rem;
   line-height: 1.45;
   color: #2c1a14;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.75rem;
   position: relative;
   z-index: 2;
   font-style: italic;
@@ -301,7 +247,7 @@
 
 .quote-author {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   color: #635043;
   font-weight: 500;
   border-top: 1px solid rgba(139, 94, 60, 0.2);
@@ -313,4 +259,24 @@
 .quote-author span {
   font-weight: 700;
   color: #3b2318;
+}
+
+/* Glowing Vintage Lantern */
+.lantern-wrap {
+  width: 95px;
+  flex-shrink: 0;
+  position: relative;
+  filter: drop-shadow(0 0 20px rgba(255, 170, 50, 0.65));
+}
+
+.hero-lantern-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-sm);
+  transition: transform var(--transition-smooth);
+}
+
+.lantern-wrap:hover .hero-lantern-img {
+  transform: scale(1.05);
 }
