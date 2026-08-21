@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Elder Wisdom Vault - VIRASAT</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Work+Sans:wght@300..700&amp;family=Manrope:wght@400..800&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+    <!-- External Separate Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css"/>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#5f5e5e",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#775a19",
+                    "on-background": "#1e1b16",
+                    "inverse-primary": "#e9c176",
+                    "primary-fixed": "#ffdea5",
+                    "on-tertiary-fixed-variant": "#48473f",
+                    "on-primary-fixed-variant": "#5d4201",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#cac6bc",
+                    "on-tertiary-fixed": "#1c1c15",
+                    "surface-container": "#f5ede4",
+                    "surface-container-highest": "#e9e1d8",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#e9c176",
+                    "surface-variant": "#e9e1d8",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "surface": "#fff8f3",
+                    "tertiary": "#605e56",
+                    "outline-variant": "#d1c5b4",
+                    "surface-dim": "#e1d9d0",
+                    "on-surface": "#1e1b16",
+                    "on-primary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#4e4639",
+                    "background": "#fff8f3",
+                    "surface-bright": "#fff8f3",
+                    "secondary-fixed": "#e5e2e1",
+                    "inverse-surface": "#34302a",
+                    "surface-container-low": "#fbf2e9",
+                    "secondary-container": "#e5e2e1",
+                    "on-tertiary-container": "#3c3b34",
+                    "primary-container": "#c5a059",
+                    "on-secondary-container": "#656464",
+                    "on-error": "#ffffff",
+                    "outline": "#7f7667",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#474646",
+                    "secondary-fixed-dim": "#c9c6c5",
+                    "on-primary-container": "#4e3700",
+                    "primary": "#775a19",
+                    "tertiary-fixed": "#e6e2d7",
+                    "inverse-on-surface": "#f8efe6",
+                    "on-primary-fixed": "#261900",
+                    "tertiary-container": "#a8a59b",
+                    "surface-container-high": "#efe7de"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "unit": "8px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "section-gap": "80px"
+            },
+            "fontFamily": {
+                    "quote-serif": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-lg": ["Work Sans"],
+                    "headline-xl": ["Playfair Display"],
+                    "label-caps": ["Manrope"],
+                    "body-md": ["Work Sans"]
+            },
+            "fontSize": {
+                    "quote-serif": ["22px", { "lineHeight": "32px", "fontWeight": "400" }],
+                    "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                    "headline-lg-mobile": ["28px", { "lineHeight": "34px", "fontWeight": "600" }],
+                    "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                    "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                    "headline-xl": ["40px", { "lineHeight": "48px", "fontWeight": "600" }],
+                    "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                    "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+            }
+          }
+        },
+      }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 w-full shadow-md border-b border-primary/20 bg-inverse-surface dark:bg-inverse-surface transition-all">
+    <div class="flex justify-between items-center w-full px-margin-mobile md:px-8 py-4 max-w-container-max mx-auto">
+        <!-- Brand Logo -->
+        <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+            <span class="material-symbols-outlined text-primary text-3xl">account_balance</span>
+            <div class="flex flex-col">
+                <span class="font-display-lg text-headline-lg text-primary tracking-widest uppercase leading-none">VIRASAT</span>
+                <span class="font-label-caps text-label-caps text-on-primary/70 text-[8px] tracking-[0.2em] mt-1">LEARN · SHARE · PRESERVE</span>
+            </div>
+        </div>
+        <!-- Navigation Links (Desktop) -->
+        <nav class="hidden md:flex items-center gap-6">
+            <a class="flex items-center gap-2 text-on-primary/70 hover:text-primary transition-colors group" href="index.html">
+                <span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed duration-300">home</span>
+                <span class="font-label-caps text-label-caps">Home</span>
+            </a>
+            <a class="flex items-center gap-2 text-on-primary/70 hover:text-primary transition-colors group" href="#">
+                <span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed duration-300">explore</span>
+                <span class="font-label-caps text-label-caps">Explore</span>
+            </a>
+            <a class="flex items-center gap-2 text-on-primary/70 hover:text-primary transition-colors group" href="#">
+                <span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed duration-300">route</span>
+                <span class="font-label-caps text-label-caps">Journey</span>
+            </a>
+            <a class="flex items-center gap-2 text-on-primary/70 hover:text-primary transition-colors group" href="games.html">
+                <span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed duration-300">sports_esports</span>
+                <span class="font-label-caps text-label-caps">Games</span>
+            </a>
+            <a class="flex items-center gap-2 text-on-primary/70 hover:text-primary transition-colors group" href="passport.html">
+                <span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed duration-300">import_contacts</span>
+                <span class="font-label-caps text-label-caps">Passport</span>
+            </a>
+            <a class="flex items-center gap-2 text-primary border-b-2 border-primary pb-1 group" href="wisdom-vault.html">
+                <span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed duration-300" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+                <span class="font-label-caps text-label-caps">Wisdom Vault</span>
+            </a>
+            <a class="flex items-center gap-2 text-on-primary/70 hover:text-primary transition-colors group" href="#">
+                <span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed duration-300">meeting_room</span>
+                <span class="font-label-caps text-label-caps">Rooms</span>
+            </a>
+        </nav>
+        <!-- Trailing Actions & Profile -->
+        <div class="flex items-center gap-4">
+            <button class="text-on-primary/70 hover:text-primary transition-colors scale-95 active:opacity-80">
+                <span class="material-symbols-outlined">search</span>
+            </button>
+            <button class="text-on-primary/70 hover:text-primary transition-colors scale-95 active:opacity-80">
+                <span class="material-symbols-outlined">notifications</span>
+            </button>
+            <div class="flex items-center gap-2 cursor-pointer border border-primary/20 rounded-full pl-1 pr-3 py-1 hover:bg-white/5 transition-colors">
+                <img class="w-8 h-8 rounded-full object-cover border border-primary/50" data-alt="A small, high-quality circular avatar portrait of an explorer wearing a subtle historical artifact, warm lighting, professional photography, set against a dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOGZHHITjo2s01o9vzY6gBO6-3NMb69eChpqJbf9uTh3qtIoSpkypfhXcusXfAboFbX9unZqsKzs5BaO5sL7p6MgbHvirKUvEpM7BhlpmxSROC2ft0f9oJvkvXt8es0dvdSuN1qExrNXXmdZQYIl0bN6YncYgnlkfV6nCrtETP6jUppphDqY99DjFf9S1FCBmB32q4HGU5FWuxOVSu0AjjZ-Nk67eJoe_DY0kQSGRmHMl4-SVgRqwYrg"/>
+                <span class="font-label-caps text-label-caps text-on-primary/90 hidden sm:block">Explorer</span>
+                <span class="material-symbols-outlined text-on-primary/70 text-sm hidden sm:block">expand_more</span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content Canvas -->
+<main class="w-full pb-section-gap">
+    <!-- Hero Banner Area -->
+    <section class="relative w-full bg-inverse-surface text-on-primary pt-8 pb-16 overflow-hidden">
+        <!-- Background Image/Texture -->
+        <div class="absolute inset-0 z-0 opacity-40 mix-blend-overlay pointer-events-none" data-alt="A moody, atmospheric dark textured background featuring subtle silhouettes of ancient ruins and starry night sky, rendered in a museum archival style with warm sepia and gold undertones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCH37DdE43U1-dFLdMTy-Zzndl4DD2z_FSsFArzM-X74-23xVtXkBxiNN0ey0VC7b8ropGqdr5Z8uIYECKuFPhM10i6a5jJ8kch9JkDnwU09MW-8rfcttZkTQXDfW9YcGQ8hMU-2QiHd1aVf4O_Is9epNx2AisCuydmxXVFuttt799VxirgG6EtXddHvck2XSjsqMYnxDT4fmwiAsntv_3iLpZgFn5UhtJdkKe-FmHQULZ-vRGBWyYEmA')"></div>
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter relative z-10 flex flex-col md:flex-row gap-8 items-center">
+            <!-- Left Content: Title & Stats -->
+            <div class="flex-1 text-center md:text-left pt-6">
+                <!-- Breadcrumb -->
+                <div class="flex items-center justify-center md:justify-start gap-2 text-on-primary/60 font-label-caps text-label-caps mb-6">
+                    <a href="index.html" class="flex items-center gap-1 hover:text-primary"><span class="material-symbols-outlined text-sm">home</span> <span>Home</span></a>
+                    <span class="material-symbols-outlined text-sm">chevron_right</span>
+                    <span class="text-primary">Wisdom Vault</span>
+                </div>
+                <!-- Title Block -->
+                <div class="mb-8">
+                    <div class="flex items-center justify-center md:justify-start gap-4 mb-4">
+                        <div class="h-[1px] w-12 bg-primary/50 hidden md:block"></div>
+                        <span class="material-symbols-outlined text-primary text-2xl">diamond</span>
+                        <div class="h-[1px] w-12 bg-primary/50 hidden md:block"></div>
+                    </div>
+                    <h1 class="font-display-lg text-display-lg text-primary-fixed mb-4">ELDER WISDOM VAULT</h1>
+                    <div class="flex items-center justify-center md:justify-start gap-4 mb-6">
+                        <div class="h-[1px] w-16 bg-primary/30"></div>
+                        <span class="font-quote-serif text-quote-serif text-primary-fixed-dim italic">Stories that survived generations.</span>
+                        <div class="h-[1px] w-16 bg-primary/30"></div>
+                    </div>
+                    <p class="font-body-lg text-body-lg text-on-primary/80 max-w-2xl mx-auto md:mx-0">
+                        A living archive of knowledge, traditions and memories shared by our elders. Listen, learn and keep our heritage alive.
+                    </p>
+                </div>
+                <!-- Stats Row -->
+                <div class="flex flex-wrap justify-center md:justify-start gap-6 pt-4 border-t border-primary/20">
+                    <div class="flex flex-col items-center md:items-start">
+                        <div class="flex items-center gap-2 text-primary-fixed">
+                            <span class="material-symbols-outlined text-xl">auto_stories</span>
+                            <span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">1,248</span>
+                        </div>
+                        <span class="font-label-caps text-label-caps text-on-primary/60 mt-1 uppercase tracking-widest">Wisdom Stories</span>
+                    </div>
+                    <div class="w-[1px] bg-primary/20 hidden sm:block"></div>
+                    <div class="flex flex-col items-center md:items-start">
+                        <div class="flex items-center gap-2 text-primary-fixed">
+                            <span class="material-symbols-outlined text-xl">person_search</span>
+                            <span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">356</span>
+                        </div>
+                        <span class="font-label-caps text-label-caps text-on-primary/60 mt-1 uppercase tracking-widest">Elders</span>
+                    </div>
+                    <div class="w-[1px] bg-primary/20 hidden sm:block"></div>
+                    <div class="flex flex-col items-center md:items-start">
+                        <div class="flex items-center gap-2 text-primary-fixed">
+                            <span class="material-symbols-outlined text-xl">translate</span>
+                            <span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">28</span>
+                        </div>
+                        <span class="font-label-caps text-label-caps text-on-primary/60 mt-1 uppercase tracking-widest">Languages</span>
+                    </div>
+                    <div class="w-[1px] bg-primary/20 hidden sm:block"></div>
+                    <div class="flex flex-col items-center md:items-start">
+                        <div class="flex items-center gap-2 text-primary-fixed">
+                            <span class="material-symbols-outlined text-xl">groups</span>
+                            <span class="font-headline-lg text-headline-lg-mobile md:text-headline-lg">195</span>
+                        </div>
+                        <span class="font-label-caps text-label-caps text-on-primary/60 mt-1 uppercase tracking-widest">Communities</span>
+                    </div>
+                </div>
+            </div>
+            <!-- Right Content: Quote & Lantern -->
+            <div class="flex-1 w-full relative mt-12 md:mt-0 flex justify-center">
+                <!-- Parchment Quote Box -->
+                <div class="bg-[#F5F1E6] rounded-sm p-6 md:p-8 max-w-sm relative z-10 shadow-lg border border-[#C5A059]/20 transform md:rotate-2 md:-translate-y-4" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.8\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100\' height=\'100\' filter=\'url(%23noise)\' opacity=\'0.05\'/%3E%3C/svg%3E');">
+                    <span class="material-symbols-outlined text-primary opacity-30 text-6xl absolute -top-4 -left-2" style="font-variation-settings: 'FILL' 1;">format_quote</span>
+                    <p class="font-quote-serif text-quote-serif text-on-surface mb-6 relative z-10">
+                        "What we know today exists because someone preserved it before us. Now it's our turn."
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-[1px] bg-primary"></div>
+                        <div class="flex flex-col">
+                            <span class="font-body-md text-body-md text-on-surface font-semibold">Shared by Dadi Kamla Devi</span>
+                            <span class="font-label-caps text-label-caps text-on-surface-variant">Rajasthan</span>
+                        </div>
+                    </div>
+                    <!-- Watermark motif -->
+                    <span class="material-symbols-outlined text-primary/10 text-6xl absolute bottom-2 right-2 pointer-events-none">park</span>
+                </div>
+                <!-- Decorative Lantern Image -->
+                <div class="absolute -right-8 -bottom-16 w-64 h-80 z-0 opacity-80 mix-blend-lighten hidden lg:block" data-alt="A highly detailed, glowing antique brass oil lantern resting on aged wooden crates in a dark room. The flame emits a warm, golden, ethereal light that illuminates the surrounding shadows. Premium archival museum photography style." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB0ocoDmnd_yk6uU0KBAD6ybX7u5uj6BYAN7Zmq64KtVArHBnLMv_Ml6vTXiFnzX07NkoT9e4CIbaanBvW66lAhMl3DH43BM-qv1uKpkczJShuEXrZj_VwI3SMfpQXyju7CEkeIExchTtDtwN13GOEU5Os5Y_MUKn-REhzF36w6M2rQOnCqblfbtvZ4j92L2XuCELOzbYZMOzTMTd7WnE5zc9Q-EfuttfhmezmdAbRC4aAfT6pAsmicnw')"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Workspace -->
+    <div class="bg-surface w-full relative z-20 shadow-[0_-10px_20px_rgba(0,0,0,0.1)]">
+        <div class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-8">
+            <!-- Filters & Search Toolbar -->
+            <div class="flex flex-col lg:flex-row justify-between items-center gap-4 mb-10 pb-4 border-b border-outline-variant/30">
+                <!-- Tab Navigation -->
+                <div class="flex overflow-x-auto hide-scrollbar w-full lg:w-auto gap-8 pb-2">
+                    <button class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-2 whitespace-nowrap">FEATURED</button>
+                    <button class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors pb-2 whitespace-nowrap">RECENT STORIES</button>
+                    <button class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors pb-2 whitespace-nowrap">BY REGION</button>
+                    <button class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors pb-2 whitespace-nowrap">BY TOPIC</button>
+                    <button class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors pb-2 whitespace-nowrap">BY LANGUAGE</button>
+                </div>
+                <!-- Search & Filter -->
+                <div class="flex items-center gap-3 w-full lg:w-auto">
+                    <div class="relative w-full lg:w-64">
+                        <span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant/50 text-sm">search</span>
+                        <input class="w-full bg-surface-container rounded-full pl-9 pr-4 py-2 border-none text-sm font-body-md focus:ring-1 focus:ring-primary text-on-surface placeholder:text-on-surface-variant/50" placeholder="Search stories, topics, or elders..." type="text"/>
+                    </div>
+                    <button class="flex items-center gap-2 bg-surface-container hover:bg-surface-container-high transition-colors px-4 py-2 rounded-full border border-outline-variant/30 text-on-surface">
+                        <span class="material-symbols-outlined text-sm">tune</span>
+                        <span class="font-label-caps text-label-caps">Filter</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Grid Layout for Main Content & Sidebar -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+                <!-- Left Column: Primary Content (Featured Stories, etc.) -->
+                <div class="lg:col-span-8 flex flex-col gap-12">
+                    <!-- Featured Stories Section -->
+                    <section>
+                        <div class="flex items-center gap-2 mb-6">
+                            <span class="material-symbols-outlined text-primary text-xl">star</span>
+                            <h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-on-surface uppercase tracking-wide">FEATURED STORIES</h2>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 gap-6 relative">
+                            <!-- Card 1 -->
+                            <article class="group bg-surface-container-lowest border border-outline-variant/30 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                                <div class="relative h-48 overflow-hidden">
+                                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An older Indian woman in a rustic kitchen sharing traditional laddoos with her family. Warm, natural sunlight streaming through a window, highlighting the golden sweets in a brass bowl. Archival documentary photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB537TT17Fd0HGMmJQoMAP35de4vi4vfI4DeCCqFGVp1vAan6vL4VfNq4qGoax6-_21QV8mPIC-gDr27W64UPJmPVGBVyUb9a2eo5t98fi6u8YndSvS-R7On3BU5wYR7wiDwIE26mNagESyhwvnSujZpnKQ70zXgUWUEUu4a5L5EXThtCINd08nbEkDc2-wc1Ipn6V_4zWprYCtGPfvitlrRrwltJ-ihcdwX0_KMakV6CGgGXV9R5-9fQ"/>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                    <div class="absolute top-3 right-3 bg-inverse-surface/80 text-on-primary backdrop-blur-sm px-3 py-1 rounded-full font-label-caps text-[10px] tracking-wider">RECIPE</div>
+                                    <div class="absolute bottom-3 left-3 flex items-center gap-2 text-on-primary">
+                                        <span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                                        <span class="font-label-caps text-label-caps text-[10px]">05:23</span>
+                                    </div>
+                                </div>
+                                <div class="p-5">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="font-headline-lg text-body-lg font-bold text-on-surface line-clamp-2 pr-4 group-hover:text-primary transition-colors">The secret behind our festive laddoos</h3>
+                                        <button class="text-on-surface-variant hover:text-primary transition-colors">
+                                            <span class="material-symbols-outlined text-lg">bookmark_border</span>
+                                        </button>
+                                    </div>
+                                    <p class="font-body-md text-sm text-on-surface-variant line-clamp-3 mb-4">
+                                        Dadi Shanta shares the traditional method passed down in our family for over 100 years.
+                                    </p>
+                                    <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/20">
+                                        <div class="flex items-center gap-2">
+                                            <img class="w-6 h-6 rounded-full object-cover grayscale opacity-80" data-alt="Small circular portrait of an elderly Indian woman smiling." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXALD0_KnTnpYZ67wpYLJocaBhepfaMiWR8ZmoJyMPCK4IiYS8NSE1pHkTfNnrkmyOM9I-yPqGv9zrTcHFXUXthtuazozds1gN1Kr7jYv3b_XY_qlmlEjLOtZuq2kxWHLsHJeZT-D_q34UK9-mOi3KBtaI5Gpnpv0WxLOLk84hfPeUDcI2PmyIKlk6GtRtlyUoEXFPgGOFb8pt-vKt5P-RvYST8pq675zv7o2BPen5NVG8vDFDTQm1QQ"/>
+                                            <span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Dadi Shanta Devi</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 text-on-surface-variant/70">
+                                            <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                            <span class="font-label-caps text-[10px]">Punjab</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- Card 2 -->
+                            <article class="group bg-surface-container-lowest border border-outline-variant/30 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                                <div class="relative h-48 overflow-hidden">
+                                    <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="An elderly man sitting beside a traditional wooden charkha (spinning wheel), demonstrating its use. Soft, warm indoor lighting highlighting the textures of the wood and spun cotton. Documentary archival style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9OMX2LHFdlEW3i2avGFyJKBuF5XT3ybAQlkBUR0gnhbXHyN5HR4AFiMwSuLWRP8oa1mnmAQ0mFU6qwbvnOauRM2OxrMw0yDSrKpSTfC5hRBWCiRj4kUygDglLjimvox76zCfmBdbZSOQD6dTWHe7iBo8_bxYRN0anyY59bPvJfpLHa_1Qr7_IFr35YelZr01QoU3ofYVdC4Wxxx7X_RWDjUX7d_BXiAXxf16JVaMtROiN80yAoafSuw"/>
+                                    <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                    <div class="absolute top-3 right-3 bg-inverse-surface/80 text-on-primary backdrop-blur-sm px-3 py-1 rounded-full font-label-caps text-[10px] tracking-wider">CRAFT</div>
+                                    <div class="absolute bottom-3 left-3 flex items-center gap-2 text-on-primary">
+                                        <span class="material-symbols-outlined text-xl" style="font-variation-settings: 'FILL' 1;">play_circle</span>
+                                        <span class="font-label-caps text-label-caps text-[10px]">04:11</span>
+                                    </div>
+                                </div>
+                                <div class="p-5">
+                                    <div class="flex justify-between items-start mb-2">
+                                        <h3 class="font-headline-lg text-body-lg font-bold text-on-surface line-clamp-2 pr-4 group-hover:text-primary transition-colors">Spinning stories with the charkha</h3>
+                                        <button class="text-on-surface-variant hover:text-primary transition-colors">
+                                            <span class="material-symbols-outlined text-lg">bookmark_border</span>
+                                        </button>
+                                    </div>
+                                    <p class="font-body-md text-sm text-on-surface-variant line-clamp-3 mb-4">
+                                        Babuji explains how the charkha was not just a tool, but a symbol of freedom and pride.
+                                    </p>
+                                    <div class="flex items-center justify-between mt-auto pt-4 border-t border-outline-variant/20">
+                                        <div class="flex items-center gap-2">
+                                            <img class="w-6 h-6 rounded-full object-cover grayscale opacity-80" data-alt="Small circular portrait of an elderly Indian man with a turban." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPoPzoAQeVHUZXrgZitKFUvZbVs8htWCLdcYwLqMcwrr7FjzcPuNlnlt8Bzi8yP1nUp_1W8zEATluyGq1KuYX8gHpce0oUosn04xmKg5c7goPGZ1UECW99GYeh1ruYe9Yajin_uzL69XvVD1owFQdIGvO2wz2xlkQXX9V-YdeYT3pAaUB5zkH5n0uMwUdgeXC4xQ-IeEwygkXpikuXeRUeuU9vd1dGLAu14bg3bIKhkQ_dHgUlD7250Q"/>
+                                            <span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Babu Harbans Singh</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 text-on-surface-variant/70">
+                                            <span class="material-symbols-outlined text-[14px]">location_on</span>
+                                            <span class="font-label-caps text-[10px]">Gujarat</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        <!-- Navigation Arrow -->
+                        <div class="flex justify-end mt-4">
+                            <button class="w-10 h-10 rounded-full border border-outline-variant bg-surface flex items-center justify-center text-on-surface hover:bg-surface-container hover:text-primary transition-colors shadow-sm">
+                                <span class="material-symbols-outlined">chevron_right</span>
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- Explore By Topic Section -->
+                    <section>
+                        <h2 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest mb-6">EXPLORE BY TOPIC</h2>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <!-- Chip 1 -->
+                            <button class="flex items-center gap-3 bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 p-3 rounded-lg transition-colors group text-left">
+                                <div class="w-10 h-10 rounded bg-primary-container/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined">restaurant_menu</span>
+                                </div>
+                                <div>
+                                    <div class="font-body-md text-sm font-semibold text-on-surface">Food &amp; Recipes</div>
+                                    <div class="font-label-caps text-[10px] text-on-surface-variant">182 Stories</div>
+                                </div>
+                            </button>
+                            <!-- Chip 2 -->
+                            <button class="flex items-center gap-3 bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 p-3 rounded-lg transition-colors group text-left">
+                                <div class="w-10 h-10 rounded bg-primary-container/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined">menu_book</span>
+                                </div>
+                                <div>
+                                    <div class="font-body-md text-sm font-semibold text-on-surface">Folk Tales</div>
+                                    <div class="font-label-caps text-[10px] text-on-surface-variant">156 Stories</div>
+                                </div>
+                            </button>
+                            <!-- Chip 3 -->
+                            <button class="flex items-center gap-3 bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 p-3 rounded-lg transition-colors group text-left">
+                                <div class="w-10 h-10 rounded bg-primary-container/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined">design_services</span>
+                                </div>
+                                <div>
+                                    <div class="font-body-md text-sm font-semibold text-on-surface">Crafts &amp; Skills</div>
+                                    <div class="font-label-caps text-[10px] text-on-surface-variant">214 Stories</div>
+                                </div>
+                            </button>
+                            <!-- Chip 4 -->
+                            <button class="flex items-center gap-3 bg-surface-container-low hover:bg-surface-container border border-outline-variant/20 p-3 rounded-lg transition-colors group text-left">
+                                <div class="w-10 h-10 rounded bg-primary-container/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+                                    <span class="material-symbols-outlined">celebration</span>
+                                </div>
+                                <div>
+                                    <div class="font-body-md text-sm font-semibold text-on-surface">Festivals</div>
+                                    <div class="font-label-caps text-[10px] text-on-surface-variant">198 Stories</div>
+                                </div>
+                            </button>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Right Column: Sidebar (Action & Impact) -->
+                <aside class="lg:col-span-4 flex flex-col gap-6">
+                    <!-- Share Your Wisdom Card -->
+                    <div class="bg-[#F5F1E6] border border-[#C5A059]/30 rounded-xl p-6 shadow-sm" style="background-image: url('data:image/svg+xml,%3Csvg width=\'100\' height=\'100\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.8\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100\' height=\'100\' filter=\'url(%23noise)\' opacity=\'0.03\'/%3E%3C/svg%3E');">
+                        <div class="flex flex-col items-center text-center mb-6 border-b border-outline-variant/30 pb-4">
+                            <span class="material-symbols-outlined text-primary text-3xl mb-2">history_edu</span>
+                            <h3 class="font-headline-lg text-body-lg font-bold text-on-surface uppercase tracking-widest">SHARE YOUR WISDOM</h3>
+                            <p class="font-body-md text-xs text-on-surface-variant mt-2">Help preserve knowledge for future generations.</p>
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <!-- Action 1 -->
+                            <a class="flex items-center gap-4 p-3 bg-surface-container-lowest hover:bg-surface-container rounded border border-outline-variant/20 transition-colors group" href="#">
+                                <div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-primary shadow-sm border border-outline-variant/10">
+                                    <span class="material-symbols-outlined">mic</span>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-body-md text-sm font-semibold text-on-surface">Record Your Story</div>
+                                    <div class="font-body-md text-[11px] text-on-surface-variant leading-tight">Share your memories, experiences or family traditions.</div>
+                                </div>
+                                <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">chevron_right</span>
+                            </a>
+                            <!-- Action 2 -->
+                            <a class="flex items-center gap-4 p-3 bg-surface-container-lowest hover:bg-surface-container rounded border border-outline-variant/20 transition-colors group" href="#">
+                                <div class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-primary shadow-sm border border-outline-variant/10">
+                                    <span class="material-symbols-outlined">cloud_upload</span>
+                                </div>
+                                <div class="flex-1">
+                                    <div class="font-body-md text-sm font-semibold text-on-surface">Upload Photo / Document</div>
+                                    <div class="font-body-md text-[11px] text-on-surface-variant leading-tight">Add old photos, letters, recipes, or handwritten notes.</div>
+                                </div>
+                                <span class="material-symbols-outlined text-on-surface-variant group-hover:text-primary">chevron_right</span>
+                            </a>
+                        </div>
+                        <button class="w-full mt-6 bg-inverse-surface hover:bg-inverse-surface/90 text-on-primary py-3 rounded font-label-caps text-label-caps flex items-center justify-center gap-2 transition-colors">
+                            <span>Contribute Now</span>
+                            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </button>
+                    </div>
+
+                    <!-- Wisdom Impact Card -->
+                    <div class="bg-surface-container border border-outline-variant/20 rounded-xl p-6">
+                        <div class="flex items-center gap-2 mb-4 justify-center">
+                            <span class="material-symbols-outlined text-primary">psychiatry</span>
+                            <h3 class="font-label-caps text-label-caps text-on-surface uppercase tracking-widest">WISDOM IMPACT</h3>
+                        </div>
+                        <p class="text-center font-body-md text-xs text-on-surface-variant mb-6 italic">Together, we are preserving our roots.</p>
+                        <div class="grid grid-cols-3 gap-2 text-center divide-x divide-outline-variant/30">
+                            <div>
+                                <div class="font-headline-lg text-body-lg font-bold text-primary">1,248</div>
+                                <div class="font-label-caps text-[10px] text-on-surface-variant uppercase mt-1">Stories</div>
+                            </div>
+                            <div>
+                                <div class="font-headline-lg text-body-lg font-bold text-primary">9,532</div>
+                                <div class="font-label-caps text-[10px] text-on-surface-variant uppercase mt-1">Minutes</div>
+                            </div>
+                            <div>
+                                <div class="font-headline-lg text-body-lg font-bold text-primary">102</div>
+                                <div class="font-label-caps text-[10px] text-on-surface-variant uppercase mt-1">Contributors</div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer Component -->
+<footer class="bg-inverse-surface dark:bg-inverse-surface w-full mt-auto text-center py-section-gap px-margin-mobile border-t border-primary/10">
+    <div class="flex flex-col gap-unit items-center max-w-container-max mx-auto">
+        <!-- Brand Logo -->
+        <div class="font-display-lg text-primary text-3xl mb-4">
+            VIRASAT
+        </div>
+        <!-- Links -->
+        <nav class="flex flex-wrap justify-center gap-6 mb-8">
+            <a class="text-on-primary/60 hover:text-primary transition-colors font-body-md text-body-md" href="#">About Heritage</a>
+            <a class="text-on-primary/60 hover:text-primary transition-colors font-body-md text-body-md" href="#">Contribution Guide</a>
+            <a class="text-on-primary/60 hover:text-primary transition-colors font-body-md text-body-md" href="#">Privacy Archives</a>
+            <a class="text-on-primary/60 hover:text-primary transition-colors font-body-md text-body-md" href="#">Terms of Discovery</a>
+        </nav>
+        <!-- Copyright -->
+        <p class="text-on-primary/40 font-label-caps text-label-caps tracking-widest text-[10px]">
+            VIRASAT © 2024. LEARN · SHARE · PRESERVE
+        </p>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,87 @@
+[
+  {
+    "id": "punjab-phulkari",
+    "region": "Punjab",
+    "item_name": "Phulkari Floral Embroidery",
+    "item_description": "A vibrant geometric embroidery traditionally hand-stitched with untwisted silk thread (pat) onto coarse handspun cotton (khaddar) by women for wedding ceremonies and bridal trousseaus.",
+    "correct_twin": "Palestinian Tatreez Embroidery",
+    "wrong_options": [
+      "Scottish Tartan Wool Weaving",
+      "Japanese Sashiko Stitching",
+      "Peruvian Alpaca Weaving"
+    ],
+    "similarity_text": "Both are matrilineal needlework traditions where women embroider intricate geometric patterns to document familial milestones, geographic heritage, and social status.",
+    "difference_text": "Phulkari is stitched from the reverse side using lustrous silk floss on thick khaddar cotton, whereas Tatreez uses counted cross-stitch with silk or cotton threads on woven linen.",
+    "evidence_type": "Shared Social Function",
+    "image_icon": "🪡",
+    "cultural_origin": "Levant & Mediterranean"
+  },
+  {
+    "id": "bengal-dokra",
+    "region": "Bengal",
+    "item_name": "Dokra Lost-Wax Metal Casting",
+    "item_description": "An ancient non-ferrous metal casting craft dating back over 4,000 years to the Indus Valley Civilization, creating rustic brass and bronze figurines of deities, animals, and musicians.",
+    "correct_twin": "Benin Bronze Casting (Nigeria)",
+    "wrong_options": [
+      "Venetian Glass Blowing (Italy)",
+      "Nordic Damascene Steel Forging",
+      "Mayan Jadeite Carving"
+    ],
+    "similarity_text": "Both civilizations independently refined the 'cire perdue' (lost-wax) technique using clay cores and beeswax threads to cast symbolic royal and spiritual metal sculptures.",
+    "difference_text": "Dokra uses hollow-cast brass/bronze with characteristic spiral thread textures for folk rituals, while Benin bronzes are heavy cast-copper alloys commissioned for royal palace altars.",
+    "evidence_type": "Documented Historical Connection",
+    "image_icon": "🏺",
+    "cultural_origin": "West Africa"
+  },
+  {
+    "id": "rajasthan-kalbelia",
+    "region": "Rajasthan",
+    "item_name": "Kalbelia Snake-Charmer Dance",
+    "item_description": "A sensuous, swirling folk dance performed by women of the nomadic Kalbelia community wearing swirling black skirts embroidered with silver ribbons and mirror work, accompanied by the poongi wind instrument.",
+    "correct_twin": "Andalusian Flamenco Gitano (Spain)",
+    "wrong_options": [
+      "Irish Riverdance Clogging",
+      "Balinese Barong Mask Dance",
+      "Greek Sirtaki Circle Dance"
+    ],
+    "similarity_text": "Both dances feature expressive arm gestures, rhythmic footwork, swirling flared skirts, and raw emotional vocal laments rooted in nomadic Romani heritage.",
+    "difference_text": "Kalbelia mimics the fluid, hypnotic movements of the desert cobra with acrobatic floor bends, while Flamenco emphasizes percussive heel-tapping (zapateado) and upright tension.",
+    "evidence_type": "Visual Resemblance",
+    "image_icon": "💃",
+    "cultural_origin": "Southern Spain"
+  },
+  {
+    "id": "tamil-nadu-athangudi",
+    "region": "Tamil Nadu",
+    "item_name": "Chettinad Athangudi Tiles",
+    "item_description": "Handmade patterned cement floor tiles cast using local river sand, colored oxides, and glass molds, celebrated for their natural gloss and geometric botanical patterns.",
+    "correct_twin": "Moroccan Zellij Mosaic Tilework",
+    "wrong_options": [
+      "Dutch Delft Blue Ceramic Glazing",
+      "Persian Lusterware Pottery",
+      "Portuguese Azulejo Tile Painting"
+    ],
+    "similarity_text": "Both are artisanal geometric architectural floor and wall elements crafted by hand using natural earth pigments to keep interior courtyards cool in hot climates.",
+    "difference_text": "Athangudi tiles are poured wet cement cold-cured in water tanks, whereas Moroccan Zellij tiles are hand-cut terracotta pieces assembled like complex mathematical jigsaw puzzles.",
+    "evidence_type": "Visual Resemblance",
+    "image_icon": "🏛️",
+    "cultural_origin": "North Africa"
+  },
+  {
+    "id": "northeast-root-bridges",
+    "region": "North-East",
+    "item_name": "Living Root Bridges (Jingkieng Jri)",
+    "item_description": "Aerial suspension bridges handmade by indigenous Khasi and Jaintia tribes by guiding the flexible secondary aerial roots of Ficus elastica trees across rushing monsoon gorges.",
+    "correct_twin": "Inca Q'eswachaka Grass Rope Bridges (Peru)",
+    "wrong_options": [
+      "Roman Stone Arch Viaducts",
+      "Swiss Timber Covered Bridges",
+      "Polynesian Outrigger Waterways"
+    ],
+    "similarity_text": "Both represent ingenious indigenous botanical engineering, weaving living or harvested organic mountain flora into enduring footbridges without metal nails or mortar.",
+    "difference_text": "Living Root Bridges grow stronger over centuries as the tree lives and roots thicken, while Q'eswachaka bridges are hand-woven from ichu grass and ritualistically rebuilt every single year.",
+    "evidence_type": "Shared Social Function",
+    "image_icon": "🌿",
+    "cultural_origin": "Andean South America"
+  }
+]

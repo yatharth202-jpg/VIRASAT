@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>VIRASAT - Find the Connection</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Work+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+
+    <!-- External Separate Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css"/>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#5f5e5e",
+                      "on-error-container": "#93000a",
+                      "surface-tint": "#775a19",
+                      "on-background": "#1e1b16",
+                      "inverse-primary": "#e9c176",
+                      "primary-fixed": "#ffdea5",
+                      "on-tertiary-fixed-variant": "#48473f",
+                      "on-primary-fixed-variant": "#5d4201",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed-dim": "#cac6bc",
+                      "on-tertiary-fixed": "#1c1c15",
+                      "surface-container": "#f5ede4",
+                      "surface-container-highest": "#e9e1d8",
+                      "on-secondary": "#ffffff",
+                      "primary-fixed-dim": "#e9c176",
+                      "surface-variant": "#e9e1d8",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "surface": "#fff8f3",
+                      "tertiary": "#605e56",
+                      "outline-variant": "#d1c5b4",
+                      "surface-dim": "#e1d9d0",
+                      "on-surface": "#1e1b16",
+                      "on-primary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#4e4639",
+                      "background": "#fff8f3",
+                      "surface-bright": "#fff8f3",
+                      "secondary-fixed": "#e5e2e1",
+                      "inverse-surface": "#34302a",
+                      "surface-container-low": "#fbf2e9",
+                      "secondary-container": "#e5e2e1",
+                      "on-tertiary-container": "#3c3b34",
+                      "primary-container": "#c5a059",
+                      "on-secondary-container": "#656464",
+                      "on-error": "#ffffff",
+                      "outline": "#7f7667",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "on-secondary-fixed-variant": "#474646",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "on-primary-container": "#4e3700",
+                      "primary": "#775a19",
+                      "tertiary-fixed": "#e6e2d7",
+                      "inverse-on-surface": "#f8efe6",
+                      "on-primary-fixed": "#261900",
+                      "tertiary-container": "#a8a59b",
+                      "surface-container-high": "#efe7de"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "unit": "8px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "section-gap": "80px"
+              },
+              "fontFamily": {
+                      "quote-serif": ["Playfair Display"],
+                      "display-lg": ["Playfair Display"],
+                      "headline-lg-mobile": ["Playfair Display"],
+                      "headline-lg": ["Playfair Display"],
+                      "body-lg": ["Work Sans"],
+                      "headline-xl": ["Playfair Display"],
+                      "label-caps": ["Manrope"],
+                      "body-md": ["Work Sans"]
+              },
+              "fontSize": {
+                      "quote-serif": ["22px", { "lineHeight": "32px", "fontWeight": "400" }],
+                      "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "headline-lg-mobile": ["28px", { "lineHeight": "34px", "fontWeight": "600" }],
+                      "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "600" }],
+                      "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                      "headline-xl": ["40px", { "lineHeight": "48px", "fontWeight": "600" }],
+                      "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                      "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md min-h-screen relative">
+<div class="fixed inset-0 texture-overlay z-0"></div>
+
+<!-- TopAppBar -->
+<header class="bg-inverse-surface dark:bg-inverse-surface border-b border-primary/20 shadow-md docked full-width top-0 z-50 sticky">
+    <div class="flex justify-between items-center w-full px-margin-mobile md:px-8 py-4 max-w-container-max mx-auto">
+        <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
+            <span class="material-symbols-outlined text-primary text-3xl" data-weight="fill" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+            <span class="font-display-lg text-headline-lg text-primary tracking-widest uppercase">VIRASAT</span>
+        </div>
+        <nav class="hidden md:flex gap-6 items-center">
+            <a class="font-label-caps text-label-caps text-on-primary/70 hover:text-primary transition-colors flex items-center gap-1 scale-95 active:opacity-80 transition-all hover:text-primary-fixed duration-300" href="index.html"><span class="material-symbols-outlined text-[16px]">home</span>Home</a>
+            <a class="font-label-caps text-label-caps text-on-primary/70 hover:text-primary transition-colors flex items-center gap-1 scale-95 active:opacity-80 transition-all hover:text-primary-fixed duration-300" href="#"><span class="material-symbols-outlined text-[16px]">explore</span>Explore</a>
+            <a class="font-label-caps text-label-caps text-on-primary/70 hover:text-primary transition-colors flex items-center gap-1 scale-95 active:opacity-80 transition-all hover:text-primary-fixed duration-300" href="#"><span class="material-symbols-outlined text-[16px]">map</span>Journey</a>
+            <a class="font-label-caps text-label-caps text-primary border-b-2 border-primary pb-1 flex items-center gap-1 scale-95 active:opacity-80 transition-all hover:text-primary-fixed duration-300" href="games.html"><span class="material-symbols-outlined text-[16px]">sports_esports</span>Games</a>
+            <a class="font-label-caps text-label-caps text-on-primary/70 hover:text-primary transition-colors flex items-center gap-1 scale-95 active:opacity-80 transition-all hover:text-primary-fixed duration-300" href="passport.html"><span class="material-symbols-outlined text-[16px]">import_contacts</span>Passport</a>
+            <a class="font-label-caps text-label-caps text-on-primary/70 hover:text-primary transition-colors flex items-center gap-1 scale-95 active:opacity-80 transition-all hover:text-primary-fixed duration-300" href="wisdom-vault.html"><span class="material-symbols-outlined text-[16px]">auto_stories</span>Wisdom Vault</a>
+            <a class="font-label-caps text-label-caps text-on-primary/70 hover:text-primary transition-colors flex items-center gap-1 scale-95 active:opacity-80 transition-all hover:text-primary-fixed duration-300" href="#"><span class="material-symbols-outlined text-[16px]">meeting_room</span>Rooms</a>
+        </nav>
+        <div class="flex items-center gap-4">
+            <div class="flex items-center gap-1 text-primary-container">
+                <span class="material-symbols-outlined">local_fire_department</span>
+                <span class="font-label-caps text-label-caps">12</span>
+            </div>
+            <div class="flex items-center gap-1 text-primary-container">
+                <span class="material-symbols-outlined">notifications</span>
+            </div>
+            <div class="flex items-center gap-2 cursor-pointer border border-primary/20 rounded-full pl-1 pr-3 py-1">
+                <img class="w-8 h-8 rounded-full object-cover" data-alt="A small circular avatar portrait of an explorer character in a digital museum style UI, high quality, soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbA1puMBE0pZcxY1n0avCybNWtmbczOsLUKNRKthm61cauFry_6PHXsu7zB_EDpDQbhhpKNOrbvwhRmW5xqF9ubeLAeKhnzElpF3sUw4dA9WZCC9aK7E1kcCj8oY33SKGJPHatA4jAyMApgSz5sSaSBbMcZmqhtLXDN9rWrKaAfmQhAwBiOKMUDpskXEaZdRTzpI0GpI-gTSRZrPQeQK-RCJOSrRqF98uy147KypH9Ex0OXmzqhxMj5A"/>
+                <span class="font-label-caps text-label-caps text-on-primary/90">Explorer <span class="material-symbols-outlined text-[12px]">expand_more</span></span>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-gutter py-8 relative z-10">
+    <!-- Breadcrumbs -->
+    <div class="flex items-center gap-2 text-on-surface-variant mb-8 font-body-md text-sm">
+        <a href="index.html" class="flex items-center gap-1 hover:text-primary"><span class="material-symbols-outlined text-[18px]">home</span> Home</a> <span class="material-symbols-outlined text-[16px]">chevron_right</span> Games <span class="material-symbols-outlined text-[16px]">chevron_right</span> <span class="font-medium text-on-surface">Find the Connection</span>
+        <button class="ml-auto flex items-center gap-1 px-3 py-1.5 border border-primary/20 rounded bg-surface-container hover:bg-surface-container-high transition-colors text-on-surface">
+            <span class="material-symbols-outlined text-[18px]">help</span> How it works ?
+        </button>
+    </div>
+
+    <!-- Header -->
+    <div class="text-center mb-12">
+        <div class="flex items-center justify-center gap-4 mb-2">
+            <div class="h-[1px] w-12 bg-primary/30"></div>
+            <span class="material-symbols-outlined text-primary-container">diamond</span>
+            <div class="h-[1px] w-12 bg-primary/30"></div>
+        </div>
+        <h1 class="font-headline-xl text-headline-xl text-on-background mb-3">FIND THE CONNECTION</h1>
+        <p class="font-body-lg text-body-lg text-on-surface-variant">Two cultures. One possible connection. Can you discover the link?</p>
+    </div>
+
+    <!-- Main Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+        <!-- Left Sidebar: Progress -->
+        <aside class="lg:col-span-3">
+            <div class="bg-inverse-surface rounded-lg p-6 text-on-primary border border-primary/10 relative overflow-hidden h-full">
+                <div class="absolute inset-0 historical-motif opacity-5 bg-repeat"></div>
+                <div class="relative z-10">
+                    <h3 class="font-label-caps text-label-caps text-primary-fixed mb-6 tracking-widest border-b border-primary/20 pb-2">YOUR PROGRESS</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full border border-primary-container/30 flex items-center justify-center bg-inverse-surface/50 text-primary-fixed">
+                                <span class="material-symbols-outlined">extension</span>
+                            </div>
+                            <div>
+                                <p class="font-body-md text-sm text-on-primary/70 mb-1">Connections Solved</p>
+                                <p class="font-headline-lg-mobile text-headline-lg-mobile text-primary-fixed">7 / 25</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full border border-primary-container/30 flex items-center justify-center bg-inverse-surface/50 text-primary-fixed">
+                                <span class="material-symbols-outlined">emoji_events</span>
+                            </div>
+                            <div>
+                                <p class="font-body-md text-sm text-on-primary/70 mb-1">Streak</p>
+                                <p class="font-headline-lg-mobile text-headline-lg-mobile text-primary-fixed">12 days</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full border border-primary-container/30 flex items-center justify-center bg-inverse-surface/50 text-primary-fixed">
+                                <span class="material-symbols-outlined">workspace_premium</span>
+                            </div>
+                            <div>
+                                <p class="font-body-md text-sm text-on-primary/70 mb-1">Level</p>
+                                <p class="font-headline-lg-mobile text-headline-lg-mobile text-primary-fixed">Explorer</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="passport.html" class="w-full mt-8 py-2 px-4 border border-primary-container text-primary-fixed rounded hover:bg-primary-container/10 transition-colors font-body-md flex items-center justify-center gap-2">
+                        View Passport <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Center Content: Game Area -->
+        <div class="lg:col-span-6 flex flex-col gap-gutter">
+            <!-- Cards Container -->
+            <div class="relative bg-surface-container rounded-lg p-6 border border-primary/10 shadow-[0_4px_20px_-4px_rgba(60,40,0,0.05)] flex-grow flex flex-col">
+                <div class="flex flex-col md:flex-row gap-6 relative flex-grow">
+                    <!-- Connection Line & Question Mark -->
+                    <div class="hidden md:flex absolute top-[30%] left-[45%] right-[45%] items-center justify-center z-20 pointer-events-none">
+                        <div class="absolute w-full h-[2px] bg-primary-container border-t border-dashed border-inverse-surface z-0"></div>
+                        <div class="w-14 h-14 rounded-full bg-inverse-surface text-primary-fixed flex items-center justify-center shadow-lg border-2 border-surface z-10">
+                            <span class="font-headline-lg text-headline-lg">?</span>
+                        </div>
+                    </div>
+                    <!-- Card 1: India -->
+                    <div class="flex-1 bg-surface rounded overflow-hidden border border-outline-variant relative group">
+                        <div class="absolute top-3 left-3 bg-inverse-surface text-primary-fixed font-label-caps text-[10px] px-2 py-1 rounded z-10 tracking-wider">INDIA</div>
+                        <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/80 flex items-center justify-center z-10 text-on-surface hover:text-error transition-colors backdrop-blur-sm">
+                            <span class="material-symbols-outlined text-[20px]">favorite</span>
+                        </button>
+                        <div class="h-48 relative overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A highly detailed, cinematic wide shot of Rani Ki Vav, an ancient intricately carved stepwell in India, stone architecture, warm sunlight casting deep shadows, premium museum photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGSPKPafaeoYP_J2I5JKFd7nb-M_3oVlTgJ_SILJ8Gxn2CHwmmS6S8P6wQ68sPWs27_hyNny-yYIix1y68ZXlcCu4sbZDQG37XoVy5ZaAChUpTuZnVvipOFz8JpJl0yrJXA8YfxCA913rWSa_iKwGREp8dp_rHv2H-Ghyhl3h8QzPtY8DFHX3ySOlRmTFE7KJ8VvY4Ks_oAhbORxCeaX5pcoFiTYFGVdcAqzx7fU7YNLNa3-kjUoeiWA"/>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">Rani Ki Vav</h4>
+                            <p class="text-on-surface-variant text-sm mb-3 font-medium">Gujarat</p>
+                            <p class="text-on-surface-variant font-body-md text-sm leading-relaxed">An intricately designed stepwell built in the 11th century.</p>
+                        </div>
+                    </div>
+                    <!-- Card 2: Persia -->
+                    <div class="flex-1 bg-surface rounded overflow-hidden border border-outline-variant relative group">
+                        <div class="absolute top-3 left-3 bg-inverse-surface text-primary-fixed font-label-caps text-[10px] px-2 py-1 rounded z-10 tracking-wider">PERSIA</div>
+                        <button class="absolute top-3 right-3 w-8 h-8 rounded-full bg-surface/80 flex items-center justify-center z-10 text-on-surface hover:text-error transition-colors backdrop-blur-sm">
+                            <span class="material-symbols-outlined text-[20px]">favorite</span>
+                        </button>
+                        <div class="h-48 relative overflow-hidden">
+                            <img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A cinematic, detailed wide shot of the ancient Qanat system landscape in Iran, a line of circular shafts leading into mountains, arid desert environment, warm golden hour lighting, premium museum photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmxGDfJ8a9-LrQ32TPhCSmaVrNKpJ0bSX1gbd8sAQv_ltlqGBKOHFQUJLxlSeY0yMIovKeTW7mEcJFJd2-m9EU7l2Rzp-GE4tjg-6slKnJTW3F6YFBLltuNHmFjTO9DpyHXt6VKz-NWSZFmPPT6yBFsHlke7h3PzV-6qwJjPUaaLMxv6bAOsDNHmhm6LLsUqJJYha8osvIl5rFxHoO2ZQLN5ANGpV_A8bC1rHEuVQWP0B9mhrKfaRZ9Q"/>
+                        </div>
+                        <div class="p-5">
+                            <h4 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface mb-1">Qanat System</h4>
+                            <p class="text-on-surface-variant text-sm mb-3 font-medium">Iran (Persia)</p>
+                            <p class="text-on-surface-variant font-body-md text-sm leading-relaxed">An ancient water management system using underground channels.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Multiple Choice Area -->
+                <div class="mt-8 pt-6 border-t border-primary/10">
+                    <div class="text-center mb-6">
+                        <p class="font-headline-lg-mobile text-lg text-on-background font-semibold">What do you think connects these two?</p>
+                        <p class="text-on-surface-variant text-sm">Choose your guess to reveal the connection.</p>
+                    </div>
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 mb-6">
+                        <button class="py-3 px-2 border border-outline-variant rounded bg-surface hover:bg-surface-container-high transition-colors flex flex-col items-center justify-center gap-2 text-sm font-medium text-on-surface text-center">
+                            <span class="material-symbols-outlined text-on-surface-variant">account_balance</span>
+                            Similar<br/>Architecture
+                        </button>
+                        <button class="py-3 px-2 border-2 border-primary-container rounded bg-surface-container-low transition-colors flex flex-col items-center justify-center gap-2 text-sm font-medium text-on-surface text-center relative">
+                            <span class="absolute -top-2 -right-2 bg-primary-container text-inverse-surface rounded-full w-5 h-5 flex items-center justify-center"><span class="material-symbols-outlined text-[14px]">check</span></span>
+                            <span class="material-symbols-outlined text-primary">water_drop</span>
+                            Water<br/>Management
+                        </button>
+                        <button class="py-3 px-2 border border-outline-variant rounded bg-surface hover:bg-surface-container-high transition-colors flex flex-col items-center justify-center gap-2 text-sm font-medium text-on-surface text-center">
+                            <span class="material-symbols-outlined text-on-surface-variant">self_improvement</span>
+                            Religious<br/>Influence
+                        </button>
+                        <button class="py-3 px-2 border border-outline-variant rounded bg-surface hover:bg-surface-container-high transition-colors flex flex-col items-center justify-center gap-2 text-sm font-medium text-on-surface text-center">
+                            <span class="material-symbols-outlined text-on-surface-variant">handshake</span>
+                            Trade &amp; Cultural<br/>Exchange
+                        </button>
+                    </div>
+                    <div class="flex justify-center">
+                        <button class="bg-[#1b4332] text-white px-8 py-3 rounded font-body-md font-medium hover:bg-opacity-90 transition-opacity flex items-center gap-2">
+                            Reveal Connection <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Sidebar: Hints & Info -->
+        <aside class="lg:col-span-3 flex flex-col gap-gutter">
+            <!-- Hints -->
+            <div class="bg-surface-container rounded-lg p-5 border border-primary/10 shadow-[0_4px_20px_-4px_rgba(60,40,0,0.05)]">
+                <h3 class="font-label-caps text-label-caps text-on-surface mb-4 tracking-widest flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary-container">lightbulb</span> HINTS
+                </h3>
+                <ul class="space-y-4 mb-6">
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary/60 mt-0.5">psychology</span>
+                        <span class="font-body-md text-sm text-on-surface-variant">Both are genius solutions to a common need.</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-primary/60 mt-0.5">explore</span>
+                        <span class="font-body-md text-sm text-on-surface-variant">One is above ground, the other below ground.</span>
+                    </li>
+                    <li class="flex items-start gap-3 opacity-50">
+                        <span class="material-symbols-outlined text-primary/60 mt-0.5">wb_sunny</span>
+                        <span class="font-body-md text-sm text-on-surface-variant">Both helped civilizations thrive in harsh climates.</span>
+                    </li>
+                </ul>
+                <button class="w-full py-2 px-4 border border-outline-variant text-on-surface rounded hover:bg-surface-container-high transition-colors font-body-md text-sm flex items-center justify-center gap-2">
+                    Show Another Hint <span class="text-error text-xs">(-1 <span class="material-symbols-outlined text-[12px]">local_fire_department</span>)</span>
+                </button>
+            </div>
+            <!-- Difficulty -->
+            <div class="bg-surface-container rounded-lg p-5 border border-primary/10 shadow-[0_4px_20px_-4px_rgba(60,40,0,0.05)]">
+                <div class="flex items-center justify-between mb-2">
+                    <h3 class="font-label-caps text-label-caps text-on-surface tracking-widest flex items-center gap-2">
+                        <span class="material-symbols-outlined text-primary-container">speed</span> DIFFICULTY LEVEL
+                    </h3>
+                    <span class="text-[#e85d04] font-medium text-sm">Medium</span>
+                </div>
+                <p class="font-body-md text-sm text-on-surface-variant mt-2 border-t border-primary/10 pt-3">Keep going! You're doing great.</p>
+            </div>
+            <!-- Share -->
+            <div class="bg-surface-container rounded-lg p-5 border border-primary/10 shadow-[0_4px_20px_-4px_rgba(60,40,0,0.05)]">
+                <h3 class="font-label-caps text-label-caps text-on-surface mb-2 tracking-widest flex items-center gap-2">
+                    <span class="material-symbols-outlined text-primary-container">group</span> SHARE YOUR GUESS
+                </h3>
+                <p class="font-body-md text-sm text-on-surface-variant mb-4">Discuss with friends or in a room</p>
+                <button class="w-full py-2 px-4 border border-outline-variant text-on-surface rounded hover:bg-surface-container-high transition-colors font-body-md text-sm flex items-center justify-center gap-2">
+                    <span class="material-symbols-outlined text-[18px]">meeting_room</span> Open Cultural Room <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+                </button>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-inverse-surface dark:bg-inverse-surface full-width bottom-0 bg-inverse-surface border-t border-primary/10 flat no shadows opacity-100 hover:opacity-80 transition-opacity flex flex-col gap-unit items-center w-full pt-section-gap pb-margin-mobile px-margin-mobile text-center relative z-20 mt-12">
+    <h2 class="font-display-lg text-primary mb-4">VIRASAT</h2>
+    <div class="flex gap-6 mb-6">
+        <a class="font-body-md text-body-md text-on-primary/60 hover:text-primary transition-colors" href="#">About Heritage</a>
+        <a class="font-body-md text-body-md text-on-primary/60 hover:text-primary transition-colors" href="#">Contribution Guide</a>
+        <a class="font-body-md text-body-md text-on-primary/60 hover:text-primary transition-colors" href="#">Privacy Archives</a>
+        <a class="font-body-md text-body-md text-on-primary/60 hover:text-primary transition-colors" href="#">Terms of Discovery</a>
+    </div>
+    <p class="font-body-md text-body-md text-on-primary/60">VIRASAT © 2024. LEARN · SHARE · PRESERVE</p>
+</footer>
+</body>
+</html>
