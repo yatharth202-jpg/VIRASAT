@@ -1,0 +1,88 @@
+/* ==========================================================================
+   VIRASAT HERITAGE PLATFORM - DESIGN TOKENS
+   Custodial, scholarly, and profoundly premium digital museum design system.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Work+Sans:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Brand Pillars */
+  --gold-primary: #C5A059;
+  --gold-bright: #D8B268;
+  --gold-hover: #B58F45;
+  --gold-deep: #775A19;
+  --gold-glow: rgba(197, 160, 89, 0.35);
+  --gold-border: rgba(197, 160, 89, 0.28);
+  --gold-subtle: rgba(197, 160, 89, 0.12);
+  --gold-fixed: #FFDEA5;
+
+  /* Surfaces & Parchment */
+  --surface-parchment: #F5F1E6;
+  --surface-parchment-light: #FFF9F3;
+  --surface-parchment-warm: #F2ECE0;
+  --surface-container-card: #FFFFFF;
+  --surface-container-muted: #F8F4EC;
+  --surface-container-elevated: #FAF6EF;
+  
+  /* Dark Museum Containers */
+  --dark-bg: #090B0E;
+  --dark-surface: #0E1318;
+  --dark-card: #131922;
+  --dark-card-border: rgba(197, 160, 89, 0.22);
+  --dark-subtle: #1C232F;
+  --dark-text-primary: #F8EFE6;
+  --dark-text-secondary: #C4BBB0;
+  --dark-text-muted: #8E877C;
+
+  /* Typography Colors (Light Background) */
+  --text-headline: #1E1B16;
+  --text-body: #423C32;
+  --text-muted: #726A5C;
+  --text-subtle: #968D7E;
+
+  /* Status & Verification Colors */
+  --accent-correct: #1E7E34;
+  --accent-correct-bg: #EAF7EE;
+  --accent-correct-border: #97E2AB;
+  --accent-incorrect: #C0392B;
+  --accent-incorrect-bg: #FDF2F2;
+  --accent-streak-flame: #E65100;
+  --accent-token-gold: #FFB300;
+
+  /* Typography Families */
+  --font-display: 'Playfair Display', 'Cinzel', Georgia, serif;
+  --font-serif-accent: 'Cinzel', 'Playfair Display', serif;
+  --font-body: 'Work Sans', system-ui, -apple-system, sans-serif;
+  --font-ui: 'Manrope', 'Work Sans', sans-serif;
+
+  /* Spacing Scale */
+  --space-unit: 8px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+  --container-max: 1360px;
+
+  /* Elevation & Shadows (Warm Museum Shadows) */
+  --shadow-warm-sm: 0 2px 6px rgba(45, 30, 10, 0.04), 0 1px 2px rgba(45, 30, 10, 0.03);
+  --shadow-warm-md: 0 8px 20px rgba(45, 30, 10, 0.06), 0 2px 6px rgba(45, 30, 10, 0.04);
+  --shadow-warm-lg: 0 16px 36px rgba(45, 30, 10, 0.08), 0 4px 12px rgba(45, 30, 10, 0.04);
+  --shadow-gold-glow: 0 0 25px rgba(197, 160, 89, 0.35);
+  --shadow-dark-card: 0 12px 30px rgba(0, 0, 0, 0.45);
+
+  /* Border Radii */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 280ms cubic-bezier(0.25, 1, 0.5, 1);
+  --transition-smooth: 450ms cubic-bezier(0.16, 1, 0.3, 1);
+}
