@@ -1,0 +1,104 @@
+/* ==========================================================================
+   VIRASAT DESIGN SYSTEM - AETHERIS CULTURAL HERITAGE TOKENS
+   ========================================================================== */
+
+:root {
+  /* Color System */
+  --color-surface-dark: #131313;
+  --color-surface-darker: #0d0d0d;
+  --color-surface-header: #1a1412;
+  --color-surface-hero: #16100d;
+  --color-surface-bottom-banner: #120e0c;
+
+  /* Parchment Canvas */
+  --color-bg-parchment: #f5e6d3;
+  --color-bg-parchment-texture: #f3dfc8;
+  --color-bg-card: #fff9f0;
+  --color-bg-card-hover: #ffffff;
+  --color-card-border: #e6d5bf;
+  --color-card-border-subtle: rgba(142, 107, 72, 0.18);
+
+  /* Accents & Golds */
+  --color-gold-primary: #d4af37;
+  --color-gold-muted: #c5a059;
+  --color-gold-bright: #f2ca50;
+  --color-gold-deep: #9d7b27;
+  --color-gold-glow: rgba(212, 175, 55, 0.35);
+
+  /* Earthy & Terracotta */
+  --color-terracotta: #8b5e3c;
+  --color-terracotta-hover: #754b2d;
+  --color-terracotta-active: #603d24;
+  --color-terracotta-light: #fbf5ef;
+
+  /* Helper Highlight Green */
+  --color-help-bg: #e8edde;
+  --color-help-border: #d4dec4;
+  --color-help-text: #2f4028;
+  --color-help-subtext: #4e5f47;
+
+  /* Typography Colors */
+  --color-text-primary-dark: #3e2723;
+  --color-text-secondary-dark: #63534a;
+  --color-text-muted-dark: #8c7a6e;
+  
+  --color-text-primary-light: #f5f2e9;
+  --color-text-secondary-light: #d0c5af;
+  --color-text-muted-light: #99907c;
+
+  /* Typography Scales */
+  --font-serif: 'Libre Caslon Text', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+
+  /* Elevation Shadows */
+  --shadow-sm: 0 2px 4px rgba(62, 39, 35, 0.05);
+  --shadow-md: 0 4px 12px rgba(62, 39, 35, 0.08);
+  --shadow-lg: 0 10px 24px rgba(62, 39, 35, 0.12);
+  --shadow-hero-glow: 0 0 35px rgba(212, 175, 55, 0.15);
+
+  /* Border Radius */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 9999px;
+
+  /* Transitions */
+  --transition-fast: 0.18s ease;
+  --transition-smooth: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-spring: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Reset & Base Defaults */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-parchment);
+  color: var(--color-text-primary-dark);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Base Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ede0cf;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5a059;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a3823d;
+}

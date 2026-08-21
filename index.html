@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virasat - Elder Wisdom Vault | Cultural Heritage Preservation</title>
+  
+  <!-- Google Fonts: Libre Caslon Text, Manrope, Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/design-tokens.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/wisdom-vault.css">
+  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/home-toggle.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HOMEPAGE INTEGRATION & TOGGLE CONTROL BAR (DEMO CONTROLLER)
+       ========================================================================== -->
+  <div class="home-integration-bar">
+    <div class="integration-info">
+      <span class="integration-badge">Interactive Module</span>
+      <span>Homepage Toggle Integration Ready • Aetheris Cultural Design System</span>
+    </div>
+    <div class="integration-switch-wrap">
+      <span>View Mode:</span>
+      <div class="view-mode-toggle">
+        <button id="viewModeHomeBtn" class="view-mode-btn" title="View Full Website Homepage with Vault Entry">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+          Home Page
+        </button>
+        <button id="viewModeVaultBtn" class="view-mode-btn active" title="View Elder Wisdom Vault Section">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polygon points="12 8 8 12 12 16 12 8"></polygon></svg>
+          Wisdom Vault
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       GLOBAL VIRASAT HEADER
+       ========================================================================== -->
+  <header class="virasat-global-header">
+    <a href="#" class="brand-container" id="headerBrandLogo">
+      <!-- Mandala Emblem -->
+      <svg class="brand-mandala" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.8">
+        <circle cx="24" cy="24" r="21" stroke-dasharray="2 3"/>
+        <circle cx="24" cy="24" r="14"/>
+        <circle cx="24" cy="24" r="6" fill="currentColor" fill-opacity="0.3"/>
+        <path d="M24 3v42M3 24h42M9.15 9.15l29.7 29.7M38.85 9.15L9.15 38.85" stroke-linecap="round"/>
+        <circle cx="24" cy="24" r="2.5" fill="currentColor"/>
+      </svg>
+      <div class="brand-text-wrap">
+        <span class="brand-title">VIRASAT</span>
+        <span class="brand-tagline">LEARN • SHARE • PRESERVE</span>
+      </div>
+    </a>
+
+    <!-- Center Navigation -->
+    <nav class="header-nav">
+      <a href="#" class="nav-link" id="navLinkHome">Home</a>
+      <a href="#" class="nav-link">Explore</a>
+      <a href="#" class="nav-link">Journey</a>
+      <a href="#" class="nav-link">Games</a>
+      <a href="#" class="nav-link">Passport</a>
+      <a href="#" class="nav-link active" id="navLinkWisdomVault">Wisdom Vault</a>
+      <a href="#" class="nav-link">Rooms</a>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="header-actions">
+      <button class="action-btn" title="Search Portal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </button>
+      <button class="action-btn" title="Notifications">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+        <span class="badge-dot"></span>
+      </button>
+      <button class="action-btn avatar-btn" title="User Profile">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SIMULATED WEBSITE HOME PAGE VIEW (TOGGLE STATE 1)
+       ========================================================================== -->
+  <main id="websiteHomeView" class="website-home-view">
+    <div class="home-hero-banner">
+      <h1 class="home-main-title">Preserving India's Living Heritage</h1>
+      <p class="home-main-desc">
+        Journey through centuries of ancient arts, folk traditions, monumental architecture, and oral storytelling passed down from elders across 28 states.
+      </p>
+
+      <!-- Section Toggle Trigger Card -->
+      <div class="home-vault-launcher-card">
+        <div class="launcher-info">
+          <span class="launcher-badge">Featured Interactive Section</span>
+          <h2 class="launcher-title">Elder Wisdom Vault</h2>
+          <p class="launcher-desc">
+            Explore 1,200+ authentic oral memories, ancient culinary secrets, artisanal crafts, and folk wisdom recorded directly from our cherished elders.
+          </p>
+        </div>
+        <button id="launchVaultFromHomeBtn" class="launcher-action-btn">
+          Open Wisdom Vault
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+        </button>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==========================================================================
+       ELDER WISDOM VAULT SECTION COMPONENT (TOGGLE STATE 2 / EMBEDDED SECTION)
+       ========================================================================== -->
+  <section id="wisdomVaultSection" class="wisdom-vault-section-component">
+    
+    <!-- 1. Atmospheric Hero Section -->
+    <div class="hero-vault-section">
+      <div class="hero-content-grid">
+        
+        <!-- Left: Elder & Grandchild photo -->
+        <div class="hero-image-pane">
+          <img src="assets/images/hero-elder-child.jpg" alt="Indian Elder Grandmother teaching grandchild by candlelight" class="hero-elder-img">
+          <div class="hero-image-overlay-glow"></div>
+        </div>
+
+        <!-- Center: Title, Description & Impact Stats -->
+        <div class="hero-text-center">
+          <div class="vault-ornament">
+            <span class="ornament-line"></span>
+            <span class="ornament-diamond">◆</span>
+            <span class="ornament-line"></span>
+          </div>
+
+          <h1 class="hero-vault-title">Elder Wisdom Vault</h1>
+          <p class="hero-vault-subtitle">— Stories that survived generations —</p>
+          <p class="hero-vault-desc">
+            A living archive of knowledge, traditions and memories shared by our elders. Listen, learn and keep our heritage alive.
+          </p>
+
+          <!-- Horizontal Impact Stats Pill -->
+          <div class="hero-stats-pill">
+            <div class="stat-item">
+              <div class="stat-num-row">
+                <svg class="stat-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <span>1,248</span>
+              </div>
+              <span class="stat-label">Written Stories</span>
+            </div>
+
+            <div class="stat-item">
+              <div class="stat-num-row">
+                <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                <span>356</span>
+              </div>
+              <span class="stat-label">Elders</span>
+            </div>
+
+            <div class="stat-item">
+              <div class="stat-num-row">
+                <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                <span>28</span>
+              </div>
+              <span class="stat-label">Languages & Dialects</span>
+            </div>
+
+            <div class="stat-item">
+              <div class="stat-num-row">
+                <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                <span>195</span>
+              </div>
+              <span class="stat-label">Communities</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Parchment Quote Card & Vintage Lantern -->
+        <div class="hero-quote-pane">
+          <div class="parchment-quote-card">
+            <img src="assets/images/tree-watermark.jpg" alt="Watermark" class="quote-watermark-tree">
+            <div class="quote-mark">“</div>
+            <p class="quote-body">
+              What we know today must become what someone preserved before us. Now it's our turn.
+            </p>
+            <div class="quote-author">
+              — Shared by <span>Dadi Kamala Devi</span>, Byaktnta
+            </div>
+          </div>
+
+          <div class="lantern-wrap">
+            <img src="assets/images/lantern.jpg" alt="Traditional Glowing Lantern" class="hero-lantern-img">
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 2. Main Content Area (Aged Parchment Background) -->
+    <div class="wisdom-vault-main-wrapper">
+      <div class="wisdom-vault-container">
+        
+        <!-- Top Bar: Category Tabs + Search + Filter -->
+        <div class="vault-topbar">
+          <div class="vault-tabs">
+            <button class="vault-tab-btn active" data-tab="featured">Featured</button>
+            <button class="vault-tab-btn" data-tab="recent">Recent Stories</button>
+            <button class="vault-tab-btn" data-tab="region">By Region</button>
+            <button class="vault-tab-btn" data-tab="topic">By Topic</button>
+            <button class="vault-tab-btn" data-tab="language">By Language</button>
+          </div>
+
+          <div class="vault-search-actions">
+            <div class="search-input-wrap">
+              <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+              <input type="text" id="vaultSearchInput" class="vault-search-input" placeholder="Search stories, topics, or elders...">
+            </div>
+            <button id="vaultFilterBtn" class="vault-filter-btn" title="Refine Filters">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+              Filter
+            </button>
+          </div>
+        </div>
+
+        <!-- 2-Column Main Content Grid -->
+        <div class="vault-content-grid">
+          
+          <!-- LEFT COLUMN (Featured 2x2, Topics Carousel, Language Tags) -->
+          <div class="left-column">
+            
+            <!-- A. Featured Stories Grid -->
+            <section class="featured-stories-section">
+              <div class="section-title-wrap">
+                <svg class="section-star-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg>
+                <h2 class="section-title">Featured Stories</h2>
+              </div>
+
+              <div class="featured-stories-grid">
+                
+                <!-- Story Card 1: Recipe -->
+                <article class="story-card" data-story-id="1">
+                  <div class="story-thumbnail-pane">
+                    <img src="assets/images/recipe-laddoos.jpg" alt="Festive Laddoos" class="story-thumb-img">
+                    <span class="story-badge-tag">Recipe</span>
+                    <div class="story-duration-pill">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                      <span>05:23</span>
+                    </div>
+                  </div>
+                  <div class="story-info-pane">
+                    <div>
+                      <div class="story-header-row">
+                        <h3 class="story-headline">The secret behind our festive laddoos</h3>
+                        <button class="bookmark-btn" title="Save Story">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                        </button>
+                      </div>
+                      <p class="story-excerpt">Dadi Shanta shares the traditional method down in our family for over 100 years.</p>
+                    </div>
+                    <div class="story-meta-footer">
+                      <div class="story-teller-wrap">
+                        <span class="teller-avatar-dot">👵</span>
+                        <span>Dadi Shanta Devi</span>
+                      </div>
+                      <span class="story-location-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Punjab
+                      </span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Story Card 2: Craft -->
+                <article class="story-card" data-story-id="2">
+                  <div class="story-thumbnail-pane">
+                    <img src="assets/images/craft-charkha.jpg" alt="Charkha Spinning" class="story-thumb-img">
+                    <span class="story-badge-tag">Craft</span>
+                    <div class="story-duration-pill">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                      <span>04:11</span>
+                    </div>
+                  </div>
+                  <div class="story-info-pane">
+                    <div>
+                      <div class="story-header-row">
+                        <h3 class="story-headline">Spinning stories with the charkha</h3>
+                        <button class="bookmark-btn" title="Save Story">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                        </button>
+                      </div>
+                      <p class="story-excerpt">Babuji explains how the charkha was a symbol of freedom, self-reliance, and pride.</p>
+                    </div>
+                    <div class="story-meta-footer">
+                      <div class="story-teller-wrap">
+                        <span class="teller-avatar-dot">👴</span>
+                        <span>Babu Harbans Singh</span>
+                      </div>
+                      <span class="story-location-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Gujarat
+                      </span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Story Card 3: Tradition -->
+                <article class="story-card" data-story-id="3">
+                  <div class="story-thumbnail-pane">
+                    <img src="assets/images/tradition-folk-art.jpg" alt="Village Wall Painting" class="story-thumb-img">
+                    <span class="story-badge-tag">Tradition</span>
+                    <div class="story-duration-pill">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                      <span>06:07</span>
+                    </div>
+                  </div>
+                  <div class="story-info-pane">
+                    <div>
+                      <div class="story-header-row">
+                        <h3 class="story-headline">Why we paint before we pray</h3>
+                        <button class="bookmark-btn" title="Save Story">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                        </button>
+                      </div>
+                      <p class="story-excerpt">The meaning behind our village art the first look of all on the art of the divine.</p>
+                    </div>
+                    <div class="story-meta-footer">
+                      <div class="story-teller-wrap">
+                        <span class="teller-avatar-dot">👵</span>
+                        <span>Dadi Parvati Bai</span>
+                      </div>
+                      <span class="story-location-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Madhya Pradesh
+                      </span>
+                    </div>
+                  </div>
+                </article>
+
+                <!-- Story Card 4: Folk Tale -->
+                <article class="story-card" data-story-id="4">
+                  <div class="story-thumbnail-pane">
+                    <img src="assets/images/elder-storyteller.jpg" alt="Nana Jora Storyteller" class="story-thumb-img">
+                    <span class="story-badge-tag">Folk Tale</span>
+                    <div class="story-duration-pill">
+                      <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                      <span>13:42</span>
+                    </div>
+                  </div>
+                  <div class="story-info-pane">
+                    <div>
+                      <div class="story-header-row">
+                        <h3 class="story-headline">The brave princess of our village</h3>
+                        <button class="bookmark-btn" title="Save Story">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+                        </button>
+                      </div>
+                      <p class="story-excerpt">A forgotten folk tale of courage, known photos, recipe, wisdom and a promise kept.</p>
+                    </div>
+                    <div class="story-meta-footer">
+                      <div class="story-teller-wrap">
+                        <span class="teller-avatar-dot">👴</span>
+                        <span>Nana Jora Rana</span>
+                      </div>
+                      <span class="story-location-wrap">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        Rajasthan
+                      </span>
+                    </div>
+                  </div>
+                </article>
+
+              </div>
+            </section>
+
+            <!-- B. Explore by Topic Horizontal Carousel -->
+            <section class="topics-section">
+              <div class="section-title-wrap">
+                <h2 class="section-title">Explore By Topic</h2>
+              </div>
+
+              <div class="topics-carousel-wrap">
+                <div class="topics-carousel" id="topicsCarousel">
+                  
+                  <!-- Topic 1 -->
+                  <div class="topic-card-item">
+                    <div class="topic-icon-wrap">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+                    </div>
+                    <div class="topic-text-meta">
+                      <span class="topic-title">Food & Recipes</span>
+                      <span class="topic-count">162 Stories</span>
+                    </div>
+                  </div>
+
+                  <!-- Topic 2 -->
+                  <div class="topic-card-item">
+                    <div class="topic-icon-wrap">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    </div>
+                    <div class="topic-text-meta">
+                      <span class="topic-title">Folk Tales</span>
+                      <span class="topic-count">156 Stories</span>
+                    </div>
+                  </div>
+
+                  <!-- Topic 3 -->
+                  <div class="topic-card-item">
+                    <div class="topic-icon-wrap">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <div class="topic-text-meta">
+                      <span class="topic-title">Festivals</span>
+                      <span class="topic-count">196 Stories</span>
+                    </div>
+                  </div>
+
+                  <!-- Topic 4 -->
+                  <div class="topic-card-item">
+                    <div class="topic-icon-wrap">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18V5l12-2v13"></path><circle cx="6" cy="18" r="3"></circle><circle cx="18" cy="16" r="3"></circle></svg>
+                    </div>
+                    <div class="topic-text-meta">
+                      <span class="topic-title">Songs & Music</span>
+                      <span class="topic-count">143 Stories</span>
+                    </div>
+                  </div>
+
+                  <!-- Topic 5 -->
+                  <div class="topic-card-item">
+                    <div class="topic-icon-wrap">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <div class="topic-text-meta">
+                      <span class="topic-title">Life Lessons</span>
+                      <span class="topic-count">97 Stories</span>
+                    </div>
+                  </div>
+
+                  <!-- Topic 6 -->
+                  <div class="topic-card-item">
+                    <div class="topic-icon-wrap">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                    </div>
+                    <div class="topic-text-meta">
+                      <span class="topic-title">Home Remedies</span>
+                      <span class="topic-count">101 Stories</span>
+                    </div>
+                  </div>
+
+                </div>
+
+                <button id="topicNextBtn" class="carousel-nav-btn" title="Scroll Topics">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                </button>
+              </div>
+            </section>
+
+            <!-- C. Stories In Your Language Tag Cloud -->
+            <section class="languages-section">
+              <div class="section-title-wrap">
+                <h2 class="section-title">Stories In Your Language</h2>
+              </div>
+
+              <div class="languages-pills-row">
+                <a href="#" class="lang-pill">
+                  <span class="lang-script">हिंदी</span>
+                  <span class="lang-count">812</span>
+                </a>
+                <a href="#" class="lang-pill">
+                  <span class="lang-script">ਪੰਜਾਬੀ</span>
+                  <span class="lang-count">198</span>
+                </a>
+                <a href="#" class="lang-pill">
+                  <span class="lang-script">ગુજરાતી</span>
+                  <span class="lang-count">156</span>
+                </a>
+                <a href="#" class="lang-pill">
+                  <span class="lang-script">বাংলা</span>
+                  <span class="lang-count">102</span>
+                </a>
+                <a href="#" class="lang-pill">
+                  <span class="lang-script">தமிழ்</span>
+                  <span class="lang-count">102</span>
+                </a>
+                <a href="#" class="lang-pill">
+                  <span class="lang-script">मराठी</span>
+                  <span class="lang-count">88</span>
+                </a>
+                <a href="#" class="lang-pill">
+                  <span class="lang-script">తెలుగు</span>
+                  <span class="lang-count">45</span>
+                </a>
+                <a href="#" class="view-all-langs-link">
+                  View All Languages →
+                </a>
+              </div>
+            </section>
+
+          </div>
+
+          <!-- RIGHT COLUMN (Sidebar: Share Wisdom, Impact, How It Helps) -->
+          <aside class="right-column-sidebar">
+            
+            <!-- 1. Share Your Wisdom Card -->
+            <div class="share-wisdom-card">
+              <img src="assets/images/tree-watermark.jpg" alt="Tree Watermark" class="sidebar-tree-watermark">
+              <h3 class="share-wisdom-title">Share Your Wisdom</h3>
+              <p class="share-wisdom-subtext">
+                Help preserve for future generations. Invite elders to share.
+              </p>
+
+              <div class="contribution-tiles-grid">
+                <!-- Record -->
+                <button class="action-tile-btn" data-action="record">
+                  <svg class="action-tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                  <span class="action-tile-label">Record</span>
+                </button>
+                <!-- Upload -->
+                <button class="action-tile-btn" data-action="upload">
+                  <svg class="action-tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg>
+                  <span class="action-tile-label">Upload</span>
+                </button>
+                <!-- Nominate -->
+                <button class="action-tile-btn" data-action="nominate">
+                  <svg class="action-tile-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                  <span class="action-tile-label">Nominate</span>
+                </button>
+              </div>
+
+              <button class="btn-contribute-primary" data-action="contribute-now">Contribute Now</button>
+            </div>
+
+            <!-- 2. Wisdom Impact Card -->
+            <div class="wisdom-impact-card">
+              <h3 class="impact-card-title">Wisdom Impact</h3>
+              <div class="impact-metrics-row">
+                <div class="impact-metric-col">
+                  <div class="impact-metric-num">1,248</div>
+                  <div class="impact-metric-label">Stories</div>
+                </div>
+                <div class="impact-metric-col">
+                  <div class="impact-metric-num">9,532</div>
+                  <div class="impact-metric-label">Minutes of Wisdom</div>
+                </div>
+                <div class="impact-metric-col">
+                  <div class="impact-metric-num">102</div>
+                  <div class="impact-metric-label">Active Contributors</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 3. How Your Contribution Helps (Muted Sage Green #E8EDDE) -->
+            <div class="how-helps-card">
+              <h3 class="how-helps-title">How Your Contribution Helps</h3>
+              <div class="how-helps-list">
+                
+                <div class="how-helps-item">
+                  <div class="help-icon-bubble">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                  </div>
+                  <div class="help-item-content">
+                    <span class="help-item-heading">Preserves Heritage</span>
+                    <span class="help-item-desc">Preserves heritage, knowledge and memories preserved beyond our time.</span>
+                  </div>
+                </div>
+
+                <div class="how-helps-item">
+                  <div class="help-icon-bubble">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                  </div>
+                  <div class="help-item-content">
+                    <span class="help-item-heading">Educates Youth</span>
+                    <span class="help-item-desc">Educates youth on cultural identity, ancestral roots and timeless values.</span>
+                  </div>
+                </div>
+
+                <div class="how-helps-item">
+                  <div class="help-icon-bubble">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                  </div>
+                  <div class="help-item-content">
+                    <span class="help-item-heading">Builds Community</span>
+                    <span class="help-item-desc">Connects generations and bridges cultural gaps across communities.</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </aside>
+
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 3. Bottom Atmospheric Banner -->
+    <footer class="bottom-wisdom-banner">
+      <div class="bottom-banner-content">
+        <p class="bottom-banner-quote">The past lives in stories. The future lives in remembering them.</p>
+        <p class="bottom-banner-sub">Let's keep the chain of wisdom unbroken.</p>
+      </div>
+      <img src="assets/images/tree-watermark.jpg" alt="Banner Silhouette" class="bottom-banner-silhouette">
+    </footer>
+
+  </section>
+
+  <!-- ==========================================================================
+       MODALS: RECORD, UPLOAD, NOMINATE, CONTRIBUTE & STORY VIEWER
+       ========================================================================== -->
+
+  <!-- 1. Record Story Modal -->
+  <div id="recordModal" class="modal-backdrop">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon-badge">🎙️</div>
+          <h3 class="modal-title">Record Oral Wisdom</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="record-box-visual">
+          <button id="micRecordBtn" class="mic-pulse-btn" title="Click to Start/Pause Recording">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+          </button>
+          <div class="record-timer-text" id="recordTimerDisplay">00:00</div>
+          <span id="recordStatusText" style="font-size: 0.82rem; color: #635043;">Click the microphone to start recording</span>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Story Title / Topic</label>
+          <input type="text" class="form-control" placeholder="e.g. My Grandmother's Monsoon Lullaby">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Elder's Name</label>
+            <input type="text" class="form-control" placeholder="e.g. Dadi Shanta Devi">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Language / Dialect</label>
+            <input type="text" class="form-control" placeholder="e.g. Punjabi / Hindi">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary btn-modal-close">Cancel</button>
+        <button class="btn-primary-action btn-modal-close">Save & Archive</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Upload Story Modal -->
+  <div id="uploadModal" class="modal-backdrop">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon-badge">📤</div>
+          <h3 class="modal-title">Upload Archive File</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">Select Audio, Video, or Scanned Document</label>
+          <input type="file" class="form-control" accept="audio/*,video/*,image/*,.pdf">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Story Title</label>
+          <input type="text" class="form-control" placeholder="e.g. Traditional Weaving Song of Assam">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Category</label>
+            <select class="form-control">
+              <option>Recipe</option>
+              <option>Craft</option>
+              <option>Tradition</option>
+              <option>Folk Tale</option>
+              <option>Songs & Music</option>
+              <option>Life Lessons</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Region / State</label>
+            <input type="text" class="form-control" placeholder="e.g. Gujarat">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary btn-modal-close">Cancel</button>
+        <button class="btn-primary-action btn-modal-close">Upload & Preserve</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Nominate Elder Modal -->
+  <div id="nominateModal" class="modal-backdrop">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon-badge">✍️</div>
+          <h3 class="modal-title">Nominate a Village Elder</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">Elder's Full Name</label>
+          <input type="text" class="form-control" placeholder="e.g. Nana Jora Rana">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Age (Approx.)</label>
+            <input type="number" class="form-control" placeholder="78">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Village / Town</label>
+            <input type="text" class="form-control" placeholder="Jaisalmer, Rajasthan">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">What wisdom or heritage craft should our team record?</label>
+          <textarea class="form-control" rows="3" placeholder="Describe their unique knowledge, story or craft..."></textarea>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary btn-modal-close">Cancel</button>
+        <button class="btn-primary-action btn-modal-close">Submit Nomination</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Contribute Now Modal (Hub) -->
+  <div id="contributeModal" class="modal-backdrop">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon-badge">✨</div>
+          <h3 class="modal-title">Contribute to the Vault</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <p style="font-size: 0.88rem; color: #5a473c; margin-bottom: 1.2rem;">
+          Choose how you would like to help preserve living heritage for generations ahead:
+        </p>
+        <div class="contribution-tiles-grid" style="margin-bottom: 1rem;">
+          <button class="action-tile-btn" onclick="Modals.openModal('recordModal')">
+            <span style="font-size: 1.5rem;">🎙️</span>
+            <span class="action-tile-label">Record Voice</span>
+          </button>
+          <button class="action-tile-btn" onclick="Modals.openModal('uploadModal')">
+            <span style="font-size: 1.5rem;">📤</span>
+            <span class="action-tile-label">Upload Media</span>
+          </button>
+          <button class="action-tile-btn" onclick="Modals.openModal('nominateModal')">
+            <span style="font-size: 1.5rem;">✍️</span>
+            <span class="action-tile-label">Nominate Elder</span>
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary btn-modal-close">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Story Audio Player & Viewer Modal -->
+  <div id="storyPlayerModal" class="modal-backdrop">
+    <div class="modal-window story-player-window">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon-badge">📖</div>
+          <h3 class="modal-title" id="playerTitle">Story Title</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="player-hero-img-wrap">
+        <img id="playerHeroImg" src="assets/images/recipe-laddoos.jpg" alt="Story Feature" class="player-hero-img">
+      </div>
+      <div class="player-controls-bar">
+        <button class="player-play-btn" title="Play Story Recording">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+        </button>
+        <div class="player-track-progress">
+          <div class="progress-bar-rail">
+            <div class="progress-bar-fill"></div>
+          </div>
+          <div class="track-time-labels">
+            <span>01:42</span>
+            <span id="playerDuration">05:23</span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-body">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem;">
+          <span id="playerAuthor" style="font-weight: 700; color: #2e1b12; font-size: 0.95rem;">Dadi Shanta Devi • Punjab</span>
+          <span style="font-family: var(--font-mono); font-size: 0.8rem; background: #ebdcc9; padding: 2px 8px; border-radius: 4px; color: #5a473b;">Verified Oral Archive</span>
+        </div>
+        <p id="playerExcerpt" style="font-family: var(--font-serif); font-size: 0.95rem; line-height: 1.6; color: #3c291e;"></p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary btn-modal-close">Close</button>
+        <button class="btn-primary-action btn-modal-close">Share Story</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. Filter Modal -->
+  <div id="filterModal" class="modal-backdrop">
+    <div class="modal-window">
+      <div class="modal-header">
+        <div class="modal-title-wrap">
+          <div class="modal-icon-badge">⚡</div>
+          <h3 class="modal-title">Filter Wisdom Vault</h3>
+        </div>
+        <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">By Region / State</label>
+          <select class="form-control">
+            <option>All Regions of India</option>
+            <option>Punjab & North</option>
+            <option>Gujarat & West</option>
+            <option>Rajasthan & Desert</option>
+            <option>Madhya Pradesh & Central</option>
+            <option>Assam & North East</option>
+            <option>Tamil Nadu & South</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">By Media Type</label>
+          <select class="form-control">
+            <option>All Media (Audio, Video, Text)</option>
+            <option>Oral Audio Recordings</option>
+            <option>Visual Craft Demonstrations</option>
+            <option>Written Manuscripts</option>
+          </select>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary btn-modal-close">Reset</button>
+        <button class="btn-primary-action btn-modal-close">Apply Filters</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Modules -->
+  <script src="js/wisdom-vault.js"></script>
+  <script src="js/modals.js"></script>
+  <script src="js/home-integration.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
