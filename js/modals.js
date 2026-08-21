@@ -1,6 +1,6 @@
 /**
  * ==========================================================================
- * VIRASAT - MODALS, AUDIO RECORDING & CONTRIBUTION CONTROLLER
+ * VIRASAT - MODALS, AUDIO RECORDING & VERIFICATION SUBMISSION CONTROLLER
  * ==========================================================================
  */
 
@@ -117,7 +117,7 @@ const Modals = (() => {
             mediaRecorder.start();
           }
         } catch (err) {
-          console.warn('Microphone permission not granted or unavailable; using audio synthesis fallback.');
+          console.warn('Microphone permission not granted; using audio synthesizer fallback.');
         }
 
         isRecording = true;
@@ -133,10 +133,10 @@ const Modals = (() => {
           timerDisplay.textContent = `${mins}:${secs}`;
         }, 1000);
       } else {
-        // Pause / Stop Recording
+        // Stop Recording
         isRecording = false;
         micBtn.classList.remove('recording');
-        statusText.textContent = '✅ Voice recorded! Click "Save & Archive" to add to Wisdom Vault';
+        statusText.textContent = '✅ Voice recorded! Ready to submit for verification testing.';
         clearInterval(recordTimer);
 
         if (mediaRecorder && mediaRecorder.state === 'recording') {
@@ -160,7 +160,8 @@ const Modals = (() => {
         const mins = String(Math.floor(Math.max(recordSeconds, 65) / 60)).padStart(2, '0');
         const secs = String(Math.max(recordSeconds, 65) % 60).padStart(2, '0');
 
-        WisdomVault.addNewStory({
+        // Submit for Verification
+        WisdomVault.addStoryForVerification({
           category: 'Oral Wisdom',
           title: title,
           author: author,
@@ -172,7 +173,7 @@ const Modals = (() => {
           audioUrl: recordedAudioUrl
         });
 
-        // Reset form & close
+        // Reset
         if (titleInput) titleInput.value = '';
         if (elderInput) elderInput.value = '';
         if (langInput) langInput.value = '';
@@ -221,9 +222,10 @@ const Modals = (() => {
         const category = catSelect?.value || 'Craft';
         const author = elderInput?.value.trim() || 'Babu Mohan Lal';
         const location = regionInput?.value.trim() || 'Assam';
-        const fullStory = descInput?.value.trim() || 'A rare traditional craftsmanship recording uploaded to the Virasat Elder Wisdom Vault.';
+        const fullStory = descInput?.value.trim() || 'A rare traditional craftsmanship recording uploaded for verification testing.';
 
-        WisdomVault.addNewStory({
+        // Submit for Verification
+        WisdomVault.addStoryForVerification({
           category: category,
           title: title,
           author: author,
@@ -265,9 +267,9 @@ const Modals = (() => {
       const author = nameInput?.value.trim() || 'Nana Jora Rana';
       const age = ageInput?.value.trim() || '78';
       const location = villageInput?.value.trim() || 'Jaisalmer, Rajasthan';
-      const fullStory = craftInput?.value.trim() || 'Nominated master storyteller and artisan whose oral traditions and craftsmanship are being documented for future generations.';
+      const fullStory = craftInput?.value.trim() || 'Nominated master storyteller and artisan whose oral traditions and craftsmanship are submitted for community review.';
 
-      WisdomVault.addNewStory({
+      WisdomVault.addStoryForVerification({
         category: 'Folk Tale',
         title: `Oral Heritage of ${author} (Age ${age})`,
         author: author,
