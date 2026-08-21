@@ -110,61 +110,54 @@
 </head>
 <body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
 
-<!-- TopAppBar -->
-<header class="sticky top-0 z-50 w-full shadow-md border-b border-primary/20 bg-inverse-surface dark:bg-inverse-surface transition-all">
-    <div class="flex justify-between items-center w-full px-margin-mobile md:px-8 py-4 max-w-container-max mx-auto">
-        <!-- Brand Logo -->
-        <div class="flex items-center gap-2 cursor-pointer" onclick="window.location.href='index.html'">
-            <span class="material-symbols-outlined text-primary text-3xl">account_balance</span>
+<!-- TopAppBar matching Homepage -->
+<header class="bg-inverse-surface border-b border-primary/20 shadow-md flex justify-between items-center w-full px-4 sm:px-6 md:px-8 py-4 z-50 sticky top-0">
+    <div class="max-w-[1440px] mx-auto w-full flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group cursor-pointer">
+            <div class="w-10 h-10 flex items-center justify-center text-[#D4A359] group-hover:rotate-45 transition-transform duration-700 shrink-0">
+                <svg viewBox="0 0 100 100" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="goldGradVault" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#ECC484"/>
+                            <stop offset="60%" stop-color="#D4A359"/>
+                            <stop offset="100%" stop-color="#A97A32"/>
+                        </radialGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="46" stroke="url(#goldGradVault)" stroke-width="2.5"/>
+                    <circle cx="50" cy="50" r="41" stroke="url(#goldGradVault)" stroke-width="1.5"/>
+                    <circle cx="50" cy="50" r="38" stroke="url(#goldGradVault)" stroke-width="1" stroke-dasharray="2 3"/>
+                    <g stroke="url(#goldGradVault)" stroke-width="1.8" fill="url(#goldGradVault)" fill-opacity="0.25">
+                        <polygon points="50,14 47,40 50,42 53,40"/>
+                        <polygon points="50,86 47,60 50,58 53,60"/>
+                        <polygon points="14,50 40,47 42,50 40,53"/>
+                        <polygon points="86,50 60,47 58,50 60,53"/>
+                    </g>
+                    <circle cx="50" cy="50" r="12" stroke="url(#goldGradVault)" stroke-width="2" fill="#120F0B"/>
+                    <circle cx="50" cy="50" r="3" fill="url(#goldGradVault)"/>
+                </svg>
+            </div>
             <div class="flex flex-col">
-                <span class="font-display-lg text-headline-lg text-primary tracking-widest uppercase leading-none">VIRASAT</span>
-                <span class="font-label-caps text-label-caps text-on-primary/70 text-[8px] tracking-[0.2em] mt-1">LEARN · SHARE · PRESERVE</span>
+                <span class="font-bold tracking-[0.2em] text-[#FAF5EE] uppercase text-lg leading-tight">VIRASAT</span>
+                <span class="text-[8px] font-extrabold tracking-[0.25em] text-[#D4A359] uppercase">LEARN · SHARE · PRESERVE</span>
             </div>
-        </div>
-        <!-- Navigation Links (Desktop) -->
-        <nav class="hidden md:flex items-center gap-6">
-            <a class="flex items-center gap-2 text-on-primary/70 hover:text-primary transition-colors group" href="index.html">
-                <span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed duration-300">home</span>
-                <span class="font-label-caps text-label-caps">Home</span>
-            </a>
-            <a class="flex items-center gap-2 text-on-primary/70 hover:text-primary transition-colors group" href="#">
-                <span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed duration-300">explore</span>
-                <span class="font-label-caps text-label-caps">Explore</span>
-            </a>
-            <a class="flex items-center gap-2 text-on-primary/70 hover:text-primary transition-colors group" href="#">
-                <span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed duration-300">route</span>
-                <span class="font-label-caps text-label-caps">Journey</span>
-            </a>
-            <a class="flex items-center gap-2 text-on-primary/70 hover:text-primary transition-colors group" href="games.html">
-                <span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed duration-300">sports_esports</span>
-                <span class="font-label-caps text-label-caps">Games</span>
-            </a>
-            <a class="flex items-center gap-2 text-on-primary/70 hover:text-primary transition-colors group" href="passport.html">
-                <span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed duration-300">import_contacts</span>
-                <span class="font-label-caps text-label-caps">Passport</span>
-            </a>
-            <a class="flex items-center gap-2 text-primary border-b-2 border-primary pb-1 group" href="wisdom-vault.html">
-                <span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed duration-300" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
-                <span class="font-label-caps text-label-caps">Wisdom Vault</span>
-            </a>
-            <a class="flex items-center gap-2 text-on-primary/70 hover:text-primary transition-colors group" href="#">
-                <span class="material-symbols-outlined text-[20px] group-hover:text-primary-fixed duration-300">meeting_room</span>
-                <span class="font-label-caps text-label-caps">Rooms</span>
-            </a>
+        </a>
+
+        <nav class="hidden md:flex gap-8 items-center text-[13.5px] font-sans font-medium text-[#FAF5EE]/80">
+            <a class="hover:text-[#D4A359] transition-colors" href="index.html#explore-section">Explore</a>
+            <a class="hover:text-[#D4A359] transition-colors" href="passport.html">Journey</a>
+            <a class="hover:text-[#D4A359] transition-colors" href="games.html">Games</a>
+            <a class="hover:text-[#D4A359] transition-colors" href="passport.html">Passport</a>
+            <a class="text-[#D4A359] border-b border-[#D4A359] pb-0.5 font-semibold" href="wisdom-vault.html">Wisdom Vault</a>
+            <a class="hover:text-[#D4A359] transition-colors" href="games.html#culturalRoomModal">Rooms</a>
         </nav>
-        <!-- Trailing Actions & Profile -->
+
         <div class="flex items-center gap-4">
-            <button class="text-on-primary/70 hover:text-primary transition-colors scale-95 active:opacity-80">
-                <span class="material-symbols-outlined">search</span>
+            <a href="games.html" class="w-9 h-9 rounded-full flex items-center justify-center text-[#FAF5EE]/80 hover:text-[#D4A359] hover:bg-white/5 transition-all" title="Search">
+                <span class="material-symbols-outlined text-[20px]">search</span>
+            </a>
+            <button onclick="window.location.href='games.html'" class="px-5 py-1.5 rounded-full border border-[#D4A359]/70 text-[#FAF5EE] hover:bg-[#D4A359]/15 hover:border-[#D4A359] font-caps text-xs font-semibold tracking-wider transition-all">
+                Sign In
             </button>
-            <button class="text-on-primary/70 hover:text-primary transition-colors scale-95 active:opacity-80">
-                <span class="material-symbols-outlined">notifications</span>
-            </button>
-            <div class="flex items-center gap-2 cursor-pointer border border-primary/20 rounded-full pl-1 pr-3 py-1 hover:bg-white/5 transition-colors">
-                <img class="w-8 h-8 rounded-full object-cover border border-primary/50" data-alt="A small, high-quality circular avatar portrait of an explorer wearing a subtle historical artifact, warm lighting, professional photography, set against a dark background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOGZHHITjo2s01o9vzY6gBO6-3NMb69eChpqJbf9uTh3qtIoSpkypfhXcusXfAboFbX9unZqsKzs5BaO5sL7p6MgbHvirKUvEpM7BhlpmxSROC2ft0f9oJvkvXt8es0dvdSuN1qExrNXXmdZQYIl0bN6YncYgnlkfV6nCrtETP6jUppphDqY99DjFf9S1FCBmB32q4HGU5FWuxOVSu0AjjZ-Nk67eJoe_DY0kQSGRmHMl4-SVgRqwYrg"/>
-                <span class="font-label-caps text-label-caps text-on-primary/90 hidden sm:block">Explorer</span>
-                <span class="material-symbols-outlined text-on-primary/70 text-sm hidden sm:block">expand_more</span>
-            </div>
         </div>
     </div>
 </header>

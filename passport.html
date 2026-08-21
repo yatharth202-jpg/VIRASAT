@@ -110,54 +110,54 @@
 </head>
 <body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col wood-texture">
 
-<!-- TopAppBar -->
-<header class="bg-inverse-surface border-b border-primary/20 shadow-md flex justify-between items-center w-full px-margin-mobile md:px-8 py-4 z-50 sticky top-0">
-    <div class="flex items-center gap-4 cursor-pointer" onclick="window.location.href='index.html'">
-        <div class="font-display-lg text-headline-lg text-primary tracking-widest uppercase">VIRASAT</div>
-    </div>
-    <nav class="hidden md:flex gap-8 items-center">
-        <a class="text-on-primary/70 hover:text-primary transition-colors font-label-caps text-label-caps flex items-center gap-2 group" href="index.html">
-            <span class="material-symbols-outlined text-lg group-hover:text-primary-fixed duration-300">home</span>
-            Home
+<!-- TopAppBar matching Homepage -->
+<header class="bg-inverse-surface border-b border-primary/20 shadow-md flex justify-between items-center w-full px-4 sm:px-6 md:px-8 py-4 z-50 sticky top-0">
+    <div class="max-w-[1440px] mx-auto w-full flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group cursor-pointer">
+            <div class="w-10 h-10 flex items-center justify-center text-[#D4A359] group-hover:rotate-45 transition-transform duration-700 shrink-0">
+                <svg viewBox="0 0 100 100" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="goldGradPass" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#ECC484"/>
+                            <stop offset="60%" stop-color="#D4A359"/>
+                            <stop offset="100%" stop-color="#A97A32"/>
+                        </radialGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="46" stroke="url(#goldGradPass)" stroke-width="2.5"/>
+                    <circle cx="50" cy="50" r="41" stroke="url(#goldGradPass)" stroke-width="1.5"/>
+                    <circle cx="50" cy="50" r="38" stroke="url(#goldGradPass)" stroke-width="1" stroke-dasharray="2 3"/>
+                    <g stroke="url(#goldGradPass)" stroke-width="1.8" fill="url(#goldGradPass)" fill-opacity="0.25">
+                        <polygon points="50,14 47,40 50,42 53,40"/>
+                        <polygon points="50,86 47,60 50,58 53,60"/>
+                        <polygon points="14,50 40,47 42,50 40,53"/>
+                        <polygon points="86,50 60,47 58,50 60,53"/>
+                    </g>
+                    <circle cx="50" cy="50" r="12" stroke="url(#goldGradPass)" stroke-width="2" fill="#120F0B"/>
+                    <circle cx="50" cy="50" r="3" fill="url(#goldGradPass)"/>
+                </svg>
+            </div>
+            <div class="flex flex-col">
+                <span class="font-bold tracking-[0.2em] text-[#FAF5EE] uppercase text-lg leading-tight">VIRASAT</span>
+                <span class="text-[8px] font-extrabold tracking-[0.25em] text-[#D4A359] uppercase">LEARN · SHARE · PRESERVE</span>
+            </div>
         </a>
-        <a class="text-on-primary/70 hover:text-primary transition-colors font-label-caps text-label-caps flex items-center gap-2 group" href="#">
-            <span class="material-symbols-outlined text-lg group-hover:text-primary-fixed duration-300">explore</span>
-            Explore
-        </a>
-        <a class="text-on-primary/70 hover:text-primary transition-colors font-label-caps text-label-caps flex items-center gap-2 group" href="#">
-            <span class="material-symbols-outlined text-lg group-hover:text-primary-fixed duration-300">map</span>
-            Journey
-        </a>
-        <a class="text-on-primary/70 hover:text-primary transition-colors font-label-caps text-label-caps flex items-center gap-2 group" href="games.html">
-            <span class="material-symbols-outlined text-lg group-hover:text-primary-fixed duration-300">sports_esports</span>
-            Games
-        </a>
-        <a class="text-primary border-b-2 border-primary pb-1 font-label-caps text-label-caps flex items-center gap-2 group" href="passport.html">
-            <span class="material-symbols-outlined text-lg">book</span>
-            Passport
-        </a>
-        <a class="text-on-primary/70 hover:text-primary transition-colors font-label-caps text-label-caps flex items-center gap-2 group" href="wisdom-vault.html">
-            <span class="material-symbols-outlined text-lg group-hover:text-primary-fixed duration-300">auto_stories</span>
-            Wisdom Vault
-        </a>
-        <a class="text-on-primary/70 hover:text-primary transition-colors font-label-caps text-label-caps flex items-center gap-2 group" href="#">
-            <span class="material-symbols-outlined text-lg group-hover:text-primary-fixed duration-300">meeting_room</span>
-            Rooms
-        </a>
-    </nav>
-    <div class="flex items-center gap-6">
-        <button class="text-on-primary/70 hover:text-primary-fixed duration-300 scale-95 active:opacity-80 transition-all">
-            <span class="material-symbols-outlined">search</span>
-        </button>
-        <button class="text-on-primary/70 hover:text-primary-fixed duration-300 scale-95 active:opacity-80 transition-all">
-            <span class="material-symbols-outlined">local_fire_department</span>
-        </button>
-        <button class="text-on-primary/70 hover:text-primary-fixed duration-300 scale-95 active:opacity-80 transition-all">
-            <span class="material-symbols-outlined">notifications</span>
-        </button>
-        <div class="flex items-center gap-2 cursor-pointer group">
-            <img alt="Explorer Profile Avatar" class="w-8 h-8 rounded-full border border-primary/30 group-hover:border-primary transition-colors object-cover" data-alt="A small, circular avatar portrait of an explorer against a subtly textured, warm museum-like background. The lighting is soft and focused, highlighting a serene expression. The color palette is earthy with deep blacks, warm whites, and subtle gold accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYN718cxYva9VVKdSBU3AkP5QUVAyhNF2AL_GY-nmQdGVtCLLQQNTPx5VUGtYrCZkri9dFlNBhwFIXgzA7H6O_eBQmXICENw-OzDLJtp8O8zTJSnJqGS-PscDd2ivZmT8AJNvvKAW45SSwZtB6yE0KvBtVBBumQSYKwsWjDLsIALuxachyy0LCmpCUcnIBEk_irYxbFer1B-wgwHWQwFs6iVIfr_irYtlt9XOuQS3b9RdqDqQl8kk9vQ"/>
-            <span class="hidden lg:block text-on-primary/70 font-label-caps text-label-caps group-hover:text-primary transition-colors">Namaste, Explorer</span>
+
+        <nav class="hidden md:flex gap-8 items-center text-[13.5px] font-sans font-medium text-[#FAF5EE]/80">
+            <a class="hover:text-[#D4A359] transition-colors" href="index.html#explore-section">Explore</a>
+            <a class="hover:text-[#D4A359] transition-colors" href="passport.html">Journey</a>
+            <a class="hover:text-[#D4A359] transition-colors" href="games.html">Games</a>
+            <a class="text-[#D4A359] border-b border-[#D4A359] pb-0.5 font-semibold" href="passport.html">Passport</a>
+            <a class="hover:text-[#D4A359] transition-colors" href="wisdom-vault.html">Wisdom Vault</a>
+            <a class="hover:text-[#D4A359] transition-colors" href="games.html#culturalRoomModal">Rooms</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+            <a href="games.html" class="w-9 h-9 rounded-full flex items-center justify-center text-[#FAF5EE]/80 hover:text-[#D4A359] hover:bg-white/5 transition-all" title="Search">
+                <span class="material-symbols-outlined text-[20px]">search</span>
+            </a>
+            <button onclick="window.location.href='games.html'" class="px-5 py-1.5 rounded-full border border-[#D4A359]/70 text-[#FAF5EE] hover:bg-[#D4A359]/15 hover:border-[#D4A359] font-caps text-xs font-semibold tracking-wider transition-all">
+                Sign In
+            </button>
         </div>
     </div>
 </header>

@@ -111,14 +111,14 @@
             <a href="games.html" class="hover:text-[#D4A359] transition-colors">Games</a>
             <a href="passport.html" class="hover:text-[#D4A359] transition-colors">Passport</a>
             <a href="wisdom-vault.html" class="hover:text-[#D4A359] transition-colors">Wisdom Vault</a>
-            <a href="#" class="hover:text-[#D4A359] transition-colors">Rooms</a>
+            <a href="games.html#culturalRoomModal" class="hover:text-[#D4A359] transition-colors">Rooms</a>
         </nav>
 
         <div class="flex items-center gap-4">
-            <button class="w-9 h-9 rounded-full flex items-center justify-center text-[#FAF5EE]/80 hover:text-[#D4A359] hover:bg-white/5 transition-all">
+            <a href="games.html" class="w-9 h-9 rounded-full flex items-center justify-center text-[#FAF5EE]/80 hover:text-[#D4A359] hover:bg-white/5 transition-all" title="Search">
                 <span class="material-symbols-outlined text-[20px]">search</span>
-            </button>
-            <button class="px-5 py-1.5 rounded-full border border-[#D4A359]/70 text-[#FAF5EE] hover:bg-[#D4A359]/15 hover:border-[#D4A359] font-caps text-xs font-semibold tracking-wider transition-all">
+            </a>
+            <button onclick="window.location.href='games.html'" class="px-5 py-1.5 rounded-full border border-[#D4A359]/70 text-[#FAF5EE] hover:bg-[#D4A359]/15 hover:border-[#D4A359] font-caps text-xs font-semibold tracking-wider transition-all">
                 Sign In
             </button>
         </div>
@@ -277,16 +277,16 @@
             </div>
         </div>
 
-        <div id="connection-module" class="lg:col-span-3 bento-card rounded-2xl p-6 flex flex-col justify-between text-center">
+        <div id="connection-module" onclick="window.location.href='games.html'" class="lg:col-span-3 bento-card rounded-2xl p-6 flex flex-col justify-between text-center cursor-pointer group hover:border-[#D4A359]">
             <div>
                 <div class="flex items-center justify-center gap-2 mb-1.5">
-                    <span class="material-symbols-outlined text-[#A97A32] text-[20px]">join_inner</span>
+                    <span class="material-symbols-outlined text-[#A97A32] text-[20px] group-hover:scale-110 transition-transform">join_inner</span>
                     <h3 class="font-caps text-[12.5px] font-bold tracking-[0.14em] text-[#211B14] uppercase">FIND THE CONNECTION</h3>
                 </div>
                 <p class="font-sans text-[13px] text-[#6B6255] mb-4">What connects these two?</p>
                 
                 <div class="flex items-center justify-center gap-2 my-2 relative">
-                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden shadow-sm border border-black/10">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden shadow-sm border border-black/10 group-hover:scale-105 transition-transform duration-300">
                         <img class="w-full h-full object-cover" alt="Konark Wheel" src="images/wheel-konark.jpg"/>
                     </div>
                     
@@ -294,7 +294,7 @@
                         <span class="font-bold text-xs">+</span>
                     </div>
 
-                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden shadow-sm border border-black/10">
+                    <div class="w-24 h-24 sm:w-28 sm:h-28 rounded-xl overflow-hidden shadow-sm border border-black/10 group-hover:scale-105 transition-transform duration-300">
                         <img class="w-full h-full object-cover" alt="Persian Mosaic" src="images/mosaic-persian.jpg"/>
                     </div>
                 </div>
@@ -302,7 +302,7 @@
                 <p class="font-heading italic text-[14px] text-[#6B6255] mt-3">Guess the cultural connection</p>
             </div>
 
-            <a href="games.html" class="w-full btn-dark py-3 rounded-full flex items-center justify-center gap-2 text-xs tracking-wider uppercase mt-4">
+            <a href="games.html" class="w-full btn-dark py-3 rounded-full flex items-center justify-center gap-2 text-xs tracking-wider uppercase mt-4 group-hover:bg-[#D4A359] group-hover:text-[#120F0B] transition-all">
                 Take the Challenge →
             </a>
         </div>
