@@ -149,7 +149,7 @@
             <div class="stat-item">
               <div class="stat-num-row">
                 <svg class="stat-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                <span>1,248</span>
+                <span id="heroStatStories">1,248</span>
               </div>
               <span class="stat-label">Written Stories</span>
             </div>
@@ -157,7 +157,7 @@
             <div class="stat-item">
               <div class="stat-num-row">
                 <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                <span>356</span>
+                <span id="heroStatElders">356</span>
               </div>
               <span class="stat-label">Elders</span>
             </div>
@@ -165,7 +165,7 @@
             <div class="stat-item">
               <div class="stat-num-row">
                 <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                <span>28</span>
+                <span id="heroStatLangs">28</span>
               </div>
               <span class="stat-label">Languages & Dialects</span>
             </div>
@@ -173,7 +173,7 @@
             <div class="stat-item">
               <div class="stat-num-row">
                 <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
-                <span>195</span>
+                <span id="heroStatComms">195</span>
               </div>
               <span class="stat-label">Communities</span>
             </div>
@@ -240,140 +240,9 @@
                 <h2 class="section-title">Featured Stories</h2>
               </div>
 
-              <div class="featured-stories-grid">
-                
-                <!-- Story Card 1: Recipe -->
-                <article class="story-card" data-story-id="1">
-                  <div class="story-thumbnail-pane">
-                    <img src="assets/images/recipe-laddoos.jpg" alt="Festive Laddoos" class="story-thumb-img">
-                    <span class="story-badge-tag">Recipe</span>
-                    <div class="story-duration-pill">
-                      <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                      <span>05:23</span>
-                    </div>
-                  </div>
-                  <div class="story-info-pane">
-                    <div>
-                      <div class="story-header-row">
-                        <h3 class="story-headline">The secret behind our festive laddoos</h3>
-                        <button class="bookmark-btn" title="Save Story">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-                        </button>
-                      </div>
-                      <p class="story-excerpt">Dadi Shanta shares the traditional method down in our family for over 100 years.</p>
-                    </div>
-                    <div class="story-meta-footer">
-                      <div class="story-teller-wrap">
-                        <span class="teller-avatar-dot">👵</span>
-                        <span>Dadi Shanta Devi</span>
-                      </div>
-                      <span class="story-location-wrap">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        Punjab
-                      </span>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Story Card 2: Craft -->
-                <article class="story-card" data-story-id="2">
-                  <div class="story-thumbnail-pane">
-                    <img src="assets/images/craft-charkha.jpg" alt="Charkha Spinning" class="story-thumb-img">
-                    <span class="story-badge-tag">Craft</span>
-                    <div class="story-duration-pill">
-                      <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                      <span>04:11</span>
-                    </div>
-                  </div>
-                  <div class="story-info-pane">
-                    <div>
-                      <div class="story-header-row">
-                        <h3 class="story-headline">Spinning stories with the charkha</h3>
-                        <button class="bookmark-btn" title="Save Story">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-                        </button>
-                      </div>
-                      <p class="story-excerpt">Babuji explains how the charkha was a symbol of freedom, self-reliance, and pride.</p>
-                    </div>
-                    <div class="story-meta-footer">
-                      <div class="story-teller-wrap">
-                        <span class="teller-avatar-dot">👴</span>
-                        <span>Babu Harbans Singh</span>
-                      </div>
-                      <span class="story-location-wrap">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        Gujarat
-                      </span>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Story Card 3: Tradition -->
-                <article class="story-card" data-story-id="3">
-                  <div class="story-thumbnail-pane">
-                    <img src="assets/images/tradition-folk-art.jpg" alt="Village Wall Painting" class="story-thumb-img">
-                    <span class="story-badge-tag">Tradition</span>
-                    <div class="story-duration-pill">
-                      <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                      <span>06:07</span>
-                    </div>
-                  </div>
-                  <div class="story-info-pane">
-                    <div>
-                      <div class="story-header-row">
-                        <h3 class="story-headline">Why we paint before we pray</h3>
-                        <button class="bookmark-btn" title="Save Story">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-                        </button>
-                      </div>
-                      <p class="story-excerpt">The meaning behind our village art the first look of all on the art of the divine.</p>
-                    </div>
-                    <div class="story-meta-footer">
-                      <div class="story-teller-wrap">
-                        <span class="teller-avatar-dot">👵</span>
-                        <span>Dadi Parvati Bai</span>
-                      </div>
-                      <span class="story-location-wrap">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        Madhya Pradesh
-                      </span>
-                    </div>
-                  </div>
-                </article>
-
-                <!-- Story Card 4: Folk Tale -->
-                <article class="story-card" data-story-id="4">
-                  <div class="story-thumbnail-pane">
-                    <img src="assets/images/elder-storyteller.jpg" alt="Nana Jora Storyteller" class="story-thumb-img">
-                    <span class="story-badge-tag">Folk Tale</span>
-                    <div class="story-duration-pill">
-                      <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
-                      <span>13:42</span>
-                    </div>
-                  </div>
-                  <div class="story-info-pane">
-                    <div>
-                      <div class="story-header-row">
-                        <h3 class="story-headline">The brave princess of our village</h3>
-                        <button class="bookmark-btn" title="Save Story">
-                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
-                        </button>
-                      </div>
-                      <p class="story-excerpt">A forgotten folk tale of courage, known photos, recipe, wisdom and a promise kept.</p>
-                    </div>
-                    <div class="story-meta-footer">
-                      <div class="story-teller-wrap">
-                        <span class="teller-avatar-dot">👴</span>
-                        <span>Nana Jora Rana</span>
-                      </div>
-                      <span class="story-location-wrap">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        Rajasthan
-                      </span>
-                    </div>
-                  </div>
-                </article>
-
+              <!-- Dynamically Rendered Stories Grid -->
+              <div class="featured-stories-grid" id="featuredStoriesGrid">
+                <!-- Story cards rendered dynamically by WisdomVault.renderStoriesGrid() -->
               </div>
             </section>
 
@@ -540,21 +409,21 @@
               <h3 class="impact-card-title">Wisdom Impact</h3>
               <div class="impact-metrics-row">
                 <div class="impact-metric-col">
-                  <div class="impact-metric-num">1,248</div>
+                  <div class="impact-metric-num" id="sideStatStories">1,248</div>
                   <div class="impact-metric-label">Stories</div>
                 </div>
                 <div class="impact-metric-col">
-                  <div class="impact-metric-num">9,532</div>
+                  <div class="impact-metric-num" id="sideStatMins">9,532</div>
                   <div class="impact-metric-label">Minutes of Wisdom</div>
                 </div>
                 <div class="impact-metric-col">
-                  <div class="impact-metric-num">102</div>
+                  <div class="impact-metric-num" id="sideStatContribs">102</div>
                   <div class="impact-metric-label">Active Contributors</div>
                 </div>
               </div>
             </div>
 
-            <!-- 3. How Your Contribution Helps (Muted Sage Green #E8EDDE) -->
+            <!-- 3. How Your Contribution Helps (Sage Green Shade #E8EDDE) -->
             <div class="how-helps-card">
               <h3 class="how-helps-title">How Your Contribution Helps</h3>
               <div class="how-helps-list">
@@ -635,22 +504,26 @@
 
         <div class="form-group">
           <label class="form-label">Story Title / Topic</label>
-          <input type="text" class="form-control" placeholder="e.g. My Grandmother's Monsoon Lullaby">
+          <input type="text" id="recordTitleInput" class="form-control" placeholder="e.g. My Grandmother's Monsoon Lullaby">
         </div>
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">Elder's Name</label>
-            <input type="text" class="form-control" placeholder="e.g. Dadi Shanta Devi">
+            <input type="text" id="recordElderInput" class="form-control" placeholder="e.g. Dadi Shanta Devi">
           </div>
           <div class="form-group">
-            <label class="form-label">Language / Dialect</label>
-            <input type="text" class="form-control" placeholder="e.g. Punjabi / Hindi">
+            <label class="form-label">Language / Dialect / Region</label>
+            <input type="text" id="recordLangInput" class="form-control" placeholder="e.g. Punjabi / Punjab">
           </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Story Details / Reflection</label>
+          <textarea id="recordDescInput" class="form-control" rows="2" placeholder="Brief summary of the oral story..."></textarea>
         </div>
       </div>
       <div class="modal-footer">
         <button class="btn-secondary btn-modal-close">Cancel</button>
-        <button class="btn-primary-action btn-modal-close">Save & Archive</button>
+        <button id="saveRecordSubmitBtn" class="btn-primary-action">Save & Archive</button>
       </div>
     </div>
   </div>
@@ -668,18 +541,18 @@
       <div class="modal-body">
         <div class="form-group">
           <label class="form-label">Select Audio, Video, or Scanned Document</label>
-          <input type="file" class="form-control" accept="audio/*,video/*,image/*,.pdf">
+          <input type="file" id="uploadFileInput" class="form-control" accept="audio/*,video/*,image/*,.pdf">
         </div>
         <div class="form-group">
           <label class="form-label">Story Title</label>
-          <input type="text" class="form-control" placeholder="e.g. Traditional Weaving Song of Assam">
+          <input type="text" id="uploadTitleInput" class="form-control" placeholder="e.g. Traditional Weaving Song of Assam">
         </div>
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">Category</label>
-            <select class="form-control">
+            <select id="uploadCategorySelect" class="form-control">
               <option>Recipe</option>
-              <option>Craft</option>
+              <option selected>Craft</option>
               <option>Tradition</option>
               <option>Folk Tale</option>
               <option>Songs & Music</option>
@@ -687,14 +560,24 @@
             </select>
           </div>
           <div class="form-group">
+            <label class="form-label">Elder's Name</label>
+            <input type="text" id="uploadElderInput" class="form-control" placeholder="e.g. Babu Mohan Lal">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
             <label class="form-label">Region / State</label>
-            <input type="text" class="form-control" placeholder="e.g. Gujarat">
+            <input type="text" id="uploadRegionInput" class="form-control" placeholder="e.g. Assam">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Summary</label>
+            <input type="text" id="uploadDescInput" class="form-control" placeholder="Brief story summary...">
           </div>
         </div>
       </div>
       <div class="modal-footer">
         <button class="btn-secondary btn-modal-close">Cancel</button>
-        <button class="btn-primary-action btn-modal-close">Upload & Preserve</button>
+        <button id="saveUploadSubmitBtn" class="btn-primary-action">Upload & Preserve</button>
       </div>
     </div>
   </div>
@@ -712,26 +595,26 @@
       <div class="modal-body">
         <div class="form-group">
           <label class="form-label">Elder's Full Name</label>
-          <input type="text" class="form-control" placeholder="e.g. Nana Jora Rana">
+          <input type="text" id="nominateNameInput" class="form-control" placeholder="e.g. Nana Jora Rana">
         </div>
         <div class="form-row">
           <div class="form-group">
             <label class="form-label">Age (Approx.)</label>
-            <input type="number" class="form-control" placeholder="78">
+            <input type="number" id="nominateAgeInput" class="form-control" placeholder="78">
           </div>
           <div class="form-group">
-            <label class="form-label">Village / Town</label>
-            <input type="text" class="form-control" placeholder="Jaisalmer, Rajasthan">
+            <label class="form-label">Village / State</label>
+            <input type="text" id="nominateVillageInput" class="form-control" placeholder="Jaisalmer, Rajasthan">
           </div>
         </div>
         <div class="form-group">
           <label class="form-label">What wisdom or heritage craft should our team record?</label>
-          <textarea class="form-control" rows="3" placeholder="Describe their unique knowledge, story or craft..."></textarea>
+          <textarea id="nominateCraftInput" class="form-control" rows="3" placeholder="Describe their unique knowledge, story or craft..."></textarea>
         </div>
       </div>
       <div class="modal-footer">
         <button class="btn-secondary btn-modal-close">Cancel</button>
-        <button class="btn-primary-action btn-modal-close">Submit Nomination</button>
+        <button id="saveNominateSubmitBtn" class="btn-primary-action">Submit Nomination</button>
       </div>
     </div>
   </div>
@@ -751,15 +634,15 @@
           Choose how you would like to help preserve living heritage for generations ahead:
         </p>
         <div class="contribution-tiles-grid" style="margin-bottom: 1rem;">
-          <button class="action-tile-btn" onclick="Modals.openModal('recordModal')">
+          <button class="action-tile-btn" onclick="Modals.closeModal('contributeModal'); Modals.openModal('recordModal');">
             <span style="font-size: 1.5rem;">🎙️</span>
             <span class="action-tile-label">Record Voice</span>
           </button>
-          <button class="action-tile-btn" onclick="Modals.openModal('uploadModal')">
+          <button class="action-tile-btn" onclick="Modals.closeModal('contributeModal'); Modals.openModal('uploadModal');">
             <span style="font-size: 1.5rem;">📤</span>
             <span class="action-tile-label">Upload Media</span>
           </button>
-          <button class="action-tile-btn" onclick="Modals.openModal('nominateModal')">
+          <button class="action-tile-btn" onclick="Modals.closeModal('contributeModal'); Modals.openModal('nominateModal');">
             <span style="font-size: 1.5rem;">✍️</span>
             <span class="action-tile-label">Nominate Elder</span>
           </button>
@@ -785,15 +668,15 @@
         <img id="playerHeroImg" src="assets/images/recipe-laddoos.jpg" alt="Story Feature" class="player-hero-img">
       </div>
       <div class="player-controls-bar">
-        <button class="player-play-btn" title="Play Story Recording">
+        <button id="playerPlayToggleBtn" class="player-play-btn" title="Play Audio">
           <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
         </button>
         <div class="player-track-progress">
-          <div class="progress-bar-rail">
-            <div class="progress-bar-fill"></div>
+          <div class="progress-bar-rail" id="playerProgressRail">
+            <div class="progress-bar-fill" id="playerProgressBarFill"></div>
           </div>
           <div class="track-time-labels">
-            <span>01:42</span>
+            <span id="playerCurrentTime">00:00</span>
             <span id="playerDuration">05:23</span>
           </div>
         </div>
@@ -801,7 +684,7 @@
       <div class="modal-body">
         <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.8rem;">
           <span id="playerAuthor" style="font-weight: 700; color: #2e1b12; font-size: 0.95rem;">Dadi Shanta Devi • Punjab</span>
-          <span style="font-family: var(--font-mono); font-size: 0.8rem; background: #ebdcc9; padding: 2px 8px; border-radius: 4px; color: #5a473b;">Verified Oral Archive</span>
+          <span id="playerCategoryBadge" style="font-family: var(--font-mono); font-size: 0.8rem; background: #ebdcc9; padding: 2px 8px; border-radius: 4px; color: #5a473b;">Verified Oral Archive</span>
         </div>
         <p id="playerExcerpt" style="font-family: var(--font-serif); font-size: 0.95rem; line-height: 1.6; color: #3c291e;"></p>
       </div>
