@@ -1,4 +1,4 @@
-﻿class VirasatConnectionGame {
+class VirasatConnectionGame {
   constructor(app) {
     this.app = app;
     this.currentConnection = null;
@@ -50,11 +50,11 @@
         <div class="culture-card-img-wrap">
           <img src="${cultureA.image}" alt="${cultureA.siteName}" class="culture-card-img" onerror="this.src='${cultureA.fallbackImage}'" />
           <span class="culture-origin-badge">${cultureA.badge}</span>
-          <button class="culture-bookmark-btn" title="Bookmark Artifact">â™¡</button>
+          <button class="culture-bookmark-btn" title="Bookmark Artifact">♡</button>
         </div>
         <div class="culture-card-body">
           <h3 class="culture-site-title">${cultureA.siteName}</h3>
-          <span class="culture-site-location">ðŸ“ ${cultureA.location}</span>
+          <span class="culture-site-location">📍 ${cultureA.location}</span>
           <p class="culture-site-desc">${cultureA.shortDesc}</p>
         </div>
       `;
@@ -65,11 +65,11 @@
         <div class="culture-card-img-wrap">
           <img src="${cultureB.image}" alt="${cultureB.siteName}" class="culture-card-img" onerror="this.src='${cultureB.fallbackImage}'" />
           <span class="culture-origin-badge">${cultureB.badge}</span>
-          <button class="culture-bookmark-btn" title="Bookmark Artifact">â™¡</button>
+          <button class="culture-bookmark-btn" title="Bookmark Artifact">♡</button>
         </div>
         <div class="culture-card-body">
           <h3 class="culture-site-title">${cultureB.siteName}</h3>
-          <span class="culture-site-location">ðŸ“ ${cultureB.location}</span>
+          <span class="culture-site-location">📍 ${cultureB.location}</span>
           <p class="culture-site-desc">${cultureB.shortDesc}</p>
         </div>
       `;
@@ -78,8 +78,8 @@
     document.querySelectorAll('.culture-bookmark-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
-        btn.textContent = btn.textContent === 'â™¡' ? 'â™¥' : 'â™¡';
-        btn.style.color = btn.textContent === 'â™¥' ? '#C5A059' : '#FFFFFF';
+        btn.textContent = btn.textContent === '♡' ? '♥' : '♡';
+        btn.style.color = btn.textContent === '♥' ? '#C5A059' : '#FFFFFF';
       });
     });
   }
@@ -88,7 +88,7 @@
     if (!this.centerConnector) return;
     if (this.isRevealed) {
       this.centerConnector.classList.add('revealed');
-      this.centerConnector.innerHTML = 'ðŸ”—';
+      this.centerConnector.innerHTML = '🔗';
       this.centerConnector.title = 'Connection Discovered!';
     } else {
       this.centerConnector.classList.remove('revealed');
@@ -133,7 +133,7 @@
 
     this.hintsListWrap.innerHTML = hints.slice(0, this.unlockedHintsCount).map(hint => `
       <div class="hint-item-bullet">
-        <span class="hint-icon">ðŸ’¡</span>
+        <span class="hint-icon">💡</span>
         <span>${hint.text}</span>
       </div>
     `).join('');
@@ -143,7 +143,7 @@
         this.showHintBtn.style.display = 'none';
       } else {
         this.showHintBtn.style.display = 'flex';
-        this.showHintBtn.innerHTML = `Show Another Hint (-1 ðŸ”¥)`;
+        this.showHintBtn.innerHTML = `Show Another Hint (-1 🔥)`;
       }
     }
   }
@@ -164,11 +164,13 @@
   updateRevealButtonState() {
     if (!this.revealBtn) return;
     if (this.isRevealed) {
-      this.revealBtn.textContent = 'âœ“ Connection Revealed';
+      this.revealBtn.textContent = '✓ Connection Revealed';
       this.revealBtn.classList.add('revealed-state');
     } else {
-      this.revealBtn.textContent = 'Reveal Connection â†’';
+      this.revealBtn.textContent = 'Reveal Connection →';
       this.revealBtn.classList.remove('revealed-state');
+    }
+  }s.revealBtn.classList.remove('revealed-state');
     }
   }
 
