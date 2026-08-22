@@ -256,13 +256,48 @@ class VirasatWisdomVaultApp {
     if (this.heroPlayBtn) {
       this.heroPlayBtn.addEventListener('click', () => {
         const featured = this.stories.find(s => s.id === 'gond-laddu-kamla-devi') || this.stories[0];
-        this.openStoryDetail(featured.id, true);
+        this.togglePlay(featured.id);
       });
+    }
+
+    // Preload speech synthesis voices
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.onvoiceschanged = () => {
+        this.loadAvailableVoices();
+      };
+      this.loadAvailableVoices();
     }
 
     window.addEventListener('virasat:passport-updated', () => {
       this.updateHeaderPassportXP();
     });
+  }
+
+  loadAvailableVoices() {
+    if ('speechSynthesis' in window) {
+      this.voices = window.speechSynthesis.getVoices();
+    }
+  }
+
+  getBestElderVoice() {
+    if (!this.voices || this.voices.length === 0) {
+      this.loadAvailableVoices();
+    }
+    if (!this.voices || this.voices.length === 0) return null;
+
+    // Preference: Indian English or Hindi or deep natural narrator voices
+    const indianVoices = this.voices.filter(v => 
+      v.lang.includes('en-IN') || v.lang.includes('hi-IN') || v.name.toLowerCase().includes('india')
+    );
+    if (indianVoices.length > 0) return indianVoices[0];
+
+    const naturalVoices = this.voices.filter(v => 
+      v.name.toLowerCase().includes('natural') || v.name.toLowerCase().includes('google') || v.name.toLowerCase().includes('guy') || v.name.toLowerCase().includes('george')
+    );
+    if (naturalVoices.length > 0) return naturalVoices[0];
+
+    const englishVoices = this.voices.filter(v => v.lang.startsWith('en'));
+    return englishVoices.length > 0 ? englishVoices[0] : this.voices[0];
   }
 
   updateHeaderPassportXP() {
@@ -401,7 +436,7 @@ class VirasatWisdomVaultApp {
       const isPlaying = this.currentlyPlayingId === story.id;
 
       return `
-        <div class="bento-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-[#D4A359] transition-all duration-300 shadow-sm" data-id="${story.id}">
+        <div class="bento-card rounded-2xl overflow-hidden flex flex-col justify-between group hover:border-[#D4A359] transition-all duration-300 shadow-sm ${isPlaying ? 'ring-2 ring-[#D4A359]' : ''}" data-id="${story.id}">
           <div>
             <!-- Image & Header Badges -->
             <div class="w-full h-52 relative overflow-hidden bg-black/10">
@@ -450,18 +485,27 @@ class VirasatWisdomVaultApp {
               </p>
 
               <!-- Audio Player Simulation Bar -->
-              <div class="p-3 rounded-xl bg-[#FAF5EE] border border-[#E4D8C7] flex items-center justify-between gap-3 mb-2">
-                <button onclick="window.wisdomApp.togglePlay('${story.id}')" class="w-8 h-8 rounded-full ${isPlaying ? 'bg-[#1C4436] text-white animate-pulse' : 'bg-[#D4A359] text-[#120F0B]'} flex items-center justify-center font-bold hover:scale-105 transition-transform cursor-pointer shrink-0" title="${isPlaying ? 'Pause Oral Recording' : 'Play Oral Recording'}">
-                  <span class="material-symbols-outlined text-[18px]">${isPlaying ? 'pause' : 'play_arrow'}</span>
+              <div class="p-3 rounded-xl ${isPlaying ? 'bg-[#181512] text-white border-[#D4A359]' : 'bg-[#FAF5EE] text-[#211B14] border-[#E4D8C7]'} border flex items-center justify-between gap-3 mb-2 transition-all duration-300">
+                <button onclick="window.wisdomApp.togglePlay('${story.id}')" class="w-9 h-9 rounded-full ${isPlaying ? 'bg-[#1C4436] text-[#6ee7b7]' : 'bg-[#D4A359] text-[#120F0B]'} flex items-center justify-center font-bold hover:scale-110 transition-all cursor-pointer shrink-0 shadow-md" title="${isPlaying ? 'Pause Oral Recording' : 'Play Oral Recording'}">
+                  <span class="material-symbols-outlined text-[20px]">${isPlaying ? 'pause' : 'play_arrow'}</span>
                 </button>
                 <div class="flex-1">
-                  <div class="text-[11px] font-bold text-[#211B14] leading-tight">Oral Audio Recording</div>
-                  <div class="text-[10px] text-[#8F8474] flex items-center gap-1">
-                    <span>${isPlaying ? 'Playing archive audio...' : `${story.audioLength} min`}</span>
-                    ${isPlaying ? '<span class="text-[#1C4436] font-bold">● LIVE</span>' : ''}
+                  <div class="text-[11.5px] font-bold ${isPlaying ? 'text-[#ECC484]' : 'text-[#211B14]'} leading-tight flex items-center gap-2">
+                    <span>Oral Audio Recording</span>
+                    ${isPlaying ? `
+                      <span class="inline-flex items-center gap-0.5">
+                        <span class="w-1 h-3 bg-[#D4A359] rounded-full animate-bounce"></span>
+                        <span class="w-1 h-4 bg-[#ECC484] rounded-full animate-bounce [animation-delay:0.15s]"></span>
+                        <span class="w-1 h-2 bg-[#D4A359] rounded-full animate-bounce [animation-delay:0.3s]"></span>
+                      </span>
+                    ` : ''}
+                  </div>
+                  <div class="text-[10px] ${isPlaying ? 'text-white/70' : 'text-[#8F8474]'} flex items-center gap-1.5 mt-0.5">
+                    <span>${isPlaying ? 'Playing Narration & Tanpura' : `${story.audioLength} min`}</span>
+                    ${isPlaying ? '<span class="text-[#6ee7b7] font-bold">● LIVE</span>' : ''}
                   </div>
                 </div>
-                <button onclick="window.wisdomApp.openStoryDetail('${story.id}', true)" class="text-[10.5px] font-bold text-[#A97A32] hover:underline font-caps">
+                <button onclick="window.wisdomApp.openStoryDetail('${story.id}', true)" class="text-[10.5px] font-bold ${isPlaying ? 'text-[#ECC484]' : 'text-[#A97A32]'} hover:underline font-caps">
                   Listen Full →
                 </button>
               </div>
@@ -491,22 +535,42 @@ class VirasatWisdomVaultApp {
     if (this.currentlyPlayingId === storyId) {
       this.stopAudio();
       this.currentlyPlayingId = null;
+      this.renderStories();
+      this.updateFloatingPlayer(null);
     } else {
       this.stopAudio();
       this.currentlyPlayingId = storyId;
+      this.renderStories();
       this.startOralAudioPlayback(story);
+      this.updateFloatingPlayer(story);
 
       if (window.VirasatPassportService) {
         window.VirasatPassportService.recordWisdomListen(story);
       }
     }
-    this.renderStories();
+
+    if (this.heroPlayBtn) {
+      const isHeroPlaying = this.currentlyPlayingId === 'gond-laddu-kamla-devi';
+      this.heroPlayBtn.innerHTML = `<span class="material-symbols-outlined text-[20px]">${isHeroPlaying ? 'pause' : 'play_arrow'}</span>`;
+    }
   }
 
   stopAudio() {
-    if (window.speechSynthesis) {
-      window.speechSynthesis.cancel();
+    if (this.keepAliveInterval) {
+      clearInterval(this.keepAliveInterval);
+      this.keepAliveInterval = null;
     }
+    if (this.droneInterval) {
+      clearInterval(this.droneInterval);
+      this.droneInterval = null;
+    }
+
+    if ('speechSynthesis' in window) {
+      try {
+        window.speechSynthesis.cancel();
+      } catch (e) {}
+    }
+
     if (this.audioDroneNodes) {
       try {
         this.audioDroneNodes.forEach(node => {
@@ -516,65 +580,191 @@ class VirasatWisdomVaultApp {
       } catch (e) {}
       this.audioDroneNodes = null;
     }
+
+    if (this.audioCtx && this.audioCtx.state === 'running') {
+      try {
+        this.audioCtx.suspend();
+      } catch (e) {}
+    }
   }
 
   startOralAudioPlayback(story) {
+    // 1. Synthesize Atmospheric Indian Acoustic Tanpura & Sitar Soundscape
     try {
-      const AudioContext = window.AudioContext || window.webkitAudioContext;
-      if (AudioContext) {
-        if (!this.audioCtx) this.audioCtx = new AudioContext();
-        if (this.audioCtx.state === 'suspended') this.audioCtx.resume();
+      const AudioCtxClass = window.AudioContext || window.webkitAudioContext;
+      if (AudioCtxClass) {
+        if (!this.audioCtx) {
+          this.audioCtx = new AudioCtxClass();
+        }
+        if (this.audioCtx.state === 'suspended') {
+          this.audioCtx.resume();
+        }
 
-        // Create warm Indian ambient Tanpura drone chords (D - A - D harmonic)
-        const freqs = [146.83, 220.00, 293.66]; // D3, A3, D4
+        const now = this.audioCtx.currentTime;
         this.audioDroneNodes = [];
 
+        // Master Volume Gain
         const masterGain = this.audioCtx.createGain();
-        masterGain.gain.setValueAtTime(0.08, this.audioCtx.currentTime);
+        masterGain.gain.setValueAtTime(0.12, now);
         masterGain.connect(this.audioCtx.destination);
 
-        freqs.forEach((f, i) => {
+        // Warm Tanpura base frequencies (D harmonic scale: Pa - Sa - Sa - Sa)
+        const tanpuraFreqs = [146.83, 220.00, 293.66, 440.00]; // D3, A3, D4, A4
+
+        tanpuraFreqs.forEach((freq, idx) => {
           const osc = this.audioCtx.createOscillator();
           const gain = this.audioCtx.createGain();
-          osc.type = i === 1 ? 'triangle' : 'sine';
-          osc.frequency.setValueAtTime(f, this.audioCtx.currentTime);
+          const filter = this.audioCtx.createBiquadFilter();
 
-          // Subtle harmonic detuning for acoustic warmth
-          osc.detune.setValueAtTime((i - 1) * 3, this.audioCtx.currentTime);
-          gain.gain.setValueAtTime(0.3 / (i + 1), this.audioCtx.currentTime);
+          osc.type = idx % 2 === 0 ? 'sawtooth' : 'triangle';
+          osc.frequency.setValueAtTime(freq, now);
+          osc.detune.setValueAtTime((idx - 1.5) * 4, now); // Micro-detuning
 
-          osc.connect(gain);
+          filter.type = 'lowpass';
+          filter.frequency.setValueAtTime(800 + idx * 100, now);
+
+          // Gentle breathing volume wave
+          gain.gain.setValueAtTime(0.04 / (idx + 1), now);
+
+          osc.connect(filter);
+          filter.connect(gain);
           gain.connect(masterGain);
           osc.start();
 
-          this.audioDroneNodes.push(osc, gain);
+          this.audioDroneNodes.push(osc, gain, filter);
         });
+
+        // Periodic acoustic pluck note
+        const playSitarChime = () => {
+          if (!this.currentlyPlayingId || !this.audioCtx || this.audioCtx.state !== 'running') return;
+          try {
+            const pluckOsc = this.audioCtx.createOscillator();
+            const pluckGain = this.audioCtx.createGain();
+            const chimeNotes = [293.66, 329.63, 369.99, 440.00, 587.33]; // D major raag notes
+            const chosenNote = chimeNotes[Math.floor(Math.random() * chimeNotes.length)];
+
+            pluckOsc.type = 'triangle';
+            pluckOsc.frequency.setValueAtTime(chosenNote, this.audioCtx.currentTime);
+
+            pluckGain.gain.setValueAtTime(0.08, this.audioCtx.currentTime);
+            pluckGain.gain.exponentialRampToValueAtTime(0.001, this.audioCtx.currentTime + 2.2);
+
+            pluckOsc.connect(pluckGain);
+            pluckGain.connect(masterGain);
+            pluckOsc.start();
+            pluckOsc.stop(this.audioCtx.currentTime + 2.3);
+          } catch (e) {}
+        };
+
+        this.droneInterval = setInterval(playSitarChime, 3800);
       }
     } catch (e) {
-      console.warn('Web Audio drone initialized in fallback mode', e);
+      console.warn('Web Audio Soundscape initialized with standard playback', e);
     }
 
-    // Elder Oral Narration via SpeechSynthesis
+    // 2. Clear, expressive Speech Synthesis Narration with error protection
     if ('speechSynthesis' in window) {
-      window.speechSynthesis.cancel();
-      const narrative = `${story.title}. Oral record by Elder ${story.elderName}, from ${story.region}. ${story.fullStory || story.excerpt} Lesson: ${story.moral}`;
-      const utterance = new SpeechSynthesisUtterance(narrative);
-      utterance.rate = 0.90;
-      utterance.pitch = 0.95;
+      try {
+        window.speechSynthesis.cancel();
+      } catch (e) {}
 
-      utterance.onend = () => {
-        this.stopAudio();
-        this.currentlyPlayingId = null;
-        this.renderStories();
-      };
-      utterance.onerror = () => {
-        this.stopAudio();
-        this.currentlyPlayingId = null;
-        this.renderStories();
-      };
+      setTimeout(() => {
+        if (this.currentlyPlayingId !== story.id) return;
 
-      window.speechSynthesis.speak(utterance);
+        const narrativeText = `Listening to oral heritage recording. ${story.title}. Told by Elder ${story.elderName}, age ${story.elderAge || 80}, from ${story.region}. ${story.fullStory || story.excerpt}. Ancestral moral insight: ${story.moral}`;
+        
+        this.currentUtterance = new SpeechSynthesisUtterance(narrativeText);
+        this.currentUtterance.rate = 0.88;
+        this.currentUtterance.pitch = 0.95;
+        this.currentUtterance.volume = 1.0;
+
+        const voice = this.getBestElderVoice();
+        if (voice) {
+          this.currentUtterance.voice = voice;
+          this.currentUtterance.lang = voice.lang;
+        }
+
+        this.currentUtterance.onstart = () => {
+          this.updateFloatingPlayer(story);
+        };
+
+        this.currentUtterance.onend = () => {
+          this.stopAudio();
+          this.currentlyPlayingId = null;
+          this.renderStories();
+          this.updateFloatingPlayer(null);
+        };
+
+        this.currentUtterance.onerror = (err) => {
+          console.warn('Speech synthesis playback state:', err);
+          if (err.error !== 'canceled' && err.error !== 'interrupted') {
+            // If speech synthesis has an issue on user machine, the acoustic Tanpura soundscape continues
+          }
+        };
+
+        // Chrome keep-alive heartbeat to prevent speech cutoff
+        this.keepAliveInterval = setInterval(() => {
+          if (window.speechSynthesis.speaking) {
+            window.speechSynthesis.pause();
+            window.speechSynthesis.resume();
+          }
+        }, 8000);
+
+        window.speechSynthesis.speak(this.currentUtterance);
+      }, 70);
     }
+  }
+
+  updateFloatingPlayer(story) {
+    let player = document.getElementById('wisdomFloatingAudioBar');
+    if (!story) {
+      if (player) {
+        player.classList.add('translate-y-32', 'opacity-0');
+        setTimeout(() => { if (player) player.remove(); }, 400);
+      }
+      return;
+    }
+
+    if (!player) {
+      player = document.createElement('div');
+      player.id = 'wisdomFloatingAudioBar';
+      player.className = 'fixed bottom-5 left-1/2 -translate-x-1/2 z-50 w-[92%] max-w-2xl bg-[#120F0B]/95 text-white backdrop-blur-xl border border-[#D4A359]/60 rounded-2xl p-4 shadow-2xl transition-all duration-500 flex items-center justify-between gap-4 translate-y-32 opacity-0';
+      document.body.appendChild(player);
+
+      setTimeout(() => {
+        player.classList.remove('translate-y-32', 'opacity-0');
+      }, 50);
+    }
+
+    player.innerHTML = `
+      <div class="flex items-center gap-3 min-w-0">
+        <button onclick="window.wisdomApp.togglePlay('${story.id}')" class="w-11 h-11 rounded-full bg-[#D4A359] text-[#120F0B] flex items-center justify-center font-bold hover:scale-105 transition-transform shrink-0 shadow-lg cursor-pointer">
+          <span class="material-symbols-outlined text-[24px]">pause</span>
+        </button>
+        <div class="min-w-0">
+          <div class="text-[11px] font-caps font-bold text-[#D4A359] flex items-center gap-2">
+            <span>NOW PLAYING ORAL ARCHIVE</span>
+            <span class="inline-flex items-center gap-0.5">
+              <span class="w-1 h-3 bg-[#D4A359] rounded-full animate-bounce"></span>
+              <span class="w-1 h-4 bg-[#ECC484] rounded-full animate-bounce [animation-delay:0.15s]"></span>
+              <span class="w-1 h-2 bg-[#D4A359] rounded-full animate-bounce [animation-delay:0.3s]"></span>
+            </span>
+          </div>
+          <h4 class="font-heading text-sm sm:text-base font-bold text-white truncate">${story.title}</h4>
+          <p class="text-xs text-[#ECC484]/80 truncate">${story.elderName} · ${story.region}</p>
+        </div>
+      </div>
+
+      <div class="flex items-center gap-3 shrink-0">
+        <button onclick="window.wisdomApp.openStoryDetail('${story.id}')" class="hidden sm:inline-flex items-center gap-1 px-3.5 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-xs font-semibold text-[#ECC484] border border-[#D4A359]/40 transition-colors">
+          <span>Read Lore</span>
+          <span>→</span>
+        </button>
+        <button onclick="window.wisdomApp.togglePlay('${story.id}')" class="w-8 h-8 rounded-full hover:bg-white/10 flex items-center justify-center text-white/70 hover:text-white transition-colors" title="Close player">
+          <span class="material-symbols-outlined text-[18px]">close</span>
+        </button>
+      </div>
+    `;
   }
 
   toggleBookmark(storyId) {
@@ -609,10 +799,13 @@ class VirasatWisdomVaultApp {
 
     if (autoPlay) {
       this.currentlyPlayingId = storyId;
+      this.startOralAudioPlayback(story);
       if (window.VirasatPassportService) {
         window.VirasatPassportService.recordWisdomListen(story);
       }
     }
+
+    const isPlaying = this.currentlyPlayingId === storyId;
 
     this.detailContent.innerHTML = `
       <div class="space-y-6">
@@ -653,14 +846,17 @@ class VirasatWisdomVaultApp {
 
         <!-- Audio Player -->
         <div class="p-4 rounded-xl bg-[#120F0B] text-white border border-[#D4A359]/40 flex items-center justify-between gap-4 shadow-md">
-          <button onclick="window.wisdomApp.togglePlay('${story.id}')" class="w-11 h-11 rounded-full bg-[#D4A359] text-[#120F0B] flex items-center justify-center font-bold hover:scale-105 transition-transform shrink-0">
+          <button onclick="window.wisdomApp.togglePlay('${story.id}')" class="w-11 h-11 rounded-full bg-[#D4A359] text-[#120F0B] flex items-center justify-center font-bold hover:scale-105 transition-transform shrink-0 cursor-pointer shadow-lg">
             <span class="material-symbols-outlined text-[24px]">${this.currentlyPlayingId === story.id ? 'pause' : 'play_arrow'}</span>
           </button>
           <div class="flex-1">
-            <div class="text-xs font-bold text-[#ECC484] uppercase tracking-wider">Oral History Audio Archive</div>
+            <div class="text-xs font-bold text-[#ECC484] uppercase tracking-wider flex items-center gap-2">
+              <span>Oral History Audio Archive</span>
+              ${this.currentlyPlayingId === story.id ? '<span class="text-[#6ee7b7] text-[10px] font-bold">● LIVE SOUNDSCAPE</span>' : ''}
+            </div>
             <div class="text-sm font-semibold">${story.elderName} Narration · ${story.audioLength} min</div>
             <div class="w-full bg-white/20 h-1.5 rounded-full mt-2 overflow-hidden">
-              <div class="bg-[#D4A359] h-full rounded-full transition-all duration-300" style="width: ${this.currentlyPlayingId === story.id ? '70%' : '15%'}"></div>
+              <div class="bg-[#D4A359] h-full rounded-full transition-all duration-300" style="width: ${this.currentlyPlayingId === story.id ? '75%' : '15%'}"></div>
             </div>
           </div>
           <a href="passport.html" class="text-xs text-[#D4A359] hover:underline font-caps font-bold">
