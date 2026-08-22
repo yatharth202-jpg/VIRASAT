@@ -164,7 +164,7 @@ class VirasatConnectionGame {
   updateRevealButtonState() {
     if (!this.revealBtn) return;
     if (this.isRevealed) {
-      this.revealBtn.textContent = '✓ Connection Revealed';
+      this.revealBtn.textContent = '✓ Connection Revealed — View Historical Analysis ↓';
       this.revealBtn.classList.add('revealed-state');
     } else {
       this.revealBtn.textContent = 'Reveal Connection →';
@@ -185,7 +185,12 @@ class VirasatConnectionGame {
     this.updateRevealButtonState();
     this.triggerCelebration();
 
-    this.app.onConnectionRevealed(this.currentConnection);
+    if (window.VirasatPassportService) {
+      window.VirasatPassportService.addStamp(this.currentConnection);
+    }
+    if (this.app && typeof this.app.sidebar?.updateStats === 'function') {
+      this.app.sidebar.updateStats();
+    }
   }
 
   triggerCelebration() {
@@ -198,3 +203,4 @@ class VirasatConnectionGame {
     }
   }
 }
+

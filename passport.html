@@ -1,417 +1,790 @@
 <!DOCTYPE html>
-<html class="light" lang="en">
+<html lang="en">
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>VIRASAT - Passport</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Work+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-
-    <!-- External Separate Stylesheet -->
-    <link rel="stylesheet" href="css/styles.css"/>
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-                    "secondary": "#5f5e5e",
-                    "on-error-container": "#93000a",
-                    "surface-tint": "#775a19",
-                    "on-background": "#1e1b16",
-                    "inverse-primary": "#e9c176",
-                    "primary-fixed": "#ffdea5",
-                    "on-tertiary-fixed-variant": "#48473f",
-                    "on-primary-fixed-variant": "#5d4201",
-                    "error-container": "#ffdad6",
-                    "tertiary-fixed-dim": "#cac6bc",
-                    "on-tertiary-fixed": "#1c1c15",
-                    "surface-container": "#f5ede4",
-                    "surface-container-highest": "#e9e1d8",
-                    "on-secondary": "#ffffff",
-                    "primary-fixed-dim": "#e9c176",
-                    "surface-variant": "#e9e1d8",
-                    "on-secondary-fixed": "#1c1b1b",
-                    "surface": "#fff8f3",
-                    "tertiary": "#605e56",
-                    "outline-variant": "#d1c5b4",
-                    "surface-dim": "#e1d9d0",
-                    "on-surface": "#1e1b16",
-                    "on-primary": "#ffffff",
-                    "on-tertiary": "#ffffff",
-                    "on-surface-variant": "#4e4639",
-                    "background": "#fff8f3",
-                    "surface-bright": "#fff8f3",
-                    "secondary-fixed": "#e5e2e1",
-                    "inverse-surface": "#34302a",
-                    "surface-container-low": "#fbf2e9",
-                    "secondary-container": "#e5e2e1",
-                    "on-tertiary-container": "#3c3b34",
-                    "primary-container": "#c5a059",
-                    "on-secondary-container": "#656464",
-                    "on-error": "#ffffff",
-                    "outline": "#7f7667",
-                    "surface-container-lowest": "#ffffff",
-                    "error": "#ba1a1a",
-                    "on-secondary-fixed-variant": "#474646",
-                    "secondary-fixed-dim": "#c9c6c5",
-                    "on-primary-container": "#4e3700",
-                    "primary": "#775a19",
-                    "tertiary-fixed": "#e6e2d7",
-                    "inverse-on-surface": "#f8efe6",
-                    "on-primary-fixed": "#261900",
-                    "tertiary-container": "#a8a59b",
-                    "surface-container-high": "#efe7de"
-            },
-            borderRadius: {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            spacing: {
-                    "container-max": "1280px",
-                    "unit": "8px",
-                    "margin-mobile": "16px",
-                    "gutter": "24px",
-                    "section-gap": "80px"
-            },
-            fontFamily: {
-                    "quote-serif": ["Playfair Display"],
-                    "display-lg": ["Playfair Display"],
-                    "headline-lg-mobile": ["Playfair Display"],
-                    "headline-lg": ["Playfair Display"],
-                    "body-lg": ["Work Sans"],
-                    "headline-xl": ["Playfair Display"],
-                    "label-caps": ["Manrope"],
-                    "body-md": ["Work Sans"]
-            },
-            fontSize: {
-                    "quote-serif": ["22px", { lineHeight: "32px", fontWeight: "400" }],
-                    "display-lg": ["56px", { lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "700" }],
-                    "headline-lg-mobile": ["28px", { lineHeight: "34px", fontWeight: "600" }],
-                    "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "600" }],
-                    "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
-                    "headline-xl": ["40px", { lineHeight: "48px", fontWeight: "600" }],
-                    "label-caps": ["12px", { lineHeight: "16px", letterSpacing: "0.1em", fontWeight: "700" }],
-                    "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }]
-            }
-          }
-        }
-      }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIRASAT — Your Cultural Heritage Passport</title>
+  <meta name="description" content="Explore, discover, and preserve timeless cultural heritage with your personalized Virasat Passport.">
+  
+  <!-- Google Fonts: Libre Caslon Text, Cinzel, Manrope, Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/passport.css">
 </head>
-<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col wood-texture">
+<body class="virasat-theme">
+  <!-- Atmospheric Background Canvas & Heritage Backdrop -->
+  <div class="bg-backdrop-container">
+    <div class="bg-image-layer" style="background-image: url('assets/bg_heritage.jpg');"></div>
+    <div class="bg-overlay-gradient"></div>
+    <div class="bg-vignette"></div>
+    <canvas id="ambientStarsCanvas"></canvas>
+  </div>
 
-<!-- TopAppBar matching Homepage -->
-<header class="bg-inverse-surface border-b border-primary/20 shadow-md flex justify-between items-center w-full px-4 sm:px-6 md:px-8 py-4 z-50 sticky top-0">
-    <div class="max-w-[1440px] mx-auto w-full flex items-center justify-between">
-        <a href="index.html" class="flex items-center gap-3 group cursor-pointer">
-            <div class="w-10 h-10 flex items-center justify-center text-[#D4A359] group-hover:rotate-45 transition-transform duration-700 shrink-0">
-                <svg viewBox="0 0 100 100" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs>
-                        <radialGradient id="goldGradPass" cx="50%" cy="50%" r="50%">
-                            <stop offset="0%" stop-color="#ECC484"/>
-                            <stop offset="60%" stop-color="#D4A359"/>
-                            <stop offset="100%" stop-color="#A97A32"/>
-                        </radialGradient>
-                    </defs>
-                    <circle cx="50" cy="50" r="46" stroke="url(#goldGradPass)" stroke-width="2.5"/>
-                    <circle cx="50" cy="50" r="41" stroke="url(#goldGradPass)" stroke-width="1.5"/>
-                    <circle cx="50" cy="50" r="38" stroke="url(#goldGradPass)" stroke-width="1" stroke-dasharray="2 3"/>
-                    <g stroke="url(#goldGradPass)" stroke-width="1.8" fill="url(#goldGradPass)" fill-opacity="0.25">
-                        <polygon points="50,14 47,40 50,42 53,40"/>
-                        <polygon points="50,86 47,60 50,58 53,60"/>
-                        <polygon points="14,50 40,47 42,50 40,53"/>
-                        <polygon points="86,50 60,47 58,50 60,53"/>
-                    </g>
-                    <circle cx="50" cy="50" r="12" stroke="url(#goldGradPass)" stroke-width="2" fill="#120F0B"/>
-                    <circle cx="50" cy="50" r="3" fill="url(#goldGradPass)"/>
-                </svg>
-            </div>
-            <div class="flex flex-col">
-                <span class="font-bold tracking-[0.2em] text-[#FAF5EE] uppercase text-lg leading-tight">VIRASAT</span>
-                <span class="text-[8px] font-extrabold tracking-[0.25em] text-[#D4A359] uppercase">LEARN · SHARE · PRESERVE</span>
-            </div>
+  <!-- Main App Shell -->
+  <div class="app-layout">
+    
+    <!-- Top Navigation Header -->
+    <header class="app-header" id="appHeader">
+      <div class="header-inner">
+        <!-- Logo & Brand Tagline -->
+        <a href="index.html" class="brand-logo" id="brandLogo" title="Return to Virasat Home">
+          <div class="mandala-icon-wrapper">
+            <svg class="mandala-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22" stroke="url(#goldGrad)" stroke-width="1.2" stroke-dasharray="3 2"/>
+              <circle cx="24" cy="24" r="16" stroke="url(#goldGrad)" stroke-width="1"/>
+              <circle cx="24" cy="24" r="9" stroke="url(#goldGrad)" stroke-width="1.2"/>
+              <circle cx="24" cy="24" r="3" fill="url(#goldGrad)"/>
+              <g stroke="url(#goldGrad)" stroke-width="1" fill="none">
+                <path d="M24,2 C21,12 21,16 24,24 C27,16 27,12 24,2 Z"/>
+                <path d="M24,46 C21,36 21,32 24,24 C27,32 27,36 24,46 Z"/>
+                <path d="M2,24 C12,21 16,21 24,24 C16,27 12,27 2,24 Z"/>
+                <path d="M46,24 C36,21 32,21 24,24 C32,27 36,27 46,24 Z"/>
+                <path d="M8.4,8.4 C16.2,14.8 19,17.7 24,24 C17.7,19 14.8,16.2 8.4,8.4 Z"/>
+                <path d="M39.6,39.6 C31.8,33.2 29,30.3 24,24 C30.3,29 33.2,31.8 39.6,39.6 Z"/>
+                <path d="M8.4,39.6 C14.8,31.8 17.7,29 24,24 C19,30.3 16.2,33.2 8.4,39.6 Z"/>
+                <path d="M39.6,8.4 C33.2,16.2 30.3,19 24,24 C29,17.7 31.8,14.8 39.6,8.4 Z"/>
+              </g>
+              <defs>
+                <linearGradient id="goldGrad" x1="0" y1="0" x2="48" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#FFF2A7"/>
+                  <stop offset="0.4" stop-color="#E2B743"/>
+                  <stop offset="0.8" stop-color="#C5962B"/>
+                  <stop offset="1" stop-color="#8F6312"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">VIRASAT</span>
+            <span class="brand-tagline">LEARN · SHARE · PRESERVE</span>
+          </div>
         </a>
 
-        <nav class="hidden md:flex gap-8 items-center text-[13.5px] font-sans font-medium text-[#FAF5EE]/80">
-            <a class="hover:text-[#D4A359] transition-colors" href="index.html#explore-section">Explore</a>
-            <a class="hover:text-[#D4A359] transition-colors" href="passport.html">Journey</a>
-            <a class="hover:text-[#D4A359] transition-colors" href="games.html">Games</a>
-            <a class="text-[#D4A359] border-b border-[#D4A359] pb-0.5 font-semibold" href="passport.html">Passport</a>
-            <a class="hover:text-[#D4A359] transition-colors" href="wisdom-vault.html">Wisdom Vault</a>
-            <a class="hover:text-[#D4A359] transition-colors" href="games.html#culturalRoomModal">Rooms</a>
+        <!-- Center Navigation Menu -->
+        <nav class="main-nav" aria-label="Main Navigation">
+          <ul class="nav-list">
+            <li><a href="index.html" class="nav-link">Home</a></li>
+            <li><a href="index.html#explore-section" class="nav-link">Explore</a></li>
+            <li><a href="passport.html" class="nav-link active" aria-current="page"><span class="active-pill"></span>Passport</a></li>
+            <li><a href="wisdom-vault.html" class="nav-link">Wisdom Vault</a></li>
+            <li><a href="surprise-me.html" class="nav-link">Surprise Me</a></li>
+            <li><a href="games.html" class="nav-link">Games</a></li>
+            <li><a href="connect.html" class="nav-link">Connect</a></li>
+          </ul>
         </nav>
 
-        <div class="flex items-center gap-4">
-            <a href="games.html" class="w-9 h-9 rounded-full flex items-center justify-center text-[#FAF5EE]/80 hover:text-[#D4A359] hover:bg-white/5 transition-all" title="Search">
-                <span class="material-symbols-outlined text-[20px]">search</span>
-            </a>
-            <button onclick="window.location.href='games.html'" class="px-5 py-1.5 rounded-full border border-[#D4A359]/70 text-[#FAF5EE] hover:bg-[#D4A359]/15 hover:border-[#D4A359] font-caps text-xs font-semibold tracking-wider transition-all">
-                Sign In
-            </button>
-        </div>
+        <!-- Right User Profile Badge -->
+        <div class="user-profile-widget" id="userProfileWidget" tabindex="0" role="button" aria-haspopup="true" aria-expanded="false">
+          <div class="user-avatar-mini">
+            <img src="assets/explorer_avatar_exact.png" alt="Explorer Profile Picture" class="avatar-img-tiny">
+          </div>
+          <span class="user-greeting">Namaste, Explorer</span>
+          <svg class="chevron-down" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+          
+          <!-- Dropdown Menu -->
+          <div class="profile-dropdown" id="profileDropdown">
+            <div class="dropdown-header">
+              <strong>Cultural Explorer</strong>
+              <span>Pass ID: VIR-2024-8X71-CE</span>
+            </div>
+            <div class="dropdown-divider"></div>
+            <a href="#badges" class="dropdown-item">🎖️ My Badges & Milestones</a>
+            <a href="#" class="dropdown-item" id="btnDownloadCertificate">📜 Download Virasat Certificate</a>
+            <a href="#audio" class="dropdown-item" id="ambientAudioToggle">🎵 Ambient Sound: <span id="audioStatusText">Off</span></a>
+            <div class="dropdown-divider"></div>
+            <a href="wisdom-vault.html" class="dropdown-item">✨ Elder Wisdom Vault</a>
+      </div>
+    </header>
+
+    <!-- Top Subnav Breadcrumb & Back Navigation -->
+    <div style="max-width: 1440px; margin: 0 auto; padding: 12px 24px; display: flex; align-items: center; justify-content: space-between; font-family: var(--font-sans-body); font-size: 13px;">
+      <a href="index.html" style="display: inline-flex; align-items: center; gap: 8px; color: #D4A359; text-decoration: none; font-weight: 600; background: rgba(212,163,89,0.12); padding: 6px 16px; border-radius: 9999px; border: 1px solid rgba(212,163,89,0.35); transition: all 0.2s;" onmouseover="this.style.background='rgba(212,163,89,0.25)'" onmouseout="this.style.background='rgba(212,163,89,0.12)'">
+        <span>←</span> <span>Back to Virasat Home</span>
+      </a>
+      <div style="display: flex; align-items: center; gap: 16px; color: rgba(250,245,238,0.7);">
+        <a href="games.html" style="color: #ECC484; text-decoration: none; font-weight: 500;">🎮 Games & Connect</a>
+        <span>•</span>
+        <a href="wisdom-vault.html" style="color: #ECC484; text-decoration: none; font-weight: 500;">📜 Elder Wisdom Vault</a>
+      </div>
     </div>
-</header>
 
-<!-- Main Content -->
-<main class="flex-grow flex flex-col items-center justify-start pt-8 pb-16 px-4 md:px-8 w-full max-w-[1600px] mx-auto relative">
-    <!-- Header Section -->
-    <div class="text-center mb-8 w-full">
-        <h1 class="font-headline-xl text-headline-xl text-surface-container-lowest mb-2 font-display-lg drop-shadow-md">YOUR VIRASAT PASSPORT</h1>
-        <p class="font-body-lg text-body-lg text-surface-container-highest/80 italic">Your journey. Your discoveries. Your legacy.</p>
-    </div>
+    <!-- Hero Title & Decorative Flourish -->
+    <section class="passport-hero-title" style="padding-top: 5px;">
+      <h1 class="page-headline">YOUR VIRASAT PASSPORT</h1>
+      <div class="flourish-divider">
+        <span class="flourish-line"></span>
+        <svg class="flourish-diamond" viewBox="0 0 24 24" width="18" height="18" fill="none">
+          <path d="M12 2L22 12L12 22L2 12L12 2Z" stroke="url(#goldGrad)" stroke-width="1.5" fill="rgba(212,175,55,0.2)"/>
+          <circle cx="12" cy="12" r="3" fill="url(#goldGrad)"/>
+        </svg>
+        <span class="flourish-line"></span>
+      </div>
+      <p class="page-subheadline">Your journey. Your discoveries. Your legacy.</p>
+    </section>
 
-    <!-- Passport Container -->
-    <div class="w-full max-w-[1400px] flex flex-col xl:flex-row gap-8 items-start justify-center">
-        <!-- Left Sidebar (Identity) -->
-        <aside class="w-full xl:w-[280px] flex flex-col gap-6 shrink-0">
-            <!-- Cover Card -->
-            <div class="bg-inverse-surface rounded-lg p-6 flex flex-col items-center justify-center ambient-shadow border border-primary/30 relative overflow-hidden h-[400px]">
-                <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle, #C5A059 1px, transparent 1px); background-size: 20px 20px;"></div>
-                <h2 class="font-headline-lg text-headline-lg text-primary-container text-center mb-8 uppercase tracking-widest">Virasat<br/><span class="text-xl">Passport</span></h2>
-                <div class="w-32 h-32 rounded-full border border-primary/40 flex items-center justify-center mb-8 relative">
-                    <div class="absolute inset-2 border border-primary/20 rounded-full border-dashed"></div>
-                    <span class="material-symbols-outlined text-6xl text-primary-container" style="font-variation-settings: 'FILL' 1;">local_florist</span>
-                </div>
-                <p class="font-label-caps text-label-caps text-primary/80 text-center tracking-wider max-w-[200px] mt-auto">Every discovery keeps our heritage alive</p>
-            </div>
-            <!-- Profile Info -->
-            <div class="bg-inverse-surface/80 rounded-lg p-4 flex items-center gap-4 border border-primary/20 backdrop-blur-sm">
-                <img class="w-12 h-12 rounded-full object-cover border border-primary/40" data-alt="A close-up portrait of a cultural explorer with a warm, inviting expression. The background is a soft, blurred landscape of ancient ruins bathed in golden hour light. The color palette emphasizes warm earth tones and rich shadows, evoking a sense of historical discovery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFp9yPkitLuWF4aMdvTXjE-RPw9-NzkzwNdi8C0_5oQvEzboJQoddyHoQ23qLTMrEvQB_azFOJ0SkXH9kvgvDkvPv0PyuZpyKISCutzk74nNm1-8E75zfiIhADH0Sb_QnXmtgCH-XaY4mMcjIhjHQbhcfJe0Snll_AKSO7S3pv5XzEggIyN9WFzqjw8oxU1zjoMafUV2XOC9QX0Wkm2xZ7Wp_INcvUmmcujlQmdl1LeeOhZfeHYeXXWQ"/>
-                <div>
-                    <h3 class="font-label-caps text-label-caps text-surface-container-lowest">Cultural Explorer</h3>
-                    <p class="font-body-md text-sm text-surface-container-highest/60">Since Aug 2024</p>
-                </div>
-            </div>
-            <!-- Quote -->
-            <div class="bg-inverse-surface/60 rounded-lg p-4 border border-primary/10 italic text-center">
-                <p class="font-quote-serif text-quote-serif text-surface-container-highest/80 text-sm">"The roots of your culture are the wings of your future."</p>
-            </div>
-        </aside>
-
-        <!-- Main Book Area -->
-        <div class="flex-grow w-full max-w-[900px] flex flex-col md:flex-row relative ambient-shadow rounded-lg overflow-hidden border border-primary/20">
-            <!-- Left Page -->
-            <div class="w-full md:w-1/2 paper-texture p-8 md:p-10 flex flex-col gap-8 relative z-10 border-r border-primary/10">
-                <!-- Stats Grid -->
-                <div>
-                    <h3 class="font-label-caps text-label-caps text-on-surface-variant mb-6 border-b border-primary/20 pb-2 flex items-center gap-2">
-                        <span class="material-symbols-outlined text-primary text-sm">bar_chart</span>
-                        Journey Overview
-                    </h3>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="text-center p-4 rounded-lg bg-surface/50 border border-primary/10 transition-colors hover:bg-surface-container">
-                            <span class="material-symbols-outlined text-primary mb-1 block">explore</span>
-                            <div class="font-headline-lg text-headline-lg text-on-surface">48</div>
-                            <div class="font-label-caps text-[10px] text-on-surface-variant">Discoveries</div>
-                        </div>
-                        <div class="text-center p-4 rounded-lg bg-surface/50 border border-primary/10 transition-colors hover:bg-surface-container">
-                            <span class="material-symbols-outlined text-primary mb-1 block">public</span>
-                            <div class="font-headline-lg text-headline-lg text-on-surface">12</div>
-                            <div class="font-label-caps text-[10px] text-on-surface-variant">Regions Explored</div>
-                        </div>
-                        <div class="text-center p-4 rounded-lg bg-surface/50 border border-primary/10 transition-colors hover:bg-surface-container">
-                            <span class="material-symbols-outlined text-primary mb-1 block">link</span>
-                            <div class="font-headline-lg text-headline-lg text-on-surface">7</div>
-                            <div class="font-label-caps text-[10px] text-on-surface-variant">Cultural Twins</div>
-                        </div>
-                        <div class="text-center p-4 rounded-lg bg-surface/50 border border-primary/10 transition-colors hover:bg-surface-container">
-                            <span class="material-symbols-outlined text-primary mb-1 block">sports_esports</span>
-                            <div class="font-headline-lg text-headline-lg text-on-surface">15</div>
-                            <div class="font-label-caps text-[10px] text-on-surface-variant">Games Completed</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Progress -->
-                <div>
-                    <h3 class="font-label-caps text-label-caps text-on-surface-variant mb-6 border-b border-primary/20 pb-2 flex items-center gap-2">
-                        <span class="material-symbols-outlined text-primary text-sm">military_tech</span>
-                        Your Progress
-                    </h3>
-                    <div class="flex items-center gap-6 p-4 rounded-lg bg-surface/30 border border-primary/10">
-                        <!-- Circular Progress -->
-                        <div class="relative w-24 h-24 flex items-center justify-center shrink-0">
-                            <svg class="w-full h-full transform -rotate-90" viewbox="0 0 100 100">
-                                <circle class="text-surface-dim" cx="50" cy="50" fill="none" r="45" stroke="currentColor" stroke-width="6"></circle>
-                                <circle class="text-primary-container" cx="50" cy="50" fill="none" r="45" stroke="currentColor" stroke-dasharray="282.7" stroke-dashoffset="60" stroke-linecap="round" stroke-width="6"></circle>
-                            </svg>
-                            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
-                                <span class="font-label-caps text-[10px] text-on-surface-variant leading-tight">Level</span>
-                                <span class="font-headline-lg text-2xl text-on-surface leading-tight">6</span>
-                            </div>
-                        </div>
-                        <div class="flex flex-col gap-2">
-                            <div>
-                                <div class="font-label-caps text-xs text-on-surface font-bold">Heritage Seeker</div>
-                                <div class="font-body-md text-xs text-on-surface-variant">2,350 / 3,000 XP</div>
-                            </div>
-                            <div class="flex items-center gap-2 text-xs">
-                                <span class="material-symbols-outlined text-sm text-primary">local_fire_department</span>
-                                <span class="font-body-md text-on-surface-variant">Current Streak: <strong class="text-on-surface">12 days</strong></span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Book Spine (Desktop Only) -->
-            <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-8 -ml-4 passport-spine z-20 pointer-events-none"></div>
-
-            <!-- Right Page -->
-            <div class="w-full md:w-1/2 paper-texture p-8 md:p-10 flex flex-col gap-8 relative z-10">
-                <!-- Map Section -->
-                <div>
-                    <div class="flex justify-between items-end mb-4 border-b border-primary/20 pb-2">
-                        <h3 class="font-label-caps text-label-caps text-on-surface-variant flex items-center gap-2">
-                            <span class="material-symbols-outlined text-primary text-sm">map</span>
-                            Regions Explored
-                        </h3>
-                        <a class="font-label-caps text-[10px] text-primary hover:underline" href="#">View Map</a>
-                    </div>
-                    <div class="flex gap-4">
-                        <!-- Minimal Map Placeholder -->
-                        <div class="w-1/2 aspect-square relative bg-surface-container-lowest/50 rounded-lg border border-primary/10 overflow-hidden flex items-center justify-center">
-                            <div class="text-primary/20 font-display-lg opacity-50 absolute pointer-events-none">MAP</div>
-                            <div class="w-3/4 h-3/4 bg-surface-variant rounded-full blur-2xl opacity-50"></div>
-                        </div>
-                        <!-- Legend -->
-                        <div class="w-1/2 flex flex-col justify-center gap-2">
-                            <div class="flex justify-between items-center text-xs">
-                                <span class="font-body-md text-on-surface flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-primary-container inline-block"></span>Rajasthan</span>
-                                <span class="font-label-caps text-on-surface-variant">8/12</span>
-                            </div>
-                            <div class="flex justify-between items-center text-xs">
-                                <span class="font-body-md text-on-surface flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-tertiary inline-block"></span>Gujarat</span>
-                                <span class="font-label-caps text-on-surface-variant">6/9</span>
-                            </div>
-                            <div class="flex justify-between items-center text-xs">
-                                <span class="font-body-md text-on-surface flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary inline-block"></span>Kerala</span>
-                                <span class="font-label-caps text-on-surface-variant">3/6</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Recent Discoveries Gallery -->
-                <div>
-                    <div class="flex justify-between items-end mb-4 border-b border-primary/20 pb-2">
-                        <h3 class="font-label-caps text-label-caps text-on-surface-variant flex items-center gap-2">
-                            <span class="material-symbols-outlined text-primary text-sm">photo_library</span>
-                            Recent Discoveries
-                        </h3>
-                        <a class="font-label-caps text-[10px] text-primary hover:underline" href="#">View All</a>
-                    </div>
-                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-3">
-                        <div class="group cursor-pointer">
-                            <div class="aspect-[3/4] rounded border border-primary/20 overflow-hidden relative mb-2">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A vibrant depiction of the Onam festival in Kerala. People in traditional white and gold attire are celebrating around a large, intricate floral carpet (Pookalam). The setting is a traditional courtyard. The lighting is bright and festive, with warm sunlight highlighting the colorful flowers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEeDPoROEtGs54xNMJBpJpOkPb59y75ig5OjCN-P349mtu0WGHxlL1T0kcmkXmjEqXSr3H0e5X_E4NWOMrQ_aq4MM2aBht1_GqW2QdI9E4GIXgXJ9_cJdQzAe2w-aHA340LktaUZMXkgL_ZrArQRdCbRiugETIauEvDUFhR5y3t0sxfroe84RclzFQz6v3KcG2taaBURgGVe9Y4Q_s69qCh657yjgBfFywUth_3h3_9PAS5oh2ygg7Cg"/>
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                            </div>
-                            <div class="font-label-caps text-[9px] bg-surface-container-high px-1.5 py-0.5 rounded inline-block text-on-surface-variant mb-1">FESTIVAL</div>
-                            <h4 class="font-body-md text-xs font-semibold text-on-surface truncate">Onam</h4>
-                            <p class="font-body-md text-[10px] text-on-surface-variant">2 days ago</p>
-                        </div>
-                        <div class="group cursor-pointer">
-                            <div class="aspect-[3/4] rounded border border-primary/20 overflow-hidden relative mb-2">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="An artisan delicately painting a Madhubani artwork. The canvas is filled with intricate geometric patterns and vibrant colors depicting mythological scenes. The setting is a simple, naturally lit studio in Bihar. The focus is on the steady hands of the artist and the fine details of the brushwork." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNhbFQ1Qd3OFSIXtAHLJsxaqK3yFPzjD2JIe9pKwWQSyS0-OKmDh2ZxV8hlPnFDSNvumHx_wH1GAv8tUyiXaL7djNuX8y6pz3gCMxRLDLBnL8ID1afwiO8Y21cNDYbB8Yu4rmIFUCaitC3Nw3r-tylLPqSC1UfiuRtj5AClIwyZZpJJm-bQNxSk6TGk9SoGkJj6_SG1SA-j2NIhohbC501-wAwm7I9bZXGzi4yjj4rpMJD1mzYGdkGjw"/>
-                            </div>
-                            <div class="font-label-caps text-[9px] bg-surface-container-high px-1.5 py-0.5 rounded inline-block text-on-surface-variant mb-1">CRAFT</div>
-                            <h4 class="font-body-md text-xs font-semibold text-on-surface truncate">Madhubani Painting</h4>
-                            <p class="font-body-md text-[10px] text-on-surface-variant">5 days ago</p>
-                        </div>
-                        <div class="group cursor-pointer">
-                            <div class="aspect-[3/4] rounded border border-primary/20 overflow-hidden relative mb-2">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A Baul singer from West Bengal performing passionately. He is wearing traditional saffron robes and playing a one-stringed instrument (Ektara). The background is a rural landscape at dusk, creating a mystical and soulful atmosphere. The lighting is soft and warm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpvtsw8BfTTqd57EFFdXNUN-Z50ZdYUYeUT0_SznkLF4k1Q2rTf0p36QEJDJtZXHnC4Gzy0PmnnXM9eNPWIcGOEbNyKYq-Kz737pSDPs-BpR-osfLrBDasconLYXm5j8jYzv_L-XLAhnM3jt-6syIfkpgUbcMVvZ3YM8A-_I2jxjkPLzRyvI5GT-Oi3n-vtlBXDA9wfNHzSeh_ndM-pvmEm6Mdm_JkCn3bpgZbC5QmqPenLnmboi5xEw"/>
-                            </div>
-                            <div class="font-label-caps text-[9px] bg-surface-container-high px-1.5 py-0.5 rounded inline-block text-on-surface-variant mb-1">TRADITION</div>
-                            <h4 class="font-body-md text-xs font-semibold text-on-surface truncate">Baul Singing</h4>
-                            <p class="font-body-md text-[10px] text-on-surface-variant">1 week ago</p>
-                        </div>
-                        <div class="group cursor-pointer">
-                            <div class="aspect-[3/4] rounded border border-primary/20 overflow-hidden relative mb-2">
-                                <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="A traditional Rajasthani thali featuring Dal Baati Churma. The round baked wheat balls (baati) are served with a rich lentil stew (dal) and a sweet crumbly mixture (churma). The setting is a rustic wooden table with copper utensils, reflecting warmth and rich culinary heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhoFrFeIkTPEuLJB7x6_nKxr7rzZ0BOw0jZrvlVd-PnX9r8RhaFiYVbtbBzkpV5BBghq0AU4xwN06mtUMQqdcKPjOwGDbf6MvLMdik8iSPqseRSjoEyPekHElTTa7g3OJBTuNvyDn-XWrrsFqzvHoq2fo3QFcVdq6e9g0aD5Ruzf0g5SLGLMte7lqh6sZrXUd0WGwfsH9PhEEU97ge7dfRA_LnwuV-72tVs9XKNWltxNbwE1gTireZSA"/>
-                            </div>
-                            <div class="font-label-caps text-[9px] bg-surface-container-high px-1.5 py-0.5 rounded inline-block text-on-surface-variant mb-1">FOOD</div>
-                            <h4 class="font-body-md text-xs font-semibold text-on-surface truncate">Dal Baati Churma</h4>
-                            <p class="font-body-md text-[10px] text-on-surface-variant">1 week ago</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <!-- Main 3-Column Dashboard Viewport -->
+    <main class="dashboard-grid">
+      
+      <!-- ================= LEFT COLUMN ================= -->
+      <aside class="col-left">
+        
+        <!-- Authentic Leather Passport Cover from Screenshot -->
+        <div class="leather-passport-card" id="leatherCoverCard" title="Click to inspect Passport Cover">
+          <img src="assets/passport_leather_exact.png" alt="Virasat Leather Passport Cover" class="leather-exact-img">
         </div>
 
-        <!-- Right Sidebar (Badges & Next Steps) -->
-        <aside class="w-full xl:w-[280px] flex flex-col gap-6 shrink-0">
-            <!-- Badges -->
-            <div class="bg-inverse-surface/90 rounded-lg p-5 border border-primary/20 ambient-shadow">
-                <div class="flex justify-between items-end mb-4 border-b border-primary/20 pb-2">
-                    <h3 class="font-label-caps text-label-caps text-surface-container-lowest">Passport Badges</h3>
-                    <a class="font-label-caps text-[10px] text-primary hover:text-primary-fixed" href="#">View All</a>
-                </div>
-                <div class="grid grid-cols-3 gap-4">
-                    <div class="flex flex-col items-center gap-1 group cursor-pointer">
-                        <div class="w-14 h-14 rounded-full border-2 border-primary-container flex items-center justify-center bg-inverse-surface shadow-[0_0_15px_rgba(197,160,89,0.3)] transition-transform group-hover:scale-110">
-                            <span class="material-symbols-outlined text-primary-container text-2xl">visibility</span>
-                        </div>
-                        <span class="font-label-caps text-[9px] text-surface-container-highest text-center leading-tight">Curious<br/>Mind</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-1 group cursor-pointer">
-                        <div class="w-14 h-14 rounded-full border-2 border-primary-container flex items-center justify-center bg-inverse-surface shadow-[0_0_15px_rgba(197,160,89,0.3)] transition-transform group-hover:scale-110">
-                            <span class="material-symbols-outlined text-primary-container text-2xl">workspace_premium</span>
-                        </div>
-                        <span class="font-label-caps text-[9px] text-surface-container-highest text-center leading-tight">First<br/>Discovery</span>
-                    </div>
-                    <div class="flex flex-col items-center gap-1 group cursor-pointer">
-                        <div class="w-14 h-14 rounded-full border-2 border-primary-container/30 flex items-center justify-center bg-inverse-surface/50 grayscale opacity-60">
-                            <span class="material-symbols-outlined text-primary-container/50 text-2xl">lock</span>
-                        </div>
-                        <span class="font-label-caps text-[9px] text-surface-container-highest/50 text-center leading-tight">Level 8<br/>Keeper</span>
-                    </div>
-                </div>
-            </div>
-            <!-- Next Recommended Path -->
-            <div class="bg-inverse-surface/90 rounded-lg p-5 border border-primary/20 ambient-shadow relative overflow-hidden group">
-                <div class="absolute inset-0 opacity-20 transition-opacity group-hover:opacity-30">
-                    <img class="w-full h-full object-cover" data-alt="A majestic view of the ancient Konark Sun Temple in Odisha. The monumental stone wheels and intricate carvings are bathed in the golden light of sunrise. The mood is awe-inspiring and timeless, emphasizing the architectural grandeur against a clear morning sky." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjoLvopaU97X5WkpFBhdK_9pIbVqf_vkSwDyarq2N7jhLhBUjzSjCK06XdjKMhnBrOov2noIq_S63myK5nmwVV-6tfS848JCDOOI5Vi6xDBxbEsBuqnOZFACfARjGYJtL7MRnTMCNNV16gbVRVZqtsE9K9-sV3dcQk2o1-GB3ethu7YYZHLEyqk47COBXea_3I8JDErVvsKg8NATRN6ubIvc-2lh8Z08bC5xKLTuQIH4vWAOuTqICOfg"/>
-                </div>
-                <div class="absolute inset-0 bg-gradient-to-t from-inverse-surface via-inverse-surface/90 to-transparent"></div>
-                <div class="relative z-10">
-                    <h3 class="font-label-caps text-label-caps text-primary mb-2">Next Recommended</h3>
-                    <h4 class="font-headline-lg-mobile text-lg text-surface-container-lowest mb-1 leading-tight">Explore the Temples of Odisha</h4>
-                    <p class="font-body-md text-xs text-surface-container-highest/70 mb-4 flex items-center gap-1">
-                        <span class="material-symbols-outlined text-[14px]">location_on</span>
-                        Odisha
-                    </p>
-                    <button class="w-full py-2 px-4 border border-primary-container text-primary-fixed font-label-caps text-xs rounded hover:bg-primary-container hover:text-on-primary-container transition-colors flex items-center justify-center gap-2">
-                        Continue Journey
-                        <span class="material-symbols-outlined text-sm">arrow_forward</span>
-                    </button>
-                </div>
-            </div>
-        </aside>
-    </div>
-</main>
+        <!-- Cultural Explorer Identity Card -->
+        <div class="profile-summary-card">
+          <div class="profile-avatar-wrapper">
+            <img src="assets/explorer_avatar_exact.png" alt="Cultural Explorer Avatar" class="profile-avatar-img">
+            <div class="avatar-ring-glow"></div>
+          </div>
+          <h2 class="profile-title">Cultural Explorer</h2>
+          <div class="profile-meta">Since Aug 2024</div>
+          
+          <blockquote class="profile-quote">
+            <span class="quote-mark open">“</span>
+            The roots of your culture are the wings of your future.
+            <span class="quote-mark close">”</span>
+          </blockquote>
 
-<!-- Footer -->
-<footer class="bg-inverse-surface dark:bg-inverse-surface border-t border-primary/10 flex flex-col gap-unit items-center w-full pt-section-gap pb-margin-mobile px-margin-mobile text-center z-10 relative">
-    <div class="font-display-lg text-primary text-3xl mb-4 tracking-widest uppercase">VIRASAT</div>
-    <div class="flex flex-wrap justify-center gap-6 mb-8 w-full max-w-container-max">
-        <a class="text-on-primary/60 hover:text-primary transition-colors font-body-md text-sm" href="#">About Heritage</a>
-        <a class="text-on-primary/60 hover:text-primary transition-colors font-body-md text-sm" href="#">Contribution Guide</a>
-        <a class="text-on-primary/60 hover:text-primary transition-colors font-body-md text-sm" href="#">Privacy Archives</a>
-        <a class="text-on-primary/60 hover:text-primary transition-colors font-body-md text-sm" href="#">Terms of Discovery</a>
+          <!-- Passport ID Widget -->
+          <div class="passport-id-container">
+            <div class="passport-id-label">PASSPORT ID</div>
+            <div class="passport-id-box" id="passportIdBox" title="Click to copy Passport ID">
+              <span class="passport-id-code" id="passportIdValue">VIR - 2024 - 8X71 - CE</span>
+              <button class="btn-copy-id" id="btnCopyId" aria-label="Copy Passport ID">
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- ================= CENTER COLUMN: THE DUAL-PAGE PASSPORT JOURNAL ================= -->
+      <section class="col-center-book" aria-label="Passport Journal Manuscript">
+        
+        <!-- Authentically Rendered Double-Spread Open Journal -->
+        <div class="dual-page-manuscript" id="journalBook">
+          
+          <!-- LEFT PAGE: DISCOVERY PASSPORT LOG -->
+          <div class="journal-page page-left">
+            <div class="page-corner-ornament top-left"></div>
+            <div class="page-corner-ornament bottom-left"></div>
+
+            <!-- Page Watermark Tree Motif -->
+            <div class="page-watermark-tree" style="background-image: url('assets/tree-watermark.jpg');"></div>
+
+            <!-- Page Header -->
+            <div class="page-header-row">
+              <span class="page-subheading">CHAPTER II</span>
+              <span class="page-number">P. 04</span>
+            </div>
+            <h2 class="page-title">REGIONS EXPLORED & DISCOVERY LOG</h2>
+            <div class="page-title-rule"></div>
+
+            <!-- 1. INDIA MAP SECTION PLACED PROMINENTLY AT TOP -->
+            <div class="journal-section" style="margin-bottom: 20px;">
+              <div class="section-header-flex">
+                <h3 class="section-title">📍 MAP OF INDIA — REGIONS EXPLORED</h3>
+                <a href="#map" class="link-view-all" id="btnViewMapFull">Interactive Map</a>
+              </div>
+
+              <div class="regions-explored-layout">
+                <!-- Authentic Map of India with Interactive Hotspots -->
+                <div class="india-map-container" id="indiaMapContainer">
+                  <img src="assets/map_india.png" alt="Illustrated Map of India - Regions Explored" class="india-map-image" id="indiaMapImage">
+                  
+                  <!-- Interactive Hover Overlay Hotspots -->
+                  <div class="map-hotspot-layer">
+                    <div class="map-hotspot hotspot-rajasthan" data-state="Rajasthan" data-progress="8/12 Explored" title="Rajasthan: 8/12"></div>
+                    <div class="map-hotspot hotspot-up" data-state="Uttar Pradesh" data-progress="7/10 Explored" title="Uttar Pradesh: 7/10"></div>
+                    <div class="map-hotspot hotspot-gujarat" data-state="Gujarat" data-progress="6/9 Explored" title="Gujarat: 6/9"></div>
+                    <div class="map-hotspot hotspot-wb" data-state="West Bengal" data-progress="5/8 Explored" title="West Bengal: 5/8"></div>
+                    <div class="map-hotspot hotspot-maharashtra" data-state="Maharashtra" data-progress="5/7 Explored" title="Maharashtra: 5/7"></div>
+                    <div class="map-hotspot hotspot-kerala" data-state="Kerala" data-progress="3/6 Explored" title="Kerala: 3/6"></div>
+                    <div class="map-hotspot hotspot-bihar" data-state="Bihar" data-progress="2/5 Explored" title="Bihar: 2/5"></div>
+                  </div>
+
+                  <!-- Floating Map Tooltip -->
+                  <div class="map-tooltip" id="mapTooltip">
+                    <strong class="tooltip-state-name">Rajasthan</strong>
+                    <span class="tooltip-progress-val">8/12 Explored</span>
+                  </div>
+                </div>
+
+                <!-- Region State Exploration Breakdown List -->
+                <div class="state-progress-list">
+                  <div class="state-item" data-state-name="Rajasthan">
+                    <span class="state-bullet bullet-rajasthan"></span>
+                    <span class="state-name">Rajasthan</span>
+                    <span class="state-ratio">8/12</span>
+                  </div>
+                  <div class="state-item" data-state-name="Uttar Pradesh">
+                    <span class="state-bullet bullet-up"></span>
+                    <span class="state-name">Uttar Pradesh</span>
+                    <span class="state-ratio">7/10</span>
+                  </div>
+                  <div class="state-item" data-state-name="Gujarat">
+                    <span class="state-bullet bullet-gujarat"></span>
+                    <span class="state-name">Gujarat</span>
+                    <span class="state-ratio">6/9</span>
+                  </div>
+                  <div class="state-item" data-state-name="West Bengal">
+                    <span class="state-bullet bullet-wb"></span>
+                    <span class="state-name">West Bengal</span>
+                    <span class="state-ratio">5/8</span>
+                  </div>
+                  <div class="state-item" data-state-name="Maharashtra">
+                    <span class="state-bullet bullet-maharashtra"></span>
+                    <span class="state-name">Maharashtra</span>
+                    <span class="state-ratio">5/7</span>
+                  </div>
+                  <div class="state-item" data-state-name="Kerala">
+                    <span class="state-bullet bullet-kerala"></span>
+                    <span class="state-name">Kerala</span>
+                    <span class="state-ratio">3/6</span>
+                  </div>
+                  <div class="state-item" data-state-name="Bihar">
+                    <span class="state-bullet bullet-bihar"></span>
+                    <span class="state-name">Bihar</span>
+                    <span class="state-ratio">2/5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="page-horizontal-divider"></div>
+
+            <!-- 2. STATS OVERVIEW -->
+            <div class="journal-section">
+              <h3 class="section-title">STATS OVERVIEW</h3>
+              <div class="stats-metric-grid">
+                
+                <!-- Stat 1: Total Discoveries -->
+                <div class="metric-card" data-tooltip="Total Discoveries Logged">
+                  <div class="metric-icon-wrap">
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="#5a4d3b" stroke-width="2" fill="none">
+                      <circle cx="12" cy="12" r="10"></circle>
+                      <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                    </svg>
+                  </div>
+                  <div class="metric-details">
+                    <span class="metric-value" id="statDiscoveriesValue">28</span>
+                    <span class="metric-label">Total Discoveries</span>
+                  </div>
+                </div>
+
+                <!-- Stat 2: States Explored -->
+                <div class="metric-card" data-tooltip="States & Regions Explored">
+                  <div class="metric-icon-wrap">
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="#5a4d3b" stroke-width="2" fill="none">
+                      <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
+                      <line x1="8" y1="2" x2="8" y2="18"></line>
+                      <line x1="16" y1="6" x2="16" y2="22"></line>
+                    </svg>
+                  </div>
+                  <div class="metric-details">
+                    <span class="metric-value">12</span>
+                    <span class="metric-label">States Explored</span>
+                  </div>
+                </div>
+
+                <!-- Stat 3: Cultural Twins Found -->
+                <div class="metric-card" onclick="window.location.href='games.html'" style="cursor: pointer;" data-tooltip="Click to explore Cultural Twins">
+                  <div class="metric-icon-wrap">
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="#5a4d3b" stroke-width="2" fill="none">
+                      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                  </div>
+                  <div class="metric-details">
+                    <span class="metric-value" id="statTwinsValue">8</span>
+                    <span class="metric-label">Twins Connected →</span>
+                  </div>
+                </div>
+
+                <!-- Stat 4: Games Completed -->
+                <div class="metric-card" onclick="window.location.href='games.html'" style="cursor: pointer;" data-tooltip="Click to play Games">
+                  <div class="metric-icon-wrap">
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="#5a4d3b" stroke-width="2" fill="none">
+                      <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                      <circle cx="8.5" cy="8.5" r="1.5" fill="#5a4d3b"></circle>
+                      <circle cx="15.5" cy="15.5" r="1.5" fill="#5a4d3b"></circle>
+                    </svg>
+                  </div>
+                  <div class="metric-details">
+                    <span class="metric-value" id="statGamesValue">15</span>
+                    <span class="metric-label">Games Played →</span>
+                  </div>
+                </div>
+
+                <!-- Stat 5: Elder Stories Unlocked -->
+                <div class="metric-card" onclick="window.location.href='wisdom-vault.html'" style="cursor: pointer;" data-tooltip="Click to explore Elder Wisdom Vault">
+                  <div class="metric-icon-wrap">
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="#5a4d3b" stroke-width="2" fill="none">
+                      <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                      <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                    </svg>
+                  </div>
+                  <div class="metric-details">
+                    <span class="metric-value" id="statWisdomValue">9</span>
+                    <span class="metric-label">Elder Shares →</span>
+                  </div>
+                </div>
+
+                <!-- Stat 6: Contributions Made -->
+                <div class="metric-card" data-tooltip="Contributions Made">
+                  <div class="metric-icon-wrap">
+                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="#5a4d3b" stroke-width="2" fill="none">
+                      <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
+                    </svg>
+                  </div>
+                  <div class="metric-details">
+                    <span class="metric-value">5</span>
+                    <span class="metric-label">Contributions</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="page-horizontal-divider"></div>
+
+            <!-- 3. YOUR PROGRESS -->
+            <div class="journal-section">
+              <h3 class="section-title">YOUR PROGRESS</h3>
+              <div class="progress-container">
+                
+                <!-- Circular Level Dial -->
+                <div class="level-dial-wrapper">
+                  <svg class="level-dial-svg" viewBox="0 0 120 120">
+                    <circle class="dial-track" cx="60" cy="60" r="51"/>
+                    <circle class="dial-fill" id="passportDialFill" cx="60" cy="60" r="51" style="stroke-dasharray: 320; stroke-dashoffset: 100;"/>
+                  </svg>
+                  <div class="dial-inner-text">
+                    <span class="dial-level-label">Level</span>
+                    <span class="dial-level-number" id="passportLevelNum">6</span>
+                    <span class="dial-rank-name" id="passportRankName">Heritage Seeker</span>
+                    <span class="dial-xp-text" id="passportXPText">3,550 / 6,900 XP</span>
+                  </div>
+                </div>
+
+                <!-- Streak & Milestone Details -->
+                <div class="streak-details">
+                  <div class="streak-item">
+                    <div class="streak-icon">🏆</div>
+                    <div class="streak-text-group">
+                      <span class="streak-label">Current Streak</span>
+                      <span class="streak-highlight" id="passportStreakText">12 days 🔥</span>
+                    </div>
+                  </div>
+
+                  <div class="streak-item">
+                    <div class="streak-icon">⏳</div>
+                    <div class="streak-text-group">
+                      <span class="streak-label">Longest Streak</span>
+                      <span class="streak-value">28 days</span>
+                    </div>
+                  </div>
+
+                  <div class="streak-item">
+                    <div class="streak-icon">🏛️</div>
+                    <div class="streak-text-group">
+                      <span class="streak-label">Next Milestone</span>
+                      <span class="streak-value">Heritage Keeper</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- ================= RIGHT PAGE OF BOOK: DISCOVERIES & TWINS ================= -->
+          <div class="book-page page-right">
+            
+            <!-- 1. RECENT DISCOVERIES -->
+            <div class="journal-section">
+              <div class="section-header-flex">
+                <h3 class="section-title">RECENT DISCOVERIES</h3>
+                <a href="#discoveries" class="link-view-all" id="btnViewAllDiscoveries">View All</a>
+              </div>
+
+              <div class="discoveries-scroll-row">
+                
+                <!-- Card 1: Onam -->
+                <div class="discovery-card" data-title="Onam" data-category="FESTIVAL" data-state="Kerala" data-desc="The grand harvest festival of Kerala celebrating the homecoming of King Mahabali with snake boat races and Onasadya feasts.">
+                  <div class="discovery-img-wrap">
+                    <img src="assets/discovery_onam_crop.png" alt="Onam Kerala" class="discovery-thumb">
+                    <span class="discovery-tag tag-festival">FESTIVAL</span>
+                  </div>
+                  <div class="discovery-info">
+                    <h4 class="discovery-name">Onam</h4>
+                    <div class="discovery-state">Kerala</div>
+                    <div class="discovery-time">2 days ago</div>
+                  </div>
+                </div>
+
+                <!-- Card 2: Madhubani Painting -->
+                <div class="discovery-card" data-title="Madhubani Painting" data-category="CRAFT" data-state="Bihar" data-desc="Ancient Mithila folk art traditionally created in Bihar using natural mineral pigments and sacred motifs.">
+                  <div class="discovery-img-wrap">
+                    <img src="assets/discovery_madhubani_crop.png" alt="Madhubani Painting Bihar" class="discovery-thumb">
+                    <span class="discovery-tag tag-craft">CRAFT</span>
+                  </div>
+                  <div class="discovery-info">
+                    <h4 class="discovery-name">Madhubani Painting</h4>
+                    <div class="discovery-state">Bihar</div>
+                    <div class="discovery-time">5 days ago</div>
+                  </div>
+                </div>
+
+                <!-- Card 3: Baul Singing -->
+                <div class="discovery-card" data-title="Baul Singing" data-category="TRADITION" data-state="West Bengal" data-desc="UNESCO recognized mystic folk music of Bengal exploring the divine soul with the acoustic Ektara.">
+                  <div class="discovery-img-wrap">
+                    <img src="assets/discovery_baul.png" alt="Baul Singing West Bengal" class="discovery-thumb">
+                    <span class="discovery-tag tag-tradition">TRADITION</span>
+                  </div>
+                  <div class="discovery-info">
+                    <h4 class="discovery-name">Baul Singing</h4>
+                    <div class="discovery-state">West Bengal</div>
+                    <div class="discovery-time">1 week ago</div>
+                  </div>
+                </div>
+
+                <!-- Card 4: Dal Baati Churma -->
+                <div class="discovery-card" data-title="Dal Baati Churma" data-category="FOOD" data-state="Rajasthan" data-desc="Quintessential culinary heritage of Rajasthan: golden baked wheat baatis in pure desi ghee with spicy dal.">
+                  <div class="discovery-img-wrap">
+                    <img src="assets/discovery_dalbaati.png" alt="Dal Baati Churma Rajasthan" class="discovery-thumb">
+                    <span class="discovery-tag tag-food">FOOD</span>
+                  </div>
+                  <div class="discovery-info">
+                    <h4 class="discovery-name">Dal Baati Churma</h4>
+                    <div class="discovery-state">Rajasthan</div>
+                    <div class="discovery-time">1 week ago</div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="page-horizontal-divider"></div>
+
+            <!-- 2. CULTURAL TWIN CONNECTIONS -->
+            <div class="journal-section">
+              <div class="section-header-flex">
+                <h3 class="section-title">CULTURAL TWIN CONNECTIONS</h3>
+                <a href="games.html" class="link-view-all" id="btnViewAllTwins">Play Twins Matrix →</a>
+              </div>s">View All</a>
+              </div>
+
+              <!-- Interactive Comparative Twin Card -->
+              <div class="cultural-twin-card" id="culturalTwinContainer">
+                
+                <div class="twin-sides-row">
+                  
+                  <!-- Left Side: India Tradition -->
+                  <div class="twin-side" id="twinSideIndia">
+                    <span class="twin-tag tag-india">INDIA</span>
+                    <h4 class="twin-title" id="twinTitleIndia">Warli Art</h4>
+                    <span class="twin-region" id="twinRegionIndia">Maharashtra</span>
+                    <div class="twin-artwork-box">
+                      <img src="assets/twin_warli.png" alt="Warli Tribal Art" id="twinImgIndia" class="twin-img">
+                    </div>
+                  </div>
+
+                  <!-- Center Link Connector -->
+                  <div class="twin-link-center">
+                    <div class="link-chain-icon">
+                      <svg viewBox="0 0 24 24" width="18" height="18" stroke="#ffd56b" stroke-width="2" fill="none">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                      </svg>
+                    </div>
+                    <span class="twin-status-pill" id="twinStatusText">Historically Connected</span>
+                  </div>
+
+                  <!-- Right Side: World Tradition -->
+                  <div class="twin-side" id="twinSideWorld">
+                    <span class="twin-tag tag-world">WORLD</span>
+                    <h4 class="twin-title" id="twinTitleWorld">Aboriginal Dot Painting</h4>
+                    <span class="twin-region" id="twinRegionWorld">Australia</span>
+                    <div class="twin-artwork-box">
+                      <img src="assets/twin_aboriginal.png" alt="Aboriginal Dot Painting" id="twinImgWorld" class="twin-img">
+                    </div>
+                  </div>
+
+                </div>
+
+                <!-- Shared Philosophy Description -->
+                <p class="twin-description-text" id="twinDescText">
+                  Both traditions use simple motifs to depict stories of nature, community & life.
+                </p>
+
+                <!-- Carousel Dots Pagination -->
+                <div class="twin-pagination-dots" id="twinDotsContainer">
+                  <span class="twin-dot active" data-index="0"></span>
+                  <span class="twin-dot" data-index="1"></span>
+                  <span class="twin-dot" data-index="2"></span>
+                  <span class="twin-dot" data-index="3"></span>
+                  <span class="twin-dot" data-index="4"></span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ================= RIGHT COLUMN ================= -->
+      <aside class="col-right">
+        
+        <!-- 1. PASSPORT BADGES -->
+        <div class="sidebar-module">
+          <div class="section-header-flex">
+            <h3 class="sidebar-title">PASSPORT BADGES</h3>
+            <a href="#badges" class="link-view-all" id="btnViewAllBadges">View All</a>
+          </div>
+
+          <div class="badges-grid">
+            
+            <!-- Badge 1: Curious Mind -->
+            <div class="badge-item" data-badge="curious" title="Curious Mind">
+              <div class="badge-medallion">
+                <img src="assets/badge_curious.png" alt="Curious Mind Badge" class="badge-exact-img">
+              </div>
+              <span class="badge-label">Curious Mind</span>
+            </div>
+
+            <!-- Badge 2: First Discovery -->
+            <div class="badge-item" data-badge="first" title="First Discovery">
+              <div class="badge-medallion">
+                <img src="assets/badge_first.png" alt="First Discovery Badge" class="badge-exact-img">
+              </div>
+              <span class="badge-label">First Discovery</span>
+            </div>
+
+            <!-- Badge 3: Story Seeker -->
+            <div class="badge-item" data-badge="story" title="Story Seeker">
+              <div class="badge-medallion">
+                <img src="assets/badge_story.png" alt="Story Seeker Badge" class="badge-exact-img">
+              </div>
+              <span class="badge-label">Story Seeker</span>
+            </div>
+
+            <!-- Badge 4: Game Explorer -->
+            <div class="badge-item" data-badge="game" title="Game Explorer">
+              <div class="badge-medallion">
+                <img src="assets/badge_game.png" alt="Game Explorer Badge" class="badge-exact-img">
+              </div>
+              <span class="badge-label">Game Explorer</span>
+            </div>
+
+            <!-- Badge 5: Culture Connector -->
+            <div class="badge-item" data-badge="culture" title="Culture Connector">
+              <div class="badge-medallion">
+                <img src="assets/badge_culture.png" alt="Culture Connector Badge" class="badge-exact-img">
+              </div>
+              <span class="badge-label">Culture Connector</span>
+            </div>
+
+            <!-- Badge 6: Heritage Keeper (Locked) -->
+            <div class="badge-item badge-locked" data-badge="keeper" title="Heritage Keeper (Locked)">
+              <div class="badge-medallion">
+                <img src="assets/badge_keeper.png" alt="Heritage Keeper Badge (Locked)" class="badge-exact-img">
+              </div>
+              <span class="badge-label">Heritage Keeper</span>
+              <span class="badge-sublevel">Level 5</span>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 2. YOUR IMPACT -->
+        <div class="sidebar-module">
+          <div class="section-header-flex">
+            <h3 class="sidebar-title">YOUR IMPACT</h3>
+            <a href="#impact" class="link-view-all" id="btnViewAllImpact">View All</a>
+          </div>
+
+          <!-- 3 Impact Metric Columns -->
+          <div class="impact-metrics-row">
+            <div class="impact-col">
+              <div class="impact-shield-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#d4af37" stroke-width="1.8" fill="none">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  <circle cx="12" cy="11" r="3" fill="#d4af37"/>
+                </svg>
+              </div>
+              <span class="impact-val">8</span>
+              <span class="impact-txt">Stories Shared</span>
+            </div>
+
+            <div class="impact-col" onclick="window.location.href='wisdom-vault.html'" style="cursor: pointer;" title="Click to explore Elder Wisdom Vault">
+              <div class="impact-shield-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#4895ef" stroke-width="1.8" fill="none">
+                  <path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7H3l2-4h14l2 4M5 21V10.85M19 21V10.85M9 21v-4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v4"/>
+                </svg>
+              </div>
+              <span class="impact-val">3</span>
+              <span class="impact-txt">Elders Honored →</span>
+            </div>
+
+            <div class="impact-col">
+              <div class="impact-shield-icon">
+                <svg viewBox="0 0 24 24" width="20" height="20" stroke="#e07a5f" stroke-width="1.8" fill="none">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <span class="impact-val">1</span>
+              <span class="impact-txt">Community Helped</span>
+            </div>
+          </div>
+
+          <!-- Elder Quote Card (Opens Wisdom Vault) -->
+          <div class="elder-quote-card" onclick="window.location.href='wisdom-vault.html'" style="cursor: pointer;" title="Click to visit Elder Wisdom Vault">
+            <div class="elder-portrait-wrap">
+              <img src="assets/elder_portrait_exact.png" alt="Village Elder Portrait" class="elder-portrait-img">
+            </div>
+            <div class="elder-quote-body">
+              <p class="elder-quote-text">
+                “We do not inherit our culture from our ancestors, we borrow it from our children.”
+              </p>
+              <div class="elder-quote-author">— Indian Proverb (Explore Elder Lore →)</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. NEXT RECOMMENDED PATH -->
+        <div class="sidebar-module module-recommended">
+          <div class="section-header-flex">
+            <h3 class="sidebar-title">NEXT RECOMMENDED PATH</h3>
+          </div>
+
+          <div class="recommended-path-card" id="recPathCard">
+            <div class="rec-path-bg" style="background-image: url('assets/temple_odisha.png');">
+              <div class="rec-path-gradient"></div>
+            </div>
+            <div class="rec-path-content">
+              <span class="rec-subhead">Explore more about</span>
+              <h4 class="rec-title">Temples of Odisha</h4>
+              <div class="rec-location">
+                <svg viewBox="0 0 24 24" width="14" height="14" stroke="#d4af37" stroke-width="2" fill="none">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                <span>Odisha</span>
+              </div>
+              <button class="btn-continue-journey" id="btnContinueJourney">
+                <span>Continue Journey</span>
+                <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </aside>
+
+    </main>
+
+    <!-- Bottom Accent Ribbon / Footer Banner -->
+    <footer class="app-bottom-bar">
+      <!-- Left Quote Capsule -->
+      <div class="bottom-quote-pill">
+        <span>The more you explore, the more you preserve.</span>
+      </div>
+
+      <!-- Right Compass Banner -->
+      <div class="bottom-banner-parchment">
+        <div class="banner-text-group">
+          <h4 class="banner-title">Keep Exploring, Keep Preserving.</h4>
+          <p class="banner-sub">Your journey has just begun.</p>
+        </div>
+        
+        <!-- Vintage Brass Compass from Screenshot -->
+        <div class="vintage-compass-icon" title="Ancient Maritime Compass">
+          <img src="assets/compass_exact.png" alt="Vintage Navigation Compass" class="compass-img-exact">
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ================= INTERACTIVE MODALS & TOASTS ================= -->
+  
+  <!-- Copy Notification Toast -->
+  <div class="toast-notification" id="copyToast" role="status" aria-live="polite">
+    <svg viewBox="0 0 24 24" width="18" height="18" stroke="#4ade80" stroke-width="2" fill="none">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </svg>
+    <span>Passport ID copied to clipboard!</span>
+  </div>
+
+  <!-- Discovery Detail Modal Dialog -->
+  <div class="modal-backdrop" id="discoveryModal" aria-hidden="true" role="dialog">
+    <div class="modal-card">
+      <button class="modal-btn-close" id="modalCloseBtn" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <span class="modal-tag" id="modalTag">FESTIVAL</span>
+        <h3 class="modal-title" id="modalTitle">Onam</h3>
+        <span class="modal-state" id="modalState">Kerala</span>
+      </div>
+      <div class="modal-body">
+        <div class="modal-img-wrap">
+          <img src="" alt="" id="modalImg" class="modal-hero-img">
+        </div>
+        <p class="modal-desc" id="modalDesc">
+          Detailed lore, history, and traditions of this cultural discovery.
+        </p>
+      </div>
+      <div class="modal-footer">
+        <button class="modal-action-btn" id="modalShareBtn">📜 Share Discovery</button>
+        <button class="modal-action-btn primary" id="modalAudioBtn">🎧 Play Lore Narration</button>
+      </div>
     </div>
-    <p class="font-body-md text-body-md text-on-primary/40 text-sm tracking-wider">VIRASAT © 2024. LEARN · SHARE · PRESERVE</p>
-</footer>
+  </div>
+
+  <!-- Badge 3D Inspection Modal Dialog -->
+  <div class="modal-backdrop" id="badgeModal" aria-hidden="true" role="dialog">
+    <div class="modal-card modal-badge-card">
+      <button class="modal-btn-close" id="badgeModalCloseBtn" aria-label="Close modal">&times;</button>
+      <div class="badge-modal-content">
+        <div class="badge-modal-medallion" id="badgeModalIconWrap">
+          <img src="" alt="" id="badgeModalImg" style="width:100%;height:100%;object-fit:contain;">
+        </div>
+        <h3 class="badge-modal-title" id="badgeModalTitle">Curious Mind</h3>
+        <span class="badge-modal-status" id="badgeModalStatus">Unlocked · Aug 14, 2024</span>
+        <p class="badge-modal-desc" id="badgeModalDesc">
+          Awarded for uncovering ancient heritage artifacts across 3 distinct historical eras.
+        </p>
+        <div class="badge-modal-stats">
+          <div class="b-stat"><span>XP Earned</span><strong>+450 XP</strong></div>
+          <div class="b-stat"><span>Rarity</span><strong>Rare (14.2%)</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript Logic -->
+  <script src="js/passport-service.js"></script>
+  <script src="js/passport-app.js"></script>
 </body>
 </html>

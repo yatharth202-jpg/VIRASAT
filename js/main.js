@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Hero Slides Carousel
     const slides = document.querySelectorAll('.hero-slide');
     const monumentText = document.getElementById('monument-text');
     let currentSlideIndex = 0;
@@ -38,11 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 5500);
     }
 
+    // 2. Heritage Facts Carousel
     const heritageFacts = [
         "The sarangi, a traditional Indian instrument, shares its roots with the rebab of Persia.",
         "Rani Ki Vav stepwell was constructed in the 11th century as an inverted subterranean temple with over 500 sculpted deities.",
         "The Konark Sun Temple’s 24 monumental stone wheels function as accurate sundials, calculating time down to the exact minute.",
-        "Jaipur Blue Pottery is unique across the world—it is made without clay, using Egyptian paste, quartz powder, and natural glass glaze."
+        "Jaipur Blue Pottery is unique across the world — it is made without clay, using Egyptian paste, quartz powder, and natural glass glaze."
     ];
 
     let currentFactIndex = 0;
@@ -99,4 +101,34 @@ document.addEventListener('DOMContentLoaded', () => {
         const nextIndex = (currentFactIndex + 1) % heritageFacts.length;
         showFact(nextIndex);
     }, 5500);
+
+    // 3. Homepage Passport Module Live Dynamic Sync
+    function syncHomepagePassportModule() {
+        if (typeof VirasatPassportService === 'undefined') return;
+        const stats = VirasatPassportService.getStats();
+        const passportModule = document.getElementById('passport-module');
+        if (!passportModule) return;
+
+        const countHeader = passportModule.querySelector('.font-heading.text-2xl');
+        if (countHeader) {
+            countHeader.textContent = `${stats.solved} / 28`;
+        }
+
+        const progressBar = passportModule.querySelector('.bg-gradient-to-r');
+        if (progressBar) {
+            const pct = Math.min(100, Math.round((stats.solved / 28) * 100));
+            progressBar.style.width = `${Math.max(15, pct)}%`;
+        }
+
+        const wisdomCountEl = passportModule.querySelector('.border-t .flex-col:first-child .font-bold');
+        if (wisdomCountEl) {
+            wisdomCountEl.textContent = `${stats.wisdomCount}/6`;
+        }
+    }
+
+    syncHomepagePassportModule();
+    window.addEventListener('virasat:passport-updated', syncHomepagePassportModule);
+    window.addEventListener('virasat:stamps-updated', syncHomepagePassportModule);
+    window.addEventListener('virasat:discoveries-updated', syncHomepagePassportModule);
+    window.addEventListener('virasat:badges-updated', syncHomepagePassportModule);
 });

@@ -1,88 +1,104 @@
 /* ==========================================================================
-   VIRASAT HERITAGE PLATFORM - DESIGN TOKENS
-   Custodial, scholarly, and profoundly premium digital museum design system.
+   VIRASAT DESIGN SYSTEM - AETHERIS CULTURAL HERITAGE TOKENS
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Manrope:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Work+Sans:wght@300;400;500;600;700&display=swap');
-
 :root {
-  /* Brand Pillars */
-  --gold-primary: #C5A059;
-  --gold-bright: #D8B268;
-  --gold-hover: #B58F45;
-  --gold-deep: #775A19;
-  --gold-glow: rgba(197, 160, 89, 0.35);
-  --gold-border: rgba(197, 160, 89, 0.28);
-  --gold-subtle: rgba(197, 160, 89, 0.12);
-  --gold-fixed: #FFDEA5;
+  /* Color System */
+  --color-surface-dark: #131313;
+  --color-surface-darker: #0d0d0d;
+  --color-surface-header: #1a1412;
+  --color-surface-hero: #16100d;
+  --color-surface-bottom-banner: #120e0c;
 
-  /* Surfaces & Parchment */
-  --surface-parchment: #F5F1E6;
-  --surface-parchment-light: #FFF9F3;
-  --surface-parchment-warm: #F2ECE0;
-  --surface-container-card: #FFFFFF;
-  --surface-container-muted: #F8F4EC;
-  --surface-container-elevated: #FAF6EF;
+  /* Parchment Canvas */
+  --color-bg-parchment: #f5e6d3;
+  --color-bg-parchment-texture: #f3dfc8;
+  --color-bg-card: #fff9f0;
+  --color-bg-card-hover: #ffffff;
+  --color-card-border: #e6d5bf;
+  --color-card-border-subtle: rgba(142, 107, 72, 0.18);
+
+  /* Accents & Golds */
+  --color-gold-primary: #d4af37;
+  --color-gold-muted: #c5a059;
+  --color-gold-bright: #f2ca50;
+  --color-gold-deep: #9d7b27;
+  --color-gold-glow: rgba(212, 175, 55, 0.35);
+
+  /* Earthy & Terracotta */
+  --color-terracotta: #8b5e3c;
+  --color-terracotta-hover: #754b2d;
+  --color-terracotta-active: #603d24;
+  --color-terracotta-light: #fbf5ef;
+
+  /* Helper Highlight Green */
+  --color-help-bg: #e8edde;
+  --color-help-border: #d4dec4;
+  --color-help-text: #2f4028;
+  --color-help-subtext: #4e5f47;
+
+  /* Typography Colors */
+  --color-text-primary-dark: #3e2723;
+  --color-text-secondary-dark: #63534a;
+  --color-text-muted-dark: #8c7a6e;
   
-  /* Dark Museum Containers */
-  --dark-bg: #090B0E;
-  --dark-surface: #0E1318;
-  --dark-card: #131922;
-  --dark-card-border: rgba(197, 160, 89, 0.22);
-  --dark-subtle: #1C232F;
-  --dark-text-primary: #F8EFE6;
-  --dark-text-secondary: #C4BBB0;
-  --dark-text-muted: #8E877C;
+  --color-text-primary-light: #f5f2e9;
+  --color-text-secondary-light: #d0c5af;
+  --color-text-muted-light: #99907c;
 
-  /* Typography Colors (Light Background) */
-  --text-headline: #1E1B16;
-  --text-body: #423C32;
-  --text-muted: #726A5C;
-  --text-subtle: #968D7E;
+  /* Typography Scales */
+  --font-serif: 'Libre Caslon Text', Georgia, serif;
+  --font-sans: 'Manrope', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
 
-  /* Status & Verification Colors */
-  --accent-correct: #1E7E34;
-  --accent-correct-bg: #EAF7EE;
-  --accent-correct-border: #97E2AB;
-  --accent-incorrect: #C0392B;
-  --accent-incorrect-bg: #FDF2F2;
-  --accent-streak-flame: #E65100;
-  --accent-token-gold: #FFB300;
+  /* Elevation Shadows */
+  --shadow-sm: 0 2px 4px rgba(62, 39, 35, 0.05);
+  --shadow-md: 0 4px 12px rgba(62, 39, 35, 0.08);
+  --shadow-lg: 0 10px 24px rgba(62, 39, 35, 0.12);
+  --shadow-hero-glow: 0 0 35px rgba(212, 175, 55, 0.15);
 
-  /* Typography Families */
-  --font-display: 'Playfair Display', 'Cinzel', Georgia, serif;
-  --font-serif-accent: 'Cinzel', 'Playfair Display', serif;
-  --font-body: 'Work Sans', system-ui, -apple-system, sans-serif;
-  --font-ui: 'Manrope', 'Work Sans', sans-serif;
-
-  /* Spacing Scale */
-  --space-unit: 8px;
-  --space-xs: 4px;
-  --space-sm: 8px;
-  --space-md: 16px;
-  --space-lg: 24px;
-  --space-xl: 32px;
-  --space-2xl: 48px;
-  --space-3xl: 64px;
-  --container-max: 1360px;
-
-  /* Elevation & Shadows (Warm Museum Shadows) */
-  --shadow-warm-sm: 0 2px 6px rgba(45, 30, 10, 0.04), 0 1px 2px rgba(45, 30, 10, 0.03);
-  --shadow-warm-md: 0 8px 20px rgba(45, 30, 10, 0.06), 0 2px 6px rgba(45, 30, 10, 0.04);
-  --shadow-warm-lg: 0 16px 36px rgba(45, 30, 10, 0.08), 0 4px 12px rgba(45, 30, 10, 0.04);
-  --shadow-gold-glow: 0 0 25px rgba(197, 160, 89, 0.35);
-  --shadow-dark-card: 0 12px 30px rgba(0, 0, 0, 0.45);
-
-  /* Border Radii */
-  --radius-xs: 4px;
-  --radius-sm: 8px;
-  --radius-md: 12px;
-  --radius-lg: 18px;
-  --radius-xl: 24px;
+  /* Border Radius */
+  --radius-xs: 3px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
   --radius-pill: 9999px;
 
   /* Transitions */
-  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-normal: 280ms cubic-bezier(0.25, 1, 0.5, 1);
-  --transition-smooth: 450ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-fast: 0.18s ease;
+  --transition-smooth: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  --transition-spring: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Reset & Base Defaults */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-parchment);
+  color: var(--color-text-primary-dark);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Base Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ede0cf;
+}
+::-webkit-scrollbar-thumb {
+  background: #c5a059;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a3823d;
 }

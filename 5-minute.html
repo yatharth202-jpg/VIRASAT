@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>5-Minute Virasat | Learn a skill. Practice it. Pass it on.</title>
+  <meta name="description" content="5-Minute Virasat: Short, interactive lessons in dance, yoga, music, art, language, and food heritage.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Cinzel+Decorative:wght@700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="css/5-minute.css">
+</head>
+<body>
+  <div class="page-container" id="five-minute-app">
+
+    <!-- Top Navigation Bar -->
+    <header class="navbar" id="main-nav">
+      <div class="nav-left">
+        <a href="index.html" class="brand-container" id="brand-logo" title="Back to Virasat Home">
+          <div class="mandala-icon">
+            <img src="assets/mandala_logo.png" alt="Virasat Mandala Logo" class="brand-mandala">
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">VIRASAT</span>
+            <span class="brand-subtitle">LEARN • SHARE • PRESERVE</span>
+          </div>
+        </a>
+      </div>
+
+      <nav class="nav-center" id="nav-links">
+        <a href="index.html" class="nav-link" id="nav-home">Home</a>
+        <a href="index.html#explore-section" class="nav-link" id="nav-explore">Explore</a>
+        <a href="passport.html" class="nav-link" id="nav-passport">Passport</a>
+        <a href="wisdom-vault.html" class="nav-link" id="nav-vault">Wisdom Vault</a>
+        <a href="surprise-me.html" class="nav-link active" id="nav-surprise">
+          Surprise Me
+          <span class="active-indicator"></span>
+        </a>
+        <a href="games.html" class="nav-link" id="nav-games">Games</a>
+        <a href="connect.html" class="nav-link" id="nav-connect">Connect</a>
+        <a href="games.html#culturalRoomModal" class="nav-link" id="nav-rooms">Rooms</a>
+      </nav>
+
+      <div class="nav-right">
+        <div class="search-input-wrapper">
+          <input type="text" placeholder="Search heritage..." class="nav-search-input">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="search-icon-inside">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </div>
+
+        <button class="icon-btn notification-btn" id="notification-btn" aria-label="Notifications">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+            <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+          </svg>
+          <span class="badge-dot">1</span>
+        </button>
+
+        <div class="user-profile" id="user-profile-btn" role="button" tabindex="0">
+          <div class="avatar-wrapper">
+            <img src="assets/explorer_avatar.png" alt="Explorer Profile" class="avatar-img">
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Top Subnav Breadcrumb Bar -->
+    <div style="background: rgba(24,21,18,0.95); border-bottom: 1px solid rgba(212,163,89,0.25); padding: 10px 24px;">
+      <div style="max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; font-size: 13px;">
+        <a href="index.html" style="color: #D4A359; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; background: rgba(212,163,89,0.12); padding: 5px 14px; border-radius: 9999px; border: 1px solid rgba(212,163,89,0.3);">
+          <span>← Back to Virasat Home</span>
+        </a>
+        <div style="display: flex; align-items: center; gap: 14px; color: rgba(250,245,238,0.7);">
+          <a href="surprise-me.html" style="color: #ECC484; text-decoration: none;">✨ Surprise Capsule</a>
+          <span>•</span>
+          <a href="games.html" style="color: #ECC484; text-decoration: none;">🎮 Cultural Games</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="virasat-5min-main">
+      
+      <!-- Top Hero Section: 5-Minute Virasat & Dancer -->
+      <section class="hero-5min-section">
+        <div class="hero-5min-wrapper">
+          
+          <!-- Left Column: Title, Subtitle, CTA buttons -->
+          <div class="hero-5min-left">
+            <div class="badge-surprise-me">
+              <span class="star-icon">★</span>
+              <span>SURPRISE ME</span>
+            </div>
+
+            <div class="title-with-clock">
+              <h1 class="hero-5min-title">5-MINUTE VIRASAT</h1>
+              <div class="clock-icon-gold">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </div>
+            </div>
+
+            <h2 class="hero-5min-tagline">Learn a skill. Practice it. Pass it on.</h2>
+            
+            <p class="hero-5min-desc">
+              Short, interactive lessons that help you connect with our heritage in just five minutes.
+            </p>
+
+            <div class="hero-action-buttons">
+              <button class="pill-action-btn" id="btn-curious">
+                <span class="btn-icon">ⓘ</span>
+                <span>I'm curious</span>
+              </button>
+
+              <button class="pill-action-btn" id="btn-practice">
+                <span class="btn-icon">♡</span>
+                <span>I want to practice</span>
+              </button>
+
+              <button class="pill-action-btn dark-btn" id="btn-surprise-shuffle">
+                <span>Surprise me</span>
+                <span class="shuffle-icon">🔀</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Center Column: Classical Dancer Hero Graphic -->
+          <div class="hero-5min-center">
+            <div class="dancer-frame">
+              <img src="assets/dancer_hero.png" alt="Indian Classical Bharatanatyam Dancer" class="dancer-photo">
+            </div>
+          </div>
+
+          <!-- Right Column: "Why 5 Minutes?" Card -->
+          <div class="hero-5min-right">
+            <div class="why-5min-card">
+              <div class="why-card-mandala-bg"></div>
+              <h3 class="why-title">Why 5 Minutes?</h3>
+              <ul class="why-benefits-list">
+                <li>
+                  <div class="benefit-icon">⏱</div>
+                  <span>Quick & easy lessons</span>
+                </li>
+                <li>
+                  <div class="benefit-icon">🖐</div>
+                  <span>Learn by doing</span>
+                </li>
+                <li>
+                  <div class="benefit-icon">🛡</div>
+                  <span>Build real skills</span>
+                </li>
+                <li>
+                  <div class="benefit-icon">👥</div>
+                  <span>Pass it on to others</span>
+                </li>
+                <li>
+                  <div class="benefit-icon">🏆</div>
+                  <span>Earn discovery points</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section Title: CHOOSE WHAT YOU WANT TO LEARN -->
+      <section class="choose-learning-section">
+        <div class="section-ornate-header">
+          <span class="divider-line"></span>
+          <span class="section-diamond">✦</span>
+          <h2 class="section-title-text">CHOOSE WHAT YOU WANT TO LEARN</h2>
+          <span class="section-diamond">✦</span>
+          <span class="divider-line"></span>
+        </div>
+
+        <!-- 6 Category Cards Grid -->
+        <div class="categories-grid">
+          
+          <!-- Category 1: MOVE -->
+          <div class="category-card" data-category="move">
+            <div class="card-image-wrapper">
+              <img src="assets/cat_move.png" alt="Dance & Mudras" class="category-img">
+              <div class="category-icon-badge badge-terracotta">
+                🖐
+              </div>
+            </div>
+            <div class="category-card-body">
+              <span class="category-action-label">MOVE</span>
+              <h3 class="category-name">Dance & Mudras</h3>
+              <p class="category-desc">Learn hand gestures, dance steps and expressions.</p>
+              <div class="category-card-footer">
+                <span class="lesson-count">12 Lessons</span>
+                <button class="circle-arrow-btn" aria-label="Explore Dance & Mudras">
+                  ➔
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 2: BREATHE -->
+          <div class="category-card" data-category="breathe">
+            <div class="card-image-wrapper">
+              <img src="assets/cat_breathe.png" alt="Yoga & Wellness" class="category-img">
+              <div class="category-icon-badge badge-green">
+                🧘
+              </div>
+            </div>
+            <div class="category-card-body">
+              <span class="category-action-label">BREATHE</span>
+              <h3 class="category-name">Yoga & Wellness</h3>
+              <p class="category-desc">Discover asanas, breathing practices and wellness rituals.</p>
+              <div class="category-card-footer">
+                <span class="lesson-count">15 Lessons</span>
+                <button class="circle-arrow-btn" aria-label="Explore Yoga & Wellness">
+                  ➔
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 3: LISTEN -->
+          <div class="category-card" data-category="listen">
+            <div class="card-image-wrapper">
+              <img src="assets/cat_listen.png" alt="Music & Rhythm" class="category-img">
+              <div class="category-icon-badge badge-purple">
+                🎵
+              </div>
+            </div>
+            <div class="category-card-body">
+              <span class="category-action-label">LISTEN</span>
+              <h3 class="category-name">Music & Rhythm</h3>
+              <p class="category-desc">Explore ragas, taals, instruments and folk rhythms.</p>
+              <div class="category-card-footer">
+                <span class="lesson-count">18 Lessons</span>
+                <button class="circle-arrow-btn" aria-label="Explore Music & Rhythm">
+                  ➔
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 4: CREATE -->
+          <div class="category-card" data-category="create">
+            <div class="card-image-wrapper">
+              <img src="assets/cat_create.png" alt="Art & Craft" class="category-img">
+              <div class="category-icon-badge badge-blue">
+                🎨
+              </div>
+            </div>
+            <div class="category-card-body">
+              <span class="category-action-label">CREATE</span>
+              <h3 class="category-name">Art & Craft</h3>
+              <p class="category-desc">Try traditional art forms, patterns and craft techniques.</p>
+              <div class="category-card-footer">
+                <span class="lesson-count">16 Lessons</span>
+                <button class="circle-arrow-btn" aria-label="Explore Art & Craft">
+                  ➔
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 5: SPEAK -->
+          <div class="category-card" data-category="speak">
+            <div class="card-image-wrapper">
+              <img src="assets/cat_speak.png" alt="Language & Stories" class="category-img">
+              <div class="category-icon-badge badge-teal">
+                💬
+              </div>
+            </div>
+            <div class="category-card-body">
+              <span class="category-action-label">SPEAK</span>
+              <h3 class="category-name">Language & Stories</h3>
+              <p class="category-desc">Learn words, proverbs, greetings and folk tales.</p>
+              <div class="category-card-footer">
+                <span class="lesson-count">14 Lessons</span>
+                <button class="circle-arrow-btn" aria-label="Explore Language & Stories">
+                  ➔
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Category 6: TASTE -->
+          <div class="category-card" data-category="taste">
+            <div class="card-image-wrapper">
+              <img src="assets/cat_taste.png" alt="Food Heritage" class="category-img">
+              <div class="category-icon-badge badge-amber">
+                🍲
+              </div>
+            </div>
+            <div class="category-card-body">
+              <span class="category-action-label">TASTE</span>
+              <h3 class="category-name">Food Heritage</h3>
+              <p class="category-desc">Explore traditional recipes, ingredients and food stories.</p>
+              <div class="category-card-footer">
+                <span class="lesson-count">13 Lessons</span>
+                <button class="circle-arrow-btn" aria-label="Explore Food Heritage">
+                  ➔
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- More Categories Filter Pills -->
+        <div class="more-categories-row">
+          <span class="more-label">MORE CATEGORIES</span>
+          <span class="more-arrow">➔</span>
+          <button class="filter-pill-btn">
+            <span class="pill-icon">🎲</span>
+            <span>Games & Traditions</span>
+          </button>
+          <button class="filter-pill-btn">
+            <span class="pill-icon">🪔</span>
+            <span>Living Skills</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Bottom Bento Row: How it Works & Featured Lesson -->
+      <section class="bottom-bento-section">
+        <div class="bottom-bento-grid">
+          
+          <!-- Panel 1: How it Works (5 Steps) -->
+          <div class="bento-panel how-it-works-panel">
+            <h3 class="panel-heading">HOW IT WORKS</h3>
+            
+            <div class="steps-flow-container">
+              
+              <div class="step-item">
+                <div class="step-icon-circle">▶</div>
+                <div class="step-meta">
+                  <span class="step-title">1. WATCH</span>
+                  <p class="step-text">Watch a short, step-by-step explanation.</p>
+                </div>
+              </div>
+
+              <div class="step-arrow">➔</div>
+
+              <div class="step-item">
+                <div class="step-icon-circle">🖐</div>
+                <div class="step-meta">
+                  <span class="step-title">2. TRY</span>
+                  <p class="step-text">Follow along and try it yourself.</p>
+                </div>
+              </div>
+
+              <div class="step-arrow">➔</div>
+
+              <div class="step-item">
+                <div class="step-icon-circle">?</div>
+                <div class="step-meta">
+                  <span class="step-title">3. CHECK</span>
+                  <p class="step-text">Check your understanding with a quick quiz.</p>
+                </div>
+              </div>
+
+              <div class="step-arrow">➔</div>
+
+              <div class="step-item">
+                <div class="step-icon-circle">★</div>
+                <div class="step-meta">
+                  <span class="step-title">4. MASTER</span>
+                  <p class="step-text">Master the skill and unlock rewards.</p>
+                </div>
+              </div>
+
+              <div class="step-arrow">➔</div>
+
+              <div class="step-item">
+                <div class="step-icon-circle">👥</div>
+                <div class="step-meta">
+                  <span class="step-title">5. PASS IT ON</span>
+                  <p class="step-text">Teach someone and keep the tradition alive.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Panel 2: Featured 5-Minute Lesson -->
+          <div class="bento-panel featured-lesson-panel">
+            <div class="featured-info-col">
+              <span class="featured-tag-label">FEATURED 5-MINUTE LESSON</span>
+              <span class="mudra-tag">MUDRAS</span>
+              
+              <h3 class="featured-lesson-title">Master 3 Basic Mudras</h3>
+              <p class="featured-lesson-desc">
+                Learn Pataka, Tripataka and Ardhapataka with easy step-by-step guidance.
+              </p>
+
+              <div class="lesson-meta-row">
+                <span class="meta-item">⏱ 5 Min</span>
+                <span class="meta-divider">|</span>
+                <span class="meta-item">📶 Beginner</span>
+              </div>
+
+              <button class="start-learning-btn" id="btn-start-mudra-lesson">
+                <span>Start Learning</span>
+                <span class="play-triangle">▶</span>
+              </button>
+            </div>
+
+            <!-- Right Visual: 3 Mudra Panels with Play overlay -->
+            <div class="featured-visual-col" id="mudra-preview-trigger" role="button" tabindex="0">
+              <img src="assets/mudra_trio.png" alt="3 Basic Mudras: Pataka, Tripataka, Ardhapataka" class="mudra-trio-img">
+              <div class="mudra-play-overlay">
+                <div class="mudra-play-circle">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF">
+                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Footer Wisdom Quote -->
+      <footer class="virasat-footer-quote">
+        <div class="quote-container">
+          <span class="footer-quote-symbol">“</span>
+          <p class="footer-quote-text">
+            Every skill you learn is a piece of our heritage. Every skill you pass on keeps it alive.
+          </p>
+          <span class="footer-quote-symbol">”</span>
+        </div>
+      </footer>
+
+    </main>
+
+    <!-- Interactive Lesson Modal -->
+    <div class="modal-backdrop" id="lesson-modal">
+      <div class="modal-dialog">
+        <button class="modal-close" id="close-lesson-modal">✕</button>
+        <div class="modal-header">
+          <span class="modal-badge">5-MINUTE LESSON</span>
+          <h3 class="modal-title">Mastering Bharatanatyam Mudras</h3>
+          <p class="modal-subtitle">Pataka • Tripataka • Ardhapataka</p>
+        </div>
+        <div class="modal-video-container">
+          <img src="assets/mudra_trio.png" alt="Mudras Lesson" class="modal-hero-img">
+        </div>
+        <div class="modal-body-text">
+          <p><strong>1. Pataka:</strong> Extend all four fingers straight together and bend the thumb touching the base of the index finger. Used to denote clouds, forest, or open sky.</p>
+          <p style="margin-top: 8px;"><strong>2. Tripataka:</strong> From Pataka, bend only the ring finger downwards. Used to depict a crown, tree, or lightning bolt.</p>
+          <p style="margin-top: 8px;"><strong>3. Ardhapataka:</strong> From Tripataka, bend both the ring finger and the little finger. Used to signify a knife, bank of a river, or a flag.</p>
+        </div>
+        <div class="modal-footer">
+          <button class="cta-button btn-blue" id="btn-complete-mudra">Practice Done • Collect 50 XP ✦</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // Simple interactions for 5-minute page
+    const lessonModal = document.getElementById('lesson-modal');
+    const btnStart = document.getElementById('btn-start-mudra-lesson');
+    const mudraTrigger = document.getElementById('mudra-preview-trigger');
+    const closeModal = document.getElementById('close-lesson-modal');
+    const btnComplete = document.getElementById('btn-complete-mudra');
+
+    function openModal() {
+      if (lessonModal) {
+        lessonModal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    }
+
+    function hideModal() {
+      if (lessonModal) {
+        lessonModal.classList.remove('active');
+        document.body.style.overflow = '';
+      }
+    }
+
+    if (btnStart) btnStart.addEventListener('click', openModal);
+    if (mudraTrigger) mudraTrigger.addEventListener('click', openModal);
+    if (closeModal) closeModal.addEventListener('click', hideModal);
+    if (btnComplete) {
+      btnComplete.addEventListener('click', () => {
+        if (window.VirasatPassportService) {
+          window.VirasatPassportService.showToast('Mastered 3 Basic Mudras!', '+50 Discovery XP');
+        } else {
+          alert('?? Congratulations! You have mastered 3 Basic Mudras and earned 50 Discovery Points!');
+        }
+        hideModal();
+      });
+    }
+
+    // Category click alerts
+    document.querySelectorAll('.category-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const name = card.querySelector('.category-name').textContent;
+        alert(`Opening ${name} 5-Minute Lessons!`);
+      });
+    });
+  </script>
+<script src="js/passport-service.js"></script>
+</body>
+</html>

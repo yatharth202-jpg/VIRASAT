@@ -489,15 +489,92 @@ class VirasatWisdomVaultApp {
     if (!story) return;
 
     if (this.currentlyPlayingId === storyId) {
+      this.stopAudio();
       this.currentlyPlayingId = null;
-      if (this.audioInterval) clearInterval(this.audioInterval);
     } else {
+      this.stopAudio();
       this.currentlyPlayingId = storyId;
+      this.startOralAudioPlayback(story);
+
       if (window.VirasatPassportService) {
         window.VirasatPassportService.recordWisdomListen(story);
       }
     }
     this.renderStories();
+  }
+
+  stopAudio() {
+    if (window.speechSynthesis) {
+      window.speechSynthesis.cancel();
+    }
+    if (this.audioDroneNodes) {
+      try {
+        this.audioDroneNodes.forEach(node => {
+          if (node.stop) node.stop();
+          if (node.disconnect) node.disconnect();
+        });
+      } catch (e) {}
+      this.audioDroneNodes = null;
+    }
+  }
+
+  startOralAudioPlayback(story) {
+    try {
+      const AudioContext = window.AudioContext || window.webkitAudioContext;
+      if (AudioContext) {
+        if (!this.audioCtx) this.audioCtx = new AudioContext();
+        if (this.audioCtx.state === 'suspended') this.audioCtx.resume();
+
+        // Create warm Indian ambient Tanpura drone chords (D - A - D harmonic)
+        const freqs = [146.83, 220.00, 293.66]; // D3, A3, D4
+        this.audioDroneNodes = [];
+
+        const masterGain = this.audioCtx.createGain();
+        masterGain.gain.setValueAtTime(0.08, this.audioCtx.currentTime);
+        masterGain.connect(this.audioCtx.destination);
+
+        freqs.forEach((f, i) => {
+          const osc = this.audioCtx.createOscillator();
+          const gain = this.audioCtx.createGain();
+          osc.type = i === 1 ? 'triangle' : 'sine';
+          osc.frequency.setValueAtTime(f, this.audioCtx.currentTime);
+
+          // Subtle harmonic detuning for acoustic warmth
+          osc.detune.setValueAtTime((i - 1) * 3, this.audioCtx.currentTime);
+          gain.gain.setValueAtTime(0.3 / (i + 1), this.audioCtx.currentTime);
+
+          osc.connect(gain);
+          gain.connect(masterGain);
+          osc.start();
+
+          this.audioDroneNodes.push(osc, gain);
+        });
+      }
+    } catch (e) {
+      console.warn('Web Audio drone initialized in fallback mode', e);
+    }
+
+    // Elder Oral Narration via SpeechSynthesis
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      const narrative = `${story.title}. Oral record by Elder ${story.elderName}, from ${story.region}. ${story.fullStory || story.excerpt} Lesson: ${story.moral}`;
+      const utterance = new SpeechSynthesisUtterance(narrative);
+      utterance.rate = 0.90;
+      utterance.pitch = 0.95;
+
+      utterance.onend = () => {
+        this.stopAudio();
+        this.currentlyPlayingId = null;
+        this.renderStories();
+      };
+      utterance.onerror = () => {
+        this.stopAudio();
+        this.currentlyPlayingId = null;
+        this.renderStories();
+      };
+
+      window.speechSynthesis.speak(utterance);
+    }
   }
 
   toggleBookmark(storyId) {
