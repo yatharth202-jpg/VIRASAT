@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <radialGradient id="mudBg" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#7a3627"/>
+      <stop offset="60%" stop-color="#542318"/>
+      <stop offset="100%" stop-color="#3b160e"/>
+    </radialGradient>
+  </defs>
+  
+  <rect width="400" height="400" fill="url(#mudBg)" rx="12"/>
+  
+  <!-- Border pattern -->
+  <g stroke="#f5ede0" stroke-width="2" fill="none" opacity="0.8">
+    <rect x="16" y="16" width="368" height="368" rx="8" stroke-dasharray="6,4"/>
+    <rect x="24" y="24" width="352" height="352" rx="6" stroke-width="1"/>
+  </g>
+  
+  <!-- Sun and Moon -->
+  <circle cx="70" cy="70" r="18" fill="#f5ede0"/>
+  <g stroke="#f5ede0" stroke-width="2">
+    <line x1="70" y1="44" x2="70" y2="38"/>
+    <line x1="70" y1="96" x2="70" y2="102"/>
+    <line x1="44" y1="70" x2="38" y2="70"/>
+    <line x1="96" y1="70" x2="102" y2="70"/>
+    <line x1="52" y1="52" x2="47" y2="47"/>
+    <line x1="88" y1="88" x2="93" y2="93"/>
+    <line x1="88" y1="52" x2="93" y2="47"/>
+    <line x1="52" y1="88" x2="47" y2="93"/>
+  </g>
+  
+  <!-- Tarpa Musician in Center -->
+  <g transform="translate(200, 200)" fill="#f5ede0" stroke="#f5ede0" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="0" cy="-28" r="7"/>
+    <polygon points="0,-21 -10,0 10,0"/>
+    <polygon points="0,7 -10,0 10,0"/>
+    <path d="M-6,7 L-10,24 L-15,26 M6,7 L10,24 L15,26" stroke-width="2.5" fill="none"/>
+    <path d="M2,-18 L25,-12 L38,-2 L45,10" stroke-width="3" fill="none"/>
+    <polygon points="42,7 50,18 38,15" fill="#f5ede0"/>
+    <path d="M-8,-14 L12,-10 L25,-12" stroke-width="2.5" fill="none"/>
+  </g>
+  
+  <!-- Warli Dancers in Spiral / Ring -->
+  <g stroke="#f5ede0" stroke-width="2" fill="#f5ede0" stroke-linecap="round">
+    <g transform="translate(200, 110)">
+      <circle cx="0" cy="-20" r="5"/>
+      <polygon points="0,-15 -8,0 8,0"/>
+      <polygon points="0,5 -8,0 8,0"/>
+      <path d="M-4,5 L-8,18 M4,5 L8,18" fill="none"/>
+      <path d="M-7,-10 L-22,-6 L-30,-2 M7,-10 L22,-6 L30,-2" fill="none"/>
+    </g>
+    <g transform="translate(270, 140) rotate(45)">
+      <circle cx="0" cy="-20" r="5"/>
+      <polygon points="0,-15 -8,0 8,0"/>
+      <polygon points="0,5 -8,0 8,0"/>
+      <path d="M-4,5 L-8,18 M4,5 L8,18" fill="none"/>
+      <path d="M-7,-10 L-22,-6 M7,-10 L22,-6" fill="none"/>
+    </g>
+    <g transform="translate(290, 210) rotate(90)">
+      <circle cx="0" cy="-20" r="5"/>
+      <polygon points="0,-15 -8,0 8,0"/>
+      <polygon points="0,5 -8,0 8,0"/>
+      <path d="M-4,5 L-8,18 M4,5 L8,18" fill="none"/>
+      <path d="M-7,-10 L-22,-6 M7,-10 L22,-6" fill="none"/>
+    </g>
+    <g transform="translate(260, 280) rotate(135)">
+      <circle cx="0" cy="-20" r="5"/>
+      <polygon points="0,-15 -8,0 8,0"/>
+      <polygon points="0,5 -8,0 8,0"/>
+      <path d="M-4,5 L-8,18 M4,5 L8,18" fill="none"/>
+      <path d="M-7,-10 L-22,-6 M7,-10 L22,-6" fill="none"/>
+    </g>
+    <g transform="translate(190, 300) rotate(180)">
+      <circle cx="0" cy="-20" r="5"/>
+      <polygon points="0,-15 -8,0 8,0"/>
+      <polygon points="0,5 -8,0 8,0"/>
+      <path d="M-4,5 L-8,18 M4,5 L8,18" fill="none"/>
+      <path d="M-7,-10 L-22,-6 M7,-10 L22,-6" fill="none"/>
+    </g>
+    <g transform="translate(120, 270) rotate(225)">
+      <circle cx="0" cy="-20" r="5"/>
+      <polygon points="0,-15 -8,0 8,0"/>
+      <polygon points="0,5 -8,0 8,0"/>
+      <path d="M-4,5 L-8,18 M4,5 L8,18" fill="none"/>
+      <path d="M-7,-10 L-22,-6 M7,-10 L22,-6" fill="none"/>
+    </g>
+    <g transform="translate(100, 190) rotate(270)">
+      <circle cx="0" cy="-20" r="5"/>
+      <polygon points="0,-15 -8,0 8,0"/>
+      <polygon points="0,5 -8,0 8,0"/>
+      <path d="M-4,5 L-8,18 M4,5 L8,18" fill="none"/>
+      <path d="M-7,-10 L-22,-6 M7,-10 L22,-6" fill="none"/>
+    </g>
+    <g transform="translate(130, 130) rotate(315)">
+      <circle cx="0" cy="-20" r="5"/>
+      <polygon points="0,-15 -8,0 8,0"/>
+      <polygon points="0,5 -8,0 8,0"/>
+      <path d="M-4,5 L-8,18 M4,5 L8,18" fill="none"/>
+      <path d="M-7,-10 L-22,-6 M7,-10 L22,-6" fill="none"/>
+    </g>
+  </g>
+  
+  <!-- Tree of Life on Right -->
+  <g transform="translate(320, 70)" stroke="#f5ede0" stroke-width="2" fill="none">
+    <line x1="0" y1="40" x2="0" y2="0"/>
+    <path d="M0,30 Q-15,15 -25,20 M0,20 Q15,5 25,10 M0,10 Q-12,-2 -20,2 M0,0 Q12,-15 18,-10"/>
+    <polygon points="-25,20 -30,16 -23,14" fill="#f5ede0"/>
+    <polygon points="25,10 30,6 23,4" fill="#f5ede0"/>
+    <polygon points="-20,2 -25,-2 -18,-4" fill="#f5ede0"/>
+    <polygon points="18,-10 23,-14 16,-16" fill="#f5ede0"/>
+    <polygon points="0,0 -4,-8 4,-8" fill="#f5ede0"/>
+  </g>
+  
+  <!-- Warli Deer / Animal on Left Bottom -->
+  <g transform="translate(60, 320)" fill="#f5ede0" stroke="#f5ede0" stroke-width="1.5">
+    <polygon points="0,0 24,-6 16,6"/>
+    <polygon points="24,-6 38,2 16,6"/>
+    <circle cx="44" cy="-4" r="3"/>
+    <path d="M44,-7 L48,-16 L52,-14 M44,-7 L42,-15" fill="none"/>
+    <line x1="4" y1="4" x2="2" y2="20"/>
+    <line x1="10" y1="5" x2="8" y2="20"/>
+    <line x1="30" y1="3" x2="32" y2="20"/>
+    <line x1="36" y1="2" x2="38" y2="20"/>
+  </g>
+</svg>

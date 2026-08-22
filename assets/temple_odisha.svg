@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 240" width="100%" height="100%">
+  <defs>
+    <linearGradient id="skySunset" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#3b1a27"/>
+      <stop offset="40%" stop-color="#7a341e"/>
+      <stop offset="80%" stop-color="#d97706"/>
+      <stop offset="100%" stop-color="#f59e0b"/>
+    </linearGradient>
+    <linearGradient id="sunGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fffbeb"/>
+      <stop offset="50%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+    <linearGradient id="stoneShadow" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#451a03"/>
+      <stop offset="100%" stop-color="#1f0901"/>
+    </linearGradient>
+  </defs>
+  
+  <rect width="400" height="240" fill="url(#skySunset)" rx="8"/>
+  <circle cx="200" cy="110" r="45" fill="url(#sunGlow)" opacity="0.9"/>
+  
+  <rect x="0" y="175" width="400" height="65" fill="url(#stoneShadow)"/>
+  <line x1="0" y1="175" x2="400" y2="175" stroke="#f59e0b" stroke-width="2"/>
+  
+  <!-- Main Temple Shikhara -->
+  <g fill="url(#stoneShadow)">
+    <path d="M110,175 L125,100 Q145,50 155,20 L160,15 L165,20 Q175,50 195,100 L210,175 Z"/>
+    <ellipse cx="160" cy="15" rx="14" ry="4" fill="#fbbf24"/>
+    <polygon points="195,175 220,110 265,110 290,175"/>
+  </g>
+  
+  <!-- Konark Sun Wheel -->
+  <g transform="translate(320, 165)" stroke="#fbbf24" fill="none">
+    <circle cx="0" cy="0" r="48" stroke-width="4"/>
+    <circle cx="0" cy="0" r="38" stroke-width="2"/>
+    <circle cx="0" cy="0" r="14" fill="#f59e0b" stroke-width="2"/>
+    <line x1="0" y1="-38" x2="0" y2="-14" stroke-width="3.5"/>
+    <line x1="0" y1="14" x2="0" y2="38" stroke-width="3.5"/>
+    <line x1="-38" y1="0" x2="-14" y2="0" stroke-width="3.5"/>
+    <line x1="14" y1="0" x2="38" y2="0" stroke-width="3.5"/>
+    <line x1="-27" y1="-27" x2="-10" y2="-10" stroke-width="3.5"/>
+    <line x1="10" y1="10" x2="27" y2="27" stroke-width="3.5"/>
+    <line x1="27" y1="-27" x2="10" y2="-10" stroke-width="3.5"/>
+    <line x1="-10" y1="10" x2="-27" y2="27" stroke-width="3.5"/>
+  </g>
+</svg>

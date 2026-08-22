@@ -1,4 +1,4 @@
-/**
+﻿/**
  * VIRASAT PASSPORT SERVICE
  * Unified Heritage Passport, Discoveries, and Elder Wisdom Vault Integration
  */
@@ -6,13 +6,14 @@
 const VIRASAT_STORAGE_KEY = 'virasat_passport_data';
 const VIRASAT_STATS_KEY = 'virasat_user_stats';
 const VIRASAT_WISDOM_BADGES_KEY = 'virasat_wisdom_badges';
+const VIRASAT_DISCOVERIES_KEY = 'virasat_discoveries';
 
 const DEFAULT_STAMPS = [
   { 
     id: "architecture-imambara-golgumbaz",
-    title: "Bada Imambara ↔ Gol Gumbaz", 
-    region: "Uttar Pradesh ↔ Karnataka", 
-    domain: "Architecture & Stepwells", 
+    title: "Bada Imambara ⟷ Gol Gumbaz", 
+    region: "Uttar Pradesh ⟷ Karnataka", 
+    domain: "Architecture & Acoustic Vaults", 
     icon: "🏛️",
     date: "Aug 22, 2026", 
     type: "connection",
@@ -20,30 +21,30 @@ const DEFAULT_STAMPS = [
   },
   { 
     id: "stepwell-chandbaori-ranikivav",
-    title: "Chand Baori ↔ Rani Ki Vav", 
-    region: "Rajasthan ↔ Gujarat", 
+    title: "Chand Baori ⟷ Rani Ki Vav", 
+    region: "Rajasthan ⟷ Gujarat", 
     domain: "Architecture & Stepwells", 
-    icon: "💧",
+    icon: "🌊",
     date: "Aug 21, 2026", 
     type: "connection",
     similaritySummary: "Subterranean Desert Rainwater Harvesting: Both engineered multi-tier stepwells in arid Thar fringes with dry interlocking stone joinery."
   },
   { 
     id: "dance-kathak-kathakali",
-    title: "Kathak ↔ Kathakali", 
-    region: "Uttar Pradesh ↔ Kerala", 
+    title: "Kathak ⟷ Kathakali", 
+    region: "Uttar Pradesh ⟷ Kerala", 
     domain: "Dance & Dramatic Arts", 
-    icon: "💃",
+    icon: "🎭",
     date: "Aug 22, 2026", 
     type: "connection",
     similaritySummary: "Natya Shastra Roots: Both classical dances are rooted in the Natya Shastra, featuring 9 Navarasas micro-facial abhinaya and percussive rhythm."
   },
   { 
     id: "craft-chikankari-phulkari",
-    title: "Lucknow Chikankari ↔ Punjabi Phulkari", 
-    region: "Uttar Pradesh ↔ Punjab", 
+    title: "Lucknow Chikankari ⟷ Punjabi Phulkari", 
+    region: "Uttar Pradesh ⟷ Punjab", 
     domain: "Art, Craft & Needlework", 
-    icon: "🧵",
+    icon: "🪡",
     date: "Aug 20, 2026", 
     type: "connection",
     similaritySummary: "Counted-Thread Heritage Needlework: Artisans count warp and weft yarns by hand to craft geometric matrilineal bridal heirlooms."
@@ -63,7 +64,7 @@ const DEFAULT_STAMPS = [
     title: "Immunity Gond Ke Laddu",
     region: "Rajasthan",
     domain: "Ancestral Nutrition & Recipes",
-    icon: "🍲",
+    icon: "🍯",
     date: "Aug 21, 2026",
     type: "wisdom",
     similaritySummary: "Heritage Kitchen Secret: Preserved Dadi Kamla Devi's winter gum-resin recipe passed down across four generations."
@@ -71,10 +72,55 @@ const DEFAULT_STAMPS = [
 ];
 
 const DEFAULT_WISDOM_BADGES = [
-  { id: "badge-oral-historian", name: "Oral Historian", icon: "🎙️", description: "Listened to and preserved 3+ Elder oral histories", unlocked: true },
-  { id: "badge-tradition-keeper", name: "Tradition Keeper", icon: "🕯️", description: "Verified community authenticity for elder lore", unlocked: true },
-  { id: "badge-heritage-storyteller", name: "Living Legend Custodian", icon: "📖", description: "Contributed an elder story to the Wisdom Vault", unlocked: true },
-  { id: "badge-master-preserver", name: "Bharat Heritage Scholar", icon: "👑", description: "Earned 500+ XP across Passport & Wisdom Vault", unlocked: false }
+  { id: "badge-curious", name: "Curious Mind", icon: "badge_curious.png", description: "Visited 5+ living heritage regions and explored cultural roots", unlocked: true },
+  { id: "badge-first", name: "First Discovery", icon: "badge_first.png", description: "Logged your first traditional art discovery into the passport", unlocked: true },
+  { id: "badge-story", name: "Story Seeker", icon: "badge_story.png", description: "Preserved 3+ elder folklore stories and oral traditions", unlocked: true },
+  { id: "badge-game", name: "Game Explorer", icon: "badge_game.png", description: "Solved cultural twin matrix challenges across Indian states", unlocked: true },
+  { id: "badge-culture", name: "Culture Connector", icon: "badge_culture.png", description: "Mapped connections between Indian traditions and world heritage", unlocked: true },
+  { id: "badge-keeper", name: "Heritage Keeper", icon: "badge_keeper.png", description: "Achieved Master Scholar status with 500+ Preservation XP", unlocked: false }
+];
+
+const DEFAULT_DISCOVERIES = [
+  {
+    id: "disc-onam",
+    title: "Onam & Vallam Kali",
+    region: "Kerala",
+    category: "Festivals",
+    img: "assets/discovery_onam_crop.png",
+    hdImg: "assets/discovery_onam.jpg",
+    unlocked: true,
+    lore: "Celebration of king Mahabali with grand floral pookalams and rhythmic snake boat races along the backwaters."
+  },
+  {
+    id: "disc-madhubani",
+    title: "Mithila Madhubani Art",
+    region: "Bihar",
+    category: "Crafts",
+    img: "assets/discovery_madhubani_crop.png",
+    hdImg: "assets/discovery_madhubani.jpg",
+    unlocked: true,
+    lore: "Centuries-old folk art painted using natural twigs, fingers, and mineral pigments illustrating nature and epics."
+  },
+  {
+    id: "disc-baul",
+    title: "Baul Mystic Folk Songs",
+    region: "West Bengal",
+    category: "Traditions",
+    img: "assets/discovery_baul.png",
+    hdImg: "assets/discovery_baul.svg",
+    unlocked: true,
+    lore: "UNESCO-recognized wandering mystic minstrels expressing devotion through ektara instruments and soulful poetry."
+  },
+  {
+    id: "disc-dalbaati",
+    title: "Dal Baati Churma",
+    region: "Rajasthan",
+    category: "Food",
+    img: "assets/discovery_dalbaati.png",
+    hdImg: "assets/discovery_dalbaati.svg",
+    unlocked: true,
+    lore: "Iconic arid-zone culinary triumph baked on cow-dung embers and enriched with pure desi ghee."
+  }
 ];
 
 class VirasatPassportService {
@@ -120,6 +166,27 @@ class VirasatPassportService {
     }
   }
 
+  static getDiscoveries() {
+    try {
+      const stored = localStorage.getItem(VIRASAT_DISCOVERIES_KEY);
+      if (stored) {
+        return JSON.parse(stored);
+      }
+    } catch (e) {
+      console.warn('Discoveries storage read error:', e);
+    }
+    return [...DEFAULT_DISCOVERIES];
+  }
+
+  static saveDiscoveries(discoveries) {
+    try {
+      localStorage.setItem(VIRASAT_DISCOVERIES_KEY, JSON.stringify(discoveries));
+      window.dispatchEvent(new CustomEvent('virasat:discoveries-updated', { detail: { discoveries } }));
+    } catch (e) {
+      console.warn('Discoveries storage write error:', e);
+    }
+  }
+
   static hasStamp(id) {
     const stamps = this.getStamps();
     return stamps.some(s => s.id === id);
@@ -139,7 +206,7 @@ class VirasatPassportService {
     const newStamp = {
       id: connection.id || 'conn-' + Date.now(),
       title: connection.title,
-      region: connection.cultureA ? `${connection.cultureA.regionName} ↔ ${connection.cultureB.regionName}` : (connection.region || 'All India'),
+      region: connection.cultureA ? `${connection.cultureA.regionName} ⟷ ${connection.cultureB.regionName}` : (connection.region || 'All India'),
       domain: connection.domainName || 'Cultural Connections',
       icon: connection.domainIcon || connection.icon || '🏛️',
       date: 'Today',
@@ -163,8 +230,8 @@ class VirasatPassportService {
         id: stampId,
         title: `Elder Wisdom: ${story.title || 'Oral Lore'}`,
         region: story.region || 'India',
-        domain: `Wisdom Vault · ${story.category || 'Folklore'}`,
-        icon: story.icon || '📖',
+        domain: `Wisdom Vault • ${story.category || 'Folklore'}`,
+        icon: story.icon || '📜',
         date: 'Today',
         type: 'wisdom',
         similaritySummary: `Contributed by ${story.contributor || 'Community Preserver'}: Story of ${story.elderName || 'Elder Master'} (${story.region || 'India'}).`
@@ -174,7 +241,7 @@ class VirasatPassportService {
     }
 
     const badges = this.getWisdomBadges();
-    const storytellerBadge = badges.find(b => b.id === 'badge-heritage-storyteller');
+    const storytellerBadge = badges.find(b => b.id === 'badge-story');
     if (storytellerBadge) storytellerBadge.unlocked = true;
     this.saveWisdomBadges(badges);
 
@@ -191,13 +258,13 @@ class VirasatPassportService {
         title: `Oral History: ${story.title || 'Elder Tale'}`,
         region: story.region || 'India',
         domain: 'Oral History Archive',
-        icon: '🎙️',
+        icon: '🎧',
         date: 'Today',
         type: 'wisdom',
         similaritySummary: `Immersive audio listening verified: ${story.elderName || 'Elder'} from ${story.region || 'India'}.`
       });
       this.saveStamps(stamps);
-      this.showToast(`Audio Archive Explored! +30 Passport XP`, '🎧 Oral Historian Progress');
+      this.showToast(`Audio Archive Explored! +30 Passport XP`, '🎙️ Oral Historian Progress');
     }
   }
 
@@ -210,13 +277,13 @@ class VirasatPassportService {
         title: `Verified Authenticity: ${story.title || 'Elder Lore'}`,
         region: story.region || 'India',
         domain: 'Community Verification',
-        icon: '✅',
+        icon: '🛡️',
         date: 'Today',
         type: 'wisdom',
         similaritySummary: `Community elder verification stamp awarded for authentic heritage preservation.`
       });
       this.saveStamps(stamps);
-      this.showToast(`Story Verified! +40 Passport XP`, '🕯️ Tradition Keeper Badge Updated');
+      this.showToast(`Story Verified! +40 Passport XP`, '🎖️ Tradition Keeper Badge Updated');
     }
   }
 
@@ -233,7 +300,7 @@ class VirasatPassportService {
       connectionCount: connectionStamps,
       totalXP: totalXP,
       streakDays: 14,
-      level: totalXP > 400 ? 'Master Heritage Scholar' : 'Heritage Scholar',
+      level: totalXP >= 400 ? 'Master Heritage Scholar' : 'Heritage Scholar',
       tokens: Math.floor(stamps.length / 2) + 2
     };
   }
@@ -250,7 +317,7 @@ class VirasatPassportService {
         z-index: 99999;
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 10px;
         pointer-events: none;
       `;
       document.body.appendChild(container);
@@ -258,50 +325,47 @@ class VirasatPassportService {
 
     const toast = document.createElement('div');
     toast.style.cssText = `
-      background: rgba(18, 15, 11, 0.95);
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(212, 163, 89, 0.6);
-      box-shadow: 0 10px 30px rgba(0,0,0,0.5), 0 0 15px rgba(212, 163, 89, 0.2);
-      border-radius: 12px;
-      padding: 14px 20px;
+      background: #181512;
+      border: 1px solid #D4A359;
       color: #FAF5EE;
+      padding: 14px 20px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5), 0 0 15px rgba(212,163,89,0.25);
       font-family: 'Plus Jakarta Sans', sans-serif;
-      min-width: 280px;
-      max-width: 380px;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
       pointer-events: auto;
       transform: translateY(20px);
       opacity: 0;
-      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
-      display: flex;
-      align-items: center;
-      gap: 14px;
+      transition: all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     `;
 
     toast.innerHTML = `
-      <div style="width: 36px; height: 36px; border-radius: 50%; background: rgba(212, 163, 89, 0.15); border: 1px solid #D4A359; display: flex; align-items: center; justify-content: center; font-size: 18px; shrink: 0;">
-        📜
+      <div style="width:36px; height:36px; border-radius:50%; background:rgba(212,163,89,0.2); border:1px solid #D4A359; display:flex; align-items:center; justify-content:center; color:#ECC484; font-size:18px; shrink:0;">
+        🌟
       </div>
-      <div style="flex: 1;">
-        <div style="font-size: 13px; font-weight: 700; color: #D4A359; margin-bottom: 2px;">${title}</div>
-        <div style="font-size: 11.5px; color: rgba(250, 245, 238, 0.85);">${subtitle || 'Recorded in your Virasat Passport'}</div>
+      <div>
+        <div style="font-weight:700; color:#FAF5EE; font-size:13.5px;">${title}</div>
+        <div style="color:#ECC484; font-size:12px; margin-top:2px;">${subtitle || 'Saved to your Passport'}</div>
       </div>
-      <a href="passport.html" style="font-size: 10.5px; font-weight: 700; color: #FAF5EE; background: #D4A359; padding: 4px 10px; border-radius: 20px; text-decoration: none; text-transform: uppercase; letter-spacing: 0.05em; shrink: 0;">
-        View
-      </a>
     `;
 
     container.appendChild(toast);
-    requestAnimationFrame(() => {
+    setTimeout(() => {
       toast.style.transform = 'translateY(0)';
       toast.style.opacity = '1';
-    });
+    }, 20);
 
     setTimeout(() => {
       toast.style.transform = 'translateY(20px)';
       toast.style.opacity = '0';
       setTimeout(() => toast.remove(), 400);
-    }, 4500);
+    }, 4000);
   }
 }
 
-window.VirasatPassportService = VirasatPassportService;
+if (typeof window !== 'undefined') {
+  window.VirasatPassportService = VirasatPassportService;
+}
