@@ -164,10 +164,10 @@
   updateRevealButtonState() {
     if (!this.revealBtn) return;
     if (this.isRevealed) {
-      this.revealBtn.textContent = 'âœ“ Connection Revealed';
+      this.revealBtn.textContent = '✓ Connection Revealed';
       this.revealBtn.classList.add('revealed-state');
     } else {
-      this.revealBtn.textContent = 'Reveal Connection â†’';
+      this.revealBtn.textContent = 'Reveal Connection →';
       this.revealBtn.classList.remove('revealed-state');
     }
   }
