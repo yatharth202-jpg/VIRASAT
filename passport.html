@@ -176,7 +176,7 @@
         <!-- Authentically Rendered Double-Spread Open Journal -->
         <div class="dual-page-manuscript" id="journalBook">
           
-          <!-- LEFT PAGE: DISCOVERY PASSPORT LOG -->
+          <!-- LEFT PAGE: JOURNEY OVERVIEW, PROGRESS & DISCOVERIES -->
           <div class="journal-page page-left">
             <div class="page-corner-ornament top-left"></div>
             <div class="page-corner-ornament bottom-left"></div>
@@ -189,85 +189,12 @@
               <span class="page-subheading">CHAPTER II</span>
               <span class="page-number">P. 04</span>
             </div>
-            <h2 class="page-title">REGIONS EXPLORED & DISCOVERY LOG</h2>
+            <h2 class="page-title">JOURNEY OVERVIEW</h2>
             <div class="page-title-rule"></div>
 
-            <!-- 1. INDIA MAP SECTION PLACED PROMINENTLY AT TOP -->
-            <div class="journal-section" style="margin-bottom: 20px;">
-              <div class="section-header-flex">
-                <h3 class="section-title">📍 MAP OF INDIA — REGIONS EXPLORED</h3>
-                <a href="#map" class="link-view-all" id="btnViewMapFull">Interactive Map</a>
-              </div>
-
-              <div class="regions-explored-layout">
-                <!-- Authentic Map of India with Interactive Hotspots -->
-                <div class="india-map-container" id="indiaMapContainer">
-                  <img src="assets/map_india.png" alt="Illustrated Map of India - Regions Explored" class="india-map-image" id="indiaMapImage">
-                  
-                  <!-- Interactive Hover Overlay Hotspots -->
-                  <div class="map-hotspot-layer">
-                    <div class="map-hotspot hotspot-rajasthan" data-state="Rajasthan" data-progress="8/12 Explored" title="Rajasthan: 8/12"></div>
-                    <div class="map-hotspot hotspot-up" data-state="Uttar Pradesh" data-progress="7/10 Explored" title="Uttar Pradesh: 7/10"></div>
-                    <div class="map-hotspot hotspot-gujarat" data-state="Gujarat" data-progress="6/9 Explored" title="Gujarat: 6/9"></div>
-                    <div class="map-hotspot hotspot-wb" data-state="West Bengal" data-progress="5/8 Explored" title="West Bengal: 5/8"></div>
-                    <div class="map-hotspot hotspot-maharashtra" data-state="Maharashtra" data-progress="5/7 Explored" title="Maharashtra: 5/7"></div>
-                    <div class="map-hotspot hotspot-kerala" data-state="Kerala" data-progress="3/6 Explored" title="Kerala: 3/6"></div>
-                    <div class="map-hotspot hotspot-bihar" data-state="Bihar" data-progress="2/5 Explored" title="Bihar: 2/5"></div>
-                  </div>
-
-                  <!-- Floating Map Tooltip -->
-                  <div class="map-tooltip" id="mapTooltip">
-                    <strong class="tooltip-state-name">Rajasthan</strong>
-                    <span class="tooltip-progress-val">8/12 Explored</span>
-                  </div>
-                </div>
-
-                <!-- Region State Exploration Breakdown List -->
-                <div class="state-progress-list">
-                  <div class="state-item" data-state-name="Rajasthan">
-                    <span class="state-bullet bullet-rajasthan"></span>
-                    <span class="state-name">Rajasthan</span>
-                    <span class="state-ratio">8/12</span>
-                  </div>
-                  <div class="state-item" data-state-name="Uttar Pradesh">
-                    <span class="state-bullet bullet-up"></span>
-                    <span class="state-name">Uttar Pradesh</span>
-                    <span class="state-ratio">7/10</span>
-                  </div>
-                  <div class="state-item" data-state-name="Gujarat">
-                    <span class="state-bullet bullet-gujarat"></span>
-                    <span class="state-name">Gujarat</span>
-                    <span class="state-ratio">6/9</span>
-                  </div>
-                  <div class="state-item" data-state-name="West Bengal">
-                    <span class="state-bullet bullet-wb"></span>
-                    <span class="state-name">West Bengal</span>
-                    <span class="state-ratio">5/8</span>
-                  </div>
-                  <div class="state-item" data-state-name="Maharashtra">
-                    <span class="state-bullet bullet-maharashtra"></span>
-                    <span class="state-name">Maharashtra</span>
-                    <span class="state-ratio">5/7</span>
-                  </div>
-                  <div class="state-item" data-state-name="Kerala">
-                    <span class="state-bullet bullet-kerala"></span>
-                    <span class="state-name">Kerala</span>
-                    <span class="state-ratio">3/6</span>
-                  </div>
-                  <div class="state-item" data-state-name="Bihar">
-                    <span class="state-bullet bullet-bihar"></span>
-                    <span class="state-name">Bihar</span>
-                    <span class="state-ratio">2/5</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="page-horizontal-divider"></div>
-
-            <!-- 2. STATS OVERVIEW -->
+            <!-- 1. STATS & JOURNEY OVERVIEW (Placed next to Map at Top of Left Page) -->
             <div class="journal-section">
-              <h3 class="section-title">STATS OVERVIEW</h3>
+              <h3 class="section-title">STATS & JOURNEY OVERVIEW</h3>
               <div class="stats-metric-grid">
                 
                 <!-- Stat 1: Total Discoveries -->
@@ -360,7 +287,7 @@
 
             <div class="page-horizontal-divider"></div>
 
-            <!-- 3. YOUR PROGRESS -->
+            <!-- 2. YOUR PROGRESS (Level Dial & Streaks Placed Just Below Journey Overview) -->
             <div class="journal-section">
               <h3 class="section-title">YOUR PROGRESS</h3>
               <div class="progress-container">
@@ -409,12 +336,9 @@
               </div>
             </div>
 
-          </div>
+            <div class="page-horizontal-divider"></div>
 
-          <!-- ================= RIGHT PAGE OF BOOK: DISCOVERIES & TWINS ================= -->
-          <div class="book-page page-right">
-            
-            <!-- 1. RECENT DISCOVERIES -->
+            <!-- 3. RECENT DISCOVERIES (Framed below Progress on Left Page) -->
             <div class="journal-section">
               <div class="section-header-flex">
                 <h3 class="section-title">RECENT DISCOVERIES</h3>
@@ -478,14 +402,97 @@
               </div>
             </div>
 
+          </div>
+
+          <!-- ================= RIGHT PAGE OF BOOK: REGIONS EXPLORED & INDIA MAP AT TOP ================= -->
+          <div class="book-page page-right">
+            
+            <!-- Page Header -->
+            <div class="page-header-row">
+              <span class="page-subheading">CHAPTER III</span>
+              <span class="page-number">P. 05</span>
+            </div>
+            <h2 class="page-title">REGIONS EXPLORED</h2>
+            <div class="page-title-rule"></div>
+
+            <!-- 1. MAP OF INDIA & REGIONS EXPLORED (Shifted to Right Page Top Corner) -->
+            <div class="journal-section" style="margin-bottom: 20px;">
+              <div class="section-header-flex">
+                <h3 class="section-title">📍 MAP OF INDIA — REGIONS EXPLORED</h3>
+                <a href="#map" class="link-view-all" id="btnViewMapFull">Interactive Map</a>
+              </div>
+
+              <div class="regions-explored-layout">
+                <!-- Authentic Map of India with Interactive Hotspots -->
+                <div class="india-map-container" id="indiaMapContainer">
+                  <img src="assets/map_india.png" alt="Illustrated Map of India - Regions Explored" class="india-map-image" id="indiaMapImage">
+                  
+                  <!-- Interactive Hover Overlay Hotspots -->
+                  <div class="map-hotspot-layer">
+                    <div class="map-hotspot hotspot-rajasthan" data-state="Rajasthan" data-progress="8/12 Explored" title="Rajasthan: 8/12"></div>
+                    <div class="map-hotspot hotspot-up" data-state="Uttar Pradesh" data-progress="7/10 Explored" title="Uttar Pradesh: 7/10"></div>
+                    <div class="map-hotspot hotspot-gujarat" data-state="Gujarat" data-progress="6/9 Explored" title="Gujarat: 6/9"></div>
+                    <div class="map-hotspot hotspot-wb" data-state="West Bengal" data-progress="5/8 Explored" title="West Bengal: 5/8"></div>
+                    <div class="map-hotspot hotspot-maharashtra" data-state="Maharashtra" data-progress="5/7 Explored" title="Maharashtra: 5/7"></div>
+                    <div class="map-hotspot hotspot-kerala" data-state="Kerala" data-progress="3/6 Explored" title="Kerala: 3/6"></div>
+                    <div class="map-hotspot hotspot-bihar" data-state="Bihar" data-progress="2/5 Explored" title="Bihar: 2/5"></div>
+                  </div>
+
+                  <!-- Floating Map Tooltip -->
+                  <div class="map-tooltip" id="mapTooltip">
+                    <strong class="tooltip-state-name">Rajasthan</strong>
+                    <span class="tooltip-progress-val">8/12 Explored</span>
+                  </div>
+                </div>
+
+                <!-- Region State Exploration Breakdown List -->
+                <div class="state-progress-list">
+                  <div class="state-item" data-state-name="Rajasthan">
+                    <span class="state-bullet bullet-rajasthan"></span>
+                    <span class="state-name">Rajasthan</span>
+                    <span class="state-ratio">8/12</span>
+                  </div>
+                  <div class="state-item" data-state-name="Uttar Pradesh">
+                    <span class="state-bullet bullet-up"></span>
+                    <span class="state-name">Uttar Pradesh</span>
+                    <span class="state-ratio">7/10</span>
+                  </div>
+                  <div class="state-item" data-state-name="Gujarat">
+                    <span class="state-bullet bullet-gujarat"></span>
+                    <span class="state-name">Gujarat</span>
+                    <span class="state-ratio">6/9</span>
+                  </div>
+                  <div class="state-item" data-state-name="West Bengal">
+                    <span class="state-bullet bullet-wb"></span>
+                    <span class="state-name">West Bengal</span>
+                    <span class="state-ratio">5/8</span>
+                  </div>
+                  <div class="state-item" data-state-name="Maharashtra">
+                    <span class="state-bullet bullet-maharashtra"></span>
+                    <span class="state-name">Maharashtra</span>
+                    <span class="state-ratio">5/7</span>
+                  </div>
+                  <div class="state-item" data-state-name="Kerala">
+                    <span class="state-bullet bullet-kerala"></span>
+                    <span class="state-name">Kerala</span>
+                    <span class="state-ratio">3/6</span>
+                  </div>
+                  <div class="state-item" data-state-name="Bihar">
+                    <span class="state-bullet bullet-bihar"></span>
+                    <span class="state-name">Bihar</span>
+                    <span class="state-ratio">2/5</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <div class="page-horizontal-divider"></div>
 
-            <!-- 2. CULTURAL TWIN CONNECTIONS -->
+            <!-- 2. CULTURAL TWIN CONNECTIONS (Framed Below Map on Right Page) -->
             <div class="journal-section">
               <div class="section-header-flex">
                 <h3 class="section-title">CULTURAL TWIN CONNECTIONS</h3>
                 <a href="games.html" class="link-view-all" id="btnViewAllTwins">Play Twins Matrix →</a>
-              </div>s">View All</a>
               </div>
 
               <!-- Interactive Comparative Twin Card -->
