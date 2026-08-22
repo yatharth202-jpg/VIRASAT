@@ -598,7 +598,8 @@ button {
   width: 100%;
 }
 
-.manuscript-book {
+.manuscript-book,
+.dual-page-manuscript {
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -629,23 +630,24 @@ button {
   z-index: 10;
 }
 
-.book-page {
+.book-page,
+.journal-page {
   position: relative;
-  padding: 22px 24px;
+  padding: 20px 22px;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
   color: var(--parchment-text-dark);
 }
 
 .page-left {
   background: var(--parchment-page-left);
-  padding-right: 28px;
+  padding-right: 24px;
 }
 
 .page-right {
   background: var(--parchment-page-right);
-  padding-left: 28px;
+  padding-left: 24px;
 }
 
 .section-title {
