@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>VIRASAT - Learn, Share, Preserve</title>
+    <title>VIRASAT - Learn Â· Share Â· Preserve</title>
+    <meta name="description" content="Discover, compare, and preserve the rich cultural heritage, traditions, oral histories, and architectural marvels of India.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -11,6 +12,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 
     <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/design-tokens.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/responsive.css"/>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -45,6 +49,9 @@
 </head>
 <body id="home-layout" class="page-texture min-h-screen text-[#211B14] font-sans antialiased selection:bg-[#D4A359] selection:text-white">
 
+<!-- ==========================================================================
+     GLOBAL HEADER
+     ========================================================================== -->
 <header class="fixed top-0 left-0 w-full z-50 nav-backdrop transition-all duration-300">
     <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
         <a href="index.html" class="flex items-center gap-3 group cursor-pointer">
@@ -94,12 +101,12 @@
 
                     <circle cx="50" cy="50" r="12" stroke="url(#goldGrad)" stroke-width="2" fill="#120F0B"/>
                     <circle cx="50" cy="50" r="7" stroke="url(#goldGrad)" stroke-width="1.5" fill="url(#goldGrad)" fill-opacity="0.3"/>
-                    <circle cx="50" cy="50" r="3" fill="url(#goldGrad)"/>
+                    <circle cx="50" cy="3" fill="url(#goldGrad)"/>
                 </svg>
             </div>
             <div class="flex flex-col">
                 <span class="brand-title">VIRASAT</span>
-                <span class="brand-subtitle">LEARN · SHARE · PRESERVE</span>
+                <span class="brand-subtitle">LEARN Â· SHARE Â· PRESERVE</span>
             </div>
         </a>
 
@@ -125,11 +132,14 @@
     </div>
 </header>
 
+<!-- ==========================================================================
+     HERO BANNER
+     ========================================================================== -->
 <section id="hero-banner" class="relative w-full min-h-[640px] lg:h-[88vh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-[#120F0B]">
     <div class="hero-bg-slider">
-        <div class="hero-slide active" style="background-image: url('images/hero-konark.jpg');" data-monument="Konark Sun Temple · Odisha (Golden Hour)"></div>
-        <div class="hero-slide" style="background-image: url('images/hero-stepwell.jpg');" data-monument="Rani Ki Vav Stepwell · Gujarat (Evening Glow)"></div>
-        <div class="hero-slide" style="background-image: url('images/hero-archway.jpg');" data-monument="Grand Temple Gateway · Thanjavur (Dusk)"></div>
+        <div class="hero-slide active" style="background-image: url('images/hero-konark.jpg');" data-monument="Konark Sun Temple Â· Odisha (Golden Hour)"></div>
+        <div class="hero-slide" style="background-image: url('images/hero-stepwell.jpg');" data-monument="Rani Ki Vav Stepwell Â· Gujarat (Evening Glow)"></div>
+        <div class="hero-slide" style="background-image: url('images/hero-archway.jpg');" data-monument="Grand Temple Gateway Â· Thanjavur (Dusk)"></div>
     </div>
     
     <div class="absolute inset-0 hero-vignette z-[2] pointer-events-none"></div>
@@ -138,7 +148,7 @@
         <div class="max-w-xl text-left">
             <div id="monument-tag" class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/50 border border-[#D4A359]/40 backdrop-blur-md text-[#D4A359] text-[11px] font-caps font-semibold tracking-wider uppercase mb-5 transition-opacity duration-500 shadow-md">
                 <span class="material-symbols-outlined text-[15px] text-[#D4A359]">temple_hindu</span>
-                <span id="monument-text">Konark Sun Temple · Odisha (Golden Hour)</span>
+                <span id="monument-text">Konark Sun Temple Â· Odisha (Golden Hour)</span>
             </div>
 
             <h1 class="font-heading text-4xl sm:text-5xl lg:text-[62px] font-bold text-white leading-[1.12] mb-5 drop-shadow-md">
@@ -163,10 +173,10 @@
         </div>
 
         <div class="w-full sm:w-[350px] lg:w-[380px] hero-glass-card rounded-2xl p-6 sm:p-7 relative text-[#FAF5EE] self-center lg:self-end mb-4 lg:mb-8">
-            <div class="absolute top-2.5 left-2.5 text-[#D4A359]/30 text-xs">✦</div>
-            <div class="absolute top-2.5 right-2.5 text-[#D4A359]/30 text-xs">✦</div>
-            <div class="absolute bottom-2.5 left-2.5 text-[#D4A359]/30 text-xs">✦</div>
-            <div class="absolute bottom-2.5 right-2.5 text-[#D4A359]/30 text-xs">✦</div>
+            <div class="absolute top-2.5 left-2.5 text-[#D4A359]/30 text-xs">âœ¦</div>
+            <div class="absolute top-2.5 right-2.5 text-[#D4A359]/30 text-xs">âœ¦</div>
+            <div class="absolute bottom-2.5 left-2.5 text-[#D4A359]/30 text-xs">âœ¦</div>
+            <div class="absolute bottom-2.5 right-2.5 text-[#D4A359]/30 text-xs">âœ¦</div>
 
             <div class="flex items-center justify-between mb-3">
                 <span class="font-caps text-[11.5px] font-bold tracking-[0.18em] text-[#D4A359] uppercase">DID YOU KNOW?</span>
@@ -174,7 +184,7 @@
             </div>
 
             <div class="relative pl-5 mb-5 min-h-[76px] flex items-center">
-                <span class="font-heading text-4xl text-[#D4A359]/70 absolute -left-1 -top-2 select-none leading-none">“</span>
+                <span class="font-heading text-4xl text-[#D4A359]/70 absolute -left-1 -top-2 select-none leading-none">â€œ</span>
                 <p id="fact-text" class="font-sans text-[13.5px] leading-relaxed text-[#FAF5EE]/95 font-normal transition-opacity duration-300">
                     The sarangi, a traditional Indian instrument, shares its roots with the rebab of Persia.
                 </p>
@@ -194,10 +204,14 @@
     </div>
 </section>
 
+<!-- ==========================================================================
+     MAIN BENTO SECTIONS
+     ========================================================================== -->
 <main id="explore-section" class="relative z-20 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-6">
 
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-6">
 
+        <!-- 1. Explore India Card -->
         <div id="explore-india-card" class="lg:col-span-3 bento-card rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden group">
             <div>
                 <div class="flex items-center gap-2 mb-1.5">
@@ -211,11 +225,12 @@
                 </div>
             </div>
 
-            <button class="w-full btn-dark py-3 rounded-full flex items-center justify-center gap-2 text-xs tracking-wider uppercase mt-3">
+            <button onclick="window.location.href='games.html'" class="w-full btn-dark py-3 rounded-full flex items-center justify-center gap-2 text-xs tracking-wider uppercase mt-3">
                 Explore States <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
             </button>
         </div>
 
+        <!-- 2. Categories Showcase -->
         <div id="categories-showcase" class="lg:col-span-6 bento-card rounded-2xl p-6 flex flex-col justify-between relative">
             <div class="flex items-center justify-between mb-5">
                 <button class="w-7 h-7 rounded-full bg-white/80 border border-[#E4D8C7] flex items-center justify-center text-[#6B6255] hover:text-[#211B14] hover:bg-white transition-colors shadow-sm">
@@ -230,53 +245,54 @@
             </div>
 
             <div class="grid grid-cols-5 gap-3.5 pb-1">
-                <div class="category-item flex flex-col items-center text-center cursor-pointer group">
+                <div onclick="window.location.href='games.html'" class="category-item flex flex-col items-center text-center cursor-pointer group">
                     <div class="w-full aspect-square rounded-xl overflow-hidden mb-2.5 shadow-sm border border-black/5">
                         <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Food" src="images/cat-food.jpg"/>
                     </div>
                     <span class="material-symbols-outlined text-[#A97A32] text-[18px] mb-1">restaurant</span>
                     <span class="font-caps text-[12px] font-semibold text-[#211B14]">Food</span>
-                    <span class="cat-explore font-sans text-[10px] text-[#A97A32] font-medium mt-0.5">Explore →</span>
+                    <span class="cat-explore font-sans text-[10px] text-[#A97A32] font-medium mt-0.5">Explore â†’</span>
                 </div>
 
-                <div class="category-item flex flex-col items-center text-center cursor-pointer group">
+                <div onclick="window.location.href='games.html'" class="category-item flex flex-col items-center text-center cursor-pointer group">
                     <div class="w-full aspect-square rounded-xl overflow-hidden mb-2.5 shadow-sm border border-black/5">
                         <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Festivals" src="images/cat-festivals.jpg"/>
                     </div>
                     <span class="material-symbols-outlined text-[#A97A32] text-[18px] mb-1">celebration</span>
                     <span class="font-caps text-[12px] font-semibold text-[#211B14]">Festivals</span>
-                    <span class="cat-explore font-sans text-[10px] text-[#A97A32] font-medium mt-0.5">Explore →</span>
+                    <span class="cat-explore font-sans text-[10px] text-[#A97A32] font-medium mt-0.5">Explore â†’</span>
                 </div>
 
-                <div class="category-item flex flex-col items-center text-center cursor-pointer group">
+                <div onclick="window.location.href='games.html'" class="category-item flex flex-col items-center text-center cursor-pointer group">
                     <div class="w-full aspect-square rounded-xl overflow-hidden mb-2.5 shadow-sm border border-black/5">
                         <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Crafts" src="images/cat-crafts.jpg"/>
                     </div>
                     <span class="material-symbols-outlined text-[#A97A32] text-[18px] mb-1">brush</span>
                     <span class="font-caps text-[12px] font-semibold text-[#211B14]">Crafts</span>
-                    <span class="cat-explore font-sans text-[10px] text-[#A97A32] font-medium mt-0.5">Explore →</span>
+                    <span class="cat-explore font-sans text-[10px] text-[#A97A32] font-medium mt-0.5">Explore â†’</span>
                 </div>
 
-                <div class="category-item flex flex-col items-center text-center cursor-pointer group">
+                <div onclick="window.location.href='games.html'" class="category-item flex flex-col items-center text-center cursor-pointer group">
                     <div class="w-full aspect-square rounded-xl overflow-hidden mb-2.5 shadow-sm border border-black/5">
                         <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Monuments" src="images/cat-monuments.jpg"/>
                     </div>
                     <span class="material-symbols-outlined text-[#A97A32] text-[18px] mb-1">account_balance</span>
                     <span class="font-caps text-[12px] font-semibold text-[#211B14]">Monuments</span>
-                    <span class="cat-explore font-sans text-[10px] text-[#A97A32] font-medium mt-0.5">Explore →</span>
+                    <span class="cat-explore font-sans text-[10px] text-[#A97A32] font-medium mt-0.5">Explore â†’</span>
                 </div>
 
-                <div class="category-item flex flex-col items-center text-center cursor-pointer group">
+                <div onclick="window.location.href='games.html'" class="category-item flex flex-col items-center text-center cursor-pointer group">
                     <div class="w-full aspect-square rounded-xl overflow-hidden mb-2.5 shadow-sm border border-black/5">
                         <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Traditions" src="images/cat-traditions.jpg"/>
                     </div>
                     <span class="material-symbols-outlined text-[#A97A32] text-[18px] mb-1">local_fire_department</span>
                     <span class="font-caps text-[12px] font-semibold text-[#211B14]">Traditions</span>
-                    <span class="cat-explore font-sans text-[10px] text-[#A97A32] font-medium mt-0.5">Explore →</span>
+                    <span class="cat-explore font-sans text-[10px] text-[#A97A32] font-medium mt-0.5">Explore â†’</span>
                 </div>
             </div>
         </div>
 
+        <!-- 3. Find the Connection Module -->
         <div id="connection-module" onclick="window.location.href='games.html'" class="lg:col-span-3 bento-card rounded-2xl p-6 flex flex-col justify-between text-center cursor-pointer group hover:border-[#D4A359]">
             <div>
                 <div class="flex items-center justify-center gap-2 mb-1.5">
@@ -303,7 +319,7 @@
             </div>
 
             <a href="games.html" class="w-full btn-dark py-3 rounded-full flex items-center justify-center gap-2 text-xs tracking-wider uppercase mt-4 group-hover:bg-[#D4A359] group-hover:text-[#120F0B] transition-all">
-                Take the Challenge →
+                Take the Challenge â†’
             </a>
         </div>
 
@@ -311,28 +327,34 @@
 
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-6">
 
+        <!-- 4. Passport Module -->
         <div id="passport-module" class="lg:col-span-3 bg-[#111822] text-[#FAF5EE] rounded-2xl p-6 border border-[#232F42] shadow-md flex flex-col justify-between relative overflow-hidden">
             <div class="flex gap-4 items-center">
-                <div class="w-20 h-28 sm:w-24 sm:h-32 rounded-lg overflow-hidden shrink-0 passport-cover-shadow cursor-pointer">
-                    <img class="w-full h-full object-cover rounded-lg" alt="Virasat Passport" src="images/passport-booklet-hd.jpg"/>
+                <div onclick="window.location.href='passport.html'" class="w-20 h-28 sm:w-24 sm:h-32 rounded-lg overflow-hidden shrink-0 passport-cover-shadow cursor-pointer">
+                    <img class="w-full h-full object-cover rounded-lg" alt="Virasat Passport" src="assets/passport_leather_exact.png"/>
                 </div>
 
                 <div class="flex-1">
                     <h3 class="font-caps text-[11px] font-bold tracking-[0.14em] text-[#D4A359] uppercase mb-1">YOUR VIRASAT PASSPORT</h3>
-                    <p class="font-sans text-[12px] text-white/60 mb-2">Your journey. Your progress.</p>
+                    <p class="font-sans text-[12px] text-white/60 mb-2">VIR - 2024 - 8X71 - CE</p>
                     
                     <div class="flex items-baseline gap-1.5 mb-1.5">
-                        <span class="font-heading text-2xl font-bold text-white">44 / 28</span>
-                        <span class="font-sans text-xs text-white/50">Discoveries</span>
+                        <span class="font-heading text-2xl font-bold text-white">6 / 28</span>
+                        <span class="font-sans text-xs text-white/50">Stamps & Badges</span>
                     </div>
 
                     <div class="w-full h-1.5 rounded-full bg-white/10 overflow-hidden mb-3">
-                        <div class="h-full bg-gradient-to-r from-[#D4A359] to-[#ECC484] rounded-full" style="width: 70%;"></div>
+                        <div class="h-full bg-gradient-to-r from-[#D4A359] to-[#ECC484] rounded-full" style="width: 75%;"></div>
                     </div>
                 </div>
             </div>
 
             <div class="flex items-center justify-between pt-4 border-t border-white/10 mt-3 text-center">
+                <div class="flex flex-col items-center">
+                    <span class="material-symbols-outlined text-[16px] text-[#D4A359]">menu_book</span>
+                    <span class="text-[9px] text-white/50 mt-0.5">Wisdom</span>
+                    <span class="text-[9px] text-white/80 font-bold">2/6</span>
+                </div>
                 <div class="flex flex-col items-center">
                     <span class="material-symbols-outlined text-[16px] text-[#D4A359]">restaurant</span>
                     <span class="text-[9px] text-white/50 mt-0.5">Food</span>
@@ -344,7 +366,7 @@
                     <span class="text-[9px] text-white/80 font-bold">1/6</span>
                 </div>
                 <div class="flex flex-col items-center">
-                    <span class="material-symbols-outlined text-[16px] text-[#D4A359]">brush</span>
+                    <span class="material-symbols-outlined text-[16px] text-[#D4A359]/60">brush</span>
                     <span class="text-[9px] text-white/50 mt-0.5">Crafts</span>
                     <span class="text-[9px] text-white/80 font-bold">1/6</span>
                 </div>
@@ -353,18 +375,13 @@
                     <span class="text-[9px] text-white/50 mt-0.5">Monuments</span>
                     <span class="text-[9px] text-white/80 font-bold">1/5</span>
                 </div>
-                <div class="flex flex-col items-center">
-                    <span class="material-symbols-outlined text-[16px] text-[#D4A359]/40">music_note</span>
-                    <span class="text-[9px] text-white/50 mt-0.5">Music</span>
-                    <span class="text-[9px] text-white/80 font-bold">0/5</span>
-                </div>
             </div>
 
             <a href="passport.html" class="font-caps text-[11px] text-[#D4A359] hover:underline flex items-center gap-1 mt-4 pt-2">
-                View Passport →
-            </a>
+                Open Official Passport &#8594;</a>
         </div>
 
+        <!-- 5. Surprise Me Module -->
         <div id="surprise-module" class="lg:col-span-3 bento-card rounded-2xl p-6 flex flex-col justify-between relative">
             <div>
                 <div class="flex items-center gap-2 mb-1">
@@ -386,8 +403,8 @@
             </div>
 
             <div>
-                <button class="btn-teal w-full py-2.5 rounded-full text-xs font-semibold tracking-wider flex items-center justify-center gap-1.5 mt-4">
-                    Explore Now →
+                <button onclick="window.location.href='games.html'" class="btn-teal w-full py-2.5 rounded-full text-xs font-semibold tracking-wider flex items-center justify-center gap-1.5 mt-4">
+                    Explore Now â†’
                 </button>
 
                 <div class="flex items-center justify-center gap-1 mt-3">
@@ -399,34 +416,41 @@
             </div>
         </div>
 
-        <div id="wisdom-module" onclick="window.location.href='wisdom-vault.html'" class="lg:col-span-3 bento-card rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden cursor-pointer group hover:border-[#D4A359]">
+        <!-- 6. ELDER WISDOM VAULT MODULE (Redirects directly to wisdom-vault.html) -->
+        <div id="wisdom-module" onclick="window.location.href='wisdom-vault.html'" class="lg:col-span-3 bento-card rounded-2xl p-6 flex flex-col justify-between relative overflow-hidden cursor-pointer group hover:border-[#D4A359] transition-all duration-300">
             <div>
-                <div class="flex items-center gap-2 mb-1">
-                    <span class="material-symbols-outlined text-[#A97A32] text-[18px] group-hover:scale-110 transition-transform">menu_book</span>
-                    <h3 class="font-caps text-[12px] font-bold tracking-[0.14em] text-[#211B14] uppercase">ELDER WISDOM VAULT</h3>
+                <div class="flex items-center justify-between gap-2 mb-1">
+                    <div class="flex items-center gap-2">
+                        <span class="material-symbols-outlined text-[#A97A32] text-[18px]">menu_book</span>
+                        <h3 class="font-caps text-[12px] font-bold tracking-[0.14em] text-[#211B14] uppercase">ELDER WISDOM VAULT</h3>
+                    </div>
+                    <span class="px-2 py-0.5 rounded-full bg-[#1C4436]/15 text-[#1C4436] text-[9.5px] font-bold tracking-wider uppercase">
+                        âœ¦ Verified
+                    </span>
                 </div>
                 <p class="font-sans text-[12px] text-[#6B6255] mb-3">Stories that survived generations.</p>
 
                 <div class="flex items-center gap-3 relative my-2">
                     <div class="flex-1 pr-1">
-                        <span class="font-heading text-3xl text-[#D4A359] leading-none select-none">“</span>
+                        <span class="font-heading text-3xl text-[#D4A359] leading-none select-none">â€œ</span>
                         <p class="font-heading italic text-[13px] text-[#211B14] leading-relaxed -mt-2 mb-1">
                             Art is not made for kings, it is made for life.
                         </p>
-                        <p class="font-caps text-[10px] text-[#8F8474] font-medium">— Master Artisan, Kutch</p>
+                        <p class="font-caps text-[10px] text-[#8F8474] font-medium">â€” Master Artisan, Kutch</p>
                     </div>
 
-                    <div class="w-20 h-24 sm:w-24 sm:h-28 rounded-xl overflow-hidden shrink-0 shadow-sm border border-black/5">
+                    <div class="w-20 h-24 sm:w-24 sm:h-28 rounded-xl overflow-hidden shrink-0 shadow-sm border border-black/5 group cursor-pointer">
                         <img class="w-full h-full object-cover object-top scale-105 group-hover:scale-115 transition-transform duration-500" alt="Master Artisan" src="images/elder-artisan-hd.jpg"/>
                     </div>
                 </div>
             </div>
 
             <a href="wisdom-vault.html" class="btn-brown w-full py-2.5 rounded-full text-xs font-semibold tracking-wider flex items-center justify-center gap-1.5 mt-4 group-hover:bg-[#D4A359] group-hover:text-[#120F0B] transition-all">
-                Enter the Vault →
+                Enter the Vault â†’
             </a>
         </div>
 
+        <!-- 7. Trending Module -->
         <div id="trending-module" class="lg:col-span-3 bento-card rounded-2xl p-6 flex flex-col justify-between">
             <div>
                 <div class="flex items-center gap-2 mb-4">
@@ -435,7 +459,7 @@
                 </div>
 
                 <div class="space-y-3.5">
-                    <div class="flex items-center gap-3 cursor-pointer group">
+                    <div onclick="window.location.href='games.html'" class="flex items-center gap-3 cursor-pointer group">
                         <span class="font-caps font-bold text-xs text-[#8F8474] w-3">1</span>
                         <img class="w-10 h-10 rounded-lg object-cover shadow-sm shrink-0 border border-black/5" alt="Holi" src="images/trend-holi.jpg"/>
                         <p class="font-sans text-[12px] text-[#211B14] font-medium leading-snug group-hover:text-[#A97A32] transition-colors">
@@ -443,7 +467,7 @@
                         </p>
                     </div>
 
-                    <div class="flex items-center gap-3 cursor-pointer group">
+                    <div onclick="window.location.href='games.html'" class="flex items-center gap-3 cursor-pointer group">
                         <span class="font-caps font-bold text-xs text-[#8F8474] w-3">2</span>
                         <img class="w-10 h-10 rounded-lg object-cover shadow-sm shrink-0 border border-black/5" alt="Chikankari" src="images/trend-chikankari.jpg"/>
                         <p class="font-sans text-[12px] text-[#211B14] font-medium leading-snug group-hover:text-[#A97A32] transition-colors">
@@ -451,18 +475,18 @@
                         </p>
                     </div>
 
-                    <div class="flex items-center gap-3 cursor-pointer group">
+                    <div onclick="window.location.href='wisdom-vault.html'" class="flex items-center gap-3 cursor-pointer group">
                         <span class="font-caps font-bold text-xs text-[#8F8474] w-3">3</span>
                         <img class="w-10 h-10 rounded-lg object-cover shadow-sm shrink-0 border border-black/5" alt="Textile" src="images/trend-textile.jpg"/>
                         <p class="font-sans text-[12px] text-[#211B14] font-medium leading-snug group-hover:text-[#A97A32] transition-colors">
-                            The hidden links between Indian & Central Asian crafts
+                            Elder Stories: 400-Year-Old Indigo Chants in Kutch
                         </p>
                     </div>
                 </div>
             </div>
 
-            <a href="#" class="font-caps text-[11px] text-[#A97A32] hover:underline text-center mt-4">
-                See all trending →
+            <a href="wisdom-vault.html" class="font-caps text-[11px] text-[#A97A32] hover:underline text-center mt-4">
+                Explore Elder Wisdom â†’
             </a>
         </div>
 
@@ -470,6 +494,9 @@
 
 </main>
 
+<!-- ==========================================================================
+     GLOBAL FOOTER
+     ========================================================================== -->
 <footer class="w-full bg-[#111620] text-[#FAF5EE] border-t border-[#D4A359]/20 py-8 px-4 sm:px-6 lg:px-8 mt-12 relative overflow-hidden">
     <div class="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
         
@@ -484,29 +511,29 @@
                 </div>
             </a>
 
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full border border-[#D4A359]/40 flex items-center justify-center text-[#D4A359] shrink-0">
-                    <span class="material-symbols-outlined text-[20px]">verified</span>
+            <a href="wisdom-vault.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity cursor-pointer group">
+                <div class="w-10 h-10 rounded-full border border-[#D4A359]/40 flex items-center justify-center text-[#D4A359] shrink-0 group-hover:scale-105 transition-transform">
+                    <span class="material-symbols-outlined text-[20px]">menu_book</span>
                 </div>
                 <div>
-                    <h4 class="font-caps text-xs font-bold text-white">Verified & Respectful</h4>
-                    <p class="font-sans text-[11px] text-white/60 leading-tight mt-0.5">Evidence-based content. Always respectful.</p>
+                    <h4 class="font-caps text-xs font-bold text-white group-hover:text-[#D4A359] transition-colors">Elder Wisdom Vault</h4>
+                    <p class="font-sans text-[11px] text-white/60 leading-tight mt-0.5">Oral histories & ancestral knowledge</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-full border border-[#D4A359]/40 flex items-center justify-center text-[#D4A359] shrink-0">
+            <a href="passport.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity cursor-pointer group">
+                <div class="w-10 h-10 rounded-full border border-[#D4A359]/40 flex items-center justify-center text-[#D4A359] shrink-0 group-hover:scale-105 transition-transform">
                     <span class="material-symbols-outlined text-[20px]">volunteer_activism</span>
                 </div>
                 <div>
-                    <h4 class="font-caps text-xs font-bold text-white">Learn · Share · Preserve</h4>
-                    <p class="font-sans text-[11px] text-white/60 leading-tight mt-0.5">Understand today. Preserve tomorrow.</p>
+                    <h4 class="font-caps text-xs font-bold text-white group-hover:text-[#D4A359] transition-colors">Learn Â· Share Â· Preserve</h4>
+                    <p class="font-sans text-[11px] text-white/60 leading-tight mt-0.5">Earn passport stamps and badges</p>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div class="w-full lg:w-auto flex items-center gap-3 lg:border-l lg:border-white/10 lg:pl-8">
-            <span class="font-heading text-4xl text-[#D4A359]/70 leading-none select-none">“</span>
+            <span class="font-heading text-4xl text-[#D4A359]/70 leading-none select-none">â€œ</span>
             <p class="font-heading italic text-[13px] text-white/80 max-w-sm">
                 Virasat doesn't just show you heritage. It helps you discover, connect and keep it alive.
             </p>
@@ -515,7 +542,10 @@
     </div>
 </footer>
 
+<script src="js/passport-service.js"></script>
 <script src="js/main.js"></script>
 
 </body>
 </html>
+
+

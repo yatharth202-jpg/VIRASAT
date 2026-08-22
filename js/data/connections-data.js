@@ -26,8 +26,8 @@ const VIRASAT_CONNECTIONS = [
       location: "Lucknow, Uttar Pradesh",
       period: "1784 CE (Nawab Asaf-ud-Daula / Architect Kifayatullah)",
       shortDesc: "A monumental 50-meter arched central hall built without a single pillar or beam, topped by an acoustic 3D labyrinth.",
-      image: "assets/images/bada_imambara_lucknow.jpg",
-      fallbackImage: "assets/images/bada_imambara_lucknow.jpg",
+      image: "images/bada_imambara_lucknow.jpg",
+      fallbackImage: "images/bada_imambara_lucknow.jpg",
       wikiUrl: "https://en.wikipedia.org/wiki/Bara_Imambara",
       wikiTitle: "Bara Imambara, Lucknow",
       unescoUrl: "https://asi.nic.in",
@@ -41,8 +41,8 @@ const VIRASAT_CONNECTIONS = [
       location: "Vijayapura (Bijapur), Karnataka",
       period: "1656 CE (Mohammed Adil Shah / Architect Yaqut of Dabul)",
       shortDesc: "The second largest dome in the pre-modern world, featuring a circular gallery where the faintest whisper echoes 11 distinct times.",
-      image: "assets/images/gol_gumbaz_bijapur.jpg",
-      fallbackImage: "assets/images/gol_gumbaz_bijapur.jpg",
+      image: "images/gol_gumbaz_bijapur.jpg",
+      fallbackImage: "images/gol_gumbaz_bijapur.jpg",
       wikiUrl: "https://en.wikipedia.org/wiki/Gol_Gumbaz",
       wikiTitle: "Gol Gumbaz, Bijapur",
       unescoUrl: "https://asi.nic.in",
@@ -50,8 +50,8 @@ const VIRASAT_CONNECTIONS = [
     },
     connectionOverview: `Bada Imambara in Lucknow (UP) and Gol Gumbaz in Bijapur (Karnataka) are historic masterpieces of acoustic engineering and unsupported masonry. Built centuries before modern structural steel, both monuments engineered interlocking arch physics to create colossal pillar-free spaces.`,
     connectionDetails: `Bada Imambara's central hall spans 50 meters by 16 meters under a 15-meter arched ceiling supported entirely by interlocking Lakhori brickwork without wooden or iron beams, while Gol Gumbaz supports a 44-meter circular dome on 8 intersecting arches where even the rustle of paper carries across the entire gallery.`,
-    bridgeImage: "assets/images/bada_imambara_lucknow.jpg",
-    bridgeImageB: "assets/images/gol_gumbaz_bijapur.jpg",
+    bridgeImage: "images/bada_imambara_lucknow.jpg",
+    bridgeImageB: "images/gol_gumbaz_bijapur.jpg",
     similarities: [
       {
         title: "Pillar-Free Massive Load Distribution",
@@ -96,14 +96,14 @@ const VIRASAT_CONNECTIONS = [
         title: "Bara Imambara",
         url: "https://en.wikipedia.org/wiki/Bara_Imambara",
         extract: "Bara Imambara is an imambara complex in Lucknow, India built by Asaf-ud-Daula, Nawab of Awadh, in 1784. The central hall is said to be the largest arched hall in the world without external pillar support.",
-        image: "assets/images/bada_imambara_lucknow.jpg"
+        image: "images/bada_imambara_lucknow.jpg"
       },
       {
         culture: "Karnataka",
         title: "Gol Gumbaz",
         url: "https://en.wikipedia.org/wiki/Gol_Gumbaz",
         extract: "Gol Gumbaz is the mausoleum of king Mohammed Adil Shah in Bijapur, Karnataka. It features an enormous 44-meter circular dome with an acoustic Whispering Gallery.",
-        image: "assets/images/gol_gumbaz_bijapur.jpg"
+        image: "images/gol_gumbaz_bijapur.jpg"
       }
     ]
   },
@@ -134,8 +134,8 @@ const VIRASAT_CONNECTIONS = [
       location: "Abhaneri, Dausa District, Rajasthan",
       period: "8th - 9th Century CE (King Chanda / Nikumbha Dynasty)",
       shortDesc: "One of the oldest and deepest stepwells in the world, featuring 3,500 perfectly symmetrical steps over 13 storeys.",
-      image: "assets/images/chand_baori_rajasthan.jpg",
-      fallbackImage: "assets/images/chand_baori_rajasthan.jpg",
+      image: "images/chand_baori_rajasthan.jpg",
+      fallbackImage: "images/chand_baori_rajasthan.jpg",
       wikiUrl: "https://en.wikipedia.org/wiki/Chand_Baori",
       wikiTitle: "Chand Baori, Abhaneri",
       unescoUrl: "https://whc.unesco.org",
@@ -149,8 +149,8 @@ const VIRASAT_CONNECTIONS = [
       location: "Patan, Saraswati River Basin, Gujarat",
       period: "11th Century CE (Queen Udayamati / Chaulukya Dynasty)",
       shortDesc: "A UNESCO World Heritage subterranean stepwell constructed as an inverted temple dedicated to Lord Vishnu.",
-      image: "assets/images/rani_ki_vav_gujarat.jpg",
-      fallbackImage: "assets/images/rani_ki_vav_gujarat.jpg",
+      image: "images/rani_ki_vav_gujarat.jpg",
+      fallbackImage: "images/rani_ki_vav_gujarat.jpg",
       wikiUrl: "https://en.wikipedia.org/wiki/Rani_ki_Vav",
       wikiTitle: "Rani ki Vav (The Queen's Stepwell)",
       unescoUrl: "https://whc.unesco.org/en/list/922",
@@ -158,8 +158,8 @@ const VIRASAT_CONNECTIONS = [
     },
     connectionOverview: `Chand Baori in Rajasthan and Rani Ki Vav in Gujarat represent the pinnacle of medieval Indian water engineering. Both stepwells transformed the desperate necessity of harvesting desert groundwater into breathtaking works of mathematical symmetry and spiritual sanctity.`,
     connectionDetails: `While Chand Baori relies on an optical geometric matrix of 3,500 double-cascading stairs that create a mesmerizing play of light and shadow, Rani Ki Vav is crafted as a 7-tier subterranean temple adorned with over 800 divine sculptures, keeping water cool and sacred.`,
-    bridgeImage: "assets/images/chand_baori_rajasthan.jpg",
-    bridgeImageB: "assets/images/rani_ki_vav_gujarat.jpg",
+    bridgeImage: "images/chand_baori_rajasthan.jpg",
+    bridgeImageB: "images/rani_ki_vav_gujarat.jpg",
     similarities: [
       {
         title: "Arid Zone Groundwater Harvesting",
@@ -204,14 +204,14 @@ const VIRASAT_CONNECTIONS = [
         title: "Chand Baori",
         url: "https://en.wikipedia.org/wiki/Chand_Baori",
         extract: "Chand Baori is a stepwell in Abhaneri, Rajasthan. It consists of 3,500 narrow steps over 13 storeys, making it one of the deepest stepwells in the world.",
-        image: "assets/images/chand_baori_rajasthan.jpg"
+        image: "images/chand_baori_rajasthan.jpg"
       },
       {
         culture: "Gujarat",
         title: "Rani Ki Vav",
         url: "https://en.wikipedia.org/wiki/Rani_ki_Vav",
         extract: "Rani ki Vav is a stepwell in Patan, Gujarat. Built as an inverted temple, it was inscribed as a UNESCO World Heritage site in 2014.",
-        image: "assets/images/rani_ki_vav_gujarat.jpg"
+        image: "images/rani_ki_vav_gujarat.jpg"
       }
     ]
   },
@@ -242,8 +242,8 @@ const VIRASAT_CONNECTIONS = [
       location: "Lucknow / Varanasi Gharanas, Uttar Pradesh",
       period: "Ancient Vedic Kathakars & Nawabi Court Renaissance",
       shortDesc: "The classical dance of storytellers ('Katha Kahe So Kathak') characterized by rhythmic tatkar footwork, ghungroos, and graceful abhinaya.",
-      image: "assets/images/kathak_dance_lucknow.jpg",
-      fallbackImage: "assets/images/kathak_dance_lucknow.jpg",
+      image: "images/kathak_dance_lucknow.jpg",
+      fallbackImage: "images/kathak_dance_lucknow.jpg",
       wikiUrl: "https://en.wikipedia.org/wiki/Kathak",
       wikiTitle: "Kathak Dance",
       unescoUrl: "https://ich.unesco.org",
@@ -257,8 +257,8 @@ const VIRASAT_CONNECTIONS = [
       location: "Temple Koothambalams, Kerala",
       period: "17th Century CE",
       shortDesc: "A highly stylized classical dance-drama featuring vibrant Paccha makeup, towering Kiritam headdresses, and intricate eye expressions.",
-      image: "assets/images/kathakali_dance_kerala.jpg",
-      fallbackImage: "assets/images/kathakali_dance_kerala.jpg",
+      image: "images/kathakali_dance_kerala.jpg",
+      fallbackImage: "images/kathakali_dance_kerala.jpg",
       wikiUrl: "https://en.wikipedia.org/wiki/Kathakali",
       wikiTitle: "Kathakali Drama",
       unescoUrl: "https://ich.unesco.org",
@@ -266,8 +266,8 @@ const VIRASAT_CONNECTIONS = [
     },
     connectionOverview: `Originating in the northern river plains of Uttar Pradesh and the lush southwestern coast of Kerala, Kathak and Kathakali share the sacred foundation of Bharata Muni's Natya Shastra, translating the Mahabharata and Ramayana into expressive body language.`,
     connectionDetails: `Kathak emphasizes solo rhythmic mastery, swift 360-degree pirouettes (Chakkars), and subtle facial expressions (Bhav), while Kathakali is an explosive multi-character theatrical spectacle where actors communicate entirely without speaking, using 24 basic Mudras and microscopic eye movements (Netra Abhinaya).`,
-    bridgeImage: "assets/images/kathak_dance_lucknow.jpg",
-    bridgeImageB: "assets/images/kathakali_dance_kerala.jpg",
+    bridgeImage: "images/kathak_dance_lucknow.jpg",
+    bridgeImageB: "images/kathakali_dance_kerala.jpg",
     similarities: [
       {
         title: "Natya Shastra Core Foundation",
@@ -312,14 +312,14 @@ const VIRASAT_CONNECTIONS = [
         title: "Kathak",
         url: "https://en.wikipedia.org/wiki/Kathak",
         extract: "Kathak is one of the eight major forms of Indian classical dance, characterized by rhythmic foot movements adorned with small bells (ghungroo).",
-        image: "assets/images/kathak_dance_lucknow.jpg"
+        image: "images/kathak_dance_lucknow.jpg"
       },
       {
         culture: "Kerala",
         title: "Kathakali",
         url: "https://en.wikipedia.org/wiki/Kathakali",
         extract: "Kathakali is a major form of classical Indian dance drama distinguished by colorful makeup and towering headdresses.",
-        image: "assets/images/kathakali_dance_kerala.jpg"
+        image: "images/kathakali_dance_kerala.jpg"
       }
     ]
   },
@@ -350,8 +350,8 @@ const VIRASAT_CONNECTIONS = [
       location: "Majha / Doaba / Malwa, Punjab",
       period: "Centuries-old Punjabi Baisakhi Folk Heritage",
       shortDesc: "The joyous folk dance of Punjab celebrating the golden wheat harvest with dynamic leaping jumps, boliyan, and pulsating dhol rhythms.",
-      image: "assets/images/punjab_bhangra_dance.jpg",
-      fallbackImage: "assets/images/punjab_bhangra_dance.jpg",
+      image: "images/punjab_bhangra_dance.jpg",
+      fallbackImage: "images/punjab_bhangra_dance.jpg",
       wikiUrl: "https://en.wikipedia.org/wiki/Bhangra_(dance)",
       wikiTitle: "Bhangra (Dance)",
       unescoUrl: "https://ich.unesco.org",
@@ -365,8 +365,8 @@ const VIRASAT_CONNECTIONS = [
       location: "Ahmedabad / Vadodara / Saurashtra, Gujarat",
       period: "Ancient Navratri Shakti Tradition (UNESCO Heritage)",
       shortDesc: "The vibrant devotional circular dance performed during Navratri, moving in concentric circles with synchronized rhythmic claps.",
-      image: "assets/images/gujarat_garba_dance.jpg",
-      fallbackImage: "assets/images/gujarat_garba_dance.jpg",
+      image: "images/gujarat_garba_dance.jpg",
+      fallbackImage: "images/gujarat_garba_dance.jpg",
       wikiUrl: "https://en.wikipedia.org/wiki/Garba_(dance)",
       wikiTitle: "Garba of Gujarat",
       unescoUrl: "https://ich.unesco.org/en/RL/garba-of-gujarat-01962",
@@ -374,8 +374,8 @@ const VIRASAT_CONNECTIONS = [
     },
     connectionOverview: `Bhangra from Punjab and Garba from Gujarat represent the heart and soul of India's community folk celebrations. Both dances bring entire villages and communities together in circular unity to celebrate agricultural bounty and seasonal renewal.`,
     connectionDetails: `While Bhangra channels the exuberance of the spring Baisakhi wheat harvest through high-velocity arm movements, shoulder shrugs, and jumping footwork to the acoustic dhol, Garba channels reverence for the Goddess during autumn Navratri through hypnotic circular twirls and hand clapping around the sacred Garbha lamp.`,
-    bridgeImage: "assets/images/punjab_bhangra_dance.jpg",
-    bridgeImageB: "assets/images/gujarat_garba_dance.jpg",
+    bridgeImage: "images/punjab_bhangra_dance.jpg",
+    bridgeImageB: "images/gujarat_garba_dance.jpg",
     similarities: [
       {
         title: "Communal Circular Unity & Inclusivity",
@@ -420,14 +420,14 @@ const VIRASAT_CONNECTIONS = [
         title: "Bhangra",
         url: "https://en.wikipedia.org/wiki/Bhangra_(dance)",
         extract: "Bhangra is an energetic folk dance originating from the Punjab region of India. It was traditionally performed by Punjabi farmers to celebrate the spring harvest festival of Baisakhi.",
-        image: "assets/images/punjab_bhangra_dance.jpg"
+        image: "images/punjab_bhangra_dance.jpg"
       },
       {
         culture: "Gujarat",
         title: "Garba",
         url: "https://en.wikipedia.org/wiki/Garba_(dance)",
         extract: "Garba is a form of dance which originates from the state of Gujarat in India. The dance is performed around a centrally lit lamp or picture of the Goddess Durga during the nine-day Hindu festival of Navratri.",
-        image: "assets/images/gujarat_garba_dance.jpg"
+        image: "images/gujarat_garba_dance.jpg"
       }
     ]
   },
@@ -458,8 +458,8 @@ const VIRASAT_CONNECTIONS = [
       location: "Udaipur / Jodhpur / Jaipur, Rajasthan",
       period: "Bhil Tribal Roots & Rajput Royal Court Tradition",
       shortDesc: "The graceful folk dance of Rajasthan characterized by synchronized pirouettes ('Ghoomna') in heavy flared multi-colored ghagras.",
-      image: "assets/images/rajasthan_ghoomar_dance.jpg",
-      fallbackImage: "assets/images/rajasthan_ghoomar_dance.jpg",
+      image: "images/rajasthan_ghoomar_dance.jpg",
+      fallbackImage: "images/rajasthan_ghoomar_dance.jpg",
       wikiUrl: "https://en.wikipedia.org/wiki/Ghoomar",
       wikiTitle: "Ghoomar Dance",
       unescoUrl: "https://sangeetnatak.gov.in",
@@ -473,8 +473,8 @@ const VIRASAT_CONNECTIONS = [
       location: "Gujarat Plains",
       period: "UNESCO World Heritage Folk Tradition",
       shortDesc: "The vibrant devotional circular dance performed in Navratri circles with rhythmic clapping and mirror-work chaniyas.",
-      image: "assets/images/gujarat_garba_dance.jpg",
-      fallbackImage: "assets/images/gujarat_garba_dance.jpg",
+      image: "images/gujarat_garba_dance.jpg",
+      fallbackImage: "images/gujarat_garba_dance.jpg",
       wikiUrl: "https://en.wikipedia.org/wiki/Garba_(dance)",
       wikiTitle: "Garba of Gujarat",
       unescoUrl: "https://ich.unesco.org/en/RL/garba-of-gujarat-01962",
@@ -482,8 +482,8 @@ const VIRASAT_CONNECTIONS = [
     },
     connectionOverview: `Ghoomar in Rajasthan and Garba in Gujarat embody the vibrant textile and musical heritage of western India. Both dances celebrate grace, rotational symmetry, and the kaleidoscopic movement of mirror-embroidered ghagras.`,
     connectionDetails: `While Ghoomar focuses on subtle, veiled pirouettes where royal women glide and twirl to the acoustic dholak and folk Sarangi, Garba radiates celebratory energy in vast open-air circles where thousands clap and step in sync with live dhol drums.`,
-    bridgeImage: "assets/images/rajasthan_ghoomar_dance.jpg",
-    bridgeImageB: "assets/images/gujarat_garba_dance.jpg",
+    bridgeImage: "images/rajasthan_ghoomar_dance.jpg",
+    bridgeImageB: "images/gujarat_garba_dance.jpg",
     similarities: [
       {
         title: "Rotational Symmetry & Flared Skirt Motion",
@@ -528,14 +528,14 @@ const VIRASAT_CONNECTIONS = [
         title: "Ghoomar",
         url: "https://en.wikipedia.org/wiki/Ghoomar",
         extract: "Ghoomar is a traditional folk dance of Rajasthan. The dance is chiefly performed by veiled women who wear flowing dresses called ghaghara.",
-        image: "assets/images/rajasthan_ghoomar_dance.jpg"
+        image: "images/rajasthan_ghoomar_dance.jpg"
       },
       {
         culture: "Gujarat",
         title: "Garba",
         url: "https://en.wikipedia.org/wiki/Garba_(dance)",
         extract: "Garba is a form of dance which originates from Gujarat. It is danced in concentric circles to celebrate Navratri.",
-        image: "assets/images/gujarat_garba_dance.jpg"
+        image: "images/gujarat_garba_dance.jpg"
       }
     ]
   },
@@ -566,8 +566,8 @@ const VIRASAT_CONNECTIONS = [
       location: "Lucknow, Uttar Pradesh",
       period: "Mughal Era (Empress Noor Jahan) & Nawabi Lucknow (18th Century)",
       shortDesc: "Delicate white-on-white shadow needlework encompassing 32 intricate hand stitches on fine cotton muslin and organza.",
-      image: "assets/images/lucknow_chikankari.jpg",
-      fallbackImage: "assets/images/lucknow_chikankari.jpg",
+      image: "images/lucknow_chikankari.jpg",
+      fallbackImage: "images/lucknow_chikankari.jpg",
       wikiUrl: "https://en.wikipedia.org/wiki/Chikan_(embroidery)",
       wikiTitle: "Chikankari of Lucknow",
       unescoUrl: "https://ich.unesco.org",
@@ -581,8 +581,8 @@ const VIRASAT_CONNECTIONS = [
       location: "Majha / Malwa / Doaba, Punjab",
       period: "15th Century CE (Folk Punjabi Heritage & Heer Ranjha Epic)",
       shortDesc: "Vibrant 'flower embroidery' crafted with untwisted silk floss (Pat) on coarse handspun khaddar fabric from the reverse side.",
-      image: "assets/images/punjabi_phulkari.jpg",
-      fallbackImage: "assets/images/punjabi_phulkari.jpg",
+      image: "images/punjabi_phulkari.jpg",
+      fallbackImage: "images/punjabi_phulkari.jpg",
       wikiUrl: "https://en.wikipedia.org/wiki/Phulkari",
       wikiTitle: "Phulkari Embroidery",
       unescoUrl: "https://ich.unesco.org",
@@ -590,8 +590,8 @@ const VIRASAT_CONNECTIONS = [
     },
     connectionOverview: `Lucknow Chikankari from Uttar Pradesh and Phulkari from Punjab represent two of India's most celebrated textile traditions. Both crafts turn simple raw cloth into intricate heirlooms through counted-thread embroidery, requiring exceptional visual acuity and patience.`,
     connectionDetails: `While Chikankari creates aristocratic, ghostly shadows on sheer muslin with fine white stitches (Bakhiya, Murri, Phanda), Phulkari creates a dazzling tapestry of joyful geometric flowers (Bagh) using golden-yellow and ruby-red untwisted silk floss on rugged homespun khaddar.`,
-    bridgeImage: "assets/images/lucknow_chikankari.jpg",
-    bridgeImageB: "assets/images/punjabi_phulkari.jpg",
+    bridgeImage: "images/lucknow_chikankari.jpg",
+    bridgeImageB: "images/punjabi_phulkari.jpg",
     similarities: [
       {
         title: "Counted-Thread Manual Precision",
@@ -644,14 +644,14 @@ const VIRASAT_CONNECTIONS = [
         title: "Chikan (Embroidery)",
         url: "https://en.wikipedia.org/wiki/Chikan_(embroidery)",
         extract: "Chikan is a traditional embroidery style from Lucknow, India. Literally translated, the word means embroidery, and it is one of Lucknow's best known textile decoration styles.",
-        image: "assets/images/lucknow_chikankari.jpg"
+        image: "images/lucknow_chikankari.jpg"
       },
       {
         culture: "Punjab",
         title: "Phulkari",
         url: "https://en.wikipedia.org/wiki/Phulkari",
         extract: "Phulkari literally means flower work. It is an embroidery technique from the Punjab region featuring vibrant darn stitches with silk thread.",
-        image: "assets/images/punjabi_phulkari.jpg"
+        image: "images/punjabi_phulkari.jpg"
       }
     ]
   }
