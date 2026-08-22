@@ -116,6 +116,7 @@
             </a>
             <a href="passport.html" class="hover:text-[#D4A359] transition-colors">Passport</a>
             <a href="wisdom-vault.html" class="hover:text-[#D4A359] transition-colors">Wisdom Vault</a>
+            <a href="surprise-me.html" class="hover:text-[#D4A359] transition-colors">Surprise Me</a>
             <a href="games.html" class="hover:text-[#D4A359] transition-colors">Games</a>
             <a href="connect.html" class="hover:text-[#D4A359] transition-colors">Connect</a>
             <a href="games.html#culturalRoomModal" class="hover:text-[#D4A359] transition-colors">Rooms</a>
@@ -165,10 +166,10 @@
                     <span class="material-symbols-outlined text-[19px]">explore</span>
                     Start Exploring
                 </a>
-                <button onclick="nextHeroSlide()" class="btn-outline-gold px-6 py-3 rounded-full flex items-center gap-2.5 text-[13px] tracking-wide backdrop-blur-sm">
+                <a href="surprise-me.html" class="btn-outline-gold px-6 py-3 rounded-full flex items-center gap-2.5 text-[13px] tracking-wide backdrop-blur-sm">
                     <span class="material-symbols-outlined text-[19px] text-[#D4A359]">casino</span>
                     Surprise Me
-                </button>
+                </a>
             </div>
         </div>
 
@@ -383,7 +384,7 @@
         </div>
 
         <!-- 5. Surprise Me Module -->
-        <div id="surprise-module" class="lg:col-span-3 bento-card rounded-2xl p-6 flex flex-col justify-between relative">
+        <div id="surprise-module" onclick="window.location.href='surprise-me.html'" class="lg:col-span-3 bento-card rounded-2xl p-6 flex flex-col justify-between relative cursor-pointer group hover:border-[#D4A359] transition-all duration-300">
             <div>
                 <div class="flex items-center gap-2 mb-1">
                     <span class="material-symbols-outlined text-[#A97A32] text-[18px]">casino</span>
@@ -404,7 +405,7 @@
             </div>
 
             <div>
-                <button onclick="window.location.href='games.html'" class="btn-teal w-full py-2.5 rounded-full text-xs font-semibold tracking-wider flex items-center justify-center gap-1.5 mt-4">
+                <button onclick="window.location.href='surprise-me.html'" class="btn-teal w-full py-2.5 rounded-full text-xs font-semibold tracking-wider flex items-center justify-center gap-1.5 mt-4">
                     Explore Now →
                 </button>
 
