@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Elder Wisdom Vault | VIRASAT - Learn · Share · Preserve</title>
+    <meta name="description" content="A living cultural archive of oral histories, ancestral recipes, forgotten crafts, and sacred lore shared directly by elders across India.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Marcellus&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css"/>
+    <link rel="stylesheet" href="css/design-tokens.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/wisdom-vault.css"/>
+    <link rel="stylesheet" href="css/modal.css"/>
+    <link rel="stylesheet" href="css/responsive.css"/>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: {
+                DEFAULT: '#D4A359',
+                light: '#ECC484',
+                dark: '#A97A32',
+                50: '#FDF8F0',
+                100: '#F9EED9',
+                500: '#D4A359',
+                600: '#BA893D'
+              },
+              parchment: {
+                DEFAULT: '#F5EFE6',
+                card: '#FAF6EF',
+                border: '#E4D8C7'
+              }
+            },
+            fontFamily: {
+              brand: ['Cinzel', 'Playfair Display', 'Marcellus', 'serif'],
+              heading: ['Playfair Display', 'serif'],
+              sans: ['Plus Jakarta Sans', 'sans-serif'],
+              caps: ['Manrope', 'sans-serif']
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body class="page-texture min-h-screen text-[#211B14] font-sans antialiased selection:bg-[#D4A359] selection:text-white pt-20">
+
+<!-- ==========================================================================
+     UNIFIED GLOBAL VIRASAT HEADER
+     ========================================================================== -->
+<header class="fixed top-0 left-0 w-full z-50 nav-backdrop transition-all duration-300">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <a href="index.html" class="flex items-center gap-3 group cursor-pointer" title="Return to Homepage">
+            <div class="w-11 h-11 flex items-center justify-center text-[#D4A359] group-hover:rotate-45 transition-transform duration-700 shrink-0">
+                <svg viewBox="0 0 100 100" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <radialGradient id="goldGradVault" cx="50%" cy="50%" r="50%">
+                            <stop offset="0%" stop-color="#ECC484"/>
+                            <stop offset="60%" stop-color="#D4A359"/>
+                            <stop offset="100%" stop-color="#A97A32"/>
+                        </radialGradient>
+                    </defs>
+                    <circle cx="50" cy="50" r="46" stroke="url(#goldGradVault)" stroke-width="2.5"/>
+                    <circle cx="50" cy="50" r="41" stroke="url(#goldGradVault)" stroke-width="1.5"/>
+                    <circle cx="50" cy="50" r="38" stroke="url(#goldGradVault)" stroke-width="1" stroke-dasharray="2 3"/>
+                    
+                    <g stroke="url(#goldGradVault)" stroke-width="1.8" fill="url(#goldGradVault)" fill-opacity="0.25">
+                        <polygon points="50,14 47,40 50,42 53,40"/>
+                        <polygon points="50,86 47,60 50,58 53,60"/>
+                        <polygon points="14,50 40,47 42,50 40,53"/>
+                        <polygon points="86,50 60,47 58,50 60,53"/>
+                        <polygon points="24.5,24.5 43,41 45,43 41,45"/>
+                        <polygon points="75.5,75.5 57,59 55,57 59,55"/>
+                        <polygon points="75.5,24.5 59,43 57,45 55,41"/>
+                        <polygon points="24.5,75.5 41,57 43,55 45,59"/>
+                    </g>
+                    
+                    <g stroke="url(#goldGradVault)" stroke-width="1">
+                        <line x1="50" y1="14" x2="50" y2="40" stroke-dasharray="1 2"/>
+                        <line x1="50" y1="60" x2="50" y2="86" stroke-dasharray="1 2"/>
+                        <line x1="14" y1="50" x2="40" y2="50" stroke-dasharray="1 2"/>
+                        <line x1="60" y1="50" x2="86" y2="50" stroke-dasharray="1 2"/>
+                        <line x1="24.5" y1="24.5" x2="42" y2="42"/>
+                        <line x1="58" y1="58" x2="75.5" y2="75.5"/>
+                        <line x1="75.5" y1="24.5" x2="58" y2="42"/>
+                        <line x1="42" y1="58" x2="24.5" y2="75.5"/>
+                    </g>
+
+                    <circle cx="50" cy="27" r="2.8" fill="url(#goldGradVault)"/>
+                    <circle cx="50" cy="73" r="2.8" fill="url(#goldGradVault)"/>
+                    <circle cx="27" cy="50" r="2.8" fill="url(#goldGradVault)"/>
+                    <circle cx="73" cy="50" r="2.8" fill="url(#goldGradVault)"/>
+                    <circle cx="33.7" cy="33.7" r="2.8" fill="url(#goldGradVault)"/>
+                    <circle cx="66.3" cy="66.3" r="2.8" fill="url(#goldGradVault)"/>
+                    <circle cx="66.3" cy="33.7" r="2.8" fill="url(#goldGradVault)"/>
+                    <circle cx="33.7" cy="66.3" r="2.8" fill="url(#goldGradVault)"/>
+
+                    <circle cx="50" cy="50" r="12" stroke="url(#goldGradVault)" stroke-width="2" fill="#120F0B"/>
+                    <circle cx="50" cy="50" r="7" stroke="url(#goldGradVault)" stroke-width="1.5" fill="url(#goldGradVault)" fill-opacity="0.3"/>
+                    <circle cx="50" cy="3" fill="url(#goldGradVault)"/>
+                </svg>
+            </div>
+            <div class="flex flex-col">
+                <span class="brand-title">VIRASAT</span>
+                <span class="brand-subtitle">LEARN · SHARE · PRESERVE</span>
+            </div>
+        </a>
+
+        <!-- Global Navigation with Active State on Wisdom Vault -->
+        <nav class="hidden md:flex items-center gap-8 text-[13.5px] font-sans font-medium text-[#FAF5EE]/80">
+            <a href="index.html#explore-section" class="hover:text-[#D4A359] transition-colors flex items-center gap-1">
+                Explore <span class="material-symbols-outlined text-[16px]">expand_more</span>
+            </a>
+            <a href="passport.html" class="hover:text-[#D4A359] transition-colors">Journey</a>
+            <a href="games.html" class="hover:text-[#D4A359] transition-colors">Games</a>
+            <a href="passport.html" class="hover:text-[#D4A359] transition-colors">Passport</a>
+            <a href="wisdom-vault.html" class="text-[#D4A359] border-b-2 border-[#D4A359] pb-0.5 font-semibold transition-colors">Wisdom Vault</a>
+            <a href="games.html#culturalRoomModal" class="hover:text-[#D4A359] transition-colors">Rooms</a>
+        </nav>
+
+        <div class="flex items-center gap-4">
+            <!-- Live Passport Points Pill -->
+            <a href="passport.html" id="headerPassportPill" class="hidden sm:flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#D4A359]/15 border border-[#D4A359]/40 text-[#D4A359] hover:bg-[#D4A359]/25 text-xs font-semibold tracking-wide transition-all" title="View your Passport Stamps and XP">
+                <span class="material-symbols-outlined text-[16px]">verified</span>
+                <span id="headerPassportXP">Passport: 6 Stamps</span>
+            </a>
+
+            <button onclick="document.getElementById('vaultSearchInput').focus(); window.scrollTo({top: 600, behavior: 'smooth'});" class="w-9 h-9 rounded-full flex items-center justify-center text-[#FAF5EE]/80 hover:text-[#D4A359] hover:bg-white/5 transition-all" title="Search Wisdom Vault">
+                <span class="material-symbols-outlined text-[20px]">search</span>
+            </button>
+            <button onclick="window.location.href='games.html'" class="px-5 py-1.5 rounded-full border border-[#D4A359]/70 text-[#FAF5EE] hover:bg-[#D4A359]/15 hover:border-[#D4A359] font-caps text-xs font-semibold tracking-wider transition-all">
+                Sign In
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- ==========================================================================
+     HERO BANNER - ELDER WISDOM VAULT
+     ========================================================================== -->
+<section class="relative w-full min-h-[580px] lg:h-[80vh] flex items-center justify-center pt-16 pb-16 overflow-hidden bg-[#120F0B]">
+    <!-- Background Texture -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-30 mix-blend-luminosity pointer-events-none" style="background-image: url('assets/images/hero-elder-child.jpg');"></div>
+    <div class="absolute inset-0 hero-vignette z-[2] pointer-events-none"></div>
+
+    <div class="relative z-10 max-w-[1440px] w-full mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between gap-10">
+        <!-- Left: Hero Headline & Action -->
+        <div class="max-w-2xl text-left">
+            <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/60 border border-[#D4A359]/40 backdrop-blur-md text-[#D4A359] text-[11.5px] font-caps font-semibold tracking-wider uppercase mb-5 shadow-lg">
+                <span class="material-symbols-outlined text-[16px] text-[#D4A359]">menu_book</span>
+                <span>Living Oral Heritage Archive · Intergenerational Knowledge</span>
+            </div>
+
+            <h1 class="font-heading text-4xl sm:text-5xl lg:text-[58px] font-bold text-white leading-[1.12] mb-5 drop-shadow-md">
+                Preserve the <span class="text-[#D4A359]">Living Wisdom</span> of Our Elders.
+            </h1>
+            <p class="font-sans text-[16px] sm:text-[17px] text-[#FAF5EE]/90 max-w-xl mb-8 leading-relaxed font-normal">
+                Listen to rare oral folklore, master artisanal techniques, healing recipes, and unwritten cultural memories recorded directly from generation custodians.
+            </p>
+            
+            <div class="flex flex-wrap items-center gap-4">
+                <button id="heroAddStoryBtn" class="btn-gold px-7 py-3 rounded-full flex items-center gap-2.5 text-[13px] tracking-wide shadow-xl cursor-pointer">
+                    <span class="material-symbols-outlined text-[19px]">volunteer_activism</span>
+                    Contribute Elder Wisdom
+                </button>
+                <a href="#archives-section" class="btn-outline-gold px-6 py-3 rounded-full flex items-center gap-2.5 text-[13px] tracking-wide backdrop-blur-sm">
+                    <span class="material-symbols-outlined text-[19px] text-[#D4A359]">headphones</span>
+                    Explore Living Audio
+                </a>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="grid grid-cols-3 gap-6 pt-8 mt-8 border-t border-white/10 max-w-lg">
+                <div>
+                    <div class="font-heading text-2xl font-bold text-[#D4A359]">148+</div>
+                    <div class="font-sans text-xs text-white/60">Stories Recorded</div>
+                </div>
+                <div>
+                    <div class="font-heading text-2xl font-bold text-[#D4A359]">28</div>
+                    <div class="font-sans text-xs text-white/60">States & UTs</div>
+                </div>
+                <div>
+                    <div class="font-heading text-2xl font-bold text-[#D4A359]">100%</div>
+                    <div class="font-sans text-xs text-white/60">Elder Verified</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right: Featured Storyteller Card -->
+        <div class="w-full sm:w-[380px] lg:w-[400px] hero-glass-card rounded-2xl p-6 relative text-[#FAF5EE] shadow-2xl border border-[#D4A359]/30">
+            <div class="flex items-center justify-between mb-3">
+                <span class="font-caps text-[11px] font-bold tracking-[0.18em] text-[#D4A359] uppercase">FEATURED LIVING CUSTODIAN</span>
+                <span class="px-2.5 py-0.5 rounded-full bg-[#1C4436] text-[#6ee7b7] text-[10px] font-bold tracking-wider uppercase border border-[#6ee7b7]/30">
+                    ✦ Verified
+                </span>
+            </div>
+
+            <div class="w-full h-48 rounded-xl overflow-hidden mb-4 relative group">
+                <img src="assets/images/elder-storyteller.jpg" alt="Dadi Kamla Devi" class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"/>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-3 left-3 right-3 text-white">
+                    <span class="font-heading text-lg font-bold">Dadi Kamla Devi (Age 84)</span>
+                    <p class="text-xs text-[#ECC484]">Master Storyteller · Shekhawati, Rajasthan</p>
+                </div>
+            </div>
+
+            <div class="relative pl-4 mb-4">
+                <span class="font-heading text-3xl text-[#D4A359]/70 absolute -left-1 -top-2 leading-none">“</span>
+                <p class="font-sans text-[13px] leading-relaxed text-[#FAF5EE]/95 italic">
+                    "What we know today exists because someone preserved it before us with care. Now it is our turn to hand over the flame."
+                </p>
+            </div>
+
+            <!-- Audio Sample Bar -->
+            <div class="p-3 rounded-xl bg-black/40 border border-[#D4A359]/30 flex items-center justify-between gap-3">
+                <button id="heroPlayStoryBtn" class="w-9 h-9 rounded-full bg-[#D4A359] text-[#120F0B] flex items-center justify-center font-bold hover:scale-105 transition-transform cursor-pointer shrink-0" title="Listen to oral recording">
+                    <span class="material-symbols-outlined text-[20px]">play_arrow</span>
+                </button>
+                <div class="flex-1">
+                    <div class="text-[11.5px] font-bold text-white leading-tight">Gond Ke Laddu Recipe Lore</div>
+                    <div class="text-[10px] text-white/50">Oral Recording · 02:45 min</div>
+                </div>
+                <span class="text-[11px] font-bold text-[#D4A359] font-caps">+30 XP</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================================================
+     VAULT ARCHIVES & SEARCH SECTION
+     ========================================================================== -->
+<main id="archives-section" class="relative z-20 max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-8">
+
+    <!-- Filter & Search Toolbar -->
+    <div class="bento-card rounded-2xl p-6 space-y-6">
+        <div class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4">
+            <!-- Search Box -->
+            <div class="relative flex-1 max-w-xl">
+                <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-[#A97A32] text-[22px]">search</span>
+                <input type="text" id="vaultSearchInput" placeholder="Search by story, tradition, elder name, craft, or state..." class="w-full pl-12 pr-4 py-3 rounded-full bg-white/80 border border-[#E4D8C7] text-[#211B14] placeholder-[#8F8474] text-sm focus:outline-none focus:border-[#D4A359] focus:ring-2 focus:ring-[#D4A359]/20 transition-all"/>
+            </div>
+
+            <!-- Region & Action Controls -->
+            <div class="flex flex-wrap items-center gap-3">
+                <select id="vaultRegionSelect" class="px-4 py-2.5 rounded-full bg-white/80 border border-[#E4D8C7] text-xs font-semibold text-[#211B14] focus:outline-none focus:border-[#D4A359] cursor-pointer">
+                    <option value="all">All States of Bharat</option>
+                    <option value="rajasthan">Rajasthan</option>
+                    <option value="gujarat">Gujarat</option>
+                    <option value="uttar-pradesh">Uttar Pradesh</option>
+                    <option value="kerala">Kerala</option>
+                    <option value="bihar">Bihar</option>
+                    <option value="west-bengal">West Bengal</option>
+                    <option value="punjab">Punjab</option>
+                    <option value="karnataka">Karnataka</option>
+                </select>
+
+                <button id="openSubmitModalBtn" class="btn-gold px-5 py-2.5 rounded-full flex items-center gap-2 text-xs font-bold tracking-wider uppercase shadow-md cursor-pointer">
+                    <span class="material-symbols-outlined text-[18px]">add_circle</span>
+                    Add Elder Story
+                </button>
+            </div>
+        </div>
+
+        <!-- Category Filters -->
+        <div class="flex flex-wrap items-center gap-2.5 pt-4 border-t border-[#E4D8C7]/60">
+            <span class="font-caps text-[11px] font-bold text-[#8F8474] uppercase mr-1">Categories:</span>
+            <button class="category-pill active px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all" data-category="all">
+                All Archives <span id="count-all" class="ml-1 text-[10px] opacity-80">(6)</span>
+            </button>
+            <button class="category-pill px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all" data-category="crafts">
+                Traditional Crafts <span id="count-crafts" class="ml-1 text-[10px] opacity-80">(2)</span>
+            </button>
+            <button class="category-pill px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all" data-category="recipes">
+                Ancestral Recipes <span id="count-recipes" class="ml-1 text-[10px] opacity-80">(1)</span>
+            </button>
+            <button class="category-pill px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all" data-category="folklore">
+                Oral Histories & Lore <span id="count-folklore" class="ml-1 text-[10px] opacity-80">(2)</span>
+            </button>
+            <button class="category-pill px-4 py-1.5 rounded-full text-xs font-semibold tracking-wide transition-all" data-category="legends">
+                Living Legends <span id="count-legends" class="ml-1 text-[10px] opacity-80">(1)</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Active Stories Grid -->
+    <div id="vaultStoriesGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Story cards injected dynamically via JavaScript -->
+    </div>
+
+</main>
+
+<!-- ==========================================================================
+     ADD ELDER WISDOM CONTRIBUTION MODAL
+     ========================================================================== -->
+<div id="submitStoryModal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="modal-card bg-[#FAF6EF] rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto border border-[#D4A359]/40 shadow-2xl relative">
+        <button id="closeSubmitModalBtn" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-black/5 hover:bg-black/10 flex items-center justify-center text-[#211B14] transition-colors">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+
+        <div class="mb-6">
+            <div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#D4A359]/20 text-[#A97A32] text-xs font-caps font-bold uppercase mb-2">
+                <span class="material-symbols-outlined text-[16px]">edit_note</span>
+                Preserve Heritage
+            </div>
+            <h2 class="font-heading text-2xl sm:text-3xl font-bold text-[#211B14]">Contribute Elder Wisdom</h2>
+            <p class="font-sans text-xs sm:text-sm text-[#6B6255] mt-1">
+                Record and preserve traditional knowledge, family lore, artisanal crafts, or culinary recipes from your elders. Every submission earns <strong>+100 Passport XP</strong> and a Living Legend Badge!
+            </p>
+        </div>
+
+        <form id="storyContributionForm" class="space-y-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-caps font-bold text-[#211B14] uppercase mb-1">Elder's Full Name *</label>
+                    <input type="text" id="elderNameInput" required placeholder="e.g., Baa Shantaben Patel" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-[#E4D8C7] text-sm focus:border-[#D4A359] focus:outline-none"/>
+                </div>
+                <div>
+                    <label class="block text-xs font-caps font-bold text-[#211B14] uppercase mb-1">Elder's Age</label>
+                    <input type="number" id="elderAgeInput" placeholder="e.g., 78" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-[#E4D8C7] text-sm focus:border-[#D4A359] focus:outline-none"/>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-caps font-bold text-[#211B14] uppercase mb-1">Category *</label>
+                    <select id="storyCategoryInput" required class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-[#E4D8C7] text-sm focus:border-[#D4A359] focus:outline-none">
+                        <option value="crafts">Traditional Crafts & Textiles</option>
+                        <option value="recipes">Ancestral Recipes & Nutrition</option>
+                        <option value="folklore">Oral Folklore & History</option>
+                        <option value="legends">Living Legends & Masters</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-caps font-bold text-[#211B14] uppercase mb-1">Region / State *</label>
+                    <input type="text" id="storyRegionInput" required placeholder="e.g., Kutch, Gujarat" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-[#E4D8C7] text-sm focus:border-[#D4A359] focus:outline-none"/>
+                </div>
+            </div>
+
+            <div>
+                <label class="block text-xs font-caps font-bold text-[#211B14] uppercase mb-1">Title of Wisdom / Story *</label>
+                <input type="text" id="storyTitleInput" required placeholder="e.g., The Secret of Natural Indigo Vats" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-[#E4D8C7] text-sm focus:border-[#D4A359] focus:outline-none"/>
+            </div>
+
+            <div>
+                <label class="block text-xs font-caps font-bold text-[#211B14] uppercase mb-1">Story & Living Knowledge *</label>
+                <textarea id="storyContentInput" rows="4" required placeholder="Write the story, exact method, ancient verses, or recipe as narrated by the elder..." class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-[#E4D8C7] text-sm focus:border-[#D4A359] focus:outline-none"></textarea>
+            </div>
+
+            <div>
+                <label class="block text-xs font-caps font-bold text-[#211B14] uppercase mb-1">Key Wisdom / Moral / Insight</label>
+                <input type="text" id="storyMoralInput" placeholder="e.g., 'True patience gives dye its lifelong lustre.'" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-[#E4D8C7] text-sm focus:border-[#D4A359] focus:outline-none"/>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                    <label class="block text-xs font-caps font-bold text-[#211B14] uppercase mb-1">Your Name (Contributor)</label>
+                    <input type="text" id="contributorNameInput" placeholder="e.g., Aarav Sharma (Grandson)" class="w-full px-3.5 py-2.5 rounded-xl bg-white border border-[#E4D8C7] text-sm focus:border-[#D4A359] focus:outline-none"/>
+                </div>
+                <div>
+                    <label class="block text-xs font-caps font-bold text-[#211B14] uppercase mb-1">Declaration</label>
+                    <div class="flex items-center gap-2 mt-2">
+                        <input type="checkbox" id="verifyDeclaration" required class="w-4 h-4 rounded text-[#D4A359]"/>
+                        <span class="text-xs text-[#6B6255]">I certify this is an authentic oral knowledge submission.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-4 flex items-center justify-end gap-3 border-t border-[#E4D8C7]">
+                <button type="button" id="cancelSubmitModalBtn" class="px-5 py-2.5 rounded-full border border-[#E4D8C7] text-xs font-semibold text-[#6B6255] hover:bg-black/5 transition-colors">
+                    Cancel
+                </button>
+                <button type="submit" class="btn-gold px-6 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase shadow-md cursor-pointer">
+                    Submit & Earn Stamp
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- ==========================================================================
+     STORY DETAIL & AUDIO MODAL
+     ========================================================================== -->
+<div id="storyDetailModal" class="modal-backdrop fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="modal-card bg-[#FAF6EF] rounded-2xl max-w-2xl w-full p-6 sm:p-8 max-h-[90vh] overflow-y-auto border border-[#D4A359]/40 shadow-2xl relative">
+        <button id="closeDetailModalBtn" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-black/5 hover:bg-black/10 flex items-center justify-center text-[#211B14] transition-colors">
+            <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+
+        <div id="storyDetailContent">
+            <!-- Populated via JavaScript -->
+        </div>
+    </div>
+</div>
+
+<!-- ==========================================================================
+     UNIFIED FOOTER
+     ========================================================================== -->
+<footer class="w-full bg-[#111620] text-[#FAF5EE] border-t border-[#D4A359]/20 py-8 px-4 sm:px-6 lg:px-8 mt-16 relative overflow-hidden">
+    <div class="max-w-[1440px] mx-auto flex flex-col lg:flex-row items-center justify-between gap-8 relative z-10">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 w-full lg:w-auto">
+            <a href="index.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity cursor-pointer group">
+                <div class="w-10 h-10 rounded-full border border-[#D4A359]/40 flex items-center justify-center text-[#D4A359] shrink-0 group-hover:scale-105 transition-transform">
+                    <span class="material-symbols-outlined text-[20px]">home</span>
+                </div>
+                <div>
+                    <h4 class="font-caps text-xs font-bold text-white group-hover:text-[#D4A359] transition-colors">Virasat Home</h4>
+                    <p class="font-sans text-[11px] text-white/60 leading-tight mt-0.5">Return to interactive exploration</p>
+                </div>
+            </a>
+
+            <a href="passport.html" class="flex items-center gap-3 hover:opacity-90 transition-opacity cursor-pointer group">
+                <div class="w-10 h-10 rounded-full border border-[#D4A359]/40 flex items-center justify-center text-[#D4A359] shrink-0 group-hover:scale-105 transition-transform">
+                    <span class="material-symbols-outlined text-[20px]">verified</span>
+                </div>
+                <div>
+                    <h4 class="font-caps text-xs font-bold text-white group-hover:text-[#D4A359] transition-colors">Heritage Passport</h4>
+                    <p class="font-sans text-[11px] text-white/60 leading-tight mt-0.5">Collect Wisdom & Twin Stamps</p>
+                </div>
+            </a>
+
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full border border-[#D4A359]/40 flex items-center justify-center text-[#D4A359] shrink-0">
+                    <span class="material-symbols-outlined text-[20px]">volunteer_activism</span>
+                </div>
+                <div>
+                    <h4 class="font-caps text-xs font-bold text-white">Community Verified</h4>
+                    <p class="font-sans text-[11px] text-white/60 leading-tight mt-0.5">Evidence-based elder preservation</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full lg:w-auto flex items-center gap-3 lg:border-l lg:border-white/10 lg:pl-8">
+            <span class="font-heading text-4xl text-[#D4A359]/70 leading-none select-none">“</span>
+            <p class="font-heading italic text-[13px] text-white/80 max-w-sm">
+                Virasat bridges generations by honoring the living memory of our elders.
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- External Scripts -->
+<script src="js/passport-service.js"></script>
+<script src="js/wisdom-vault.js"></script>
+</body>
+</html>

@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find the Connection | VIRASAT - Learn · Share · Preserve</title>
+  <meta name="description" content="Discover fascinating cross-cultural connections and cultural twins across Indian states. Compare classical dances, textile crafts, architectural stepwells, and music traditions.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&family=Marcellus&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/styles.css"/>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold: {
+              DEFAULT: '#D4A359',
+              light: '#ECC484',
+              dark: '#A97A32',
+              50: '#FDF8F0',
+              100: '#F9EED9',
+              500: '#D4A359',
+              600: '#BA893D'
+            }
+          },
+          fontFamily: {
+            brand: ['Cinzel', 'Playfair Display', 'Marcellus', 'serif'],
+            heading: ['Playfair Display', 'serif'],
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            caps: ['Manrope', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="css/design-tokens.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="page-texture min-h-screen text-[#211B14] font-sans antialiased selection:bg-[#D4A359] selection:text-white pt-20">
+  <div class="parchment-pattern-bg"></div>
+
+  <!-- Unified Site Header matching Homepage -->
+  <header class="fixed top-0 left-0 w-full z-50 nav-backdrop transition-all duration-300">
+    <div class="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group cursor-pointer">
+        <div class="w-11 h-11 flex items-center justify-center text-[#D4A359] group-hover:rotate-45 transition-transform duration-700 shrink-0">
+          <svg viewBox="0 0 100 100" class="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="goldGradNav" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#ECC484"/>
+                <stop offset="60%" stop-color="#D4A359"/>
+                <stop offset="100%" stop-color="#A97A32"/>
+              </radialGradient>
+            </defs>
+            <circle cx="50" cy="50" r="46" stroke="url(#goldGradNav)" stroke-width="2.5"/>
+            <circle cx="50" cy="50" r="41" stroke="url(#goldGradNav)" stroke-width="1.5"/>
+            <circle cx="50" cy="50" r="38" stroke="url(#goldGradNav)" stroke-width="1" stroke-dasharray="2 3"/>
+            
+            <g stroke="url(#goldGradNav)" stroke-width="1.8" fill="url(#goldGradNav)" fill-opacity="0.25">
+              <polygon points="50,14 47,40 50,42 53,40"/>
+              <polygon points="50,86 47,60 50,58 53,60"/>
+              <polygon points="14,50 40,47 42,50 40,53"/>
+              <polygon points="86,50 60,47 58,50 60,53"/>
+              <polygon points="24.5,24.5 43,41 45,43 41,45"/>
+              <polygon points="75.5,75.5 57,59 55,57 59,55"/>
+              <polygon points="75.5,24.5 59,43 57,45 55,41"/>
+              <polygon points="24.5,75.5 41,57 43,55 45,59"/>
+            </g>
+            
+            <g stroke="url(#goldGradNav)" stroke-width="1">
+              <line x1="50" y1="14" x2="50" y2="40" stroke-dasharray="1 2"/>
+              <line x1="50" y1="60" x2="50" y2="86" stroke-dasharray="1 2"/>
+              <line x1="14" y1="50" x2="40" y2="50" stroke-dasharray="1 2"/>
+              <line x1="60" y1="50" x2="86" y2="50" stroke-dasharray="1 2"/>
+              <line x1="24.5" y1="24.5" x2="42" y2="42"/>
+              <line x1="58" y1="58" x2="75.5" y2="75.5"/>
+              <line x1="75.5" y1="24.5" x2="58" y2="42"/>
+              <line x1="42" y1="58" x2="24.5" y2="75.5"/>
+            </g>
+
+            <circle cx="50" cy="27" r="2.8" fill="url(#goldGradNav)"/>
+            <circle cx="50" cy="73" r="2.8" fill="url(#goldGradNav)"/>
+            <circle cx="27" cy="50" r="2.8" fill="url(#goldGradNav)"/>
+            <circle cx="73" cy="50" r="2.8" fill="url(#goldGradNav)"/>
+            <circle cx="33.7" cy="33.7" r="2.8" fill="url(#goldGradNav)"/>
+            <circle cx="66.3" cy="66.3" r="2.8" fill="url(#goldGradNav)"/>
+            <circle cx="66.3" cy="33.7" r="2.8" fill="url(#goldGradNav)"/>
+            <circle cx="33.7" cy="66.3" r="2.8" fill="url(#goldGradNav)"/>
+
+            <circle cx="50" cy="50" r="12" stroke="url(#goldGradNav)" stroke-width="2" fill="#120F0B"/>
+            <circle cx="50" cy="50" r="7" stroke="url(#goldGradNav)" stroke-width="1.5" fill="url(#goldGradNav)" fill-opacity="0.3"/>
+            <circle cx="50" cy="50" r="3" fill="url(#goldGradNav)"/>
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="brand-title">VIRASAT</span>
+          <span class="brand-subtitle">LEARN · SHARE · PRESERVE</span>
+        </div>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-[13.5px] font-sans font-medium text-[#FAF5EE]/80">
+        <a href="index.html#explore-section" class="hover:text-[#D4A359] transition-colors flex items-center gap-1">
+          Explore <span class="material-symbols-outlined text-[16px]">expand_more</span>
+        </a>
+        <a href="passport.html" class="hover:text-[#D4A359] transition-colors">Journey</a>
+        <a href="games.html" class="text-[#D4A359] border-b border-[#D4A359] pb-0.5 font-semibold transition-colors">Games</a>
+        <a href="passport.html" class="hover:text-[#D4A359] transition-colors">Passport</a>
+        <a href="wisdom-vault.html" class="hover:text-[#D4A359] transition-colors">Wisdom Vault</a>
+        <a href="#culturalRoomModal" id="navRoomsLink" class="hover:text-[#D4A359] transition-colors">Rooms</a>
+      </nav>
+
+      <div class="flex items-center gap-4">
+        <div class="header-search-wrap">
+          <button id="searchTriggerBtn" class="w-9 h-9 rounded-full flex items-center justify-center text-[#FAF5EE]/80 hover:text-[#D4A359] hover:bg-white/5 transition-all" title="Search Cultural Connections" aria-label="Search">
+            <span class="material-symbols-outlined text-[20px]">search</span>
+          </button>
+          
+          <div id="searchFlyoutBar" class="search-flyout-bar">
+            <span class="search-flyout-icon">🔍</span>
+            <input 
+              type="text" 
+              id="globalSearchInput" 
+              class="search-flyout-input" 
+              placeholder="Search state, dance, art, or monument..." 
+              autocomplete="off"
+            />
+            <button id="closeSearchFlyoutBtn" class="close-flyout-btn">✕</button>
+          </div>
+          
+          <div id="searchResultsDropdown" class="search-results-dropdown"></div>
+        </div>
+
+        <button id="signInBtn" class="px-5 py-1.5 rounded-full border border-[#D4A359]/70 text-[#FAF5EE] hover:bg-[#D4A359]/15 hover:border-[#D4A359] font-caps text-xs font-semibold tracking-wider transition-all">
+          Sign In
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="app-container" style="padding-top: 10px;">
+    <!-- Breadcrumbs -->
+    <div class="subnav-breadcrumbs-bar">
+      <div class="subnav-inner">
+        <ul class="breadcrumbs-list">
+          <li><a href="index.html"><span>🏠</span> Home</a></li>
+          <li class="breadcrumbs-separator">›</li>
+          <li><a href="games.html">Games</a></li>
+          <li class="breadcrumbs-separator">›</li>
+          <li class="breadcrumbs-current">Find the Connection</li>
+        </ul>
+        <button id="howItWorksBtn" class="how-it-works-btn">
+          <span>?</span>
+          <span>How it works ?</span>
+        </button>
+      </div>
+    </div>
+
+    <main class="main-content-wrapper">
+      <section class="discovery-filter-section" aria-label="State and Domain Discovery Filters">
+        <div class="filter-header-title-row">
+          <div class="filter-title-label">
+            <span>✨</span>
+            <span>Discover Cultural Twins across Indian States & Heritage Domains</span>
+          </div>
+          <span id="filterActiveCountBadge" class="filter-active-count-badge">5 Active Cultural Twins</span>
+        </div>
+
+        <div class="filter-rows-container">
+          <div class="filter-row">
+            <span class="filter-row-label">Select State:</span>
+            <div id="regionPillsContainer" class="filter-pills-wrap"></div>
+          </div>
+          <div class="filter-row">
+            <span class="filter-row-label">Select Domain:</span>
+            <div id="domainPillsContainer" class="filter-pills-wrap"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="game-hero-header">
+        <svg class="header-filigree-icon" viewBox="0 0 80 40" fill="currentColor">
+          <path d="M40 0 C30 15 10 20 0 20 C10 20 30 25 40 40 C50 25 70 20 80 20 C70 20 50 15 40 0 Z"/>
+          <circle cx="40" cy="20" r="4"/>
+        </svg>
+        <h1 class="game-main-title">Find the Connection</h1>
+        <p class="game-sub-title">Two cultures. One possible connection. Can you discover the link?</p>
+      </section>
+
+      <div class="game-tri-layout-grid">
+        <aside class="progress-card-dark" aria-label="User Heritage Progress">
+          <div class="card-eyebrow-dark">YOUR PROGRESS</div>
+          
+          <div class="progress-stats-stack">
+            <div class="progress-stat-row">
+              <div class="stat-icon-circle">🧩</div>
+              <div class="stat-text-meta">
+                <span class="stat-meta-label">Connections Solved</span>
+                <span id="connectionsSolvedText" class="stat-meta-value">4 / 28</span>
+              </div>
+            </div>
+
+            <div class="progress-stat-row">
+              <div class="stat-icon-circle">🏆</div>
+              <div class="stat-text-meta">
+                <span class="stat-meta-label">Streak</span>
+                <span id="streakDaysText" class="stat-meta-value">12 days</span>
+              </div>
+            </div>
+
+            <div class="progress-stat-row">
+              <div class="stat-icon-circle">🛡️</div>
+              <div class="stat-text-meta">
+                <span class="stat-meta-label">Level</span>
+                <span id="userLevelText" class="stat-meta-value">Heritage Scholar</span>
+              </div>
+            </div>
+          </div>
+
+          <a href="passport.html" class="view-passport-cta" style="display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none;">
+            <span>View Passport</span>
+            <span>→</span>
+          </a>
+        </aside>
+
+        <section class="game-center-board" aria-label="Interactive Culture Comparison">
+          <div class="dual-culture-arena">
+            <article id="cultureACard" class="culture-interactive-card"></article>
+
+            <div class="arena-center-connector">
+              <div class="connector-dotted-line"></div>
+              <div id="centerConnectorBadge" class="connector-circle-badge">?</div>
+            </div>
+
+            <article id="cultureBCard" class="culture-interactive-card"></article>
+          </div>
+
+          <div class="connection-guessing-section">
+            <h3 class="guess-prompt-heading">What do you think connects these two?</h3>
+            <p class="guess-prompt-subtext">Choose your guess to reveal the connection.</p>
+
+            <div id="guessOptionsContainer" class="guess-options-grid"></div>
+
+            <button id="revealConnectionBtn" class="reveal-action-cta-btn">
+              <span>Reveal Connection</span>
+              <span>→</span>
+            </button>
+          </div>
+        </section>
+
+        <aside class="meta-modules-column" aria-label="Hints and Social Exploration">
+          <div class="sidebar-widget-card">
+            <div class="widget-title-row">
+              <div class="widget-title">
+                <span>💡</span>
+                <span>HINTS</span>
+              </div>
+            </div>
+            <div id="hintsListWrap" class="hints-list-wrap"></div>
+            <button id="showAnotherHintBtn" class="show-hint-action-btn">
+              <span>Show Another Hint (-1 🔥)</span>
+            </button>
+          </div>
+
+          <div class="sidebar-widget-card">
+            <div class="widget-title-row">
+              <div class="widget-title">
+                <span>⏱️</span>
+                <span>DIFFICULTY LEVEL</span>
+              </div>
+              <span id="difficultyLevelBadge" class="difficulty-badge-pill">Medium</span>
+            </div>
+            <p class="widget-subtext">Keep going! You're doing great.</p>
+          </div>
+
+          <div class="sidebar-widget-card">
+            <div class="widget-title-row">
+              <div class="widget-title">
+                <span>👥</span>
+                <span>SHARE YOUR GUESS</span>
+              </div>
+            </div>
+            <p class="widget-subtext">Discuss with fellow explorers or consult cultural scholars in real time.</p>
+            <button id="openRoomBtn" class="open-room-btn">
+              <span>👥</span>
+              <span>Open Cultural Room →</span>
+            </button>
+          </div>
+        </aside>
+      </div>
+
+      <section id="connectionDeepdiveSection" class="connection-deepdive-section" aria-label="Connection Findings and Sources">
+        <article class="connection-narrative-card">
+          <div class="section-card-title">
+            <span>🛡️</span>
+            <span>THE CONNECTION</span>
+          </div>
+          <div id="connectionSummaryText" class="connection-text-summary"></div>
+          <div class="connection-photo-bridge">
+            <img id="photoBridgeA" class="bridge-half-img" alt="Culture A" />
+            <div class="bridge-link-badge-center">🔗</div>
+            <img id="photoBridgeB" class="bridge-half-img" alt="Culture B" />
+          </div>
+        </article>
+
+        <article class="evidence-sources-card">
+          <div class="section-card-title">
+            <span>📜</span>
+            <span>EVIDENCE & SOURCES</span>
+          </div>
+          <div id="evidenceSourcesList" class="evidence-links-list"></div>
+          <a href="https://whc.unesco.org" target="_blank" rel="noopener noreferrer" class="view-all-sources-link">View all sources →</a>
+        </article>
+
+        <article class="related-connections-card">
+          <div class="section-card-title">
+            <span>🧭</span>
+            <span>RELATED CONNECTIONS</span>
+          </div>
+          <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: -6px;">Explore more cultural twins</p>
+          <div id="relatedConnectionsStack" class="related-mini-cards-stack"></div>
+        </article>
+      </section>
+
+      <section class="comparison-matrix-full-panel" aria-label="Detailed Architectural Comparison Matrix">
+        <div class="comparison-tab-bar">
+          <button id="tabSimilarBtn" class="comp-tab-btn active">
+            <span>🌿</span>
+            <span>Key Similarities</span>
+          </button>
+          <button id="tabDissimilarBtn" class="comp-tab-btn">
+            <span>⚖️</span>
+            <span>Key Dissimilarities</span>
+          </button>
+        </div>
+
+        <div id="similaritiesTabPane" class="tab-pane-content active"></div>
+        <div id="dissimilaritiesTabPane" class="tab-pane-content"></div>
+
+        <div class="wikipedia-hub-header" style="margin-top: 28px;">
+          <h3 style="font-family: var(--font-display); font-size: 1.25rem; color: var(--text-headline);">
+            📚 Read In-Depth Heritage Articles
+          </h3>
+          <p style="font-size: 0.85rem; color: var(--text-muted);">
+            Explore comprehensive historical records, archaeological surveys, and Wikipedia entries.
+          </p>
+        </div>
+        <div id="wikipediaHubGrid" class="wikipedia-hub-grid"></div>
+      </section>
+    </main>
+
+    <footer class="footer-museum-banner">
+      <div class="footer-banner-container">
+        <div class="quote-left-block">
+          <svg class="palace-silhouette-icon" viewBox="0 0 160 80" fill="currentColor">
+            <path d="M10 80 L10 50 L20 40 L30 50 L30 80 Z M40 80 L40 30 L55 10 L70 30 L70 80 Z M80 80 L80 20 L95 0 L110 20 L110 80 Z M120 80 L120 40 L135 25 L150 40 L150 80 Z"/>
+          </svg>
+          <p class="quote-serif-text">
+            “Culture is a bridge that connects hearts across time and distance.”
+          </p>
+        </div>
+
+        <div class="contribute-right-block">
+          <div class="contribute-prompt-meta">
+            <span class="contribute-headline">Know a connection we missed?</span>
+            <span class="contribute-sub">Help us preserve the world's cultural links.</span>
+          </div>
+          <button id="contributeNowBtn" class="contribute-action-cta">
+            <span>✍️</span>
+            <span>Contribute Now →</span>
+          </button>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <div id="howItWorksModal" class="modal-overlay">
+    <div class="modal-content-box">
+      <button class="modal-close-btn" aria-label="Close Modal">✕</button>
+      <h3 class="modal-title">How "Find the Connection" Works</h3>
+      <p class="modal-subtitle">A digital game celebrating human ingenuity across Indian traditions.</p>
+      
+      <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.88rem; line-height: 1.6;">
+        <p><strong>1. Select Your State & Domain:</strong> Choose from Uttar Pradesh (UP), Punjab, Rajasthan, Gujarat, Kerala, or Karnataka.</p>
+        <p><strong>2. Guess the Underlying Link:</strong> Hypothesize whether the two cultures share water management, Natya Shastra roots, counted-thread embroidery, or acoustic vaulting.</p>
+        <p><strong>3. Reveal & Deep-Dive:</strong> Uncover the scholarly comparison, explore architectural similarities and dissimilarities, and read full Wikipedia archives.</p>
+        <p><strong>4. Earn Passport Stamps:</strong> Every solved connection adds a verified stamp to your Virasat Passport with its key similarity breakdown.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="culturalRoomModal" class="modal-overlay">
+    <div class="modal-content-box">
+      <button class="modal-close-btn" aria-label="Close Modal">✕</button>
+      <h3 class="modal-title">🏛️ Cultural Room: Indian Heritage Twins</h3>
+      <p class="modal-subtitle">Live discussion with cultural scholars and heritage enthusiasts.</p>
+      
+      <div id="roomChatThread" class="chat-room-thread">
+        <div class="chat-bubble">
+          <span class="chat-author">HeritageCurator_Anand</span>
+          <span>Notice how both Lucknow Chikankari (UP) and Punjabi Phulkari use counted-thread geometry, yet express completely different aesthetic spirits.</span>
+        </div>
+        <div class="chat-bubble">
+          <span class="chat-author">ArchExplorer_Kiran</span>
+          <span>Yes! And Bada Imambara in Lucknow and Gol Gumbaz in Karnataka solved the challenge of pillar-free acoustic spans centuries before modern steel.</span>
+        </div>
+      </div>
+
+      <div class="chat-input-bar">
+        <input type="text" id="roomChatInput" class="chat-input-field" placeholder="Share your cultural insight..." />
+        <button id="roomChatSendBtn" class="chat-send-btn">Send</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="contributeModal" class="modal-overlay">
+    <div class="modal-content-box">
+      <button class="modal-close-btn" aria-label="Close Modal">✕</button>
+      <h3 class="modal-title">✍️ Submit a Cultural Connection</h3>
+      <p class="modal-subtitle">Help historians document shared cultural twins across Indian states.</p>
+      
+      <form id="contributeForm" class="contribution-form">
+        <div class="form-group">
+          <label class="form-label">Culture A (State & Tradition / Monument)</label>
+          <input type="text" class="form-input" placeholder="e.g. Uttar Pradesh - Kathak Dance" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Culture B (Twin State & Tradition / Monument)</label>
+          <input type="text" class="form-input" placeholder="e.g. Kerala - Kathakali Dance Drama" required />
+        </div>
+        <div class="form-group">
+          <label class="form-label">Heritage Domain</label>
+          <select class="form-select">
+            <option>Dance & Dramatic Arts</option>
+            <option>Art, Craft & Needlework</option>
+            <option>Architecture & Stepwells</option>
+            <option>Music & Traditions</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Brief Historical Link / Similarities</label>
+          <textarea class="form-textarea" placeholder="Explain the key similarities and historical connection..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit-cta">Submit Connection to Board →</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="signInModal" class="modal-overlay">
+    <div class="modal-content-box" style="max-width: 440px;">
+      <button class="modal-close-btn" aria-label="Close Modal">✕</button>
+      <div style="text-align: center; margin-bottom: 20px;">
+        <svg class="brand-icon-mandala" style="width: 48px; height: 48px; margin: 0 auto 10px;" viewBox="0 0 100 100" fill="none" stroke="currentColor">
+          <circle cx="50" cy="50" r="44" stroke-width="2.5" stroke-dasharray="4 2"/>
+          <circle cx="50" cy="50" r="32" stroke-width="1.8"/>
+          <path d="M50 6 L50 94 M6 50 L94 50 M19 19 L81 81 M19 81 L81 19" stroke-width="1.2"/>
+          <circle cx="50" cy="50" r="16" fill="currentColor" fill-opacity="0.15" stroke-width="2"/>
+          <circle cx="50" cy="50" r="6" fill="currentColor"/>
+        </svg>
+        <h3 class="modal-title" style="font-size: 1.35rem;">Sign In to Virasat</h3>
+        <p class="modal-subtitle" style="margin-bottom: 0;">Preserve discoveries, track streaks & unlock passport stamps.</p>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <button style="display: flex; align-items: center; justify-content: center; gap: 10px; padding: 11px; background: #FFFFFF; border: 1px solid var(--gold-border); border-radius: var(--radius-pill); font-family: var(--font-ui); font-size: 0.88rem; font-weight: 600; color: var(--text-headline); cursor: pointer; transition: all 0.2s;" onclick="alert('Signed in as Explorer!'); document.getElementById('signInModal').classList.remove('open');">
+          <span>🌐 Continue with Google</span>
+        </button>
+        <button style="display: flex; align-items: center; justify-content: center; gap: 10px; padding: 11px; background: var(--dark-bg); border: 1px solid var(--gold-primary); border-radius: var(--radius-pill); font-family: var(--font-ui); font-size: 0.88rem; font-weight: 600; color: var(--gold-fixed); cursor: pointer; transition: all 0.2s;" onclick="alert('Signed in as Guest Explorer!'); document.getElementById('signInModal').classList.remove('open');">
+          <span>🛂 Continue as Guest Explorer</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/passport-service.js"></script>
+  <script src="js/data/connections-data.js"></script>
+  <script src="js/components/navbar.js"></script>
+  <script src="js/components/filter-bar.js"></script>
+  <script src="js/components/connection-game.js"></script>
+  <script src="js/components/comparison-matrix.js"></script>
+  <script src="js/components/sidebar.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

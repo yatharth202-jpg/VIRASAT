@@ -1,0 +1,17 @@
+{
+  "name": "homepage-virasat",
+  "version": "1.0.0",
+  "description": "VIRASAT — Indian Cultural Heritage Portal (Pixel-Perfect Home Layout)",
+  "main": "js/main.js",
+  "scripts": {
+    "start": "python -m http.server 8080"
+  },
+  "keywords": [
+    "virasat",
+    "cultural-heritage",
+    "india",
+    "web-portal"
+  ],
+  "author": "Virasat Team",
+  "license": "MIT"
+}
