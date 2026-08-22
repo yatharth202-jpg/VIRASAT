@@ -16,7 +16,7 @@ const DEFAULT_STORIES = [
     categoryLabel: "Traditional Crafts",
     region: "Kutch, Gujarat",
     regionKey: "gujarat",
-    image: "assets/images/craft-charkha.jpg",
+    image: "images/craft-charkha.jpg",
     excerpt: "For four centuries, our clan has never used chemical indigo. The secret lies in sour lime, jaggery water, and the exact moon cycle when the indigo ferments.",
     fullStory: "Ajrakh is not merely cloth; it is astronomy, alchemy, and prayers printed on cotton. The indigo plant leaves are steeped in earthen pots with wild iron scrap, tamarind pulp, and jaggery water. My grandfather taught me that the river water temperature at 4 AM changes the depth of blue. We print with carved teak blocks, dipping into resist paste made from gum and river clay. When the cloth dries under the hot Kutch sun, it breathes the story of our desert.",
     moral: "Patience and natural time cannot be hurried by machines.",
@@ -35,7 +35,7 @@ const DEFAULT_STORIES = [
     categoryLabel: "Ancestral Recipes",
     region: "Shekhawati, Rajasthan",
     regionKey: "rajasthan",
-    image: "assets/images/recipe-laddoos.jpg",
+    image: "images/recipe-laddoos.jpg",
     excerpt: "Every winter solstice, grandmother would heat pure A2 cow ghee in a heavy iron kadai to puff the hand-harvested acacia tree gum (Babool gond).",
     fullStory: "Our Thar winters are sharp, but our elders never suffered joint pains or cold. The secret was our winter gond laddus. We gather natural gum from the babool tree, puff it carefully in slow-heated cow ghee until it crackles like popcorn. We grind whole wheat on hand stone-mills (Chakki), blend crushed almonds, fox-nuts (makhana), dry ginger (sonth), and wild green cardamom with organic desi jaggery. A single laddu with warm milk at sunrise kept farmworkers energized till dusk.",
     moral: "Food prepared according to seasonal rhythms heals without medicine.",
@@ -54,7 +54,7 @@ const DEFAULT_STORIES = [
     categoryLabel: "Oral Histories",
     region: "Champaran, Bihar",
     regionKey: "bihar",
-    image: "assets/images/elder-storyteller.jpg",
+    image: "images/elder-storyteller.jpg",
     excerpt: "My mother sang the rhythmic verses while spinning coarse desi cotton. Every turn of the wooden wheel was accompanied by an unrecorded oral ballad.",
     fullStory: "During the indigo farmers' Satyagraha, printed pamphlets were seized by authorities, so the freedom message traveled in spinning songs called 'Charkha Geet'. My mother spun fine yarn by the oil lantern light and sang of the sacred river Gandak and our fertile soil. The cadence of the wheel dictated the metre of the poetry. To this day, when I hear the low hum of a charkha, I can hear the voices of fifty village women singing together.",
     moral: "Oral song preserves what ink and paper could not conceal.",
@@ -73,7 +73,7 @@ const DEFAULT_STORIES = [
     categoryLabel: "Living Legends",
     region: "Palakkad, Kerala",
     regionKey: "kerala",
-    image: "assets/images/tradition-folk-art.jpg",
+    image: "images/tradition-folk-art.jpg",
     excerpt: "The sacred green (Paccha) and red (Kathi) pigments are hand-ground from natural stone minerals with cold-pressed coconut oil for 12 continuous hours.",
     fullStory: "A Kathakali actor does not apply paint; he invokes the deities and demons through mineral offerings. For the pure green face of noble heroes (Paccha), we grind crushed Manayola stones and blue indigo on a flat granite stone with pure coconut oil. The paste must be velvety smooth so it never cracks during four hours of intense facial abhinaya under the glare of the brass oil lamp (Aattavilakku). The process itself is a meditative prayer before stepping onto the stage.",
     moral: "Devotion in preparation is the true soul of classical performance.",
@@ -92,7 +92,7 @@ const DEFAULT_STORIES = [
     categoryLabel: "Oral Histories",
     region: "Bundi, Rajasthan",
     regionKey: "rajasthan",
-    image: "assets/images/tree-watermark.jpg",
+    image: "images/tree-watermark.jpg",
     excerpt: "At each descending tier of the stepwell, our village women sang specific ragas dedicated to Varuna to invite underground aquifers during drought.",
     fullStory: "Our stepwells were never just cisterns; they were subterranean water temples. During the dry month of Jyeshtha, families would gather at the subterranean pavilion 50 steps deep where the air was 10 degrees cooler. The elders would lead the Varuna Suktam and regional folk ballads thanking the Mother Earth for storing monsoon rainfall. Children learned the sacred geography of underground aquifers through these songs.",
     moral: "Water is life's most sacred heritage to be guarded collectively.",
@@ -111,7 +111,7 @@ const DEFAULT_STORIES = [
     categoryLabel: "Traditional Crafts",
     region: "Bankura, West Bengal",
     regionKey: "west-bengal",
-    image: "assets/images/craft-charkha.jpg",
+    image: "images/craft-charkha.jpg",
     excerpt: "4,000 years of Dhokra metal craft passed down without written blueprints. We mix ant-hill clay, rice husk, and pure bee-wax strings by hand.",
     fullStory: "Our Dhokra craft is the exact same process used to cast the Dancing Girl of Mohenjo-Daro four millennia ago. We shape an inner core of ant-hill clay, wind fine threads of natural bee-wax over it to carve delicate motifs, then envelop it in another thick layer of river silt clay. When fired in our pit kilns with dry sal wood, the molten brass fills the exact space left behind as the wax melts away. No two pieces are ever identical.",
     moral: "Imperfection in handmade craft is the watermark of human touch.",
@@ -201,7 +201,6 @@ class VirasatWisdomVaultApp {
   }
 
   bindEvents() {
-    // Category filtering
     this.categoryPills.forEach(pill => {
       pill.addEventListener('click', () => {
         this.categoryPills.forEach(p => p.classList.remove('active'));
@@ -211,7 +210,6 @@ class VirasatWisdomVaultApp {
       });
     });
 
-    // Region filtering
     if (this.regionSelect) {
       this.regionSelect.addEventListener('change', (e) => {
         this.activeRegion = e.target.value;
@@ -219,7 +217,6 @@ class VirasatWisdomVaultApp {
       });
     }
 
-    // Search input
     if (this.searchInput) {
       this.searchInput.addEventListener('input', (e) => {
         this.searchQuery = e.target.value.trim().toLowerCase();
@@ -227,7 +224,6 @@ class VirasatWisdomVaultApp {
       });
     }
 
-    // Modal triggers
     if (this.openSubmitModalBtn) {
       this.openSubmitModalBtn.addEventListener('click', () => this.openModal(this.submitModal));
     }
@@ -245,7 +241,6 @@ class VirasatWisdomVaultApp {
       this.closeDetailModalBtn.addEventListener('click', () => this.closeModal(this.detailModal));
     }
 
-    // Close modals on backdrop click
     [this.submitModal, this.detailModal].forEach(modal => {
       if (modal) {
         modal.addEventListener('click', (e) => {
@@ -254,12 +249,10 @@ class VirasatWisdomVaultApp {
       }
     });
 
-    // Form submission
     if (this.storyForm) {
       this.storyForm.addEventListener('submit', (e) => this.handleStorySubmit(e));
     }
 
-    // Featured hero play button
     if (this.heroPlayBtn) {
       this.heroPlayBtn.addEventListener('click', () => {
         const featured = this.stories.find(s => s.id === 'gond-laddu-kamla-devi') || this.stories[0];
@@ -267,7 +260,6 @@ class VirasatWisdomVaultApp {
       });
     }
 
-    // Passport update listener
     window.addEventListener('virasat:passport-updated', () => {
       this.updateHeaderPassportXP();
     });
@@ -323,7 +315,7 @@ class VirasatWisdomVaultApp {
       categoryLabel: categoryLabels[category] || 'Folklore & Lore',
       region: region,
       regionKey: region.toLowerCase().replace(/[^a-z]/g, ''),
-      image: category === 'recipes' ? 'assets/images/recipe-laddoos.jpg' : 'assets/images/elder-storyteller.jpg',
+      image: category === 'recipes' ? 'images/recipe-laddoos.jpg' : 'images/elder-storyteller.jpg',
       excerpt: content.length > 140 ? content.substring(0, 140) + '...' : content,
       fullStory: content,
       moral: moral || 'Preserving ancestral wisdom builds cultural resilience.',
@@ -342,7 +334,6 @@ class VirasatWisdomVaultApp {
     this.closeModal(this.submitModal);
     this.storyForm.reset();
 
-    // Reward Passport Points
     if (window.VirasatPassportService) {
       window.VirasatPassportService.recordWisdomContribution(newStory);
     }
@@ -371,18 +362,15 @@ class VirasatWisdomVaultApp {
     if (!this.grid) return;
 
     let filtered = this.stories.filter(story => {
-      // Category filter
       if (this.activeCategory !== 'all' && story.category !== this.activeCategory) {
         return false;
       }
-      // Region filter
       if (this.activeRegion !== 'all') {
         const reg = (story.regionKey || story.region).toLowerCase();
         if (!reg.includes(this.activeRegion.toLowerCase())) {
           return false;
         }
       }
-      // Search filter
       if (this.searchQuery) {
         const hay = `${story.title} ${story.elderName} ${story.region} ${story.excerpt} ${story.fullStory} ${story.categoryLabel}`.toLowerCase();
         if (!hay.includes(this.searchQuery)) {
@@ -501,11 +489,9 @@ class VirasatWisdomVaultApp {
     if (!story) return;
 
     if (this.currentlyPlayingId === storyId) {
-      // Pause
       this.currentlyPlayingId = null;
       if (this.audioInterval) clearInterval(this.audioInterval);
     } else {
-      // Play
       this.currentlyPlayingId = storyId;
       if (window.VirasatPassportService) {
         window.VirasatPassportService.recordWisdomListen(story);
@@ -635,7 +621,6 @@ class VirasatWisdomVaultApp {
   }
 }
 
-// Initialize on DOM load
 document.addEventListener('DOMContentLoaded', () => {
   window.wisdomApp = new VirasatWisdomVaultApp();
 });

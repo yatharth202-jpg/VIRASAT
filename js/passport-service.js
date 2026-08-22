@@ -173,7 +173,6 @@ class VirasatPassportService {
       this.saveStamps(stamps);
     }
 
-    // Unlock badges
     const badges = this.getWisdomBadges();
     const storytellerBadge = badges.find(b => b.id === 'badge-heritage-storyteller');
     if (storytellerBadge) storytellerBadge.unlocked = true;
