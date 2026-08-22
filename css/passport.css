@@ -689,55 +689,63 @@ button {
   margin: 2px 0;
 }
 
-/* Metrics Grid */
-.metrics-grid {
+/* Metrics Overview Box (2x3 Grid matching Screenshot) */
+.stats-overview-box {
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(184, 164, 132, 0.38);
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.stats-metric-grid-2x3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  gap: 12px 10px;
 }
 
-.metric-card {
+.metric-item {
   display: flex;
-  align-items: flex-start;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.45);
-  border: 1px solid rgba(184, 164, 132, 0.35);
-  border-radius: 6px;
-  padding: 6px;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
   transition: var(--transition-smooth);
-  cursor: help;
 }
 
-.metric-card:hover {
-  background: rgba(255, 255, 255, 0.85);
-  border-color: rgba(150, 110, 50, 0.5);
+.metric-item:hover {
   transform: translateY(-1px);
 }
 
-.metric-icon-wrap {
+.metric-icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(184, 164, 132, 0.18);
+  border: 1px solid rgba(184, 164, 132, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  margin-top: 2px;
 }
 
-.metric-details {
+.metric-text-wrap {
   display: flex;
   flex-direction: column;
 }
 
 .metric-value {
   font-family: var(--font-serif-title);
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 700;
-  color: #221c15;
+  color: #1e1812;
   line-height: 1.1;
 }
 
 .metric-label {
   font-family: var(--font-sans-body);
-  font-size: 9px;
+  font-size: 8.5px;
   font-weight: 500;
-  color: #665b4c;
-  line-height: 1.25;
+  color: #6e6252;
+  line-height: 1.2;
   margin-top: 1px;
 }
 
@@ -746,9 +754,9 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 14px;
-  background: rgba(255, 255, 255, 0.45);
-  border: 1px solid rgba(184, 164, 132, 0.35);
+  gap: 16px;
+  background: rgba(255, 255, 255, 0.42);
+  border: 1px solid rgba(184, 164, 132, 0.38);
   border-radius: 8px;
   padding: 10px 14px;
 }

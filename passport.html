@@ -177,132 +177,128 @@
         <div class="dual-page-manuscript" id="journalBook">
           
           <!-- LEFT PAGE: JOURNEY OVERVIEW, PROGRESS & DISCOVERIES -->
-          <div class="journal-page page-left">
+          <div class="journal-page page-left" style="padding: 24px 22px; display: flex; flex-direction: column; gap: 14px;">
             <div class="page-corner-ornament top-left"></div>
             <div class="page-corner-ornament bottom-left"></div>
 
             <!-- Page Watermark Tree Motif -->
             <div class="page-watermark-tree" style="background-image: url('assets/tree-watermark.jpg');"></div>
 
-            <!-- Page Header -->
-            <div class="page-header-row">
-              <span class="page-subheading">CHAPTER II</span>
-              <span class="page-number">P. 04</span>
+            <!-- Centered Header: JOURNEY OVERVIEW -->
+            <div style="text-align: center; margin-bottom: 2px;">
+              <h2 style="font-family: var(--font-serif-title); font-size: 14.5px; font-weight: 700; letter-spacing: 0.08em; color: #2b231a; text-transform: uppercase; margin: 0;">
+                JOURNEY OVERVIEW
+              </h2>
             </div>
-            <h2 class="page-title">JOURNEY OVERVIEW</h2>
-            <div class="page-title-rule"></div>
 
-            <!-- 1. STATS & JOURNEY OVERVIEW (Placed next to Map at Top of Left Page) -->
-            <div class="journal-section">
-              <h3 class="section-title">STATS & JOURNEY OVERVIEW</h3>
-              <div class="stats-metric-grid">
+            <!-- 1. STATS OVERVIEW BOX (2 Rows x 3 Columns) -->
+            <div class="stats-overview-box">
+              <div class="stats-metric-grid-2x3">
                 
-                <!-- Stat 1: Total Discoveries -->
-                <div class="metric-card" data-tooltip="Total Discoveries Logged">
-                  <div class="metric-icon-wrap">
-                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="#5a4d3b" stroke-width="2" fill="none">
+                <!-- Stat 1: Discoveries -->
+                <div class="metric-item">
+                  <div class="metric-icon-circle">
+                    <svg viewBox="0 0 24 24" width="15" height="15" stroke="#7a5b28" stroke-width="2" fill="none">
                       <circle cx="12" cy="12" r="10"></circle>
                       <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
                     </svg>
                   </div>
-                  <div class="metric-details">
-                    <span class="metric-value" id="statDiscoveriesValue">28</span>
-                    <span class="metric-label">Total Discoveries</span>
+                  <div class="metric-text-wrap">
+                    <span class="metric-value" id="statDiscoveriesValue">48</span>
+                    <span class="metric-label">Discoveries</span>
                   </div>
                 </div>
 
-                <!-- Stat 2: States Explored -->
-                <div class="metric-card" data-tooltip="States & Regions Explored">
-                  <div class="metric-icon-wrap">
-                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="#5a4d3b" stroke-width="2" fill="none">
+                <!-- Stat 2: Regions Explored -->
+                <div class="metric-item">
+                  <div class="metric-icon-circle">
+                    <svg viewBox="0 0 24 24" width="15" height="15" stroke="#7a5b28" stroke-width="2" fill="none">
                       <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"></polygon>
                       <line x1="8" y1="2" x2="8" y2="18"></line>
                       <line x1="16" y1="6" x2="16" y2="22"></line>
                     </svg>
                   </div>
-                  <div class="metric-details">
+                  <div class="metric-text-wrap">
                     <span class="metric-value">12</span>
-                    <span class="metric-label">States Explored</span>
+                    <span class="metric-label">Regions Explored</span>
                   </div>
                 </div>
 
-                <!-- Stat 3: Cultural Twins Found -->
-                <div class="metric-card" onclick="window.location.href='games.html'" style="cursor: pointer;" data-tooltip="Click to explore Cultural Twins">
-                  <div class="metric-icon-wrap">
-                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="#5a4d3b" stroke-width="2" fill="none">
+                <!-- Stat 3: Cultural Twin Connections -->
+                <div class="metric-item" onclick="window.location.href='games.html'" style="cursor: pointer;">
+                  <div class="metric-icon-circle">
+                    <svg viewBox="0 0 24 24" width="15" height="15" stroke="#7a5b28" stroke-width="2" fill="none">
                       <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
                       <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
                     </svg>
                   </div>
-                  <div class="metric-details">
-                    <span class="metric-value" id="statTwinsValue">8</span>
-                    <span class="metric-label">Twins Connected →</span>
+                  <div class="metric-text-wrap">
+                    <span class="metric-value" id="statTwinsValue">7</span>
+                    <span class="metric-label">Cultural Twin<br>Connections</span>
                   </div>
                 </div>
 
                 <!-- Stat 4: Games Completed -->
-                <div class="metric-card" onclick="window.location.href='games.html'" style="cursor: pointer;" data-tooltip="Click to play Games">
-                  <div class="metric-icon-wrap">
-                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="#5a4d3b" stroke-width="2" fill="none">
+                <div class="metric-item" onclick="window.location.href='games.html'" style="cursor: pointer;">
+                  <div class="metric-icon-circle">
+                    <svg viewBox="0 0 24 24" width="15" height="15" stroke="#7a5b28" stroke-width="2" fill="none">
                       <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                      <circle cx="8.5" cy="8.5" r="1.5" fill="#5a4d3b"></circle>
-                      <circle cx="15.5" cy="15.5" r="1.5" fill="#5a4d3b"></circle>
+                      <circle cx="8.5" cy="8.5" r="1.5" fill="#7a5b28"></circle>
+                      <circle cx="15.5" cy="15.5" r="1.5" fill="#7a5b28"></circle>
                     </svg>
                   </div>
-                  <div class="metric-details">
+                  <div class="metric-text-wrap">
                     <span class="metric-value" id="statGamesValue">15</span>
-                    <span class="metric-label">Games Played →</span>
+                    <span class="metric-label">Games Completed</span>
                   </div>
                 </div>
 
                 <!-- Stat 5: Elder Stories Unlocked -->
-                <div class="metric-card" onclick="window.location.href='wisdom-vault.html'" style="cursor: pointer;" data-tooltip="Click to explore Elder Wisdom Vault">
-                  <div class="metric-icon-wrap">
-                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="#5a4d3b" stroke-width="2" fill="none">
+                <div class="metric-item" onclick="window.location.href='wisdom-vault.html'" style="cursor: pointer;">
+                  <div class="metric-icon-circle">
+                    <svg viewBox="0 0 24 24" width="15" height="15" stroke="#7a5b28" stroke-width="2" fill="none">
                       <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
                       <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                     </svg>
                   </div>
-                  <div class="metric-details">
+                  <div class="metric-text-wrap">
                     <span class="metric-value" id="statWisdomValue">9</span>
-                    <span class="metric-label">Elder Shares →</span>
+                    <span class="metric-label">Elder Stories<br>Unlocked</span>
                   </div>
                 </div>
 
                 <!-- Stat 6: Contributions Made -->
-                <div class="metric-card" data-tooltip="Contributions Made">
-                  <div class="metric-icon-wrap">
-                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="#5a4d3b" stroke-width="2" fill="none">
+                <div class="metric-item">
+                  <div class="metric-icon-circle">
+                    <svg viewBox="0 0 24 24" width="15" height="15" stroke="#7a5b28" stroke-width="2" fill="none">
                       <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path>
                     </svg>
                   </div>
-                  <div class="metric-details">
+                  <div class="metric-text-wrap">
                     <span class="metric-value">5</span>
-                    <span class="metric-label">Contributions</span>
+                    <span class="metric-label">Contributions<br>Made</span>
                   </div>
                 </div>
 
               </div>
             </div>
 
-            <div class="page-horizontal-divider"></div>
-
-            <!-- 2. YOUR PROGRESS (Level Dial & Streaks Placed Just Below Journey Overview) -->
-            <div class="journal-section">
-              <h3 class="section-title">YOUR PROGRESS</h3>
+            <!-- 2. YOUR PROGRESS SECTION -->
+            <div class="journal-section" style="margin-top: 2px;">
+              <h3 class="section-title" style="margin-bottom: 8px;">YOUR PROGRESS</h3>
               <div class="progress-container">
                 
                 <!-- Circular Level Dial -->
-                <div class="level-dial-wrapper">
+                <div class="level-dial-wrapper" style="width: 96px; height: 96px;">
                   <svg class="level-dial-svg" viewBox="0 0 120 120">
                     <circle class="dial-track" cx="60" cy="60" r="51"/>
-                    <circle class="dial-fill" id="passportDialFill" cx="60" cy="60" r="51" style="stroke-dasharray: 320; stroke-dashoffset: 100;"/>
+                    <circle class="dial-fill" id="passportDialFill" cx="60" cy="60" r="51" style="stroke-dasharray: 320; stroke-dashoffset: 75; stroke: #1C4436;"/>
                   </svg>
                   <div class="dial-inner-text">
                     <span class="dial-level-label">Level</span>
-                    <span class="dial-level-number" id="passportLevelNum">6</span>
+                    <span class="dial-level-number" id="passportLevelNum" style="font-size: 22px;">6</span>
                     <span class="dial-rank-name" id="passportRankName">Heritage Seeker</span>
-                    <span class="dial-xp-text" id="passportXPText">3,550 / 6,900 XP</span>
+                    <span class="dial-xp-text" id="passportXPText">2,350 / 3,000 XP</span>
                   </div>
                 </div>
 
@@ -317,7 +313,7 @@
                   </div>
 
                   <div class="streak-item">
-                    <div class="streak-icon">⏳</div>
+                    <div class="streak-icon">⏱️</div>
                     <div class="streak-text-group">
                       <span class="streak-label">Longest Streak</span>
                       <span class="streak-value">28 days</span>
@@ -336,13 +332,11 @@
               </div>
             </div>
 
-            <div class="page-horizontal-divider"></div>
-
-            <!-- 3. RECENT DISCOVERIES (Framed below Progress on Left Page) -->
-            <div class="journal-section">
-              <div class="section-header-flex">
+            <!-- 3. RECENT DISCOVERIES -->
+            <div class="journal-section" style="margin-top: 2px;">
+              <div class="section-header-flex" style="margin-bottom: 8px;">
                 <h3 class="section-title">RECENT DISCOVERIES</h3>
-                <a href="#discoveries" class="link-view-all" id="btnViewAllDiscoveries">View All</a>
+                <a href="#discoveries" class="link-view-all" id="btnViewAllDiscoveries" style="color: #2d6a4f; font-weight: 600;">View All</a>
               </div>
 
               <div class="discoveries-scroll-row">
@@ -404,22 +398,14 @@
 
           </div>
 
-          <!-- ================= RIGHT PAGE OF BOOK: REGIONS EXPLORED & INDIA MAP AT TOP ================= -->
-          <div class="book-page page-right">
+          <!-- ================= RIGHT PAGE OF BOOK: REGIONS EXPLORED & TWIN CONNECTIONS ================= -->
+          <div class="book-page page-right" style="padding: 24px 22px; display: flex; flex-direction: column; gap: 14px;">
             
-            <!-- Page Header -->
-            <div class="page-header-row">
-              <span class="page-subheading">CHAPTER III</span>
-              <span class="page-number">P. 05</span>
-            </div>
-            <h2 class="page-title">REGIONS EXPLORED</h2>
-            <div class="page-title-rule"></div>
-
-            <!-- 1. MAP OF INDIA & REGIONS EXPLORED (Shifted to Right Page Top Corner) -->
-            <div class="journal-section" style="margin-bottom: 20px;">
-              <div class="section-header-flex">
-                <h3 class="section-title">📍 MAP OF INDIA — REGIONS EXPLORED</h3>
-                <a href="#map" class="link-view-all" id="btnViewMapFull">Interactive Map</a>
+            <!-- 1. MAP OF INDIA & REGIONS EXPLORED -->
+            <div class="journal-section">
+              <div class="section-header-flex" style="margin-bottom: 8px;">
+                <h3 class="section-title">REGIONS EXPLORED</h3>
+                <a href="#map" class="link-view-all" id="btnViewMapFull" style="color: #2d6a4f; font-weight: 600;">View Map</a>
               </div>
 
               <div class="regions-explored-layout">
@@ -470,7 +456,7 @@
                   <div class="state-item" data-state-name="Maharashtra">
                     <span class="state-bullet bullet-maharashtra"></span>
                     <span class="state-name">Maharashtra</span>
-                    <span class="state-ratio">5/7</span>
+                    <span class="state-ratio">4/7</span>
                   </div>
                   <div class="state-item" data-state-name="Kerala">
                     <span class="state-bullet bullet-kerala"></span>
@@ -482,55 +468,68 @@
                     <span class="state-name">Bihar</span>
                     <span class="state-ratio">2/5</span>
                   </div>
+                  <div class="state-item" data-state-name="Others">
+                    <span class="state-bullet bullet-others"></span>
+                    <span class="state-name">Others</span>
+                    <span class="state-ratio">1/6</span>
+                  </div>
                 </div>
               </div>
             </div>
 
-            <div class="page-horizontal-divider"></div>
+            <div class="page-horizontal-divider" style="margin: 4px 0;"></div>
 
-            <!-- 2. CULTURAL TWIN CONNECTIONS (Framed Below Map on Right Page) -->
+            <!-- 2. CULTURAL TWIN CONNECTIONS -->
             <div class="journal-section">
-              <div class="section-header-flex">
+              <div class="section-header-flex" style="margin-bottom: 8px;">
                 <h3 class="section-title">CULTURAL TWIN CONNECTIONS</h3>
-                <a href="games.html" class="link-view-all" id="btnViewAllTwins">Play Twins Matrix →</a>
+                <a href="games.html" class="link-view-all" id="btnViewAllTwins" style="color: #2d6a4f; font-weight: 600;">View All</a>
               </div>
 
               <!-- Interactive Comparative Twin Card -->
               <div class="cultural-twin-card" id="culturalTwinContainer">
                 
-                <div class="twin-sides-row">
+                <div class="twin-sides-row" style="grid-template-columns: 1fr 40px 1fr; gap: 6px;">
                   
                   <!-- Left Side: India Tradition -->
-                  <div class="twin-side" id="twinSideIndia">
-                    <span class="twin-tag tag-india">INDIA</span>
-                    <h4 class="twin-title" id="twinTitleIndia">Warli Art</h4>
-                    <span class="twin-region" id="twinRegionIndia">Maharashtra</span>
-                    <div class="twin-artwork-box">
+                  <div class="twin-side" id="twinSideIndia" style="display: flex; align-items: center; gap: 8px; text-align: left;">
+                    <div style="flex: 1;">
+                      <span class="twin-tag tag-india">INDIA</span>
+                      <h4 class="twin-title" id="twinTitleIndia" style="margin-top: 2px;">Warli Art</h4>
+                      <span class="twin-region" id="twinRegionIndia">Maharashtra</span>
+                    </div>
+                    <div class="twin-artwork-box" style="width: 68px; height: 68px; flex-shrink: 0;">
                       <img src="assets/twin_warli.png" alt="Warli Tribal Art" id="twinImgIndia" class="twin-img">
                     </div>
                   </div>
 
                   <!-- Center Link Connector -->
                   <div class="twin-link-center">
-                    <div class="link-chain-icon">
-                      <svg viewBox="0 0 24 24" width="18" height="18" stroke="#ffd56b" stroke-width="2" fill="none">
+                    <div class="link-chain-icon" style="width: 28px; height: 28px;">
+                      <svg viewBox="0 0 24 24" width="14" height="14" stroke="#ffd56b" stroke-width="2" fill="none">
                         <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
                         <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
                       </svg>
                     </div>
-                    <span class="twin-status-pill" id="twinStatusText">Historically Connected</span>
                   </div>
 
                   <!-- Right Side: World Tradition -->
-                  <div class="twin-side" id="twinSideWorld">
-                    <span class="twin-tag tag-world">WORLD</span>
-                    <h4 class="twin-title" id="twinTitleWorld">Aboriginal Dot Painting</h4>
-                    <span class="twin-region" id="twinRegionWorld">Australia</span>
-                    <div class="twin-artwork-box">
+                  <div class="twin-side" id="twinSideWorld" style="display: flex; align-items: center; gap: 8px; text-align: left;">
+                    <div class="twin-artwork-box" style="width: 68px; height: 68px; flex-shrink: 0;">
                       <img src="assets/twin_aboriginal.png" alt="Aboriginal Dot Painting" id="twinImgWorld" class="twin-img">
+                    </div>
+                    <div style="flex: 1;">
+                      <span class="twin-tag tag-world">WORLD</span>
+                      <h4 class="twin-title" id="twinTitleWorld" style="margin-top: 2px;">Aboriginal Dot Painting</h4>
+                      <span class="twin-region" id="twinRegionWorld">Australia</span>
                     </div>
                   </div>
 
+                </div>
+
+                <!-- Status Pill -->
+                <div style="text-align: center; margin: 8px 0 4px 0;">
+                  <span class="twin-status-pill" id="twinStatusText" style="padding: 3px 8px; font-size: 8px;">Historically Connected</span>
                 </div>
 
                 <!-- Shared Philosophy Description -->
