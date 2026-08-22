@@ -59,15 +59,20 @@ class CulturalConnectionApp {
     }
   }
 
+  loadConnection(connection) {
+    if (!connection) return;
+    this.currentConnection = connection;
+    if (this.connectionGame) this.connectionGame.loadConnection(connection);
+    if (this.comparisonMatrix) this.comparisonMatrix.render(connection);
+  }
+
   loadConnectionById(connectionId) {
     let conn = this.connections.find(c => c.id === connectionId);
     if (!conn && this.connections.length > 0) {
       conn = this.connections[0];
     }
     if (conn) {
-      this.currentConnection = conn;
-      if (this.connectionGame) this.connectionGame.loadConnection(conn);
-      if (this.comparisonMatrix) this.comparisonMatrix.render(conn);
+      this.loadConnection(conn);
     }
   }
 
@@ -81,9 +86,9 @@ class CulturalConnectionApp {
     }
 
     if (filtered.length > 0) {
-      this.loadConnectionById(filtered[0].id);
-    } else {
-      this.loadConnectionById(this.connections[0].id);
+      this.loadConnection(filtered[0]);
+    } else if (this.connections.length > 0) {
+      this.loadConnection(this.connections[0]);
     }
   }
 }
